@@ -15,7 +15,7 @@ export function Hero() {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url('https://images.unsplash.com/photo-1634272967254-4d4b307bc351?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaHVrZXQlMjBiZWFjaCUyMHN1bnNldHxlbnwxfHx8fDE3NjkxNzEzMjh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral')` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a3d3d]/60 via-transparent to-[#0a3d3d]/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#3c463f]/70 via-black/30 to-[#3c463f]/80" />
       </div>
 
       {/* Language Switcher - Top Right */}
@@ -35,7 +35,7 @@ export function Hero() {
           <img src={logo} alt="Waree's Guesthouse Logo" className="w-32 h-32 mx-auto drop-shadow-2xl rounded-2xl" />
         </div>
         
-        <h1 className="text-3xl sm:text-5xl md:text-7xl text-white mb-4 sm:mb-6 drop-shadow-lg leading-tight max-w-full">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl text-white mb-4 sm:mb-6 leading-tight max-w-full" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8), 0 4px 20px rgba(0,0,0,0.6)' }}>
           {t.hero.title}
         </h1>
         
@@ -43,31 +43,31 @@ export function Hero() {
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-4">
           <div className="flex items-center bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/30">
             <Award className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 text-[#f58220] fill-[#f58220]" />
-            <span className="text-white text-xs sm:text-sm font-medium">
+            <span className="text-white text-xs sm:text-sm font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
               AirBNB Superhost
             </span>
           </div>
           
           <div className="flex items-center bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/30">
             <Heart className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 text-[#f58220] fill-[#f58220]" />
-            <span className="text-white text-xs sm:text-sm font-medium">
+            <span className="text-white text-xs sm:text-sm font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
               Guest Favorite
             </span>
           </div>
           
           <div className="flex items-center bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/30">
             <Star className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 text-[#f58220] fill-[#f58220]" />
-            <span className="text-white text-xs sm:text-sm font-medium">
+            <span className="text-white text-xs sm:text-sm font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
               4.83 Rating
             </span>
           </div>
         </div>
         
-        <p className="text-base sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 max-w-2xl leading-relaxed">
+        <p className="text-base sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 max-w-2xl leading-relaxed" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8), 0 4px 16px rgba(0,0,0,0.6)' }}>
           {t.hero.subtitle}
         </p>
         
-        <p className="text-sm sm:text-lg text-white/80 mb-8 sm:mb-10 max-w-xl leading-relaxed px-2">
+        <p className="text-sm sm:text-lg text-white/80 mb-8 sm:mb-10 max-w-xl leading-relaxed px-2" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8), 0 4px 16px rgba(0,0,0,0.6)' }}>
           {t.hero.tagline}
         </p>
         
