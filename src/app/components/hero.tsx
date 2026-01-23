@@ -28,13 +28,13 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center pt-24 sm:pt-0">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center pt-24 sm:pt-0 max-w-full overflow-hidden">
         {/* Logo - Centered on Desktop Only */}
         <div className="hidden sm:block mb-6 sm:mb-8">
           <img src={logo} alt="Waree's Guesthouse Logo" className="w-32 h-32 mx-auto drop-shadow-2xl rounded-2xl" />
         </div>
         
-        <h1 className="text-3xl sm:text-5xl md:text-7xl text-white mb-4 sm:mb-6 drop-shadow-lg leading-tight">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl text-white mb-4 sm:mb-6 drop-shadow-lg leading-tight max-w-full">
           {t.hero.title}
         </h1>
         
