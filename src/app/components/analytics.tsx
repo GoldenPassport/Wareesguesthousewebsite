@@ -1,4 +1,23 @@
-import { useEffect } from 'react';
+/**
+ * Analytics Component - Google Analytics & Meta Pixel (Facebook/Instagram)
+ * 
+ * Privacy & Cookie Compliance:
+ * - Analytics scripts ONLY load when BOTH conditions are met:
+ *   1. Environment variables are configured (VITE_GA_MEASUREMENT_ID, VITE_FB_PIXEL_ID)
+ *   2. User has ACCEPTED cookies via the cookie consent banner
+ * 
+ * - If user declines cookies: NO analytics scripts load (GDPR/CCPA compliant)
+ * - If environment variables are missing: Analytics remain disabled
+ * - Cookie consent is checked continuously and analytics activate/deactivate accordingly
+ * 
+ * Environment Variables:
+ * - VITE_GA_MEASUREMENT_ID: Google Analytics Measurement ID (format: G-XXXXXXXXXX)
+ * - VITE_FB_PIXEL_ID: Facebook Pixel ID (numeric)
+ * 
+ * See ANALYTICS.md for complete setup guide.
+ */
+
+import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 declare global {
@@ -11,17 +30,41 @@ declare global {
 }
 
 export function Analytics() {
+  const [cookiesAccepted, setCookiesAccepted] = useState(false);
+
   // Get analytics IDs from environment variables
   const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
   const FB_PIXEL_ID = import.meta.env.VITE_FB_PIXEL_ID;
 
-  // Only enable if environment variables are set
-  const isGAEnabled = GA_MEASUREMENT_ID && GA_MEASUREMENT_ID.trim() !== '';
-  const isFBPixelEnabled = FB_PIXEL_ID && FB_PIXEL_ID.trim() !== '';
+  // Check cookie consent status
+  useEffect(() => {
+    const checkCookieConsent = () => {
+      const consent = localStorage.getItem('cookie-consent');
+      setCookiesAccepted(consent === 'accepted');
+    };
+
+    // Initial check
+    checkCookieConsent();
+
+    // Listen for storage changes (when user accepts/declines cookies)
+    window.addEventListener('storage', checkCookieConsent);
+    
+    // Also check periodically in case consent changes in same tab
+    const interval = setInterval(checkCookieConsent, 1000);
+
+    return () => {
+      window.removeEventListener('storage', checkCookieConsent);
+      clearInterval(interval);
+    };
+  }, []);
+
+  // Only enable if BOTH environment variables are set AND cookies are accepted
+  const isGAEnabled = cookiesAccepted && GA_MEASUREMENT_ID && GA_MEASUREMENT_ID.trim() !== '';
+  const isFBPixelEnabled = cookiesAccepted && FB_PIXEL_ID && FB_PIXEL_ID.trim() !== '';
 
   useEffect(() => {
-    // Initialize Facebook Pixel
-    if (isFBPixelEnabled) {
+    // Initialize Facebook Pixel only after cookies are accepted
+    if (isFBPixelEnabled && cookiesAccepted) {
       // Facebook Pixel initialization
       window.fbq = function() {
         window.fbq?.callMethod 
@@ -38,7 +81,7 @@ export function Analytics() {
       window.fbq('init', FB_PIXEL_ID);
       window.fbq('track', 'PageView');
     }
-  }, [isFBPixelEnabled, FB_PIXEL_ID]);
+  }, [isFBPixelEnabled, FB_PIXEL_ID, cookiesAccepted]);
 
   return (
     <>
@@ -92,18 +135,23 @@ export function Analytics() {
   );
 }
 
+// Helper function to check cookie consent
+const hasCookieConsent = (): boolean => {
+  return localStorage.getItem('cookie-consent') === 'accepted';
+};
+
 // Helper functions for tracking events
 export const trackEvent = {
   // Google Analytics event
   ga: (eventName: string, eventParams?: Record<string, any>) => {
-    if (window.gtag && import.meta.env.VITE_GA_MEASUREMENT_ID) {
+    if (hasCookieConsent() && window.gtag && import.meta.env.VITE_GA_MEASUREMENT_ID) {
       window.gtag('event', eventName, eventParams);
     }
   },
 
   // Facebook Pixel event
   fb: (eventName: string, eventParams?: Record<string, any>) => {
-    if (window.fbq && import.meta.env.VITE_FB_PIXEL_ID) {
+    if (hasCookieConsent() && window.fbq && import.meta.env.VITE_FB_PIXEL_ID) {
       window.fbq('track', eventName, eventParams);
     }
   },
