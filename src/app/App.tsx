@@ -13,6 +13,7 @@ import { Location } from '@/app/components/location';
 import { SocialFeed } from '@/app/components/social-feed';
 import { Footer } from '@/app/components/footer';
 import { CookieConsent } from '@/app/components/cookie-consent';
+import { ScrollToTop } from '@/app/components/scroll-to-top';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <SocialFeed />
           <Footer />
           <CookieConsent />
+          <ScrollToTop />
         </div>
       </LanguageProvider>
     </SEOProvider>
