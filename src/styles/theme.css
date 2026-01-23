@@ -126,8 +126,8 @@
 
   body {
     @apply bg-background text-foreground;
-    /* Use footer color (#0a3d3d) for safe areas (notch and home indicator bar) */
-    background-color: #0a3d3d;
+    /* Use footer color (#495043) for safe areas (notch and home indicator bar) */
+    background-color: #495043;
     /* Add padding for safe areas */
     padding-top: env(safe-area-inset-top);
     padding-bottom: env(safe-area-inset-bottom);
