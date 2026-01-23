@@ -66,8 +66,11 @@ function figmaAssetsPlugin() {
 
         // Read the file and validate it's a binary image
         const fileBuffer = fs.readFileSync(assetPath);
+        
+        let finalBuffer = fileBuffer;
+        let finalFilename = path.basename(assetPath);
 
-        // Validate file is actually a binary image (not base64 text)
+        // Check if file is base64-encoded text and auto-decode if needed
         if (fileBuffer.length > 0) {
           const firstBytes = fileBuffer.subarray(
             0,
@@ -98,24 +101,40 @@ function figmaAssetsPlugin() {
             });
 
             if (isLikelyBase64 && firstBytes.length >= 4) {
-              this.error(
-                `Corrupted image file detected: ${filename}\n\n` +
-                  `The file appears to contain base64-encoded text instead of binary image data.\n\n` +
-                  `This usually happens when images are incorrectly exported from Figma.\n\n` +
-                  `To fix:\n` +
-                  `1. Re-export the image from Figma Desktop App (not browser)\n` +
-                  `2. Use "Export" button in Figma, save as binary PNG/JPEG\n` +
-                  `3. Or run: node scripts/fix_image_assets.js\n\n` +
-                  `See /FIGMA_EXPORT_GUIDE.md for detailed instructions.`,
-              );
+              console.log(`🔧 Vite: Auto-decoding base64 image: ${filename}`);
+              
+              try {
+                // Extract base64 data and decode it
+                const base64Text = fileBuffer.toString('utf8').replace(/\s/g, '');
+                const decodedBuffer = Buffer.from(base64Text, 'base64');
+                
+                // Detect actual format from magic bytes
+                const magic = decodedBuffer.subarray(0, 4);
+                const isJPEG = magic[0] === 0xFF && magic[1] === 0xD8 && magic[2] === 0xFF;
+                const isPNG = magic[0] === 0x89 && magic[1] === 0x50 && magic[2] === 0x4E && magic[3] === 0x47;
+                
+                if (isJPEG) {
+                  console.log(`   ✓ Detected JPEG format (${decodedBuffer.length} bytes)`);
+                  finalBuffer = decodedBuffer;
+                  finalFilename = finalFilename.replace(/\.png$/, '.jpg');
+                } else if (isPNG) {
+                  console.log(`   ✓ Detected PNG format (${decodedBuffer.length} bytes)`);
+                  finalBuffer = decodedBuffer;
+                } else {
+                  console.warn(`   ⚠ Unknown format, using original buffer`);
+                }
+              } catch (error) {
+                console.error(`   ✗ Failed to decode base64: ${error.message}`);
+                console.error(`   Using original buffer (may be corrupted)`);
+              }
             }
           }
         }
 
         const referenceId = this.emitFile({
           type: "asset",
-          name: path.basename(assetPath),
-          source: fileBuffer,
+          name: finalFilename,
+          source: finalBuffer,
         });
 
         // Return code that exports the asset URL
