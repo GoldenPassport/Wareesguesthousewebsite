@@ -82,7 +82,7 @@ export function AirbnbHighlights() {
                           <Award className="w-6 h-6 text-[#f58220]" />
                         )}
                       </div>
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <p className="text-gray-600 text-base leading-relaxed">
                         {highlight.description}
                       </p>
                     </div>

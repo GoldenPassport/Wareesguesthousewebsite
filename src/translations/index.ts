@@ -22,6 +22,11 @@ export const translations = {
       bookButton: "Book on AirBNB",
       reviewsButton: "Read Reviews",
     },
+    // Common UI
+    common: {
+      showDetails: "Show Details",
+      hideDetails: "Hide Details"
+    },
     // About
     about: {
       title: "Meet Anna, Josh & Mam",
@@ -618,6 +623,11 @@ export const translations = {
       phoneBtn: "+66 76 331 016",
       emailBtn: "อีเมล"
     },
+    // Common UI
+    common: {
+      showDetails: "แสดงรายละเอียด",
+      hideDetails: "ซ่อนรายละเอียด"
+    },
     // Footer
     footer: {
       description: "บ้านของคุณห่างจากบ้านในหาดกะตะที่สวยงาม ภูเก็ต สัมผัสความอบอุ่นและการต้อนรับที่แท้จริง",
@@ -820,7 +830,7 @@ export const translations = {
       courtyard: "宾馆庭院",
       courtyardDesc: "一个宁静而温馨的空间，供您放松和享受",
       entrance: "宾馆入口",
-      entranceDesc: "一个温馨而迷人的入口，通向您新的家外之家",
+      entranceDesc: "一个温馨而迷人的入口，通向您新的���外之家",
       ctaTitle: "准备好创造自己的回忆了吗？",
       ctaDesc: "加入Waree家族，在普吉岛最美丽的地方之一体验正宗的泰式热情好客",
       ctaButton: "预订您的住宿"
@@ -938,6 +948,11 @@ export const translations = {
       lineBtn: "LINE",
       phoneBtn: "+66 76 331 016",
       emailBtn: "电子邮件"
+    },
+    // Common UI
+    common: {
+      showDetails: "显示详情",
+      hideDetails: "隐藏详情"
     },
     // Footer
     footer: {
@@ -1260,6 +1275,11 @@ export const translations = {
       phoneBtn: "+66 76 331 016",
       emailBtn: "Электронная почта"
     },
+    // Common UI
+    common: {
+      showDetails: "Показать детали",
+      hideDetails: "Скрыть детали"
+    },
     // Footer
     footer: {
       description: "Ваш дом вдали от дома на прекрасном пляже Ката, Пхукет. Ощутите местное тепло и искреннее гостеприимство.",
@@ -1580,6 +1600,11 @@ export const translations = {
       lineBtn: "LINE",
       phoneBtn: "+66 76 331 016",
       emailBtn: "E-Mail"
+    },
+    // Common UI
+    common: {
+      showDetails: "Details anzeigen",
+      hideDetails: "Details ausblenden"
     },
     // Footer
     footer: {
@@ -1902,6 +1927,11 @@ export const translations = {
       phoneBtn: "+66 76 331 016",
       emailBtn: "Email"
     },
+    // Common UI
+    common: {
+      showDetails: "Mostra dettagli",
+      hideDetails: "Nascondi dettagli"
+    },
     // Footer
     footer: {
       description: "La vostra casa lontano da casa nella bellissima Kata Beach, Phuket. Sperimentate il calore locale e l'ospitalità genuina.",
@@ -2223,6 +2253,11 @@ export const translations = {
       phoneBtn: "+66 76 331 016",
       emailBtn: "E-post"
     },
+    // Common UI
+    common: {
+      showDetails: "Visa detaljer",
+      hideDetails: "Dölj detaljer"
+    },
     // Footer
     footer: {
       description: "Ditt hem borta från hemmet vid vackra Kata Beach, Phuket. Upplev lokal värme och genuin gästfrihet.",
@@ -2543,6 +2578,11 @@ export const translations = {
       lineBtn: "LINE",
       phoneBtn: "+66 76 331 016",
       emailBtn: "Sähköposti"
+    },
+    // Common UI
+    common: {
+      showDetails: "Näytä tiedot",
+      hideDetails: "Piilota tiedot"
     },
     // Footer
     footer: {

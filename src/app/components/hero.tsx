@@ -42,22 +42,22 @@ export function Hero() {
         {/* Badges */}
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-4">
           <div className="flex items-center bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/30">
-            <Award className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 text-[#f58220] fill-[#f58220]" />
-            <span className="text-white text-xs sm:text-sm font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
+            <Award className="w-4 h-4 sm:w-4 sm:h-4 mr-1.5 text-[#f58220] fill-[#f58220]" />
+            <span className="text-white text-sm sm:text-sm font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
               AirBNB Superhost
             </span>
           </div>
           
           <div className="flex items-center bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/30">
-            <Heart className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 text-[#f58220] fill-[#f58220]" />
-            <span className="text-white text-xs sm:text-sm font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
+            <Heart className="w-4 h-4 sm:w-4 sm:h-4 mr-1.5 text-[#f58220] fill-[#f58220]" />
+            <span className="text-white text-sm sm:text-sm font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
               Guest Favorite
             </span>
           </div>
           
           <div className="flex items-center bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/30">
-            <Star className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 text-[#f58220] fill-[#f58220]" />
-            <span className="text-white text-xs sm:text-sm font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
+            <Star className="w-4 h-4 sm:w-4 sm:h-4 mr-1.5 text-[#f58220] fill-[#f58220]" />
+            <span className="text-white text-sm sm:text-sm font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
               4.83 Rating
             </span>
           </div>

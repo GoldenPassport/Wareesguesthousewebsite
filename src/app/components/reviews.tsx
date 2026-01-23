@@ -83,7 +83,7 @@ export function Reviews() {
               className="md:hidden w-full text-sm text-white/90 py-2 flex items-center justify-center border-t border-white/20 mt-2"
               onClick={() => setIsAirbnbExpanded(!isAirbnbExpanded)}
             >
-              {isAirbnbExpanded ? 'Hide Details' : 'Show Details'}
+              {isAirbnbExpanded ? t.common.hideDetails : t.common.showDetails}
               <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${isAirbnbExpanded ? 'rotate-180' : ''}`} />
             </button>
             
@@ -125,7 +125,7 @@ export function Reviews() {
               className="md:hidden w-full text-sm text-white/90 py-2 flex items-center justify-center border-t border-white/20 mt-2"
               onClick={() => setIsTripAdvisorExpanded(!isTripAdvisorExpanded)}
             >
-              {isTripAdvisorExpanded ? 'Hide Details' : 'Show Details'}
+              {isTripAdvisorExpanded ? t.common.hideDetails : t.common.showDetails}
               <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${isTripAdvisorExpanded ? 'rotate-180' : ''}`} />
             </button>
             
@@ -167,10 +167,10 @@ export function Reviews() {
                         <Star key={star} className="w-4 h-4 fill-[#f58220] text-[#f58220]" />
                       ))}
                     </div>
-                    <p className="text-gray-700 text-sm mb-3 italic leading-relaxed">
+                    <p className="text-gray-700 text-base mb-3 italic leading-relaxed">
                       "{review.text}"
                     </p>
-                    <p className="text-xs text-gray-600">— {review.author}</p>
+                    <p className="text-sm text-gray-600">— {review.author}</p>
                   </div>
                 </div>
               ))}

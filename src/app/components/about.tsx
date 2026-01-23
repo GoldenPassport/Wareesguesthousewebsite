@@ -67,7 +67,7 @@ export function About() {
             <div className="bg-[#b3dce6]/20 p-5 rounded-lg">
               <ul className="space-y-2.5">
                 {t.about.rightForYou.map((item, index) => (
-                  <li key={index} className="flex items-start text-gray-700 text-sm">
+                  <li key={index} className="flex items-start text-gray-700 text-base">
                     <span className="text-[#f58220] mr-2 text-base flex-shrink-0 mt-0.5">✓</span>
                     <span className="leading-snug">{item}</span>
                   </li>
@@ -78,7 +78,7 @@ export function About() {
             <div className="bg-gray-50 p-5 rounded-lg border-2 border-gray-200">
               <ul className="space-y-2.5">
                 {t.about.notRight.map((item, index) => (
-                  <li key={index} className="flex items-start text-gray-600 text-sm">
+                  <li key={index} className="flex items-start text-gray-600 text-base">
                     <span className="text-gray-400 mr-2 text-base flex-shrink-0 mt-0.5">•</span>
                     <span className="leading-snug">{item}</span>
                   </li>

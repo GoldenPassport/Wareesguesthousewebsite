@@ -8,6 +8,7 @@ import { useState } from 'react';
 export function Location() {
   const { language } = useLanguage();
   const t = translations[language].location;
+  const common = translations[language].common;
   const [isRecommendedExpanded, setIsRecommendedExpanded] = useState(false);
   const [expandedTransport, setExpandedTransport] = useState<number | null>(null);
 
@@ -94,7 +95,7 @@ export function Location() {
             className="md:hidden w-full text-sm text-white/90 py-2 flex items-center justify-center border-t border-white/20 mt-3"
             onClick={() => setIsRecommendedExpanded(!isRecommendedExpanded)}
           >
-            {isRecommendedExpanded ? 'Hide Details' : 'Show Details'}
+            {isRecommendedExpanded ? common.hideDetails : common.showDetails}
             <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${isRecommendedExpanded ? 'rotate-180' : ''}`} />
           </button>
           
