@@ -21,9 +21,10 @@ function figmaAssetsPlugin() {
       // Handle the virtual module we created in resolveId
       if (id.startsWith('\0figma-asset:')) {
         const filename = id.replace('\0figma-asset:', '')
-        const assetPath = path.resolve(__dirname, './src/app/assets', filename)
-        // Return an import statement that Vite can process as a regular asset
-        return `export default new URL(${JSON.stringify(assetPath)}, import.meta.url).href`
+        // Use a relative import path that Vite can resolve and bundle
+        const importPath = './src/app/assets/' + filename
+        // Return an import statement with ?url to get the asset URL
+        return `import asset from ${JSON.stringify(importPath + '?url')}; export default asset;`
       }
       return null
     },
