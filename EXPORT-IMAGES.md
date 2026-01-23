@@ -2,15 +2,7 @@
 
 **IMPORTANT:** These images must be exported from Figma Make and placed in `/src/assets/` before deploying to Vercel.
 
-## ⚠️ Critical Workflow Notes
-
-**DO NOT sync images through Figma Make → GitHub sync!** This can corrupt binary files.
-
-**Correct workflow:**
-1. Download images directly from Figma Make (running in browser)
-2. Save to your **local** `/src/assets/` folder
-3. Commit and push from your **local git repository** using standard git commands
-4. Vercel will automatically deploy from GitHub
+**NEW:** The Vite build plugin now auto-converts between `.png` and `.jpg` extensions! Export images in either format - the build will handle extension mismatches automatically.
 
 ## Quick Export Method (Recommended)
 
@@ -24,17 +16,20 @@
 Copy each filename exactly (case-sensitive):
 
 ### Logo (1 image)
+
 ```
 302a78d8be4e75fe5f3bef65f80ada9b7aeb0688.png
 ```
 
 ### About Section (2 images)
+
 ```
 d873a09b9daa74b19fd6bfcd9d5107923506e80f.png
 a63fc3fbb80d4ad73ddfeba588e73e49fdf50c84.png
 ```
 
 ### Rooms Gallery (9 images)
+
 ```
 fe90856b4d0401840ae1c7eae87b65bf4a9d0967.png
 c8eb8834474b6ee7e9b14931d4731257b7f460f4.png
@@ -48,6 +43,7 @@ aaeceff6fe165faa2028b5c18597728bddcf2ac4.png
 ```
 
 ### Photo Gallery (8 images)
+
 ```
 fd44587c767eb50f2741b29b66410e6e33ab7e5b.png
 56c596cd5a33949f5e17a640ea10e1226770ea89.png
