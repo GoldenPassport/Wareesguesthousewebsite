@@ -1,20 +1,30 @@
 # Vercel Deployment Guide for Waree's Guesthouse Website
 
-## ✅ Pre-Deployment Checklist Complete
+## ✅ Automatic figma:asset Handling
 
-All `figma:asset` imports have been replaced with standard image imports from `/src/assets/images.ts`.
+The website now includes a Vite plugin that automatically transforms `figma:asset` imports for Vercel deployment!
+
+### How It Works:
+- **In Figma Make (dev)**: `figma:asset` imports work natively
+- **In Vercel (production)**: The plugin transforms them to load from `/src/app/assets/`
 
 ## 🚀 Deploy to Vercel
 
-### Step 1: Commit Changes to Git
+### Step 1: Add Image Files
+
+1. Export all images from your Figma file (or download from Figma Make)
+2. Place them in `/src/app/assets/` with the exact filenames shown in `/src/app/assets/README.md`
+3. See the README for the complete list of required filenames
+
+### Step 2: Commit Changes to Git
 
 ```bash
 git add .
-git commit -m "Fixed Vercel deployment - replaced figma:asset imports"
+git commit -m "Add image assets for Vercel deployment"
 git push origin main
 ```
 
-### Step 2: Deploy on Vercel
+### Step 3: Deploy on Vercel
 
 1. Go to your Vercel dashboard
 2. Click **"Deploy"** on the deployment configuration screen
@@ -22,48 +32,40 @@ git push origin main
    - Pull the latest code from GitHub
    - Run `npm install`
    - Run `npm run build` (or `vite build`)
+   - The Vite plugin transforms all `figma:asset` imports
    - Deploy the `dist` folder
 
-### Step 3: Verify Deployment
+### Step 4: Verify Deployment
 
 Once deployed, verify:
 - ✅ Website loads correctly
-- ✅ All images display (currently using placeholder images from Unsplash)
+- ✅ All images display from `/src/app/assets/`
 - ✅ Language switcher works
 - ✅ Cookie consent banner appears
 - ✅ All navigation and links work
 
-## 📸 Important: Replace Placeholder Images
+## 📸 Image Assets Setup
 
-The current deployment uses **placeholder images from Unsplash**. For the final production site:
+Before deployment, ensure all image files are in `/src/app/assets/`:
 
-1. **Collect your actual photos**:
-   - Logo (120x120px recommended)
-   - Host/family photos
-   - Room photos
-   - Beach and activity photos
-   - Guesthouse exterior photos
+**Required files** (20 total):
+- Logo: 1 file
+- Host photos: 2 files  
+- Room photos: 9 files
+- Activity photos: 4 files
+- Guesthouse photos: 4 files
 
-2. **Update `/src/assets/images.ts`**:
-   - Replace all Unsplash URLs with your actual image URLs
-   - Or upload images to a CDN (like Cloudinary, imgix, or Vercel itself)
-
-3. **Example**:
-```typescript
-// Replace this:
-export const logo = "https://images.unsplash.com/...";
-
-// With your actual image:
-export const logo = "https://your-cdn.com/waree-logo.png";
-```
+See `/src/app/assets/README.md` for exact filenames.
 
 ## ⚙️ Vercel Configuration
 
-The `vercel.json` file is already configured with:
+The `vercel.json` file is configured with:
 - ✅ Build command: `vite build`
 - ✅ Output directory: `dist`
 - ✅ SPA routing support
 - ✅ Cache optimization for assets
+
+The `vite-plugin-figma-assets.ts` handles automatic import transformation.
 
 ## 🌍 Custom Domain (Optional)
 
@@ -93,7 +95,11 @@ If you add Google Analytics or other services later:
 ✅ Responsive design (mobile & desktop)
 ✅ Fast page loads with Vite
 ✅ Automatic HTTPS on Vercel
+✅ Automatic figma:asset transformation
 
 ## 🎉 You're Ready!
 
-Click **"Deploy"** in Vercel and your site will be live in minutes!
+1. Add image files to `/src/app/assets/`
+2. Commit and push to Git
+3. Click **"Deploy"** in Vercel
+4. Your site will be live in minutes!
