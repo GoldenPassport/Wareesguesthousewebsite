@@ -188,7 +188,7 @@ export function SEOHead() {
       <meta name="twitter:image:alt" content="Waree's Guesthouse Kata Beach Phuket" />
       
       {/* Mobile & Browser Config */}
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
       <meta name="theme-color" content="#0a3d3d" />
       <meta name="msapplication-TileColor" content="#0a3d3d" />
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />

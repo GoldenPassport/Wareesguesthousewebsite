@@ -126,6 +126,17 @@
 
   body {
     @apply bg-background text-foreground;
+    /* Use footer color (#0a3d3d) for safe areas (notch and home indicator bar) */
+    background-color: #0a3d3d;
+    /* Add padding for safe areas */
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Make the main app content have white background */
+  #root {
+    background-color: white;
+    min-height: 100vh;
   }
 
   /**
