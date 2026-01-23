@@ -25,6 +25,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   );
 }
 
+LanguageProvider.displayName = 'LanguageProvider';
+
 export function useLanguage(): LanguageContextType {
   const context = useContext(LanguageContext);
   if (context === undefined) {

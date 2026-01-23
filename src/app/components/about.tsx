@@ -118,3 +118,5 @@ export function About() {
     </section>
   );
 }
+
+About.displayName = 'About';

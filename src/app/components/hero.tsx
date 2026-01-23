@@ -2,7 +2,7 @@ import logo from "figma:asset/302a78d8be4e75fe5f3bef65f80ada9b7aeb0688.png";
 import { LanguageSwitcher } from '@/app/components/language-switcher';
 import { useLanguage } from '@/contexts/language-context';
 import { siteConfig } from '@/config/siteConfig';
-import { Award, Heart, Star } from 'lucide-react';
+import { Award, Heart, Star, Mail } from 'lucide-react';
 
 export function Hero() {
   const { t } = useLanguage();
@@ -22,10 +22,16 @@ export function Hero() {
         <LanguageSwitcher />
       </div>
 
+      {/* Logo - Top Left on Mobile Only */}
+      <div className="absolute top-6 left-6 z-20 sm:hidden">
+        <img src={logo} alt="Waree's Guesthouse Logo" className="w-16 h-16 drop-shadow-2xl rounded-2xl" />
+      </div>
+
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
-        <div className="mb-6 sm:mb-8">
-          <img src={logo} alt="Waree's Guesthouse Logo" className="w-24 h-24 sm:w-32 sm:h-32 mx-auto drop-shadow-2xl rounded-2xl" />
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center pt-24 sm:pt-0">
+        {/* Logo - Centered on Desktop Only */}
+        <div className="hidden sm:block mb-6 sm:mb-8">
+          <img src={logo} alt="Waree's Guesthouse Logo" className="w-32 h-32 mx-auto drop-shadow-2xl rounded-2xl" />
         </div>
         
         <h1 className="text-3xl sm:text-5xl md:text-7xl text-white mb-4 sm:mb-6 drop-shadow-lg leading-tight">
@@ -66,6 +72,13 @@ export function Hero() {
         
         <div className="flex flex-col w-full max-w-md px-4 gap-3 sm:flex-row sm:max-w-none sm:px-0 sm:gap-4 sm:justify-center">
           <a 
+            href={`mailto:${siteConfig.contact.email}`}
+            className="bg-[#b3dce6] hover:bg-[#9cc8d6] text-[#0a3d3d] px-8 py-3 sm:px-10 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl text-center flex items-center justify-center gap-2"
+          >
+            <Mail className="w-5 h-5" />
+            {t.hero.emailButton}
+          </a>
+          <a 
             href={siteConfig.booking.airbnb.url}
             target="_blank" 
             rel="noopener noreferrer"
@@ -86,3 +99,5 @@ export function Hero() {
     </div>
   );
 }
+
+Hero.displayName = 'Hero';
