@@ -1,103 +1,34 @@
 AUTOMATIC FAVICON GENERATION
 ==============================
 
-Your project is now set up to automatically generate all favicon files
-during the build process using a Vite plugin!
+SETUP (One-Time):
+-----------------
+1. Right-click logo in Figma Make → "Save Image As..."
+2. Save to: /src/assets/302a78d8be4e75fe5f3bef65f80ada9b7aeb0688.png
+   (or .jpg - plugin auto-detects format)
+3. Run: npm run build
 
-QUICK SETUP (One-Time)
------------------------
-1. In Figma Make, right-click the logo at the top of your webpage
-2. Click "Save Image As..."
-3. Save it as: logo.png
-4. Place it in the /public/ folder of your project
-5. That's it! Favicons will auto-generate on every build
-
-WHAT HAPPENS AUTOMATICALLY
-----------------------------
-During every build (npm run build), the plugin will:
-✓ Read /public/logo.png as the source
-✓ Generate all required favicon sizes:
-  - favicon.ico (multi-size)
+WHAT IT DOES:
+--------------
+✓ Extracts logo from src/assets/
+✓ Handles base64 decoding if needed
+✓ Auto-converts .png ↔ .jpg
+✓ Generates all favicon sizes:
+  - favicon.ico
   - favicon-16x16.png
   - favicon-32x32.png
-  - apple-touch-icon.png (180x180 for iOS)
-✓ Update site.webmanifest with the correct settings
-✓ Place all files in /public/ folder
+  - apple-touch-icon.png (180x180)
 
-FILES GENERATED
-----------------
-After running 'npm run build', you'll see:
-- /public/favicon.ico
-- /public/favicon-16x16.png
-- /public/favicon-32x32.png
-- /public/apple-touch-icon.png
+FILES ARE ALREADY REFERENCED IN:
+---------------------------------
+/src/app/components/seo-head.tsx
 
-These files are already referenced in /src/app/components/seo-head.tsx
-
-HOW IT WORKS
--------------
-The Vite plugin is configured in /vite.config.ts:
-
-  faviconPlugin({
-    logo: 'public/logo.png',
-    outputPath: 'public',
-  })
-
-The plugin uses the 'favicons' package to generate all sizes from your
-source logo image. This runs automatically during the build process.
-
-CUSTOMIZATION
+CONFIGURATION:
 --------------
-To customize favicon settings (like background color, app name, etc.):
-1. Open /vite-favicon-plugin.ts
-2. Edit the 'configuration' object in the buildStart() function
-3. Current settings:
-   - App Name: "Waree's Guesthouse"
-   - Background: #ffffff (white)
-   - Theme Color: #0a3d3d (teal)
+Edit /vite-favicon-plugin.ts to change:
+- App name
+- Theme color (#0a3d3d)
+- Background (#ffffff)
+- Icon sizes
 
-TESTING
--------
-After building:
-1. Run: npm run build
-2. Check /public/ folder for generated favicon files
-3. Serve the dist folder to test: npx serve dist
-4. Open in browser and check the favicon in the browser tab
-
-DEPLOYMENT
------------
-When you deploy (to Vercel, Netlify, etc.):
-1. Make sure /public/logo.png is committed to your repository
-2. The build process will automatically generate favicons
-3. They'll be included in the deployment
-
-TROUBLESHOOTING
-----------------
-Problem: "Favicon generation failed"
-Solution: Make sure logo.png exists in /public/ folder
-
-Problem: "Logo file not found"
-Solution: Double-check the file is named exactly "logo.png"
-
-Problem: "Favicons not showing up"
-Solution: Hard refresh browser (Ctrl+Shift+R or Cmd+Shift+R)
-          Clear browser cache
-          Check browser dev tools > Network tab for 404 errors
-
-LOGO REQUIREMENTS
-------------------
-- Format: PNG or JPEG
-- Recommended size: 512x512 pixels minimum
-- Square aspect ratio (1:1)
-- Background: Can be transparent (PNG) or solid color
-- The plugin will automatically resize for all favicon sizes
-
-NO MANUAL WORK NEEDED!
------------------------
-Unlike the previous manual approach, you don't need to:
-❌ Use online favicon generators
-❌ Manually create different sizes
-❌ Update manifest files by hand
-❌ Remember to regenerate when logo changes
-
-Just update /public/logo.png and rebuild! 🎉
+NO MANUAL WORK NEEDED - RUNS ON EVERY BUILD!

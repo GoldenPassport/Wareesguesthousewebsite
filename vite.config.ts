@@ -153,10 +153,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
     figmaAssetsPlugin(),
-    // Auto-generate favicons from logo during build
-    // To use: Save logo from Figma Make to /public/logo.png first
+    // Auto-generate favicons from the logo (figma:asset)
+    // Extracts logo from src/assets/ and generates all favicon sizes
     faviconPlugin({
-      logo: 'public/logo.png',
+      logo: 'figma:asset/302a78d8be4e75fe5f3bef65f80ada9b7aeb0688.png',
       outputPath: 'public',
     }),
   ],
