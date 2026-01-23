@@ -1,13 +1,13 @@
 # How to Export Images from Figma Make for Vercel Deployment
 
-**IMPORTANT:** These images must be exported from Figma Make and placed in `/src/app/assets/` before deploying to Vercel.
+**IMPORTANT:** These images must be exported from Figma Make and placed in `/src/assets/` before deploying to Vercel.
 
 ## Quick Export Method (Recommended)
 
 1. **Open Figma Make in your browser** where the website is currently working
 2. **Right-click on any image** on the page → "Save Image As..." or "Open Image in New Tab" → Save
 3. **CRITICAL:** Save each file with its **exact hash filename** (listed below)
-4. **Save all files to** `/src/app/assets/` directory
+4. **Save all files to** `/src/assets/` directory
 
 ## Complete List of 20 Required Images
 
@@ -55,7 +55,7 @@ After adding all images, verify:
 
 ```bash
 # Check you have all 20 files
-ls -1 src/app/assets/*.png | wc -l
+ls -1 src/assets/*.png | wc -l
 # Should output: 20
 ```
 
@@ -64,7 +64,7 @@ ls -1 src/app/assets/*.png | wc -l
 Once all images are in place:
 
 ```bash
-git add src/app/assets/*.png
+git add src/assets/*.png
 git commit -m "Add production images for Vercel deployment"
 git push
 ```

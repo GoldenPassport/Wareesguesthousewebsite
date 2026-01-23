@@ -70,30 +70,36 @@ export function Hero() {
           {t.hero.tagline}
         </p>
         
-        <div className="flex flex-col w-full max-w-md px-4 gap-3 sm:flex-row sm:max-w-none sm:px-0 sm:gap-4 sm:justify-center">
+        {/* CTA Buttons - Email primary on mobile, all buttons on desktop */}
+        <div className="flex flex-col w-full max-w-md px-4 gap-4 sm:flex-row sm:max-w-none sm:px-0 sm:gap-4 sm:justify-center">
+          {/* Primary CTA - Email Us */}
           <a 
             href={`mailto:${siteConfig.contact.email}`}
-            className="bg-[#b3dce6] hover:bg-[#9cc8d6] text-[#0a3d3d] px-8 py-3 sm:px-10 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl text-center flex items-center justify-center gap-2"
+            className="bg-[#b3dce6] hover:bg-[#9cc8d6] text-[#0a3d3d] px-8 py-4 sm:px-10 sm:py-4 rounded-full text-lg sm:text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-2xl text-center flex items-center justify-center gap-2"
           >
             <Mail className="w-5 h-5" />
             {t.hero.emailButton}
           </a>
-          <a 
-            href={siteConfig.booking.airbnb.url}
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="bg-[#f58220] hover:bg-[#d47020] text-white px-8 py-3 sm:px-10 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl text-center"
-          >
-            {t.hero.bookButton}
-          </a>
-          <a 
-            href={siteConfig.reviews.tripadvisor.url}
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="bg-white hover:bg-gray-100 text-[#0a3d3d] px-8 py-3 sm:px-10 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl text-center"
-          >
-            {t.hero.reviewsButton}
-          </a>
+          
+          {/* Secondary CTAs - Text links on mobile, buttons on desktop */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <a 
+              href={siteConfig.booking.airbnb.url}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#f58220] text-base sm:text-lg transition-all duration-300 text-center underline underline-offset-4 sm:no-underline sm:bg-[#f58220] sm:hover:bg-[#d47020] sm:text-white sm:px-10 sm:py-4 sm:rounded-full sm:transform sm:hover:scale-105 sm:shadow-2xl"
+            >
+              {t.hero.bookButton}
+            </a>
+            <a 
+              href={siteConfig.reviews.tripadvisor.url}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#b3dce6] text-base sm:text-lg transition-all duration-300 text-center underline underline-offset-4 sm:no-underline sm:bg-white sm:hover:bg-gray-100 sm:text-[#0a3d3d] sm:px-10 sm:py-4 sm:rounded-full sm:transform sm:hover:scale-105 sm:shadow-2xl"
+            >
+              {t.hero.reviewsButton}
+            </a>
+          </div>
         </div>
       </div>
     </div>
