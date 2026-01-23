@@ -1,4 +1,4 @@
-import { logo } from '@/assets/images';
+import logo from "figma:asset/302a78d8be4e75fe5f3bef65f80ada9b7aeb0688.png";
 import { Mail, Phone, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import { siteConfig } from '@/config/siteConfig';

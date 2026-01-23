@@ -1,4 +1,5 @@
-import { hostPhoto, hostsPhoto } from '@/assets/images';
+import hostPhoto from "figma:asset/d873a09b9daa74b19fd6bfcd9d5107923506e80f.png";
+import hostsPhoto from "figma:asset/a63fc3fbb80d4ad73ddfeba588e73e49fdf50c84.png";
 import { useLanguage } from '@/contexts/language-context';
 import { useState } from 'react';
 

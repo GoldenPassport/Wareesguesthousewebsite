@@ -1,15 +1,13 @@
-import { 
-  hostPhoto, 
-  surfingPhoto, 
-  beachPhoto, 
-  viewpointPhoto, 
-  waterparkPhoto, 
-  guesthouseCourtyard, 
-  guesthouseEntrance, 
-  guesthouseStreetView, 
-  guesthouseFrontSign, 
-  hostsPhoto 
-} from '@/assets/images';
+import hostPhoto from "figma:asset/d873a09b9daa74b19fd6bfcd9d5107923506e80f.png";
+import surfingPhoto from "figma:asset/fd44587c767eb50f2741b29b66410e6e33ab7e5b.png";
+import beachPhoto from "figma:asset/56c596cd5a33949f5e17a640ea10e1226770ea89.png";
+import viewpointPhoto from "figma:asset/4fc2e1b259bb7e4cf3619d1c04678de03d10b74f.png";
+import waterparkPhoto from "figma:asset/5ed0347ef6ba377b3aed014e82457f62f67c3b79.png";
+import guesthouseCourtyard from "figma:asset/9103a84bcde1c52daa2a9cf0281a93994f92a2dc.png";
+import guesthouseEntrance from "figma:asset/5ff9106bea6d26fc1b1053a02cfc36823470b9ce.png";
+import guesthouseStreetView from "figma:asset/87e0980cb43c2b86fabd01026a648813efa362af.png";
+import guesthouseFrontSign from "figma:asset/b5e500c11743141ce9c535bfc9fc16c8222d03ca.png";
+import hostsPhoto from "figma:asset/a63fc3fbb80d4ad73ddfeba588e73e49fdf50c84.png";
 import { Camera } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import { siteConfig } from '@/config/siteConfig';

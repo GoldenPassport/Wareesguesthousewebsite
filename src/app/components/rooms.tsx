@@ -4,17 +4,15 @@ import { Building2 } from 'lucide-react';
 import { siteConfig } from '@/config/siteConfig';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback, useEffect, useState } from 'react';
-import { 
-  bathroomShower, 
-  bathroomSink, 
-  balconyView, 
-  balconySeating, 
-  kingBedRoom, 
-  roomAmenities, 
-  roomWithMirror, 
-  roomAmenitiesWide, 
-  fullRoomView 
-} from '@/assets/images';
+import bathroomShower from 'figma:asset/fe90856b4d0401840ae1c7eae87b65bf4a9d0967.png';
+import bathroomSink from 'figma:asset/c8eb8834474b6ee7e9b14931d4731257b7f460f4.png';
+import balconyView from 'figma:asset/afcf207372169cde9fed998c2cab3df10bf19418.png';
+import balconySeating from 'figma:asset/4ef3e0d03f87cafbc8eaaaea75adf4ec188f3ab3.png';
+import kingBedRoom from 'figma:asset/ae87d5913824777f33e1cf7b1aa5bb9ff9e76937.png';
+import roomAmenities from 'figma:asset/e624635e32d87a6ef0d6605d63e4816d15a69a0a.png';
+import roomWithMirror from 'figma:asset/b94d4d20d14168f3e5fed1c480d0c31daa2cf4cc.png';
+import roomAmenitiesWide from 'figma:asset/7535206b35eef49ec344fb3a87c9dd37de145c2e.png';
+import fullRoomView from 'figma:asset/aaeceff6fe165faa2028b5c18597728bddcf2ac4.png';
 
 export function Rooms() {
   const { t } = useLanguage();
