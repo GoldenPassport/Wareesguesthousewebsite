@@ -4,7 +4,7 @@
 
 ✅ **Vite plugin enhanced** with auto-conversion between `.png` ↔ `.jpg`  
 ✅ **Base64 corruption detection** built into build process  
-✅ **Auto-fix script available** at `/scripts/fix_image_assets.js`  
+✅ **Auto-fix script available** at `/scripts/fix_image_assets.js` (ES Module)  
 ✅ **Git binary handling configured** in `.gitattributes`
 
 ## 🚀 Deploy Workflow

@@ -7,7 +7,6 @@
     "build": "vite build",
     "verify-images": "bash scripts/verify-images.sh",
     "fix-images": "node scripts/fix_image_assets.js",
-    "prebuild": "node scripts/fix_image_assets.js || true",
     "dev": "vite"
   },
   "dependencies": {

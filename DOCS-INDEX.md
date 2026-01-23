@@ -14,6 +14,16 @@
   - Required file list (20 images)
   - Key features summary
 
+**[VERCEL-FIX.md](./VERCEL-FIX.md)** ⭐ NEW
+- ⏱️ **Read time:** 2 minutes
+- 🎯 **For:** Understanding the ES module fix for Vercel
+- 📋 **Contains:**
+  - What error occurred
+  - What was fixed (CommonJS → ES modules)
+  - How to deploy now
+  - Updated npm scripts
+  - Next steps
+
 ---
 
 ### 📖 Main Documentation
@@ -311,4 +321,4 @@ You now have access to **comprehensive documentation** covering:
 
 **Last Updated:** January 2025  
 **Project:** Waree's Guesthouse Website  
-**Tech:** Figma Make → GitHub → Vercel  
+**Tech:** Figma Make → GitHub → Vercel
