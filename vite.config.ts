@@ -12,7 +12,18 @@ function figmaAssetsPlugin() {
       // Only transform in production builds, not in Figma Make dev mode
       if (process.env.NODE_ENV === 'production' && id.startsWith('figma:asset/')) {
         const filename = id.replace('figma:asset/', '')
-        return path.resolve(__dirname, './src/app/assets', filename)
+        // Return a virtual module ID that we'll handle in load()
+        return '\0figma-asset:' + filename
+      }
+      return null
+    },
+    load(id: string) {
+      // Handle the virtual module we created in resolveId
+      if (id.startsWith('\0figma-asset:')) {
+        const filename = id.replace('\0figma-asset:', '')
+        const assetPath = path.resolve(__dirname, './src/app/assets', filename)
+        // Return an import statement that Vite can process as a regular asset
+        return `export default new URL(${JSON.stringify(assetPath)}, import.meta.url).href`
       }
       return null
     },
