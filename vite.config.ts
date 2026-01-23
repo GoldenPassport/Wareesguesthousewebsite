@@ -24,6 +24,19 @@ function figmaAssetsPlugin() {
         const filename = id.replace('\0figma-asset:', '')
         const assetPath = path.resolve(__dirname, './src/app/assets', filename)
         
+        // Check if file exists
+        if (!fs.existsSync(assetPath)) {
+          this.error(
+            `Missing asset file: ${filename}\n\n` +
+            `Expected location: /src/app/assets/${filename}\n\n` +
+            `To fix this:\n` +
+            `1. In Figma Make, right-click the image and select "Save Image As..."\n` +
+            `2. Save it to /src/app/assets/ with the exact filename: ${filename}\n` +
+            `3. Repeat for all missing images listed in /EXPORT-IMAGES.md\n\n` +
+            `See /EXPORT-IMAGES.md for the complete list of required images.`
+          )
+        }
+        
         // Read the file and emit it as an asset
         const fileBuffer = fs.readFileSync(assetPath)
         const referenceId = this.emitFile({
