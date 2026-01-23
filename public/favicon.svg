@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background -->
+  <rect width="100" height="100" fill="#ffffff" rx="20"/>
+  
+  <!-- Simplified bird shape (teal blue) -->
+  <g transform="translate(20, 25)">
+    <!-- Bird body -->
+    <ellipse cx="25" cy="30" rx="15" ry="20" fill="#6bbdbd"/>
+    
+    <!-- Bird head -->
+    <circle cx="25" cy="15" r="12" fill="#6bbdbd"/>
+    
+    <!-- Wing -->
+    <path d="M 25 25 Q 40 25 45 35 Q 40 30 25 30 Z" fill="#4a9d9d" opacity="0.8"/>
+    
+    <!-- Eye -->
+    <circle cx="27" cy="13" r="2" fill="#000"/>
+    
+    <!-- Beak -->
+    <path d="M 32 15 L 38 15 L 35 17 Z" fill="#f47e3d"/>
+  </g>
+  
+  <!-- Key (orange) -->
+  <g transform="translate(40, 65)">
+    <circle cx="5" cy="5" r="4" fill="none" stroke="#f47e3d" stroke-width="2"/>
+    <rect x="8" y="4" width="12" height="2" fill="#f47e3d"/>
+    <rect x="16" y="2" width="2" height="2" fill="#f47e3d"/>
+    <rect x="18" y="4" width="2" height="2" fill="#f47e3d"/>
+  </g>
+</svg>

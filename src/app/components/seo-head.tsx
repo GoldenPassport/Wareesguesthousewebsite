@@ -1,47 +1,236 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { siteConfig } from '@/config/siteConfig';
 
 export function SEOHead() {
-  // Note: For favicons to work in production, you'll need to place icon files in the public directory
-  // and reference them with absolute paths like /favicon.ico
+  // Get current URL (in production this will be your actual domain)
+  const siteUrl = typeof window !== 'undefined' 
+    ? window.location.origin 
+    : 'https://wareeguesthouse.com';
   
+  const currentUrl = typeof window !== 'undefined' 
+    ? window.location.href 
+    : siteUrl;
+
+  // SEO-optimized description
+  const description = `Experience authentic Thai hospitality at Waree's Guesthouse, a family-run B&B in Kata Beach, Phuket since 2000. AirBNB Superhost with 4.83★ rating and Guest Favorite status. Budget-friendly rooms with AC, WiFi, near beach. Book now!`;
+  
+  const title = "Waree's Guesthouse Kata Beach Phuket | AirBNB Superhost | Budget B&B Thailand";
+  
+  // Structured Data (JSON-LD) for Google
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      // Main Organization/LocalBusiness
+      {
+        "@type": "LodgingBusiness",
+        "@id": `${siteUrl}#business`,
+        "name": siteConfig.business.name,
+        "alternateName": "Waree's Guesthouse Kata Beach",
+        "description": description,
+        "url": siteUrl,
+        "logo": `${siteUrl}/logo.png`,
+        "image": `${siteUrl}/og-image.jpg`,
+        "telephone": siteConfig.contact.phone.international,
+        "email": siteConfig.contact.email,
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": siteConfig.contact.address.street,
+          "addressLocality": siteConfig.contact.address.subdistrict,
+          "addressRegion": siteConfig.contact.address.province,
+          "postalCode": siteConfig.contact.address.postalCode,
+          "addressCountry": "TH"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": siteConfig.location.latitude,
+          "longitude": siteConfig.location.longitude
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "starRating": {
+          "@type": "Rating",
+          "ratingValue": siteConfig.stats.airbnb.rating,
+          "bestRating": "5"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": siteConfig.stats.airbnb.rating,
+          "reviewCount": siteConfig.stats.airbnb.reviewCount + siteConfig.stats.tripadvisor.reviewCount,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "amenityFeature": [
+          { "@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Pet Friendly", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Family Friendly", "value": true }
+        ],
+        "sameAs": [
+          siteConfig.social.facebook.url,
+          siteConfig.booking.airbnb.url,
+          siteConfig.reviews.tripadvisor.url
+        ]
+      },
+      // Website
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}#website`,
+        "url": siteUrl,
+        "name": siteConfig.business.name,
+        "description": description,
+        "publisher": {
+          "@id": `${siteUrl}#business`
+        },
+        "inLanguage": ["en", "th", "zh", "ru", "de", "it", "sv", "fi"]
+      },
+      // WebPage
+      {
+        "@type": "WebPage",
+        "@id": `${currentUrl}#webpage`,
+        "url": currentUrl,
+        "name": title,
+        "description": description,
+        "isPartOf": {
+          "@id": `${siteUrl}#website`
+        },
+        "about": {
+          "@id": `${siteUrl}#business`
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": `${siteUrl}/og-image.jpg`
+        },
+        "inLanguage": "en"
+      },
+      // BreadcrumbList
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${siteUrl}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": siteUrl
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Kata Beach Hotels",
+            "item": `${siteUrl}#hotels`
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Waree's Guesthouse",
+            "item": currentUrl
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
-      <title>Waree's Guesthouse - Your Family Away from Home in Kata Beach, Phuket</title>
-      <meta 
-        name="description" 
-        content="Experience authentic Thai hospitality at Waree's Guesthouse in Kata Beach, Phuket. Family-run B&B since 2000 with excellent reviews, Superhost status, and 4.83 rating. Budget-friendly accommodation near the beach." 
-      />
+      {/* Primary Meta Tags */}
+      <html lang="en" />
+      <title>{title}</title>
+      <meta name="title" content={title} />
+      <meta name="description" content={description} />
+      <link rel="canonical" href={currentUrl} />
+      
+      {/* Keywords - Important for SEO */}
+      <meta name="keywords" content="Waree's Guesthouse, Kata Beach hotel, Phuket accommodation, Thailand B&B, budget hotel Phuket, guesthouse Kata, AirBNB Phuket, Superhost, family run hotel, cheap hotel Phuket, Kata Beach B&B, Phuket guesthouse, beach accommodation Thailand, Kata Beach lodging, affordable hotel Phuket, 2 star hotel, guest house near beach, Phuket budget stay, Kata accommodation" />
+      
+      {/* Author & Publisher */}
+      <meta name="author" content="Waree's Guesthouse" />
+      <meta name="publisher" content="Waree's Guesthouse" />
+      
+      {/* Robots - Critical for Google Indexing */}
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <meta name="googlebot" content="index, follow" />
+      <meta name="bingbot" content="index, follow" />
+      
+      {/* Geographic Meta Tags */}
+      <meta name="geo.region" content="TH-83" />
+      <meta name="geo.placename" content="Kata Beach, Phuket, Thailand" />
+      <meta name="geo.position" content={`${siteConfig.location.latitude};${siteConfig.location.longitude}`} />
+      <meta name="ICBM" content={`${siteConfig.location.latitude}, ${siteConfig.location.longitude}`} />
+      
+      {/* Language & Region */}
+      <meta name="language" content="English" />
+      <meta httpEquiv="content-language" content="en" />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="Waree's Guesthouse - Kata Beach, Phuket" />
-      <meta 
-        property="og:description" 
-        content="Your family away from home in Kata Beach. Budget-friendly B&B with authentic Thai hospitality since 2000." 
-      />
-      <meta property="og:site_name" content="Waree's Guesthouse" />
+      <meta property="og:url" content={currentUrl} />
+      <meta property="og:site_name" content={siteConfig.business.name} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={`${siteUrl}/og-image.jpg`} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="Waree's Guesthouse Kata Beach Phuket" />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:locale:alternate" content="th_TH" />
       
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:title" content="Waree's Guesthouse - Kata Beach, Phuket" />
-      <meta 
-        name="twitter:description" 
-        content="Your family away from home in Kata Beach. Budget-friendly B&B with authentic Thai hospitality since 2000." 
-      />
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content={currentUrl} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={`${siteUrl}/og-image.jpg`} />
+      <meta name="twitter:image:alt" content="Waree's Guesthouse Kata Beach Phuket" />
       
-      {/* Additional SEO Meta Tags */}
-      <meta name="keywords" content="Waree's Guesthouse, Kata Beach, Phuket, Thailand, B&B, accommodation, budget hotel, guesthouse, Superhost, AirBNB, family-run, beach hotel" />
-      <meta name="author" content="Waree's Guesthouse" />
-      <meta name="robots" content="index, follow" />
-      <meta name="language" content="English" />
-      <meta name="geo.region" content="TH-83" />
-      <meta name="geo.placename" content="Kata Beach, Phuket" />
-      <meta name="geo.position" content="7.837000;98.300000" />
-      
-      {/* Theme Color */}
+      {/* Mobile & Browser Config */}
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       <meta name="theme-color" content="#0a3d3d" />
       <meta name="msapplication-TileColor" content="#0a3d3d" />
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Waree's Guesthouse" />
+      
+      {/* Favicons */}
+      <link rel="icon" href="/favicon.ico" sizes="any" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      
+      {/* Alternate Languages for SEO */}
+      <link rel="alternate" hrefLang="en" href={currentUrl} />
+      <link rel="alternate" hrefLang="th" href={`${currentUrl}?lang=th`} />
+      <link rel="alternate" hrefLang="zh" href={`${currentUrl}?lang=zh`} />
+      <link rel="alternate" hrefLang="ru" href={`${currentUrl}?lang=ru`} />
+      <link rel="alternate" hrefLang="de" href={`${currentUrl}?lang=de`} />
+      <link rel="alternate" hrefLang="it" href={`${currentUrl}?lang=it`} />
+      <link rel="alternate" hrefLang="sv" href={`${currentUrl}?lang=sv`} />
+      <link rel="alternate" hrefLang="fi" href={`${currentUrl}?lang=fi`} />
+      <link rel="alternate" hrefLang="x-default" href={currentUrl} />
+      
+      {/* Structured Data (JSON-LD) */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
+      
+      {/* Additional SEO Tags */}
+      <meta name="rating" content="General" />
+      <meta name="distribution" content="global" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="classification" content="Hotels & Accommodation" />
+      <meta name="category" content="Travel, Hotels, Accommodation" />
+      
+      {/* Verification Tags (Add these when you set up in Google/Bing) */}
+      {/* <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" /> */}
+      {/* <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE" /> */}
+      {/* <meta name="facebook-domain-verification" content="YOUR_FB_VERIFICATION_CODE" /> */}
     </Helmet>
   );
 }
