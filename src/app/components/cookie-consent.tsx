@@ -19,22 +19,40 @@ export function CookieConsent() {
     }
   }, []);
 
+  // Cleanup: restore body scroll when modal closes or component unmounts
+  useEffect(() => {
+    if (!showPolicy) {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [showPolicy]);
+
   const handleAccept = () => {
     localStorage.setItem('cookie-consent', 'accepted');
     setIsVisible(false);
+    if (showPolicy) {
+      document.body.style.overflow = '';
+    }
   };
 
   const handleDecline = () => {
     localStorage.setItem('cookie-consent', 'declined');
     setIsVisible(false);
+    if (showPolicy) {
+      document.body.style.overflow = '';
+    }
   };
 
   const handleShowPolicy = () => {
     setShowPolicy(true);
+    document.body.style.overflow = 'hidden';
   };
 
   const handleClosePolicy = () => {
     setShowPolicy(false);
+    document.body.style.overflow = '';
   };
 
   if (!isVisible) return null;

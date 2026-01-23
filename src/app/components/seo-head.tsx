@@ -192,7 +192,7 @@ export function SEOHead() {
       <meta name="theme-color" content="#0a3d3d" />
       <meta name="msapplication-TileColor" content="#0a3d3d" />
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Waree's Guesthouse" />
       
