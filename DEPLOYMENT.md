@@ -1,105 +1,108 @@
-# Vercel Deployment Guide for Waree's Guesthouse Website
+# Deployment Workflow for Waree's Guesthouse Website
 
-## ✅ Automatic figma:asset Handling
+## 🚨 Important: Image Corruption Issue
 
-The website now includes a Vite plugin that automatically transforms `figma:asset` imports for Vercel deployment!
+**Problem:** When using Figma Make's built-in "Sync to GitHub" feature, binary image files (PNG, JPG, etc.) can become corrupted.
 
-### How It Works:
-- **In Figma Make (dev)**: `figma:asset` imports work natively
-- **In Vercel (production)**: The plugin transforms them to load from `/src/app/assets/`
+**Solution:** Always use the manual workflow below.
 
-## 🚀 Deploy to Vercel
+## ✅ Correct Deployment Workflow
 
-### Step 1: Add Image Files
+### Step 1: Export Images from Figma Make (One-time setup)
 
-1. Export all images from your Figma file (or download from Figma Make)
-2. Place them in `/src/app/assets/` with the exact filenames shown in `/src/app/assets/README.md`
-3. See the README for the complete list of required filenames
+1. **Open the website in Figma Make** (in your browser where it's working correctly)
+2. **Right-click each image** → "Save Image As..." or "Open Image in New Tab" → Save
+3. **Save to your LOCAL repository** at `/src/assets/` with exact hash filenames
+4. See `/EXPORT-IMAGES.md` for the complete list of 20 required image filenames
 
-### Step 2: Commit Changes to Git
+### Step 2: Sync Code Changes from Figma Make
+
+When you make code changes in Figma Make:
+
+**Option A: Manual File Copy (Recommended for binary files)**
+1. Copy the changed code files from Figma Make
+2. Paste into your local repository
+3. Proceed to Step 3
+
+**Option B: Use Figma Make Sync (OK for code, NOT for images)**
+1. Use Figma Make's "Sync to GitHub" feature
+2. **BEFORE deploying**, verify images in `/src/assets/` are not corrupted:
+   ```bash
+   # Check file sizes - they should be reasonable (not 0 bytes or tiny)
+   ls -lh src/assets/*.png
+   ```
+3. **If images are corrupted**, re-copy them from your local backup or re-download from Figma Make
+
+### Step 3: Deploy from Local Repository
+
+From your local git repository:
 
 ```bash
+# Verify you're on the main branch
+git status
+
+# Add all changes (code + images)
 git add .
-git commit -m "Add image assets for Vercel deployment"
+
+# Commit with a descriptive message
+git commit -m "Update website content and images"
+
+# Push to GitHub
 git push origin main
 ```
 
-### Step 3: Deploy on Vercel
+### Step 4: Vercel Auto-Deploy
 
-1. Go to your Vercel dashboard
-2. Click **"Deploy"** on the deployment configuration screen
-3. Vercel will automatically:
-   - Pull the latest code from GitHub
-   - Run `npm install`
-   - Run `npm run build` (or `vite build`)
-   - The Vite plugin transforms all `figma:asset` imports
-   - Deploy the `dist` folder
+Vercel will automatically detect the GitHub push and deploy your changes.
 
-### Step 4: Verify Deployment
+## 🔧 Troubleshooting
 
-Once deployed, verify:
-- ✅ Website loads correctly
-- ✅ All images display from `/src/app/assets/`
-- ✅ Language switcher works
-- ✅ Cookie consent banner appears
-- ✅ All navigation and links work
+### Images not loading on Vercel deployment?
 
-## 📸 Image Assets Setup
+1. **Check image files exist locally:**
+   ```bash
+   ls -1 src/assets/*.png | wc -l
+   # Should return: 20
+   ```
 
-Before deployment, ensure all image files are in `/src/app/assets/`:
+2. **Check file sizes are reasonable:**
+   ```bash
+   ls -lh src/assets/*.png
+   # Each file should be multiple KB or MB, not 0 bytes
+   ```
 
-**Required files** (20 total):
-- Logo: 1 file
-- Host photos: 2 files  
-- Room photos: 9 files
-- Activity photos: 4 files
-- Guesthouse photos: 4 files
+3. **Verify images are committed to git:**
+   ```bash
+   git ls-files src/assets/*.png | wc -l
+   # Should return: 20
+   ```
 
-See `/src/app/assets/README.md` for exact filenames.
+4. **If images are corrupted or missing:**
+   - Re-download them from Figma Make (see Step 1)
+   - Commit and push again
 
-## ⚙️ Vercel Configuration
+### Binary files getting corrupted?
 
-The `vercel.json` file is configured with:
-- ✅ Build command: `vite build`
-- ✅ Output directory: `dist`
-- ✅ SPA routing support
-- ✅ Cache optimization for assets
+The `.gitattributes` file ensures binary files are handled correctly:
 
-The `vite-plugin-figma-assets.ts` handles automatic import transformation.
+```gitattributes
+*.png binary
+*.jpg binary
+*.jpeg binary
+```
 
-## 🌍 Custom Domain (Optional)
+This tells git to never perform text conversion on these files.
 
-To add a custom domain like `wareeguesthouse.com`:
+## 📦 What Gets Deployed
 
-1. Go to your Vercel project settings
-2. Click **"Domains"**
-3. Add your custom domain
-4. Follow DNS configuration instructions
-5. Wait for SSL certificate provisioning (automatic)
+- **Source code:** `/src/**/*.tsx`, `/src/**/*.ts`, `/src/**/*.css`
+- **Images:** `/src/assets/*.png` (20 files)
+- **Config:** `/vite.config.ts`, `/package.json`, `/tsconfig.json`
+- **Public assets:** Any files in `/public/` if they exist
 
-## 🔧 Environment Variables (If Needed)
+## 🎯 Summary
 
-If you add Google Analytics or other services later:
-
-1. Go to Vercel project **Settings** → **Environment Variables**
-2. Add variables like:
-   - `VITE_GA_TRACKING_ID`
-   - `VITE_API_KEY`
-3. Redeploy for changes to take effect
-
-## 📱 Features Included
-
-✅ Multi-language support (8 languages)
-✅ Cookie consent system
-✅ SEO optimization with meta tags
-✅ Responsive design (mobile & desktop)
-✅ Fast page loads with Vite
-✅ Automatic HTTPS on Vercel
-✅ Automatic figma:asset transformation
-
-## 🎉 You're Ready!
-
-1. Add image files to `/src/app/assets/`
-2. Commit and push to Git
-3. Click **"Deploy"** in Vercel
-4. Your site will be live in minutes!
+**Golden Rule:** 
+- ✅ Code changes: Can sync through Figma Make
+- ❌ Image files: NEVER sync through Figma Make, always handle via local git
+- ✅ Deployment: Always push from local git repository to GitHub → Vercel auto-deploys

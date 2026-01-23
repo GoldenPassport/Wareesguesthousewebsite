@@ -2,6 +2,16 @@
 
 **IMPORTANT:** These images must be exported from Figma Make and placed in `/src/assets/` before deploying to Vercel.
 
+## ⚠️ Critical Workflow Notes
+
+**DO NOT sync images through Figma Make → GitHub sync!** This can corrupt binary files.
+
+**Correct workflow:**
+1. Download images directly from Figma Make (running in browser)
+2. Save to your **local** `/src/assets/` folder
+3. Commit and push from your **local git repository** using standard git commands
+4. Vercel will automatically deploy from GitHub
+
 ## Quick Export Method (Recommended)
 
 1. **Open Figma Make in your browser** where the website is currently working
