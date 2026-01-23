@@ -189,8 +189,8 @@ export function SEOHead() {
       
       {/* Mobile & Browser Config */}
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
-      <meta name="theme-color" content="#3c463f" />
-      <meta name="msapplication-TileColor" content="#3c463f" />
+      <meta name="theme-color" content="#545041" />
+      <meta name="msapplication-TileColor" content="#545041" />
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />

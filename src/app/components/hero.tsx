@@ -15,7 +15,7 @@ export function Hero() {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url('https://images.unsplash.com/photo-1634272967254-4d4b307bc351?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaHVrZXQlMjBiZWFjaCUyMHN1bnNldHxlbnwxfHx8fDE3NjkxNzEzMjh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral')` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#3c463f]/70 via-black/30 to-[#3c463f]/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#545041]/70 via-black/30 to-[#545041]/80" />
       </div>
 
       {/* Language Switcher - Top Right */}
