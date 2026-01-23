@@ -102,9 +102,9 @@ export function ThingsToDo() {
 
         {/* Things to Do & Sights */}
         <div className="mb-16">
-          <div className="flex items-center gap-3 mb-8">
-            <Camera className="w-8 h-8 text-[#f58220]" />
-            <h3 className="text-3xl text-[#0a3d3d]">{t.thingsToDo.attractionsTitle}</h3>
+          <div className="flex items-center justify-center md:justify-start gap-3 mb-8">
+            <Camera className="w-6 h-6 sm:w-8 sm:h-8 text-[#f58220] flex-shrink-0" />
+            <h3 className="text-xl sm:text-2xl md:text-3xl text-[#0a3d3d] leading-tight">{t.thingsToDo.attractionsTitle}</h3>
           </div>
           
           {/* Mobile Carousel */}
@@ -170,9 +170,9 @@ export function ThingsToDo() {
 
         {/* Nearby Conveniences */}
         <div>
-          <div className="flex items-center gap-3 mb-8">
-            <MapPin className="w-8 h-8 text-[#f58220]" />
-            <h3 className="text-3xl text-[#0a3d3d]">{t.thingsToDo.conveniencesTitle}</h3>
+          <div className="flex items-center justify-center md:justify-start gap-3 mb-8">
+            <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-[#f58220] flex-shrink-0" />
+            <h3 className="text-xl sm:text-2xl md:text-3xl text-[#0a3d3d] leading-tight">{t.thingsToDo.conveniencesTitle}</h3>
           </div>
 
           {/* Mobile Carousel */}

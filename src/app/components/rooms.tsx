@@ -146,15 +146,15 @@ export function Rooms() {
         </div>
         
         {/* Additional accommodation options */}
-        <div className="mt-12 bg-white rounded-lg p-8 max-w-2xl mx-auto text-center border-2 border-[#b3dce6]">
+        <div className="mt-12 bg-white rounded-lg p-8 max-w-2xl mx-auto text-center border-2 border-[#b3dce6] px-4 sm:px-8">
           <Mail className="w-12 h-12 text-[#f58220] mx-auto mb-4" />
-          <h3 className="text-xl text-[#0a3d3d] mb-3">{t.rooms.needMoreSpace}</h3>
-          <p className="text-gray-600 mb-4">
+          <h3 className="text-xl text-[#0a3d3d] mb-3 text-center">{t.rooms.needMoreSpace}</h3>
+          <p className="text-gray-600 mb-4 text-center">
             {t.rooms.moreSpaceDesc}
           </p>
           <a 
             href={`mailto:${siteConfig.contact.email}`}
-            className="inline-block text-[#f58220] hover:text-[#d47020] transition-colors"
+            className="inline-block text-[#f58220] hover:text-[#d47020] transition-colors text-center break-all"
           >
             {siteConfig.contact.email}
           </a>

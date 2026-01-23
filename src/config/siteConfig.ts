@@ -41,8 +41,8 @@ export const siteConfig = {
     longitude: 98.3000,
     // Google Maps Embed URL (using coordinates)
     googleMapsEmbedUrl: "https://maps.google.com/maps?q=7.8167,98.3000&hl=en&z=15&output=embed",
-    // Google Maps Directions URL
-    googleMapsDirectionsUrl: "https://www.google.com/maps/dir//7.8167,98.3000",
+    // Google Maps Directions URL (from Phuket International Airport to the guesthouse)
+    googleMapsDirectionsUrl: "https://www.google.com/maps/dir/Phuket+International+Airport,+222,+Mai+Khao,+Thalang+District,+Phuket+83110,+Thailand/7.8167,98.3000",
     // Airport Information
     airport: {
       name: "Phuket International Airport",
