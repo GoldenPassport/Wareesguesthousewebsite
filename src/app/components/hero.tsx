@@ -3,6 +3,7 @@ import { LanguageSwitcher } from '@/app/components/language-switcher';
 import { useLanguage } from '@/contexts/language-context';
 import { siteConfig } from '@/config/siteConfig';
 import { Award, Heart, Star, Mail } from 'lucide-react';
+import { trackEvent } from '@/app/components/analytics';
 
 export function Hero() {
   const { t } = useLanguage();
@@ -75,6 +76,7 @@ export function Hero() {
           {/* Primary CTA - Email Us */}
           <a 
             href={`mailto:${siteConfig.contact.email}`}
+            onClick={() => trackEvent.contactClick('email')}
             className="bg-[#b3dce6] hover:bg-[#9cc8d6] text-[#0a3d3d] px-8 py-4 sm:px-10 sm:py-4 rounded-full text-lg sm:text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-2xl text-center flex items-center justify-center gap-2"
           >
             <Mail className="w-5 h-5" />
@@ -87,6 +89,7 @@ export function Hero() {
               href={siteConfig.booking.airbnb.url}
               target="_blank" 
               rel="noopener noreferrer"
+              onClick={() => trackEvent.bookingClick('airbnb')}
               className="text-white hover:text-[#f58220] text-base sm:text-lg transition-all duration-300 text-center underline underline-offset-4 sm:no-underline sm:bg-[#f58220] sm:hover:bg-[#d47020] sm:text-white sm:px-10 sm:py-4 sm:rounded-full sm:transform sm:hover:scale-105 sm:shadow-2xl"
             >
               {t.hero.bookButton}
@@ -95,6 +98,7 @@ export function Hero() {
               href={siteConfig.reviews.tripadvisor.url}
               target="_blank" 
               rel="noopener noreferrer"
+              onClick={() => trackEvent.socialClick('tripadvisor')}
               className="text-white hover:text-[#b3dce6] text-base sm:text-lg transition-all duration-300 text-center underline underline-offset-4 sm:no-underline sm:bg-white sm:hover:bg-gray-100 sm:text-[#0a3d3d] sm:px-10 sm:py-4 sm:rounded-full sm:transform sm:hover:scale-105 sm:shadow-2xl"
             >
               {t.hero.reviewsButton}

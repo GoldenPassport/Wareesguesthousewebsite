@@ -24,6 +24,12 @@ npm run fix-images
 git add .
 git commit -m "Deploy to Vercel"
 git push
+
+# 5. Set up analytics (optional)
+#    Add environment variables in Vercel Dashboard:
+#    - VITE_GA_MEASUREMENT_ID (Google Analytics)
+#    - VITE_FB_PIXEL_ID (Facebook/Instagram Pixel)
+#    See DEPLOYMENT.md for details
 ```
 
 ## 📁 Project Structure

@@ -26,6 +26,64 @@ git push
 
 **That's it!** The build system now automatically handles image format conversions and base64 corruption.
 
+## 🔑 Environment Variables (Analytics)
+
+### Required for Production
+
+Add these environment variables in **Vercel Dashboard** (Project Settings → Environment Variables):
+
+| Variable | Description | Required | Example |
+|----------|-------------|----------|---------|
+| `VITE_GA_MEASUREMENT_ID` | Google Analytics Measurement ID | Optional | `G-XXXXXXXXXX` |
+| `VITE_FB_PIXEL_ID` | Facebook/Instagram Pixel ID | Optional | `1234567890123456` |
+
+### How to Add in Vercel
+
+1. Go to your project in [Vercel Dashboard](https://vercel.com/dashboard)
+2. Navigate to **Settings** → **Environment Variables**
+3. Add each variable:
+   - **Key:** `VITE_GA_MEASUREMENT_ID`
+   - **Value:** Your Google Analytics ID (format: `G-XXXXXXXXXX`)
+   - **Environments:** Select Production, Preview, Development
+4. Repeat for `VITE_FB_PIXEL_ID` with your Facebook Pixel ID
+5. Click **Save**
+6. Redeploy your site (Vercel → Deployments → ⋯ → Redeploy)
+
+### Getting Your Analytics IDs
+
+**Google Analytics:**
+1. Go to [Google Analytics](https://analytics.google.com/)
+2. Create a property for your website
+3. Copy the Measurement ID (format: `G-XXXXXXXXXX`)
+
+**Facebook/Instagram Pixel:**
+1. Go to [Meta Events Manager](https://business.facebook.com/events_manager)
+2. Create a new Pixel or select existing one
+3. Copy the Pixel ID (numeric, e.g., `1234567890123456`)
+
+### Local Development
+
+For local testing, create a `.env` file (already in `.gitignore`):
+
+```bash
+# Copy the example file
+cp .env.example .env
+
+# Edit .env and add your IDs
+VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+VITE_FB_PIXEL_ID=1234567890123456
+```
+
+**⚠️ Important:** Never commit `.env` to git! It's already in `.gitignore`.
+
+### How Analytics Work
+
+- **If variables are set:** Analytics scripts load automatically
+- **If variables are empty/missing:** Analytics are disabled (no scripts loaded)
+- **Privacy:** Analytics only activate after user accepts cookies
+
+See `.env.example` for reference configuration.
+
 ## 📦 Required Image Assets (20 Total)
 
 All images must be in `/src/assets/` with these exact hash filenames.  

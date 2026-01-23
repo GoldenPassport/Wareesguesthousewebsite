@@ -2,6 +2,7 @@ import { Languages } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import { Language } from '@/translations';
 import { useState, useRef, useEffect } from 'react';
+import { trackEvent } from '@/app/components/analytics';
 
 export function LanguageSwitcher() {
   const { language, setLanguage, t } = useLanguage();
@@ -51,6 +52,7 @@ export function LanguageSwitcher() {
               key={lang.code}
               onClick={() => {
                 setLanguage(lang.code);
+                trackEvent.languageChange(lang.code);
                 setIsOpen(false);
               }}
               className={`w-full flex items-center gap-3 px-4 py-3 hover:bg-[#b3dce6]/20 transition-colors ${

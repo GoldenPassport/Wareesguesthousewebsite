@@ -1,5 +1,6 @@
 import { LanguageProvider } from '@/contexts/language-context';
 import { SEOProvider } from '@/app/components/seo-head';
+import { Analytics } from '@/app/components/analytics';
 import { Hero } from '@/app/components/hero';
 import { About } from '@/app/components/about';
 import { AirbnbHighlights } from '@/app/components/airbnb-highlights';
@@ -17,6 +18,7 @@ function App() {
   return (
     <SEOProvider>
       <LanguageProvider>
+        <Analytics />
         <div className="min-h-screen bg-white">
           <Hero />
           <About />
