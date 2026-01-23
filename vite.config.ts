@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import path from 'path'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
+import fs from 'fs'
 
 // Plugin to transform figma:asset imports for production builds only
 function figmaAssetsPlugin() {
@@ -21,10 +22,18 @@ function figmaAssetsPlugin() {
       // Handle the virtual module we created in resolveId
       if (id.startsWith('\0figma-asset:')) {
         const filename = id.replace('\0figma-asset:', '')
-        // Use a relative import path that Vite can resolve and bundle
-        const importPath = './src/app/assets/' + filename
-        // Return an import statement with ?url to get the asset URL
-        return `import asset from ${JSON.stringify(importPath + '?url')}; export default asset;`
+        const assetPath = path.resolve(__dirname, './src/app/assets', filename)
+        
+        // Read the file and emit it as an asset
+        const fileBuffer = fs.readFileSync(assetPath)
+        const referenceId = this.emitFile({
+          type: 'asset',
+          name: filename,
+          source: fileBuffer
+        })
+        
+        // Return code that exports the asset URL
+        return `export default import.meta.ROLLUP_FILE_URL_${referenceId};`
       }
       return null
     },
