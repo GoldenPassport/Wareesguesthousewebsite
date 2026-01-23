@@ -11,6 +11,7 @@ import { ThingsToDo } from '@/app/components/things-to-do';
 import { Location } from '@/app/components/location';
 import { SocialFeed } from '@/app/components/social-feed';
 import { Footer } from '@/app/components/footer';
+import { CookieConsent } from '@/app/components/cookie-consent';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Location />
           <SocialFeed />
           <Footer />
+          <CookieConsent />
         </div>
       </LanguageProvider>
     </SEOProvider>

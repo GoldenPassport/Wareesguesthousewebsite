@@ -1,7 +1,8 @@
-import logo from "figma:asset/302a78d8be4e75fe5f3bef65f80ada9b7aeb0688.png";
+import { logo } from '@/assets/images';
 import { Mail, Phone, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import { siteConfig } from '@/config/siteConfig';
+import { CookieSettingsButton } from '@/app/components/cookie-settings-button';
 
 export function Footer() {
   const { t } = useLanguage();
@@ -101,6 +102,9 @@ export function Footer() {
         <div className="border-t border-white/20 pt-6 sm:pt-8 text-center text-white/60">
           <p className="text-xs sm:text-sm">{t.footer.copyright}</p>
           <p className="mt-2 text-xs sm:text-sm">{t.footer.tagline}</p>
+          <div className="mt-4 flex justify-center">
+            <CookieSettingsButton />
+          </div>
         </div>
       </div>
     </footer>
