@@ -3,6 +3,7 @@ import path from "path";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import fs from "fs";
+import { faviconPlugin } from "./vite-favicon-plugin";
 
 // Plugin to transform figma:asset imports for production builds only
 function figmaAssetsPlugin() {
@@ -152,6 +153,12 @@ export default defineConfig({
     react(),
     tailwindcss(),
     figmaAssetsPlugin(),
+    // Auto-generate favicons from logo during build
+    // To use: Save logo from Figma Make to /public/logo.png first
+    faviconPlugin({
+      logo: 'public/logo.png',
+      outputPath: 'public',
+    }),
   ],
   resolve: {
     alias: {
