@@ -43,28 +43,65 @@ declare global {
 
 export function Analytics() {
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
+  const [gaLoaded, setGaLoaded] = useState(false);
+  const [fbLoaded, setFbLoaded] = useState(false);
 
   // Get analytics IDs from environment variables
   const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
   const FB_PIXEL_ID = import.meta.env.VITE_FB_PIXEL_ID;
 
-  // Debug logging (remove in production)
+  // Debug logging
   useEffect(() => {
     console.log('🔍 Analytics Debug Info:');
     console.log('- GA_MEASUREMENT_ID:', GA_MEASUREMENT_ID || 'NOT SET');
     console.log('- FB_PIXEL_ID:', FB_PIXEL_ID || 'NOT SET');
     console.log('- Cookie Consent:', localStorage.getItem('cookie-consent') || 'NOT SET');
-    console.log('- isGAEnabled:', cookiesAccepted && GA_MEASUREMENT_ID && GA_MEASUREMENT_ID.trim() !== '');
-    console.log('- isFBPixelEnabled:', cookiesAccepted && FB_PIXEL_ID && FB_PIXEL_ID.trim() !== '');
-  }, [GA_MEASUREMENT_ID, FB_PIXEL_ID, cookiesAccepted]);
+    console.log('- cookiesAccepted state:', cookiesAccepted);
+    console.log('- gaLoaded:', gaLoaded);
+    console.log('- fbLoaded:', fbLoaded);
+    console.log('- window.gtag exists:', typeof window.gtag !== 'undefined');
+    console.log('- window.fbq exists:', typeof window.fbq !== 'undefined');
+  }, [GA_MEASUREMENT_ID, FB_PIXEL_ID, cookiesAccepted, gaLoaded, fbLoaded]);
 
-  // Check cookie consent status
+  // Initialize Google Analytics consent mode (always load this)
+  useEffect(() => {
+    if (!GA_MEASUREMENT_ID || GA_MEASUREMENT_ID.trim() === '') return;
+
+    // Initialize dataLayer and gtag
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(...args: any[]) {
+      window.dataLayer!.push(args);
+    };
+
+    // Set default consent to 'denied'
+    window.gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
+    });
+
+    // Check if user has already consented
+    const consent = localStorage.getItem('cookie-consent');
+    if (consent === 'accepted') {
+      window.gtag('consent', 'update', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+      });
+    }
+
+    console.log('✅ Google Analytics consent mode initialized');
+  }, [GA_MEASUREMENT_ID]);
+
+  // Check cookie consent status and load GA script
   useEffect(() => {
     const checkCookieConsent = () => {
       const consent = localStorage.getItem('cookie-consent');
       const newConsentStatus = consent === 'accepted';
       
-      // Update state
       setCookiesAccepted(newConsentStatus);
       
       // Update Google Analytics consent mode
@@ -80,10 +117,8 @@ export function Analytics() {
       // Update Facebook Pixel consent mode
       if (window.fbq) {
         if (newConsentStatus) {
-          // Grant consent for Facebook Pixel
           window.fbq('consent', 'grant');
         } else {
-          // Revoke consent for Facebook Pixel
           window.fbq('consent', 'revoke');
         }
       }
@@ -104,125 +139,86 @@ export function Analytics() {
     };
   }, []);
 
-  // Only enable if BOTH environment variables are set AND cookies are accepted
-  const isGAEnabled = cookiesAccepted && GA_MEASUREMENT_ID && GA_MEASUREMENT_ID.trim() !== '';
-  const isFBPixelEnabled = cookiesAccepted && FB_PIXEL_ID && FB_PIXEL_ID.trim() !== '';
-
+  // Load Google Analytics script when cookies are accepted
   useEffect(() => {
-    // Initialize Facebook Pixel only after cookies are accepted
-    if (isFBPixelEnabled && cookiesAccepted) {
-      // Facebook Pixel initialization
-      window.fbq = function() {
-        window.fbq?.callMethod 
-          ? window.fbq.callMethod.apply(window.fbq, arguments as any)
-          : window.fbq?.queue.push(arguments);
-      };
-      if (!window._fbq) window._fbq = window.fbq;
-      window.fbq.push = window.fbq;
-      window.fbq.loaded = true;
-      window.fbq.version = '2.0';
-      window.fbq.queue = [];
+    if (!cookiesAccepted || !GA_MEASUREMENT_ID || GA_MEASUREMENT_ID.trim() === '' || gaLoaded) {
+      return;
+    }
+
+    console.log('📊 Loading Google Analytics script...');
+
+    // Load the gtag.js script
+    const script = document.createElement('script');
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+    script.async = true;
+    script.onload = () => {
+      console.log('✅ Google Analytics script loaded');
       
-      // Track PageView
+      // Initialize GA
+      if (window.gtag) {
+        window.gtag('js', new Date());
+        window.gtag('config', GA_MEASUREMENT_ID, {
+          page_path: window.location.pathname,
+          cookie_flags: 'SameSite=None;Secure'
+        });
+        console.log('✅ Google Analytics configured with ID:', GA_MEASUREMENT_ID);
+      }
+      
+      setGaLoaded(true);
+    };
+    script.onerror = () => {
+      console.error('❌ Failed to load Google Analytics script');
+    };
+
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup: remove script if component unmounts
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
+  }, [cookiesAccepted, GA_MEASUREMENT_ID, gaLoaded]);
+
+  // Load Facebook Pixel when cookies are accepted
+  useEffect(() => {
+    if (!cookiesAccepted || !FB_PIXEL_ID || FB_PIXEL_ID.trim() === '' || fbLoaded) {
+      return;
+    }
+
+    console.log('📊 Loading Facebook Pixel...');
+
+    // Facebook Pixel initialization
+    (function(f: any, b: any, e: any, v: any, n: any, t: any, s: any) {
+      if (f.fbq) return;
+      n = f.fbq = function(...args: any[]) {
+        n.callMethod ? n.callMethod.apply(n, args) : n.queue.push(args);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = true;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = true;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js', null, null, null);
+
+    if (window.fbq) {
       window.fbq('init', FB_PIXEL_ID);
       window.fbq('track', 'PageView');
+      console.log('✅ Facebook Pixel initialized with ID:', FB_PIXEL_ID);
+      setFbLoaded(true);
     }
-  }, [isFBPixelEnabled, FB_PIXEL_ID, cookiesAccepted]);
+  }, [cookiesAccepted, FB_PIXEL_ID, fbLoaded]);
 
+  // Render Facebook Pixel noscript fallback
   return (
     <>
-      {/* Google Analytics Consent Mode - Initialize BEFORE GA loads */}
-      {GA_MEASUREMENT_ID && GA_MEASUREMENT_ID.trim() !== '' && (
+      {fbLoaded && FB_PIXEL_ID && (
         <Helmet>
-          <script>
-            {`
-              // Set default consent to 'denied' for all consent types
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('consent', 'default', {
-                'analytics_storage': 'denied',
-                'ad_storage': 'denied',
-                'ad_user_data': 'denied',
-                'ad_personalization': 'denied',
-                'wait_for_update': 500
-              });
-              
-              // Check if user has already consented
-              const consent = localStorage.getItem('cookie-consent');
-              if (consent === 'accepted') {
-                gtag('consent', 'update', {
-                  'analytics_storage': 'granted',
-                  'ad_storage': 'granted',
-                  'ad_user_data': 'granted',
-                  'ad_personalization': 'granted',
-                });
-              }
-            `}
-          </script>
-        </Helmet>
-      )}
-
-      {/* Facebook Pixel Consent Mode - Initialize BEFORE Pixel loads */}
-      {FB_PIXEL_ID && FB_PIXEL_ID.trim() !== '' && (
-        <Helmet>
-          <script>
-            {`
-              // Initialize Facebook Pixel consent mode BEFORE pixel loads
-              window._fbq_consent_mode = window._fbq_consent_mode || [];
-              
-              // Check if user has already consented
-              const fbConsent = localStorage.getItem('cookie-consent');
-              if (fbConsent !== 'accepted') {
-                // If not consented, revoke consent by default
-                window._fbq_consent_mode.push(['revoke']);
-              } else {
-                // If consented, grant consent
-                window._fbq_consent_mode.push(['grant']);
-              }
-            `}
-          </script>
-        </Helmet>
-      )}
-
-      {/* Google Analytics */}
-      {isGAEnabled && (
-        <Helmet>
-          {/* Google tag (gtag.js) */}
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          />
-          <script>
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${GA_MEASUREMENT_ID}', {
-                page_path: window.location.pathname,
-                cookie_flags: 'SameSite=None;Secure'
-              });
-            `}
-          </script>
-        </Helmet>
-      )}
-
-      {/* Facebook Pixel */}
-      {isFBPixelEnabled && (
-        <Helmet>
-          <script>
-            {`
-              !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '${FB_PIXEL_ID}');
-              fbq('track', 'PageView');
-            `}
-          </script>
           <noscript>
             {`<img height="1" width="1" style="display:none"
               src="https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1"
