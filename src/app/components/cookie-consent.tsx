@@ -21,9 +21,15 @@ export function CookieConsent() {
 
   // Cleanup: restore body scroll when modal closes or component unmounts
   useEffect(() => {
-    if (!showPolicy) {
+    if (showPolicy) {
+      // Lock scroll when policy modal is open
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Restore scroll when policy modal is closed
       document.body.style.overflow = '';
     }
+    
+    // Cleanup on unmount
     return () => {
       document.body.style.overflow = '';
     };
