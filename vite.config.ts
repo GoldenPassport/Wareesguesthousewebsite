@@ -279,4 +279,4 @@ export default defineConfig({
     assetsDir: "assets",
     copyPublicDir: true,
   },
-});
+}); 

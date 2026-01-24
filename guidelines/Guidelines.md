@@ -315,11 +315,122 @@ window.dataLayer  // Check if consent events are present
 
 ```json
 {
-  "build": "vite build",                    // Production build (Vercel runs this)
-  "verify-images": "bash scripts/verify-images.sh",  // Check images locally
-  "fix-images": "node scripts/fix_image_assets.js"   // Fix corrupted images
+  "build": "npm run fix-images && npm run generate-favicons && vite build",
+  "build:dev": "vite build",                          // Quick build without image processing
+  "build:quick": "npm run generate-favicons && vite build",  // Build with favicons, skip image fix
+  "generate-favicons": "node scripts/generate-favicons.js",   // Generate all favicon formats
+  "verify-images": "bash scripts/verify-images.sh",           // Check images locally
+  "verify-favicons": "bash scripts/verify-favicons.sh",       // Verify favicon generation
+  "fix-images": "node scripts/fix_image_assets.js",           // Fix corrupted images
+  "dev": "vite"                                               // Local development server
 }
 ```
+
+### Build Script Variants
+- **`build`** - Full production build with all checks (image fix + favicon generation)
+- **`build:dev`** - Quick build without image processing or favicon generation
+- **`build:quick`** - Build with favicons but skip slow image fix
+- **`generate-favicons`** - Manually generate favicons without full build
+
+---
+
+## Favicon System
+
+### Automated Favicon Generation
+
+**How it works:**
+- Every build automatically generates all required favicon formats
+- Tries to use **actual logo** from `/src/assets/302a78d8be4e75fe5f3bef65f80ada9b7aeb0688.{png,jpg}`
+- Falls back to placeholder `/public/favicon.svg` if logo not exported
+- Generates: `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`
+
+### Files Generated Every Build
+
+```
+/public/
+  ├── favicon.ico          ← Google's favorite! (required for search results)
+  ├── favicon-16x16.png    ← Browser tabs
+  ├── favicon-32x32.png    ← Browser tabs (retina)
+  ├── apple-touch-icon.png ← iOS home screen
+  └── favicon.svg          ← Modern browsers (source)
+```
+
+### Verify Favicons
+
+```bash
+# Check if favicons were generated
+npm run verify-favicons
+
+# Manual generation (without full build)
+npm run generate-favicons
+
+# Check files exist
+ls -la public/favicon*
+```
+
+### Google Search Timeline
+
+After deploying with proper favicons:
+
+| Timeline | Status |
+|----------|--------|
+| **Immediately** | Favicons live on site |
+| **1-3 days** | Google crawls and discovers favicons |
+| **3-7 days** | Favicon appears in search results |
+
+**Speed it up:** Request re-indexing in [Google Search Console](https://search.google.com/search-console)
+
+---
+
+## Dependency Management
+
+### Current Tech Stack
+
+**UI Framework:** Radix UI (28 packages) - all actively used  
+**Carousel:** Embla Carousel (used in 7+ components)  
+**Icons:** Lucide React  
+**Animations:** Motion  
+**Forms:** React Hook Form  
+**Routing:** React Router  
+**Analytics:** @vercel/analytics, Google Analytics, Meta Pixel  
+
+### Unused Dependencies (Safe to Remove)
+
+These packages are installed but **NOT imported anywhere:**
+
+```bash
+# Material UI (using Radix UI instead)
+npm uninstall @emotion/react @emotion/styled @mui/icons-material @mui/material
+
+# Unused carousel (using embla-carousel-react)
+npm uninstall react-slick
+
+# Unused layout libraries
+npm uninstall react-responsive-masonry react-resizable-panels
+
+# Unused drag & drop
+npm uninstall react-dnd react-dnd-html5-backend
+
+# Unused utilities
+npm uninstall date-fns tw-animate-css
+
+# Unused PWA plugin (not configured in vite.config.ts)
+npm uninstall vite-plugin-pwa
+
+# Test removal (may be Radix peer deps - reinstall if build breaks)
+npm uninstall @popperjs/core react-popper
+```
+
+**After cleanup:**
+```bash
+# Test that everything still works
+npm run build
+
+# If build fails, reinstall only the missing package
+npm install <package-name>
+```
+
+**Expected savings:** ~150-200 MB in `node_modules`, faster installs
 
 ---
 
@@ -332,12 +443,14 @@ window.dataLayer  // Check if consent events are present
 - [ ] Pushed to GitHub
 - [ ] Vercel deployment successful
 - [ ] Analytics env vars configured (if using)
+- [ ] Favicons generated successfully (check `npm run verify-favicons`)
 
 ---
 
 **System Status:**
 ✅ Vite build plugin with auto `.png` ↔ `.jpg` conversion  
 ✅ Auto-decode base64 images during build  
+✅ Automated favicon generation from logo  
 ✅ Fix script at `/scripts/fix_image_assets.js`  
 ✅ Git binary handling in `.gitattributes`  
 ✅ Cookie-gated analytics (Google Analytics + Meta Pixel)  
