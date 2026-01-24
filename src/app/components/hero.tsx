@@ -86,11 +86,15 @@ export function Hero() {
           {/* Secondary CTAs - Text links on mobile, buttons on desktop */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <a 
-              href={siteConfig.booking.airbnb.url}
+              href={siteConfig.booking.airbnb.getTrackedUrl('hero_primary_cta')}
               target="_blank" 
               rel="noopener noreferrer"
+              id="airbnb-booking-hero"
               onClick={() => trackEvent.bookingClick('airbnb')}
-              className="text-white hover:text-[#f58220] text-base sm:text-lg transition-all duration-300 text-center underline underline-offset-4 sm:no-underline sm:bg-[#f58220] sm:hover:bg-[#d47020] sm:text-white sm:px-10 sm:py-4 sm:rounded-full sm:transform sm:hover:scale-105 sm:shadow-2xl"
+              data-tracking-id="hero_primary_cta"
+              data-tracking-section="hero"
+              data-tracking-platform="airbnb"
+              className="inline-block bg-[#f58220] hover:bg-[#d47020] text-white px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg transition-all duration-300"
             >
               {t.hero.bookButton}
             </a>

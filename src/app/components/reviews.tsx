@@ -4,6 +4,7 @@ import { siteConfig } from '@/config/siteConfig';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback, useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { trackEvent } from '@/app/components/analytics';
 
 export function Reviews() {
   const { t } = useLanguage();
@@ -215,9 +216,14 @@ export function Reviews() {
         <div className="text-center mt-12">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href={siteConfig.booking.airbnb.url}
+              href={siteConfig.booking.airbnb.getTrackedUrl('reviews_section_cta')}
               target="_blank" 
               rel="noopener noreferrer"
+              id="airbnb-booking-reviews"
+              onClick={() => trackEvent.bookingClick('airbnb')}
+              data-tracking-id="reviews_section_cta"
+              data-tracking-section="reviews"
+              data-tracking-platform="airbnb"
               className="inline-block bg-[#f58220] hover:bg-[#d47020] text-white px-6 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-xl whitespace-nowrap"
             >
               {t.reviews.readAirbnbButton}

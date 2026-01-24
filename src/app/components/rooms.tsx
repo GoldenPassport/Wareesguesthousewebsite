@@ -4,6 +4,7 @@ import { Building2 } from 'lucide-react';
 import { siteConfig } from '@/config/siteConfig';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback, useEffect, useState } from 'react';
+import { trackEvent } from '@/app/components/analytics';
 import bathroomShower from 'figma:asset/fe90856b4d0401840ae1c7eae87b65bf4a9d0967.png';
 import bathroomSink from 'figma:asset/c8eb8834474b6ee7e9b14931d4731257b7f460f4.png';
 import balconyView from 'figma:asset/afcf207372169cde9fed998c2cab3df10bf19418.png';
@@ -162,12 +163,17 @@ export function Rooms() {
 
         <div className="text-center mt-12">
           <a 
-            href={siteConfig.booking.airbnb.url}
+            href={siteConfig.booking.airbnb.getTrackedUrl('rooms_section_cta')}
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-block bg-[#f58220] hover:bg-[#d47020] text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
+            id="airbnb-booking-rooms"
+            onClick={() => trackEvent.bookingClick('airbnb')}
+            data-tracking-id="rooms_section_cta"
+            data-tracking-section="rooms"
+            data-tracking-platform="airbnb"
+            className="inline-block bg-[#f58220] hover:bg-[#d47020] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
           >
-            {t.rooms.viewAvailability}
+            {t.rooms.ctaButton}
           </a>
         </div>
       </div>

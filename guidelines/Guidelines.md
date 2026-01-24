@@ -103,6 +103,36 @@ English, Thai, Chinese, Russian, German, Italian, Swedish, Finnish
 - Component: `/src/app/components/cookie-consent.tsx`
 - Analytics: `/src/app/components/analytics.tsx`
 
+**How Cookie Consent Works:**
+1. Banner appears on first visit (1 second delay)
+2. User can Accept, Decline, or Learn More
+3. Choice saved in `localStorage` as `cookie-consent` = `accepted` or `declined`
+4. When user accepts: Page reloads to initialize analytics scripts
+5. When user declines: No analytics scripts load
+
+**Google Analytics Consent Mode Integration:**
+- Default consent state: `denied` for all analytics/ad storage
+- When cookies accepted: Consent updated to `granted` via `gtag('consent', 'update')`
+- Consent mode script loads BEFORE GA to ensure proper tracking
+- Real-time consent updates when user changes settings
+
+**Cookie Settings Button:**
+- Located in footer
+- Removes consent choice and reloads page
+- Allows users to change their decision anytime
+
+**Analytics Event Tracking:**
+- All tracking respects cookie consent
+- `trackEvent` helper functions check consent before firing
+- Events: booking clicks, contact clicks, room views, language changes, etc.
+- See `/src/app/components/analytics.tsx` for all available events
+
+**AirBNB Booking Tracking:**
+- All AirBNB links have unique IDs and UTM parameters
+- Tracking IDs: `hero_primary_cta`, `airbnb_highlights_cta`, `rooms_section_cta`, `reviews_section_cta`, `gallery_section_cta`, `footer_link`
+- UTM parameters automatically added: `utm_source=wareeguesthouse_website`, `utm_medium=referral`, `utm_campaign=direct_booking`
+- Data attributes on all buttons for enhanced tracking
+
 ### SEO Optimization
 - Meta tags per language
 - Structured data, Open Graph, Twitter Cards

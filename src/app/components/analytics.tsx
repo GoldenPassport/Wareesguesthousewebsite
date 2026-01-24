@@ -40,7 +40,20 @@ export function Analytics() {
   useEffect(() => {
     const checkCookieConsent = () => {
       const consent = localStorage.getItem('cookie-consent');
-      setCookiesAccepted(consent === 'accepted');
+      const newConsentStatus = consent === 'accepted';
+      
+      // Update state
+      setCookiesAccepted(newConsentStatus);
+      
+      // Update Google Analytics consent mode
+      if (window.gtag) {
+        window.gtag('consent', 'update', {
+          'analytics_storage': newConsentStatus ? 'granted' : 'denied',
+          'ad_storage': newConsentStatus ? 'granted' : 'denied',
+          'ad_user_data': newConsentStatus ? 'granted' : 'denied',
+          'ad_personalization': newConsentStatus ? 'granted' : 'denied',
+        });
+      }
     };
 
     // Initial check
@@ -85,6 +98,37 @@ export function Analytics() {
 
   return (
     <>
+      {/* Google Analytics Consent Mode - Initialize BEFORE GA loads */}
+      {GA_MEASUREMENT_ID && GA_MEASUREMENT_ID.trim() !== '' && (
+        <Helmet>
+          <script>
+            {`
+              // Set default consent to 'denied' for all consent types
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'wait_for_update': 500
+              });
+              
+              // Check if user has already consented
+              const consent = localStorage.getItem('cookie-consent');
+              if (consent === 'accepted') {
+                gtag('consent', 'update', {
+                  'analytics_storage': 'granted',
+                  'ad_storage': 'granted',
+                  'ad_user_data': 'granted',
+                  'ad_personalization': 'granted',
+                });
+              }
+            `}
+          </script>
+        </Helmet>
+      )}
+
       {/* Google Analytics */}
       {isGAEnabled && (
         <Helmet>

@@ -1,8 +1,9 @@
-import logo from "figma:asset/302a78d8be4e75fe5f3bef65f80ada9b7aeb0688.png";
-import { Mail, Phone, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import { siteConfig } from '@/config/siteConfig';
 import { CookieSettingsButton } from '@/app/components/cookie-settings-button';
+import { trackEvent } from '@/app/components/analytics';
+import { Mail, Phone, MapPin, Facebook, MessageCircle } from 'lucide-react';
+import logo from 'figma:asset/302a78d8be4e75fe5f3bef65f80ada9b7aeb0688.png';
 
 export function Footer() {
   const { t } = useLanguage();
@@ -22,9 +23,15 @@ export function Footer() {
           <div>
             <h3 className="text-lg sm:text-xl mb-3 sm:mb-4">{t.footer.contactTitle}</h3>
             <div className="space-y-2 sm:space-y-3">
-              <a href={`mailto:${siteConfig.contact.email}`} className="flex items-start space-x-2 sm:space-x-3 hover:text-[#f58220] transition-colors">
-                <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-[#f58220] flex-shrink-0 mt-0.5" />
-                <span className="text-white/80 text-sm break-words">{siteConfig.contact.email}</span>
+              <a 
+                href={`mailto:${siteConfig.contact.email}`}
+                onClick={() => trackEvent.contactClick('email')}
+                data-tracking-id="footer_email_link"
+                data-tracking-section="footer"
+                className="text-white hover:text-[#f58220] transition-colors flex items-center gap-2"
+              >
+                <Mail className="w-4 h-4" />
+                {siteConfig.contact.email}
               </a>
               <a href={`tel:${siteConfig.contact.phone.raw}`} className="flex items-center space-x-2 sm:space-x-3 hover:text-[#f58220] transition-colors">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-[#f58220] flex-shrink-0" />
@@ -86,12 +93,20 @@ export function Footer() {
                 {t.hero.emailButton}
               </a>
               <a 
-                href={siteConfig.booking.airbnb.url}
+                href={siteConfig.booking.airbnb.getTrackedUrl('footer_link')}
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-block bg-white hover:bg-gray-100 text-[#0a3d3d] px-4 sm:px-6 py-2 rounded-full transition-all duration-300 w-full text-center text-sm"
+                id="airbnb-booking-footer"
+                onClick={() => trackEvent.bookingClick('airbnb')}
+                data-tracking-id="footer_link"
+                data-tracking-section="footer"
+                data-tracking-platform="airbnb"
+                className="text-white hover:text-[#f58220] transition-colors flex items-center gap-2"
               >
-                {t.hero.bookButton}
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z"/>
+                </svg>
+                AirBNB
               </a>
               <a 
                 href={siteConfig.reviews.tripadvisor.url}

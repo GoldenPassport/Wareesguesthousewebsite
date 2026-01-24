@@ -3,6 +3,7 @@ import { useLanguage } from '@/contexts/language-context';
 import { siteConfig } from '@/config/siteConfig';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback, useEffect, useState } from 'react';
+import { trackEvent } from '@/app/components/analytics';
 
 export function AirbnbHighlights() {
   const { t } = useLanguage();
@@ -144,9 +145,14 @@ export function AirbnbHighlights() {
             {t.airbnb.ctaText}
           </p>
           <a 
-            href={siteConfig.booking.airbnb.url}
+            href={siteConfig.booking.airbnb.getTrackedUrl('airbnb_highlights_cta')}
             target="_blank" 
             rel="noopener noreferrer"
+            id="airbnb-booking-highlights"
+            onClick={() => trackEvent.bookingClick('airbnb')}
+            data-tracking-id="airbnb_highlights_cta"
+            data-tracking-section="airbnb_highlights"
+            data-tracking-platform="airbnb"
             className="inline-block bg-[#f58220] hover:bg-[#d47020] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
           >
             {t.airbnb.ctaButton}

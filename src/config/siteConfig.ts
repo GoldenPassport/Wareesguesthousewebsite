@@ -78,6 +78,17 @@ export const siteConfig = {
     airbnb: {
       url: "https://www.airbnb.com/rooms/726744824043972517",
       roomId: "726744824043972517",
+      // Helper function to add UTM tracking to AirBNB URLs
+      getTrackedUrl: (source: string) => {
+        const baseUrl = "https://www.airbnb.com/rooms/726744824043972517";
+        const params = new URLSearchParams({
+          utm_source: 'wareeguesthouse_website',
+          utm_medium: 'referral',
+          utm_campaign: 'direct_booking',
+          utm_content: source, // e.g., 'hero', 'footer', 'rooms'
+        });
+        return `${baseUrl}?${params.toString()}`;
+      },
     },
     bookingCom: {
       url: "",  // Add when available

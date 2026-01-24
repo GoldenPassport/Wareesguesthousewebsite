@@ -35,6 +35,10 @@ export function CookieConsent() {
     if (showPolicy) {
       document.body.style.overflow = '';
     }
+    // Trigger storage event for same-tab detection and reload to initialize analytics
+    window.dispatchEvent(new Event('storage'));
+    // Reload page to initialize analytics scripts
+    window.location.reload();
   };
 
   const handleDecline = () => {
@@ -43,6 +47,8 @@ export function CookieConsent() {
     if (showPolicy) {
       document.body.style.overflow = '';
     }
+    // Trigger storage event for same-tab detection
+    window.dispatchEvent(new Event('storage'));
   };
 
   const handleShowPolicy = () => {
