@@ -82,7 +82,7 @@ export function PhotoGallery() {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a3d3d]/90 via-[#0a3d3d]/40 to-transparent">
                       <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
                         <h3 className="text-xl mb-2">{photo.title}</h3>
-                        <p className="text-white/90 text-sm leading-relaxed">
+                        <p className="text-white/90 text-base leading-relaxed">
                           {photo.desc}
                         </p>
                       </div>

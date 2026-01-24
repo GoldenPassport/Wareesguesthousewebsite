@@ -62,22 +62,22 @@ export function Rooms() {
           <div className="text-center">
             <Building2 className="w-10 h-10 text-[#f58220] mx-auto mb-2" />
             <div className="text-2xl text-[#0a3d3d] mb-1">8</div>
-            <div className="text-sm text-gray-600">{t.rooms.roomsLabel}</div>
+            <div className="text-sm sm:text-base text-gray-600">{t.rooms.roomsLabel}</div>
           </div>
           <div className="text-center">
             <Building2 className="w-10 h-10 text-[#f58220] mx-auto mb-2" />
             <div className="text-2xl text-[#0a3d3d] mb-1">3</div>
-            <div className="text-sm text-gray-600">{t.rooms.floorsLabel}</div>
+            <div className="text-sm sm:text-base text-gray-600">{t.rooms.floorsLabel}</div>
           </div>
           <div className="text-center">
             <Building2 className="w-10 h-10 text-[#f58220] mx-auto mb-2" />
             <div className="text-2xl text-[#0a3d3d] mb-1">1999</div>
-            <div className="text-sm text-gray-600">{t.rooms.establishedLabel}</div>
+            <div className="text-sm sm:text-base text-gray-600">{t.rooms.establishedLabel}</div>
           </div>
           <div className="text-center">
             <Building2 className="w-10 h-10 text-[#f58220] mx-auto mb-2" />
             <div className="text-2xl text-[#0a3d3d] mb-1">220V</div>
-            <div className="text-sm text-gray-600">{t.rooms.voltageLabel}</div>
+            <div className="text-sm sm:text-base text-gray-600">{t.rooms.voltageLabel}</div>
           </div>
         </div>
 

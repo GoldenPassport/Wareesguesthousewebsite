@@ -70,7 +70,7 @@ export function AirbnbHighlights() {
                       <div className="inline-flex items-center justify-center w-16 h-16 bg-[#f58220]/10 rounded-full mb-4">
                         <IconComponent className="w-8 h-8 text-[#f58220]" />
                       </div>
-                      <h3 className="text-lg text-[#0a3d3d] mb-3">{highlight.title}</h3>
+                      <h3 className="text-xl text-[#0a3d3d] mb-3">{highlight.title}</h3>
                       <div className="flex justify-center mb-3">
                         {highlight.showStars ? (
                           <>

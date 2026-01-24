@@ -119,7 +119,7 @@ export function ThingsToDo() {
                         <div className="flex items-start justify-between mb-3">
                           <div>
                             <h4 className="text-xl text-[#0a3d3d] mb-1 font-semibold">{attraction.name}</h4>
-                            <p className="text-gray-600 text-sm">{attraction.desc}</p>
+                            <p className="text-gray-600 text-base">{attraction.desc}</p>
                           </div>
                           <IconComponent className={`w-6 h-6 flex-shrink-0 ml-2 ${attraction.icon === Waves ? 'text-[#b3dce6]' : 'text-[#f58220]'}`} />
                         </div>

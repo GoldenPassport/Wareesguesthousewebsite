@@ -80,10 +80,16 @@ export function Footer() {
             </p>
             <div className="space-y-2 sm:space-y-3">
               <a 
+                href={`mailto:${siteConfig.contact.email}`}
+                className="inline-block bg-[#f58220] hover:bg-[#d47020] text-white px-4 sm:px-6 py-2 rounded-full transition-all duration-300 w-full text-center text-sm"
+              >
+                {t.hero.emailButton}
+              </a>
+              <a 
                 href={siteConfig.booking.airbnb.url}
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-block bg-[#f58220] hover:bg-[#d47020] text-white px-4 sm:px-6 py-2 rounded-full transition-all duration-300 w-full text-center text-sm"
+                className="inline-block bg-white hover:bg-gray-100 text-[#0a3d3d] px-4 sm:px-6 py-2 rounded-full transition-all duration-300 w-full text-center text-sm"
               >
                 {t.hero.bookButton}
               </a>
@@ -91,7 +97,7 @@ export function Footer() {
                 href={siteConfig.reviews.tripadvisor.url}
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-block bg-white hover:bg-gray-100 text-[#0a3d3d] px-4 sm:px-6 py-2 rounded-full transition-all duration-300 w-full text-center text-sm"
+                className="inline-block bg-white/10 hover:bg-white/20 text-white border border-white/30 px-4 sm:px-6 py-2 rounded-full transition-all duration-300 w-full text-center text-sm"
               >
                 {t.footer.tripadvisor}
               </a>

@@ -47,14 +47,14 @@ export function Location() {
                 <MapPin className="w-6 h-6 text-[#f58220] flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl text-[#0a3d3d] mb-2">{t.ourAddress}</h3>
-                  <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                  <p className="text-gray-700 text-base leading-relaxed whitespace-pre-line">
                     {t.address}
                   </p>
                   <a
                     href={siteConfig.location.googleMapsDirectionsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-[#f58220] hover:text-[#d47020] mt-3 transition-colors"
+                    className="inline-flex items-center text-[#f58220] hover:text-[#d47020] mt-3 transition-colors text-base"
                   >
                     <Navigation className="w-4 h-4 mr-2" />
                     {t.directions}
@@ -68,10 +68,10 @@ export function Location() {
                 <Plane className="w-6 h-6 text-[#f58220] flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl text-[#0a3d3d] mb-2">{t.fromAirport}</h3>
-                  <p className="text-gray-700 mb-2">
+                  <p className="text-gray-700 text-base mb-2">
                     <strong>{t.distance}</strong> {t.distanceValue}
                   </p>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 text-base">
                     <strong>{t.travelTime}</strong> {t.travelTimeValue}
                   </p>
                 </div>
@@ -92,7 +92,7 @@ export function Location() {
           
           {/* Accordion Button - Mobile Only */}
           <button
-            className="md:hidden w-full text-sm text-white/90 py-2 flex items-center justify-center border-t border-white/20 mt-3"
+            className="md:hidden w-full text-sm text-white/90 py-3 flex items-center justify-center border-t border-white/20 mt-3"
             onClick={() => setIsRecommendedExpanded(!isRecommendedExpanded)}
           >
             {isRecommendedExpanded ? common.hideDetails : common.showDetails}

@@ -18,10 +18,10 @@ export function About() {
             <p className="text-gray-700 text-lg leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: t.about.p3 }} />
             
             <div className="bg-[#f58220]/10 border-l-4 border-[#f58220] p-4 mb-6">
-              <p className="text-gray-700 text-sm" dangerouslySetInnerHTML={{ __html: t.about.note }} />
+              <p className="text-gray-700 text-sm sm:text-base" dangerouslySetInnerHTML={{ __html: t.about.note }} />
             </div>
 
-            <p className="text-gray-600 text-sm mb-4" dangerouslySetInnerHTML={{ __html: t.about.budget }} />
+            <p className="text-gray-600 text-base sm:text-base mb-4" dangerouslySetInnerHTML={{ __html: t.about.budget }} />
           </div>
           <div className="space-y-4">
             <img 

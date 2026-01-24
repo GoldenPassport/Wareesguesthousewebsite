@@ -45,7 +45,7 @@ export function Amenities() {
     <section className="py-12 sm:py-16 md:py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl sm:text-4xl text-[#0a3d3d] text-center mb-3 sm:mb-4 px-2">{t.amenities.title}</h2>
-        <p className="text-gray-600 text-center text-sm sm:text-base mb-8 sm:mb-12 max-w-2xl mx-auto px-4 leading-relaxed">
+        <p className="text-gray-600 text-center text-base sm:text-base mb-8 sm:mb-12 max-w-2xl mx-auto px-4 leading-relaxed">
           {t.amenities.subtitle}
         </p>
         

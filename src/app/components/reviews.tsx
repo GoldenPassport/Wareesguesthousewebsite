@@ -80,7 +80,7 @@ export function Reviews() {
             
             {/* Accordion Button - Mobile Only */}
             <button
-              className="md:hidden w-full text-sm text-white/90 py-2 flex items-center justify-center border-t border-white/20 mt-2"
+              className="md:hidden w-full text-sm text-white/90 py-3 flex items-center justify-center border-t border-white/20 mt-2"
               onClick={() => setIsAirbnbExpanded(!isAirbnbExpanded)}
             >
               {isAirbnbExpanded ? t.common.hideDetails : t.common.showDetails}
@@ -91,7 +91,7 @@ export function Reviews() {
             <div className={`space-y-2 sm:space-y-3 overflow-hidden transition-all duration-300 ${isAirbnbExpanded ? 'max-h-96 mt-4' : 'max-h-0 md:max-h-96 md:mt-6'}`}>
               {airbnbRatings.map((rating) => (
                 <div key={rating.category} className="flex justify-between items-center gap-2">
-                  <span className="text-white/90 text-sm sm:text-base truncate flex-shrink-0 min-w-0">{rating.category}</span>
+                  <span className="text-white/90 text-base sm:text-base truncate flex-shrink-0 min-w-0">{rating.category}</span>
                   <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
                     <div className="w-20 sm:w-32 h-2 bg-white/30 rounded-full overflow-hidden">
                       <div 
@@ -99,7 +99,7 @@ export function Reviews() {
                         style={{ width: `${(rating.score / 5) * 100}%` }}
                       />
                     </div>
-                    <span className="w-7 sm:w-8 text-right text-sm sm:text-base">{rating.score}</span>
+                    <span className="w-7 sm:w-8 text-right text-base sm:text-base">{rating.score}</span>
                   </div>
                 </div>
               ))}
@@ -122,7 +122,7 @@ export function Reviews() {
             
             {/* Accordion Button - Mobile Only */}
             <button
-              className="md:hidden w-full text-sm text-white/90 py-2 flex items-center justify-center border-t border-white/20 mt-2"
+              className="md:hidden w-full text-sm text-white/90 py-3 flex items-center justify-center border-t border-white/20 mt-2"
               onClick={() => setIsTripAdvisorExpanded(!isTripAdvisorExpanded)}
             >
               {isTripAdvisorExpanded ? t.common.hideDetails : t.common.showDetails}
