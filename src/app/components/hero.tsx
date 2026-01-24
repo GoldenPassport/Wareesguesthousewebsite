@@ -41,7 +41,7 @@ export function Hero() {
         
         {/* Badges */}
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-4">
-          <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/20 shadow-xl">
+          <div className="flex items-center bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/30">
             <Award className="w-4 h-4 sm:w-4 sm:h-4 mr-1.5 text-[#f58220] fill-[#f58220]" />
             <span className="text-white text-sm sm:text-sm font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
               Airbnb Superhost
@@ -94,7 +94,7 @@ export function Hero() {
               data-tracking-id="hero_primary_cta"
               data-tracking-section="hero"
               data-tracking-platform="airbnb"
-              className="text-white hover:text-[#b3dce6] text-base sm:text-lg transition-all duration-300 text-center underline underline-offset-4 sm:no-underline sm:bg-white/10 sm:backdrop-blur-sm sm:border sm:border-white/30 sm:hover:bg-white/20 sm:text-white sm:px-8 sm:py-3 sm:rounded-full"
+              className="text-white hover:text-[#b3dce6] text-base sm:text-lg transition-all duration-300 text-center underline underline-offset-4 sm:no-underline sm:bg-white/10 sm:backdrop-blur-sm sm:border sm:border-white/30 sm:hover:bg-white/20 sm:text-white sm:px-8 sm:py-4 sm:rounded-full"
             >
               {t.hero.bookButton}
             </a>
@@ -103,7 +103,7 @@ export function Hero() {
               target="_blank" 
               rel="noopener noreferrer"
               onClick={() => trackEvent.socialClick('tripadvisor')}
-              className="text-white hover:text-[#b3dce6] text-base sm:text-lg transition-all duration-300 text-center underline underline-offset-4 sm:no-underline sm:bg-white/10 sm:backdrop-blur-sm sm:border sm:border-white/30 sm:hover:bg-white/20 sm:text-white sm:px-8 sm:py-3 sm:rounded-full"
+              className="text-white hover:text-[#b3dce6] text-base sm:text-lg transition-all duration-300 text-center underline underline-offset-4 sm:no-underline sm:bg-white/10 sm:backdrop-blur-sm sm:border sm:border-white/30 sm:hover:bg-white/20 sm:text-white sm:px-8 sm:py-4 sm:rounded-full"
             >
               {t.hero.reviewsButton}
             </a>

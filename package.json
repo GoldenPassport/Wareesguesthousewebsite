@@ -6,6 +6,7 @@
   "scripts": {
     "build": "vite build",
     "verify-images": "bash scripts/verify-images.sh",
+    "verify-favicons": "bash scripts/verify-favicons.sh",
     "fix-images": "node scripts/fix_image_assets.js",
     "dev": "vite"
   },
