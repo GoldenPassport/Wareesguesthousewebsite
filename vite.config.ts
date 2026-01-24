@@ -3,27 +3,64 @@ import path from "path";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import fs from "fs";
+import { execSync } from "child_process";
 
 // Log environment variables during build
-console.log('\n' + '='.repeat(80));
-console.log('🔧 VITE BUILD - ENVIRONMENT VARIABLES');
-console.log('='.repeat(80));
-console.log('NODE_ENV:', process.env.NODE_ENV);
-console.log('VITE_GA_MEASUREMENT_ID:', process.env.VITE_GA_MEASUREMENT_ID || '❌ NOT SET');
-console.log('VITE_FB_PIXEL_ID:', process.env.VITE_FB_PIXEL_ID || '❌ NOT SET');
-console.log('\nAll VITE_ prefixed environment variables:');
+console.log("\n" + "=".repeat(80));
+console.log("🔧 VITE BUILD - ENVIRONMENT VARIABLES");
+console.log("=".repeat(80));
+console.log("NODE_ENV:", process.env.NODE_ENV);
+console.log(
+  "VITE_GA_MEASUREMENT_ID:",
+  process.env.VITE_GA_MEASUREMENT_ID || "❌ NOT SET",
+);
+console.log(
+  "VITE_FB_PIXEL_ID:",
+  process.env.VITE_FB_PIXEL_ID || "❌ NOT SET",
+);
+console.log("\nAll VITE_ prefixed environment variables:");
 Object.keys(process.env)
-  .filter(key => key.startsWith('VITE_'))
-  .forEach(key => {
+  .filter((key) => key.startsWith("VITE_"))
+  .forEach((key) => {
     console.log(`  ${key}:`, process.env[key]);
   });
-console.log('\nAll Vercel environment variables:');
+console.log("\nAll Vercel environment variables:");
 Object.keys(process.env)
-  .filter(key => key.startsWith('VERCEL_'))
-  .forEach(key => {
+  .filter((key) => key.startsWith("VERCEL_"))
+  .forEach((key) => {
     console.log(`  ${key}:`, process.env[key]);
   });
-console.log('='.repeat(80) + '\n');
+console.log("=".repeat(80) + "\n");
+
+// Plugin to generate favicons before build (survives Figma export overwrites)
+function faviconGenerationPlugin() {
+  return {
+    name: "favicon-generation",
+    buildStart() {
+      // Only run in production builds
+      if (process.env.NODE_ENV === "production") {
+        console.log(
+          "🎨 Vite: Generating favicons (including .ico for Google Search)...",
+        );
+
+        try {
+          // Run the favicon generation script
+          execSync("node scripts/generate-favicons.js", {
+            stdio: "inherit",
+            cwd: process.cwd(),
+          });
+          console.log("✅ Vite: Favicon generation complete\n");
+        } catch (error) {
+          console.warn(
+            "⚠️  Vite: Favicon generation failed - continuing build",
+          );
+          console.warn("Error:", error.message);
+          // Don't fail the build, just warn
+        }
+      }
+    },
+  };
+}
 
 // Plugin to transform figma:asset imports for production builds only
 function figmaAssetsPlugin() {
@@ -46,29 +83,57 @@ function figmaAssetsPlugin() {
       // Handle the virtual module we created in resolveId
       if (id.startsWith("\0figma-asset:")) {
         const filename = id.replace("\0figma-asset:", "");
-        
+
         // Try the exact filename first
-        let assetPath = path.resolve(__dirname, "./src/assets", filename);
-        
+        let assetPath = path.resolve(
+          __dirname,
+          "./src/assets",
+          filename,
+        );
+
         // If .png requested but doesn't exist, try .jpg (common conversion scenario)
-        if (!fs.existsSync(assetPath) && filename.endsWith('.png')) {
-          const jpgFilename = filename.replace(/\.png$/, '.jpg');
-          const jpgPath = path.resolve(__dirname, "./src/assets", jpgFilename);
-          
+        if (
+          !fs.existsSync(assetPath) &&
+          filename.endsWith(".png")
+        ) {
+          const jpgFilename = filename.replace(
+            /\.png$/,
+            ".jpg",
+          );
+          const jpgPath = path.resolve(
+            __dirname,
+            "./src/assets",
+            jpgFilename,
+          );
+
           if (fs.existsSync(jpgPath)) {
             assetPath = jpgPath;
-            console.log(`📸 Vite: Auto-converting ${filename} → ${jpgFilename}`);
+            console.log(
+              `📸 Vite: Auto-converting ${filename} → ${jpgFilename}`,
+            );
           }
         }
-        
+
         // If .jpg requested but doesn't exist, try .png (reverse scenario)
-        if (!fs.existsSync(assetPath) && filename.endsWith('.jpg')) {
-          const pngFilename = filename.replace(/\.jpg$/, '.png');
-          const pngPath = path.resolve(__dirname, "./src/assets", pngFilename);
-          
+        if (
+          !fs.existsSync(assetPath) &&
+          filename.endsWith(".jpg")
+        ) {
+          const pngFilename = filename.replace(
+            /\.jpg$/,
+            ".png",
+          );
+          const pngPath = path.resolve(
+            __dirname,
+            "./src/assets",
+            pngFilename,
+          );
+
           if (fs.existsSync(pngPath)) {
             assetPath = pngPath;
-            console.log(`📸 Vite: Auto-converting ${filename} → ${pngFilename}`);
+            console.log(
+              `📸 Vite: Auto-converting ${filename} → ${pngFilename}`,
+            );
           }
         }
 
@@ -87,7 +152,7 @@ function figmaAssetsPlugin() {
 
         // Read the file and validate it's a binary image
         const fileBuffer = fs.readFileSync(assetPath);
-        
+
         let finalBuffer = fileBuffer;
         let finalFilename = path.basename(assetPath);
 
@@ -122,31 +187,58 @@ function figmaAssetsPlugin() {
             });
 
             if (isLikelyBase64 && firstBytes.length >= 4) {
-              console.log(`🔧 Vite: Auto-decoding base64 image: ${filename}`);
-              
+              console.log(
+                `🔧 Vite: Auto-decoding base64 image: ${filename}`,
+              );
+
               try {
                 // Extract base64 data and decode it
-                const base64Text = fileBuffer.toString('utf8').replace(/\s/g, '');
-                const decodedBuffer = Buffer.from(base64Text, 'base64');
-                
+                const base64Text = fileBuffer
+                  .toString("utf8")
+                  .replace(/\s/g, "");
+                const decodedBuffer = Buffer.from(
+                  base64Text,
+                  "base64",
+                );
+
                 // Detect actual format from magic bytes
                 const magic = decodedBuffer.subarray(0, 4);
-                const isJPEG = magic[0] === 0xFF && magic[1] === 0xD8 && magic[2] === 0xFF;
-                const isPNG = magic[0] === 0x89 && magic[1] === 0x50 && magic[2] === 0x4E && magic[3] === 0x47;
-                
+                const isJPEG =
+                  magic[0] === 0xff &&
+                  magic[1] === 0xd8 &&
+                  magic[2] === 0xff;
+                const isPNG =
+                  magic[0] === 0x89 &&
+                  magic[1] === 0x50 &&
+                  magic[2] === 0x4e &&
+                  magic[3] === 0x47;
+
                 if (isJPEG) {
-                  console.log(`   ✓ Detected JPEG format (${decodedBuffer.length} bytes)`);
+                  console.log(
+                    `   ✓ Detected JPEG format (${decodedBuffer.length} bytes)`,
+                  );
                   finalBuffer = decodedBuffer;
-                  finalFilename = finalFilename.replace(/\.png$/, '.jpg');
+                  finalFilename = finalFilename.replace(
+                    /\.png$/,
+                    ".jpg",
+                  );
                 } else if (isPNG) {
-                  console.log(`   ✓ Detected PNG format (${decodedBuffer.length} bytes)`);
+                  console.log(
+                    `   ✓ Detected PNG format (${decodedBuffer.length} bytes)`,
+                  );
                   finalBuffer = decodedBuffer;
                 } else {
-                  console.warn(`   ⚠ Unknown format, using original buffer`);
+                  console.warn(
+                    `   ⚠ Unknown format, using original buffer`,
+                  );
                 }
               } catch (error) {
-                console.error(`   ✗ Failed to decode base64: ${error.message}`);
-                console.error(`   Using original buffer (may be corrupted)`);
+                console.error(
+                  `   ✗ Failed to decode base64: ${error.message}`,
+                );
+                console.error(
+                  `   Using original buffer (may be corrupted)`,
+                );
               }
             }
           }
@@ -172,6 +264,7 @@ export default defineConfig({
     // Tailwind is not being actively used – do not remove them
     react(),
     tailwindcss(),
+    faviconGenerationPlugin(), // Generate favicons before build
     figmaAssetsPlugin(),
   ],
   resolve: {
