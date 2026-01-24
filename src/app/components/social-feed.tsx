@@ -152,22 +152,6 @@ export function SocialFeed() {
               📘 {t.social.facebookBtn}
             </a>
             <a 
-              href={`https://wa.me/${siteConfig.contact.phone.raw.replace('+', '')}`}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-white text-[#0a3d3d] px-4 md:px-6 py-2 rounded-full text-sm md:text-base hover:bg-gray-100 transition-colors"
-            >
-              💬 {t.social.whatsappBtn}
-            </a>
-            <a 
-              href={siteConfig.social.line.url}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-white text-[#0a3d3d] px-4 md:px-6 py-2 rounded-full text-sm md:text-base hover:bg-gray-100 transition-colors"
-            >
-              💚 {t.social.lineBtn}
-            </a>
-            <a 
               href={`tel:${siteConfig.contact.phone.raw}`}
               className="bg-white text-[#0a3d3d] px-4 md:px-6 py-2 rounded-full text-sm md:text-base hover:bg-gray-100 transition-colors"
             >

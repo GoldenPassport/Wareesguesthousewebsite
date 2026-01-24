@@ -173,7 +173,7 @@ export function Rooms() {
             data-tracking-platform="airbnb"
             className="inline-block bg-[#f58220] hover:bg-[#d47020] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
           >
-            {t.rooms.ctaButton}
+            {t.rooms.viewAvailability}
           </a>
         </div>
       </div>

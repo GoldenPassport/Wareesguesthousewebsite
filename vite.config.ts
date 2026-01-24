@@ -3,7 +3,6 @@ import path from "path";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import fs from "fs";
-import { faviconPlugin } from "./vite-favicon-plugin";
 
 // Log environment variables during build
 console.log('\n' + '='.repeat(80));
@@ -174,12 +173,6 @@ export default defineConfig({
     react(),
     tailwindcss(),
     figmaAssetsPlugin(),
-    // Auto-generate favicons from the logo (figma:asset)
-    // Extracts logo from src/assets/ and generates all favicon sizes
-    faviconPlugin({
-      logo: 'figma:asset/302a78d8be4e75fe5f3bef65f80ada9b7aeb0688.png',
-      outputPath: 'public',
-    }),
   ],
   resolve: {
     alias: {

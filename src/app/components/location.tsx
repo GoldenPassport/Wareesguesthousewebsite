@@ -9,6 +9,7 @@ export function Location() {
   const { language } = useLanguage();
   const t = translations[language].location;
   const common = translations[language].common;
+  const hero = translations[language].hero;
   const [isRecommendedExpanded, setIsRecommendedExpanded] = useState(false);
   const [expandedTransport, setExpandedTransport] = useState<number | null>(null);
 
@@ -246,18 +247,16 @@ export function Location() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-4">
             <a
-              href={`https://wa.me/${siteConfig.contact.phone.raw.replace('+', '')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-[#f58220] hover:bg-[#d47020] text-white px-8 py-3 sm:px-10 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
-            >
-              {t.whatsappButton}
-            </a>
-            <a
               href={`tel:${siteConfig.contact.phone.raw}`}
               className="inline-block bg-[#0a3d3d] hover:bg-[#0a3d3d]/80 text-white px-8 py-3 sm:px-10 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
               {t.callButton}
+            </a>
+            <a
+              href={`mailto:${siteConfig.contact.email}`}
+              className="inline-block bg-[#f58220] hover:bg-[#d47020] text-white px-8 py-3 sm:px-10 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
+            >
+              {hero.emailButton}
             </a>
           </div>
         </div>

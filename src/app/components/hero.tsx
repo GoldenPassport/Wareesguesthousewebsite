@@ -72,7 +72,7 @@ export function Hero() {
         </p>
         
         {/* CTA Buttons - Email primary on mobile, all buttons on desktop */}
-        <div className="flex flex-col w-full max-w-md px-4 gap-4 sm:flex-row sm:max-w-none sm:px-0 sm:gap-4 sm:justify-center">
+        <div className="flex flex-col w-full max-w-md px-4 gap-4 sm:flex-row sm:max-w-none sm:px-0 sm:gap-4 sm:justify-center sm:items-center">
           {/* Primary CTA - Email Us */}
           <a 
             href={`mailto:${siteConfig.contact.email}`}
@@ -84,7 +84,7 @@ export function Hero() {
           </a>
           
           {/* Secondary CTAs - Text links on mobile, buttons on desktop */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 sm:items-center">
             <a 
               href={siteConfig.booking.airbnb.getTrackedUrl('hero_primary_cta')}
               target="_blank" 
@@ -94,7 +94,7 @@ export function Hero() {
               data-tracking-id="hero_primary_cta"
               data-tracking-section="hero"
               data-tracking-platform="airbnb"
-              className="inline-block bg-[#f58220] hover:bg-[#d47020] text-white px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg transition-all duration-300"
+              className="text-white hover:text-[#b3dce6] text-base sm:text-lg transition-all duration-300 text-center underline underline-offset-4 sm:no-underline sm:bg-white/10 sm:backdrop-blur-sm sm:border sm:border-white/30 sm:hover:bg-white/20 sm:text-white sm:px-8 sm:py-3 sm:rounded-full"
             >
               {t.hero.bookButton}
             </a>
@@ -103,7 +103,7 @@ export function Hero() {
               target="_blank" 
               rel="noopener noreferrer"
               onClick={() => trackEvent.socialClick('tripadvisor')}
-              className="text-white hover:text-[#b3dce6] text-base sm:text-lg transition-all duration-300 text-center underline underline-offset-4 sm:no-underline sm:bg-white sm:hover:bg-gray-100 sm:text-[#0a3d3d] sm:px-10 sm:py-4 sm:rounded-full sm:transform sm:hover:scale-105 sm:shadow-2xl"
+              className="text-white hover:text-[#b3dce6] text-base sm:text-lg transition-all duration-300 text-center underline underline-offset-4 sm:no-underline sm:bg-white/10 sm:backdrop-blur-sm sm:border sm:border-white/30 sm:hover:bg-white/20 sm:text-white sm:px-8 sm:py-3 sm:rounded-full"
             >
               {t.hero.reviewsButton}
             </a>

@@ -28,10 +28,10 @@ export function Footer() {
                 onClick={() => trackEvent.contactClick('email')}
                 data-tracking-id="footer_email_link"
                 data-tracking-section="footer"
-                className="text-white hover:text-[#f58220] transition-colors flex items-center gap-2"
+                className="flex items-center gap-2 sm:gap-3 hover:text-[#f58220] transition-colors"
               >
-                <Mail className="w-4 h-4" />
-                {siteConfig.contact.email}
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-[#f58220] flex-shrink-0" />
+                <span className="text-white/80 text-sm sm:text-base break-all">{siteConfig.contact.email}</span>
               </a>
               <a href={`tel:${siteConfig.contact.phone.raw}`} className="flex items-center space-x-2 sm:space-x-3 hover:text-[#f58220] transition-colors">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-[#f58220] flex-shrink-0" />
@@ -55,24 +55,6 @@ export function Footer() {
               >
                 <Facebook className="w-4 h-4 sm:w-5 sm:h-5 text-[#f58220]" />
                 <span className="text-white/80 text-sm sm:text-base">{t.footer.facebook}</span>
-              </a>
-              <a 
-                href={`https://wa.me/${siteConfig.contact.phone.raw.replace('+', '')}`}
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 sm:space-x-3 hover:text-[#f58220] transition-colors group"
-              >
-                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#f58220]" />
-                <span className="text-white/80 text-sm sm:text-base">{t.footer.whatsapp}</span>
-              </a>
-              <a 
-                href={siteConfig.social.line.url}
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 sm:space-x-3 hover:text-[#f58220] transition-colors group"
-              >
-                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#f58220]" />
-                <span className="text-white/80 text-sm sm:text-base">{t.footer.line}</span>
               </a>
               <p className="text-white/60 text-xs sm:text-sm mt-2 sm:mt-4">
                 {t.footer.messagePrompt}
@@ -101,11 +83,8 @@ export function Footer() {
                 data-tracking-id="footer_link"
                 data-tracking-section="footer"
                 data-tracking-platform="airbnb"
-                className="text-white hover:text-[#f58220] transition-colors flex items-center gap-2"
+                className="inline-block bg-white/10 hover:bg-white/20 text-white border border-white/30 px-4 sm:px-6 py-2 rounded-full transition-all duration-300 w-full text-center text-sm"
               >
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z"/>
-                </svg>
                 Airbnb
               </a>
               <a 
