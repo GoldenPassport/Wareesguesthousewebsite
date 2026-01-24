@@ -35,7 +35,7 @@ export function Hero() {
           <img src={logo} alt="Waree's Guesthouse Logo" className="w-32 h-32 mx-auto drop-shadow-2xl rounded-2xl" />
         </div>
         
-        <h1 className="text-4xl sm:text-5xl md:text-7xl text-white mb-4 sm:mb-6 leading-tight max-w-full" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8), 0 4px 20px rgba(0,0,0,0.6)' }}>
+        <h1 className="text-5xl sm:text-6xl md:text-7xl text-white mb-4 sm:mb-6 leading-tight max-w-full" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8), 0 4px 20px rgba(0,0,0,0.6)' }}>
           {t.hero.title}
         </h1>
         
