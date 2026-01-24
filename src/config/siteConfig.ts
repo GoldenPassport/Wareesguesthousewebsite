@@ -1,8 +1,8 @@
 /**
  * Site Configuration
- * 
+ *
  * Centralized configuration for contact information, social media links,
- * and other business details. Update these values here instead of 
+ * and other business details. Update these values here instead of
  * hardcoding them throughout the application.
  */
 
@@ -19,8 +19,8 @@ export const siteConfig = {
   contact: {
     email: "wareesguesthouse@hotmail.com",
     phone: {
-      display: "+66 76 331 016",  // Display format
-      raw: "+66763310166",        // Format for tel: links
+      display: "+66 76 331 016", // Display format
+      raw: "+66763310166", // Format for tel: links
       international: "+66 76 331 016",
     },
     address: {
@@ -38,11 +38,13 @@ export const siteConfig = {
   // Location Coordinates
   location: {
     latitude: 7.8167,
-    longitude: 98.3000,
+    longitude: 98.3,
     // Google Maps Embed URL (using coordinates)
-    googleMapsEmbedUrl: "https://maps.google.com/maps?q=7.8167,98.3000&hl=en&z=15&output=embed",
+    googleMapsEmbedUrl:
+      "https://maps.google.com/maps?q=7.8167,98.3000&hl=en&z=15&output=embed",
     // Google Maps Directions URL (from Phuket International Airport to the guesthouse)
-    googleMapsDirectionsUrl: "https://www.google.com/maps/dir/Phuket+International+Airport,+222,+Mai+Khao,+Thalang+District,+Phuket+83110,+Thailand/7.8167,98.3000",
+    googleMapsDirectionsUrl:
+      "https://www.google.com/maps/dir/Phuket+International+Airport,+222,+Mai+Khao,+Thalang+District,+Phuket+83110,+Thailand/7.8167,98.3000",
     // Airport Information
     airport: {
       name: "Phuket International Airport",
@@ -64,11 +66,11 @@ export const siteConfig = {
       id: "0763310166",
     },
     instagram: {
-      url: "",  // Add when available
+      url: "", // Add when available
       handle: "",
     },
     twitter: {
-      url: "",  // Add when available
+      url: "", // Add when available
       handle: "",
     },
   },
@@ -78,24 +80,25 @@ export const siteConfig = {
     airbnb: {
       url: "https://www.airbnb.com/rooms/726744824043972517",
       roomId: "726744824043972517",
-      // Helper function to add UTM tracking to AirBNB URLs
+      // Helper function to add UTM tracking to Airbnb URLs
       getTrackedUrl: (source: string) => {
-        const baseUrl = "https://www.airbnb.com/rooms/726744824043972517";
+        const baseUrl =
+          "https://www.airbnb.com/rooms/726744824043972517";
         const params = new URLSearchParams({
-          utm_source: 'wareeguesthouse_website',
-          utm_medium: 'referral',
-          utm_campaign: 'direct_booking',
+          utm_source: "wareeguesthouse_website",
+          utm_medium: "referral",
+          utm_campaign: "direct_booking",
           utm_content: source, // e.g., 'hero', 'footer', 'rooms'
         });
         return `${baseUrl}?${params.toString()}`;
       },
     },
     bookingCom: {
-      url: "",  // Add when available
+      url: "", // Add when available
       propertyId: "",
     },
     agoda: {
-      url: "",  // Add when available
+      url: "", // Add when available
       propertyId: "",
     },
   },
@@ -107,7 +110,7 @@ export const siteConfig = {
       locationId: "d3136593",
     },
     google: {
-      url: "",  // Add when available
+      url: "", // Add when available
       placeId: "",
     },
   },
@@ -150,10 +153,10 @@ export const siteConfig = {
 
   // Features
   features: {
-    starRating: 2,  // Self-described star rating
+    starRating: 2, // Self-described star rating
     budgetFriendly: true,
     familyRun: true,
-    petFriendly: true,  // Cats
+    petFriendly: true, // Cats
     wifi: true,
     airConditioning: true,
   },

@@ -1,23 +1,32 @@
-export type Language = 'en' | 'th' | 'zh' | 'ru' | 'de' | 'it' | 'sv' | 'fi';
+export type Language =
+  | "en"
+  | "th"
+  | "zh"
+  | "ru"
+  | "de"
+  | "it"
+  | "sv"
+  | "fi";
 
 export const translations = {
   en: {
     // Language Names
     languageNames: {
-      en: 'English',
-      th: 'ไทย',
-      zh: '中文',
-      ru: 'Русский',
-      de: 'Deutsch',
-      it: 'Italiano',
-      sv: 'Svenska',
-      fi: 'Suomi'
+      en: "English",
+      th: "ไทย",
+      zh: "中文",
+      ru: "Русский",
+      de: "Deutsch",
+      it: "Italiano",
+      sv: "Svenska",
+      fi: "Suomi",
     },
     // Hero
     hero: {
       title: "Waree's Guesthouse",
       subtitle: "Your Family Home in Kata Beach",
-      tagline: "Experience Phuket with authentic Thai hospitality since 2000",
+      tagline:
+        "Experience Phuket with authentic Thai hospitality since 2000",
       emailButton: "Email Us",
       bookButton: "Book on Airbnb",
       reviewsButton: "Read Reviews",
@@ -25,7 +34,7 @@ export const translations = {
     // Common UI
     common: {
       showDetails: "Show Details",
-      hideDetails: "Hide Details"
+      hideDetails: "Hide Details",
     },
     // About
     about: {
@@ -34,14 +43,15 @@ export const translations = {
       p2: "Let's hang out at our outdoor lounge, in our small bar, or play badminton with us in the street—we genuinely enjoy spending time with guests! We help arrange trips, book taxis, restaurants and more.",
       p3: "<strong>We believe that travel is all about the people you meet!</strong>",
       note: "<strong>🎵 Note:</strong> There's an outdoor market behind us playing chill live music in the evenings. They finish between 22:00 and 23:00 most nights (no later than midnight).",
-      budget: "Like we said, we're just a regular family, running our small, relaxed guesthouse/homestay. We consider ourselves <strong>\"2 Star\" / budget-friendly</strong>.",
+      budget:
+        'Like we said, we\'re just a regular family, running our small, relaxed guesthouse/homestay. We consider ourselves <strong>"2 Star" / budget-friendly</strong>.',
       rightForYouTitle: "✨ We Think You'll Love Us If You:",
       rightForYou: [
         "Want a more unique and local experience",
         "Enjoy feeling part of the family, meeting new people and making new friends",
         "On a budget, but appreciate small luxuries like air-conditioning, clean sheets and hot water",
         "Appreciate our location—not near a noisy road or bars, but still walking distance to the beach",
-        "Love cats! 🐱"
+        "Love cats! 🐱",
       ],
       notRightTitle: "💭 We May Not Be Right For You If You:",
       notRight: [
@@ -50,37 +60,47 @@ export const translations = {
         "Need to be very close to the beach",
         "Simply need a place to sleep without the local experience",
         "Are sensitive to developing country realities (occasional blackouts, insects, geckos, etc.)",
-        "Allergic to or don't like cats"
+        "Allergic to or don't like cats",
       ],
-      hostsPhotoAlt: "Mam, Anna (sisters), and Waree - The founding family of Waree's Guesthouse",
-      hostPhotoAlt: "Anna, Josh and Fin - Your hosts at Waree's Guesthouse"
+      hostsPhotoAlt:
+        "Mam, Anna (sisters), and Waree - The founding family of Waree's Guesthouse",
+      hostPhotoAlt:
+        "Anna, Josh and Fin - Your hosts at Waree's Guesthouse",
     },
     // Airbnb Highlights
     airbnb: {
       title: "Airbnb Superhost • Guest Favourite",
       subtitle: "Rated 4.83 out of 5 by our wonderful guests",
       superhost: "Anna is an Airbnb Superhost",
-      superhostDesc: "Superhosts are experienced, highly rated hosts committed to providing great stays",
+      superhostDesc:
+        "Superhosts are experienced, highly rated hosts committed to providing great stays",
       guestFavorite: "Guest Favourite",
-      guestFavoriteDesc: "One of the most loved homes on Airbnb based on ratings, reviews, and reliability",
+      guestFavoriteDesc:
+        "One of the most loved homes on Airbnb based on ratings, reviews, and reliability",
       rating: "4.83 Rating",
-      ratingDesc: "Consistently excellent reviews from guests who love our family atmosphere",
-      achievementsDate: "Airbnb achievements as of January 23, 2026",
+      ratingDesc:
+        "Consistently excellent reviews from guests who love our family atmosphere",
+      achievementsDate:
+        "Airbnb achievements as of January 23, 2026",
       ratingText: "Rating from 35 Reviews",
       superhostTitle: "Superhost",
       superhostYears: "Anna • 10 Years Hosting",
       checkInTitle: "Exceptional Check-In",
-      checkInDesc: "Recent guests gave the check-in process a 5-star rating",
+      checkInDesc:
+        "Recent guests gave the check-in process a 5-star rating",
       locationTitle: "Unbeatable Location",
-      locationDesc: "100% of guests in the past year gave this location a 5-star rating",
+      locationDesc:
+        "100% of guests in the past year gave this location a 5-star rating",
       trustedTitle: "Trusted Experience",
-      ctaText: "See why guests keep coming back and rating us 5 stars!",
-      ctaButton: "Check Availability on Airbnb"
+      ctaText:
+        "See why guests keep coming back and rating us 5 stars!",
+      ctaButton: "Check Availability on Airbnb",
     },
     // Reviews
     reviews: {
       title: "What Our Guests Say",
-      subtitle: "Real experiences from travellers who've stayed with us",
+      subtitle:
+        "Real experiences from travellers who've stayed with us",
       ratingsDate: "Ratings as of January 23, 2026",
       airbnbTitle: "Airbnb",
       airbnbScore: "4.83",
@@ -98,39 +118,50 @@ export const translations = {
         value: "Value",
         sleepQuality: "Sleep Quality",
         rooms: "Rooms",
-        service: "Service"
+        service: "Service",
       },
       // Guest reviews
       guestReviews: [
         {
           text: "Great hosts, spotlessly clean, comfortable bed, nice balcony, quiet... family-run business with a lot of love. We loved staying here!",
-          author: "Andreas, Airbnb"
+          author: "Andreas, Airbnb",
         },
         {
           text: "Anna is super lovely, nice, helpful, and friendly. The rooms are really clean and comfortable. Highly recommended!",
-          author: "Rosa, Airbnb"
+          author: "Rosa, Airbnb",
         },
         {
           text: "Probably the friendliest guesthouse owner we've met on our entire trip. Made us feel completely at home.",
-          author: "Michael, TripAdvisor"
+          author: "Michael, TripAdvisor",
         },
         {
           text: "Clean rooms, friendly staff, perfect location. You really feel like part of the family here!",
-          author: "Emma, Airbnb"
-        }
+          author: "Emma, Airbnb",
+        },
       ],
       // CTA buttons
       readAirbnbButton: "Airbnb Reviews",
-      readTripadvisorButton: "TripAdvisor Reviews"
+      readTripadvisorButton: "TripAdvisor Reviews",
     },
     // Rooms
     rooms: {
       title: "Our Guest Room",
-      subtitle: "Comfortable, clean, and equipped with everything you need",
+      subtitle:
+        "Comfortable, clean, and equipped with everything you need",
       roomName: "Guest Room",
-      roomDesc: "Cozy, comfortable room with everything you need for a relaxing stay",
+      roomDesc:
+        "Cozy, comfortable room with everything you need for a relaxing stay",
       features: "Room Features",
-      featuresList: ["King Bed", "Ensuite Shower Room (Hot Water)", "Air Conditioning", "Refrigerator", "Free WiFi", "Kettle", "Private Balcony", "Safe"],
+      featuresList: [
+        "King Bed",
+        "Ensuite Shower Room (Hot Water)",
+        "Air Conditioning",
+        "Refrigerator",
+        "Free WiFi",
+        "Kettle",
+        "Private Balcony",
+        "Safe",
+      ],
       // Property details
       roomsLabel: "Rooms",
       floorsLabel: "Floors",
@@ -138,60 +169,111 @@ export const translations = {
       voltageLabel: "Voltage",
       // More space section
       needMoreSpace: "Need More Space?",
-      moreSpaceDesc: "Looking for a suite or apartment? We can arrange other accommodation options to suit your needs. Just email us directly and we'll help find the perfect space for your stay!",
+      moreSpaceDesc:
+        "Looking for a suite or apartment? We can arrange other accommodation options to suit your needs. Just email us directly and we'll help find the perfect space for your stay!",
       // CTA button
-      viewAvailability: "View Availability on Airbnb"
+      viewAvailability: "View Availability on Airbnb",
     },
     // Amenities
     amenities: {
       title: "Everything You Need",
-      subtitle: "We've thought of all the details to make your stay comfortable and worry-free. Plus, Anna and Josh are always happy to help organize taxis, island trips, restaurant recommendations, and more!",
+      subtitle:
+        "We've thought of all the details to make your stay comfortable and worry-free. Plus, Anna and Josh are always happy to help organize taxis, island trips, restaurant recommendations, and more!",
       items: [
-        { title: "Air Conditioning", description: "Stay cool in tropical weather" },
-        { title: "Free WiFi", description: "High-speed internet access" },
-        { title: "Refrigerator", description: "Keep drinks and snacks cold" },
-        { title: "Outdoor Dining & BBQ", description: "Enjoy meals in tropical setting" },
-        { title: "Quality Bedding", description: "Extra pillows, blankets & linens" },
-        { title: "Iron Available", description: "Keep your clothes looking fresh" },
-        { title: "Toiletries Provided", description: "Shampoo, soap, towels & essentials" },
-        { title: "Scooter Rental", description: "Convenient motorbike rentals available" },
-        { title: "Luggage Storage", description: "Early arrival or late departure" },
-        { title: "Long-Term Stays Welcome", description: "28+ days available" },
-        { title: "Personal Host Greeting", description: "Anna welcomes every guest" },
-        { title: "Security & Safety", description: "Fire extinguisher & first aid kit" }
+        {
+          title: "Air Conditioning",
+          description: "Stay cool in tropical weather",
+        },
+        {
+          title: "Free WiFi",
+          description: "High-speed internet access",
+        },
+        {
+          title: "Refrigerator",
+          description: "Keep drinks and snacks cold",
+        },
+        {
+          title: "Outdoor Dining & BBQ",
+          description: "Enjoy meals in tropical setting",
+        },
+        {
+          title: "Quality Bedding",
+          description: "Extra pillows, blankets & linens",
+        },
+        {
+          title: "Iron Available",
+          description: "Keep your clothes looking fresh",
+        },
+        {
+          title: "Toiletries Provided",
+          description: "Shampoo, soap, towels & essentials",
+        },
+        {
+          title: "Scooter Rental",
+          description: "Convenient motorbike rentals available",
+        },
+        {
+          title: "Luggage Storage",
+          description: "Early arrival or late departure",
+        },
+        {
+          title: "Long-Term Stays Welcome",
+          description: "28+ days available",
+        },
+        {
+          title: "Personal Host Greeting",
+          description: "Anna welcomes every guest",
+        },
+        {
+          title: "Security & Safety",
+          description: "Fire extinguisher & first aid kit",
+        },
       ],
-      beachAlt: "Kata Beach - Just steps from Waree's Guesthouse"
+      beachAlt:
+        "Kata Beach - Just steps from Waree's Guesthouse",
     },
     // Photo Gallery
     gallery: {
       title: "Life at Waree's",
-      subtitle: "Meet your hosts, explore Kata Beach, and discover the authentic Phuket experience that awaits you",
+      subtitle:
+        "Meet your hosts, explore Kata Beach, and discover the authentic Phuket experience that awaits you",
       familyMatters: "Family Matters :)",
-      familyMattersDesc: "Mam, Anna & Waree - Your family away from home",
+      familyMattersDesc:
+        "Mam, Anna & Waree - Your family away from home",
       meetHosts: "Meet Your Hosts",
-      meetHostsDesc: "Anna, Josh & Fin - Your family away from home since 2000",
+      meetHostsDesc:
+        "Anna, Josh & Fin - Your family away from home since 2000",
       paradiseFound: "Paradise Found",
-      paradiseFoundDesc: "Stunning views, crystal waters, and peaceful island life",
+      paradiseFoundDesc:
+        "Stunning views, crystal waters, and peaceful island life",
       explore: "Explore the Island",
-      exploreDesc: "Discover breathtaking viewpoints and hidden gems around Phuket",
+      exploreDesc:
+        "Discover breathtaking viewpoints and hidden gems around Phuket",
       familyFun: "Family Fun",
-      familyFunDesc: "Waterparks, attractions, and activities for all ages nearby",
+      familyFunDesc:
+        "Waterparks, attractions, and activities for all ages nearby",
       yourHome: "Your Home in Kata",
-      yourHomeDesc: "Nestled in the heart of Kata Beach with stunning mountain views",
+      yourHomeDesc:
+        "Nestled in the heart of Kata Beach with stunning mountain views",
       welcome: "Welcome to Waree's",
-      welcomeDesc: "Look for our iconic bird and key logo - your home away from home",
+      welcomeDesc:
+        "Look for our iconic bird and key logo - your home away from home",
       courtyard: "Guesthouse Courtyard",
-      courtyardDesc: "A peaceful and inviting space for relaxation and enjoyment",
+      courtyardDesc:
+        "A peaceful and inviting space for relaxation and enjoyment",
       entrance: "Guesthouse Entrance",
-      entranceDesc: "A welcoming and charming entrance to your new home away from home",
+      entranceDesc:
+        "A welcoming and charming entrance to your new home away from home",
       ctaTitle: "Ready to create your own memories?",
-      ctaDesc: "Join the Waree's family and experience authentic Thai hospitality in one of Phuket's most beautiful locations",
-      ctaButton: "Book Your Stay"
+      ctaDesc:
+        "Join the Waree's family and experience authentic Thai hospitality in one of Phuket's most beautiful locations",
+      ctaButton: "Book Your Stay",
     },
     // Things to Do
     thingsToDo: {
       title: "Things to Do & Nearby",
-      subtitle: "Everything you need is just minutes away - beaches, attractions, shops, and local conveniences",
+      subtitle:
+        "Everything you need is just minutes away - beaches, attractions, shops, and local conveniences",
       attractionsTitle: "Beaches & Attractions",
       kataBeach: "Kata Beach",
       kataBeachDesc: "Beautiful white sand beach",
@@ -233,14 +315,17 @@ export const translations = {
       restaurants: "Local Restaurants",
       restaurantsDesc: "Thai & international food",
       restaurantsDist: "2 min walk",
-      localTip: "<strong>💡 Local Tip:</strong> We're happy to help you arrange transport, recommend restaurants, book tours, and share our favourite local spots. Just ask—we love helping our guests discover the real Phuket!"
+      localTip:
+        "<strong>💡 Local Tip:</strong> We're happy to help you arrange transport, recommend restaurants, book tours, and share our favourite local spots. Just ask—we love helping our guests discover the real Phuket!",
     },
     // Location
     location: {
       title: "How to Get There",
-      subtitle: "Located in the heart of Kata Beach, we're easy to reach from anywhere in Phuket",
+      subtitle:
+        "Located in the heart of Kata Beach, we're easy to reach from anywhere in Phuket",
       ourAddress: "Our Address",
-      address: "44/5 Kata Road\nKata Beach, Karon\nPhuket 83100\nThailand",
+      address:
+        "44/5 Kata Road\nKata Beach, Karon\nPhuket 83100\nThailand",
       directions: "Get Directions",
       fromAirport: "From the Airport",
       distance: "Distance:",
@@ -248,9 +333,11 @@ export const translations = {
       travelTime: "Travel Time:",
       travelTimeValue: "45-60 minutes by car",
       recommendedTitle: "Recommended for First-Time Visitors",
-      recommendedSubtitle: "Take a taxi from Phuket International Airport",
+      recommendedSubtitle:
+        "Take a taxi from Phuket International Airport",
       airportTaxiTitle: "🚖 Airport Taxi",
-      airportTaxiDesc: "The easiest and most comfortable option for first-time visitors to Phuket. Official airport taxis are safe, reliable, and provide direct service to our door.",
+      airportTaxiDesc:
+        "The easiest and most comfortable option for first-time visitors to Phuket. Official airport taxis are safe, reliable, and provide direct service to our door.",
       taxiCost: "Cost:",
       taxiCostValue: "Approximately 800-1,000 THB (fixed rate)",
       taxiWhere: "Where to find:",
@@ -258,64 +345,81 @@ export const translations = {
       taxiDuration: "Duration:",
       taxiDurationValue: "45-60 minutes direct to Kata Beach",
       taxiTip: "Tip:",
-      taxiTipValue: "Keep your booking confirmation handy to show the driver",
+      taxiTipValue:
+        "Keep your booking confirmation handy to show the driver",
       airportBusTitle: "🚌 Airport Bus",
-      airportBusDesc: "Budget-friendly option with regular service to Kata Beach area.",
+      airportBusDesc:
+        "Budget-friendly option with regular service to Kata Beach area.",
       busCost: "~150-200 THB",
       busDuration: "90-120 minutes",
       privateTransferTitle: "🚗 Private Transfer",
-      privateTransferDesc: "Pre-booked transfer with meet & greet service available.",
+      privateTransferDesc:
+        "Pre-booked transfer with meet & greet service available.",
       privateCost: "~1,200-1,500 THB",
       privateDuration: "45-60 minutes",
       localTransportTitle: "🛵 Local Transport",
-      localTransportDesc: "Tuk-tuks and motorbike taxis available for short trips around Kata Beach.",
+      localTransportDesc:
+        "Tuk-tuks and motorbike taxis available for short trips around Kata Beach.",
       localCost: "Varies by distance",
       localTip: "Always agree on price first",
       helpTitle: "Need help arranging transportation?",
-      helpDesc: "Anna and Josh are happy to help you arrange a taxi or provide directions. Just message us after booking!",
+      helpDesc:
+        "Anna and Josh are happy to help you arrange a taxi or provide directions. Just message us after booking!",
       whatsappButton: "WhatsApp Us",
-      callButton: "Call +66 76 331 016"
+      callButton: "Call +66 76 331 016",
     },
     // Social Feed
     social: {
       title: "Stay Connected",
-      subtitle: "Follow us on Facebook for daily updates, guest photos, local tips, and special offers! See what's happening at Waree's and get inspired for your Kata Beach adventure.",
+      subtitle:
+        "Follow us on Facebook for daily updates, guest photos, local tips, and special offers! See what's happening at Waree's and get inspired for your Kata Beach adventure.",
       communityTitle: "Community",
-      communityDesc: "Join our growing family of travellers from around the world",
+      communityDesc:
+        "Join our growing family of travellers from around the world",
       storiesTitle: "Guest Stories",
-      storiesDesc: "See photos and stories from guests who've become friends",
+      storiesDesc:
+        "See photos and stories from guests who've become friends",
       eventsTitle: "Events & Updates",
-      eventsDesc: "Local events, beach updates, and guesthouse news",
+      eventsDesc:
+        "Local events, beach updates, and guesthouse news",
       latestTitle: "Latest from Facebook",
-      latestDesc: "See our most recent posts, photos, and updates from Anna, Josh, and Mam!",
-      ctaText: "Click below to visit our Facebook page and see what's new at Waree's Guesthouse!",
+      latestDesc:
+        "See our most recent posts, photos, and updates from Anna, Josh, and Mam!",
+      ctaText:
+        "Click below to visit our Facebook page and see what's new at Waree's Guesthouse!",
       ctaButton: "Visit Our Facebook Page",
       feature1: "Updates",
       feature2: "Guest photos",
       feature3: "Local recommendations",
       feature4: "Direct messaging",
       quickTitle: "Quick Question?",
-      quickDesc: "Message us on Facebook, WhatsApp, Line, or call us for the fastest response!",
+      quickDesc:
+        "Message us on Facebook, WhatsApp, Line, or call us for the fastest response!",
       facebookBtn: "Facebook",
       whatsappBtn: "WhatsApp",
       lineBtn: "LINE",
       phoneBtn: "+66 76 331 016",
-      emailBtn: "Email"
+      emailBtn: "Email",
     },
     // Footer
     footer: {
-      description: "Your home away from home in beautiful Kata Beach, Phuket. Experience local warmth and genuine hospitality.",
+      description:
+        "Your home away from home in beautiful Kata Beach, Phuket. Experience local warmth and genuine hospitality.",
       contactTitle: "Contact Us",
       connectTitle: "Connect With Us",
       facebook: "Follow us on Facebook",
       whatsapp: "WhatsApp Us",
       line: "Line Us",
-      messagePrompt: "Message us on your favourite platform—we're here to help!",
+      messagePrompt:
+        "Message us on your favourite platform—we're here to help!",
       bookTitle: "Book Your Stay",
-      bookDescription: "Ready to experience Kata Beach like a local? Book now for the best rates and instant confirmation.",
+      bookDescription:
+        "Ready to experience Kata Beach like a local? Book now for the best rates and instant confirmation.",
       tripadvisor: "TripAdvisor",
-      copyright: "© 2026 Waree's Guesthouse, Kata Beach, Phuket. All rights reserved.",
-      tagline: "Making memories, one guest at a time since 2000. 💛",
+      copyright:
+        "© 2026 Waree's Guesthouse, Kata Beach, Phuket. All rights reserved.",
+      tagline:
+        "Making memories, one guest at a time since 2000. 💛",
       quickLinks: "Quick Links",
       contact: "Contact",
       phone: "Phone",
@@ -325,28 +429,29 @@ export const translations = {
       rooms: "Rooms",
       amenities: "Amenities",
       reviews: "Reviews",
-      location: "Location"
-    }
+      location: "Location",
+    },
   },
   th: {
     // Language Names
     languageNames: {
-      en: 'English',
-      th: 'ไทย',
-      zh: '中文',
-      ru: 'Русский',
-      de: 'Deutsch',
-      it: 'Italiano',
-      sv: 'Svenska',
-      fi: 'Suomi'
+      en: "English",
+      th: "ไทย",
+      zh: "中文",
+      ru: "Русский",
+      de: "Deutsch",
+      it: "Italiano",
+      sv: "Svenska",
+      fi: "Suomi",
     },
     // Hero
     hero: {
       title: "เกสต์เฮ้าส์วารี",
       subtitle: "บ้านของครอบครัวคุณที่หาดกะตะ",
-      tagline: "สัมผัสภูเก็ตกับการต้อนรับแบบไทยแท้ ตั้งแต่ปี 2000",
+      tagline:
+        "สัมผัสภูเก็ตกับการต้อนรับแบบไทยแท้ ตั้งแต่ปี 2000",
       emailButton: "ส่งอีเมลหาเรา",
-      bookButton: "จองทาง AirBNB",
+      bookButton: "จองทาง Airbnb",
       reviewsButton: "อ่านรีวิว",
     },
     // About
@@ -356,14 +461,15 @@ export const translations = {
       p2: "มานั่งเล่นที่ลานกลางแจ้ง บาร์เล็กๆ ของเรา หรือมาเล่นแบดมินตันกับเราที่ถนน เราชอบใช้เวลากับแขกจริงๆ! เราช่วยจัดทริป จองแท็กซี่ ร้านอาหาร และอื่นๆ อีกมากมาย",
       p3: "<strong>เราเชื่อว่าการเดินทางคือเรื่องของคนที่คุณพบเจอ!</strong>",
       note: "<strong>🎵 หมายเหตุ:</strong> มีตลาดกลางคืนด้านหลังเราที่เล่นดนตรีสดผ่อนๆ ในตอนเย็น ปิดประมาณ 22:00-23:00 (ไม่เกินเที่ยงคืน)",
-      budget: "อย่างที่บอก เราเป็นแค่ครอบครัวธรรมดา ดูแลเกสต์เฮ้าส์/โฮมสเตย์เล็กๆ ที่ผ่อนคลาย เราถือว่าตัวเองเป็น<strong>\"2 ดาว\" / ราคาประหยัด</strong>",
+      budget:
+        'อย่างที่บอก เราเป็นแค่ครอบครัวธรรมดา ดูแลเกสต์เฮ้าส์/โฮมสเตย์เล็กๆ ที่ผ่อนคลาย เราถือว่าตัวเองเป็น<strong>"2 ดาว" / ราคาประหยัด</strong>',
       rightForYouTitle: "✨ เราคิดว่าคุณจะชอบเราถ้าคุณ:",
       rightForYou: [
         "ต้องการประสบการณ์ที่เป็นเอกลักษณ์และท้องถิ่น",
         "ชอบความรู้สึกเป็นส่วนหนึ่งของครอบครัว พบปะคนใหม่และสร้างเพื่อนใหม่",
         "ใช้งบประมาณ แต่ชื่นชอบความสะดวกสบายเล็กๆ น้อยๆ เช่น เครื่องปรับอากาศ ผ้าปูที่นอนสะอาด และน้ำอุ่น",
         "ชื่นชอบทำเลของเรา ไม่ใกล้ถนนหรือบาร์ที่เสียงดัง แต่ยังเดินไปชายหาดได้",
-        "รักแมว! 🐱"
+        "รักแมว! 🐱",
       ],
       notRightTitle: "💭 เราอาจไม่เหมาะกับคุณถ้าคุณ:",
       notRight: [
@@ -372,39 +478,45 @@ export const translations = {
         "ต้องการอยู่ใกล้ชายหาดมาก",
         "ต้องการเพียงที่นอนโดยไม่ต้องการประสบการณ์ท้องถิ่น",
         "ไวต่อความเป็นจริงของประเทศกำลังพัฒนา (ไฟดับบางครั้ง แมลง ตุ๊กแก ฯลฯ)",
-        "แพ้หรือไม่ชอบแมว"
+        "แพ้หรือไม่ชอบแมว",
       ],
-      hostsPhotoAlt: "แม่ม แอนนา และวารี - ครอบครัวผู้ก่อตั้งเกสต์เฮาส์วารี",
-      hostPhotoAlt: "แอนนา จอช และฟิน - เจ้าของที่พักของคุณ"
+      hostsPhotoAlt:
+        "แม่ม แอนนา และวารี - ครอบครัวผู้ก่อตั้งเกสต์เฮาส์วารี",
+      hostPhotoAlt: "แอนนา จอช และฟิน - เจ้าของที่พักของคุณ",
     },
     // Airbnb Highlights
     airbnb: {
       title: "Airbnb Superhost • Guest Favorite",
       subtitle: "คะแนน 4.83 จาก 5 จากแขกที่น่ารักของเรา",
       superhost: "แอนนาเป็น Airbnb Superhost",
-      superhostDesc: "Superhost คือโฮสต์ที่มีประสบการณ์ คะแนนสูง มุ่งมั่นให้การพักที่ยอดเยี่ยม",
+      superhostDesc:
+        "Superhost คือโฮสต์ที่มีประสบการณ์ คะแนนสูง มุ่งมั่นให้การพักที่ยอดเยี่ยม",
       guestFavorite: "Guest Favorite",
-      guestFavoriteDesc: "หนึ่งในที่พักที่ได้รับความรักมากที่สุดบน Airbnb จากคะแนน รีวิว และความน่าเชื่อถือ",
+      guestFavoriteDesc:
+        "หนึ่งในที่พักที่ได้รับความรักมากที่สุดบน Airbnb จากคะแนน รีวิว และความน่าเชื่อถือ",
       rating: "คะแนน 4.83",
-      ratingDesc: "รีวิวที่ยอดเยี่ยมอย่างสม่ำเสมอจากแขกที่รักบรรยากาศครอบครัวของเรา",
-      achievementsDate: "ความสำเร็จบน AirBNB ณ วันที่ 23 มกราคม 2026",
+      ratingDesc:
+        "รีวิวที่ยอดเยี่ยมอย่างสม่ำเสมอจากแขกที่รักบรรยากาศครอบครัวของเรา",
+      achievementsDate:
+        "ความสำเร็จบน Airbnb ณ วันที่ 23 มกราคม 2026",
       ratingText: "คะแนนจาก 35 รีวิว",
       superhostTitle: "Superhost",
       superhostYears: "แอนนา • 10 ปีของการเป็นโฮสต์",
       checkInTitle: "การเช็คอินที่ยอดเยี่ยม",
       checkInDesc: "แขกล่าสุดให้คะแนนกระบวนการเช็คอิน 5 ดาว",
       locationTitle: "ทำเลที่ตั้งที่ดีที่สุด",
-      locationDesc: "แขก 100% ในปีที่ผ่านมาให้คะแนนทำเลที่ตั้งนี้ 5 ดาว",
+      locationDesc:
+        "แขก 100% ในปีที่ผ่านมาให้คะแนนทำเลที่ตั้งนี้ 5 ดาว",
       trustedTitle: "ประสบการณ์ที่ไว้วางใจได้",
       ctaText: "ดูว่าทำไมแขกถึงกลับมาและให้คะแนน 5 ดาวกับเรา!",
-      ctaButton: "เช็คห้องว่างบน AirBNB"
+      ctaButton: "เช็คห้องว่างบน Airbnb",
     },
     // Reviews
     reviews: {
       title: "แขกของเราพูดว่าอย่างไร",
       subtitle: "ประสบการณ์จริงจากนักเดินทางที่เคยพักกับเรา",
       ratingsDate: "คะแนน ณ วันที่ 23 มกราคม 2026",
-      airbnbTitle: "AirBNB",
+      airbnbTitle: "Airbnb",
       airbnbScore: "4.83",
       airbnbReviewCount: "จาก 35 รีวิว",
       tripadvisorTitle: "TripAdvisor",
@@ -420,99 +532,160 @@ export const translations = {
         value: "คุ้มค่า",
         sleepQuality: "คุณภาพการนอน",
         rooms: "ห้องพัก",
-        service: "บริการ"
+        service: "บริการ",
       },
       // Guest reviews
       guestReviews: [
         {
           text: "โฮสต์ที่ยอดเยี่ยม สะอาดเป็นประกาย เตียงสบาย ระเบียงสวย เงียบ... ธุรกิจครอบครัวที่เต็มไปด้วยความรัก เรารักที่นี่!",
-          author: "Andreas, AirBNB"
+          author: "Andreas, Airbnb",
         },
         {
           text: "แอนนาน่ารักมาก ใจดี ช่วยเหลือดี และเป็นมิตร ห้องพักสะอาดและสบายมาก แนะนำอย่างยิ่ง!",
-          author: "Rosa, AirBNB"
+          author: "Rosa, Airbnb",
         },
         {
           text: "อาจเป็นเจ้าของเกสต์เฮ้าส์ที่เป็นมิตรที่สุดที่เราเคยพบในการเดินทางทั้งหมดของเรา ทำให้เรารู้สึกเหมือนอยู่บ้าน",
-          author: "Michael, TripAdvisor"
+          author: "Michael, TripAdvisor",
         },
         {
           text: "ห้องสะอาด พนักงานเป็นมิตร ทำเลเยี่ยม คุณรู้สึกเหมือนเป็นส่วนหนึ่งของครอบครัวจริงๆ!",
-          author: "Emma, AirBNB"
-        }
+          author: "Emma, Airbnb",
+        },
       ],
       // CTA buttons
-      readAirbnbButton: "รีวิว AirBNB",
-      readTripadvisorButton: "รีวิว TripAdvisor"
+      readAirbnbButton: "รีวิว Airbnb",
+      readTripadvisorButton: "รีวิว TripAdvisor",
     },
     // Rooms
     rooms: {
       title: "ห้องพักของเรา",
-      subtitle: "สะดวกสบาย สะอาด และครบครันด้วยทุกสิ่งที่คุณต้องการ",
+      subtitle:
+        "สะดวกสบาย สะอาด และครบครันด้วยทุกสิ่งที่คุณต้องการ",
       roomName: "ห้องพัก",
-      roomDesc: "ห้องที่อบอุ่น สะดวกสบาย พร้อมทุกสิ่งที่คุณต้องการสำหรับการพักผ่อน",
+      roomDesc:
+        "ห้องที่อบอุ่น สะดวกสบาย พร้อมทุกสิ่งที่คุณต้องการสำหรับการพักผ่อน",
       features: "สิ่งอำนวยความสะดวกในห้อง",
-      featuresList: ["เตียงคิงไซส์", "ห้องอาบน้ำในตัว (น้ำอุ่น)", "เครื่องปรับอากาศ", "ตู้เย็น", "Wi-Fi ฟรี", "กาต้มน้ำ", "ระเบียงส่วนตัว", "ตู้เซฟ"],
+      featuresList: [
+        "เตียงคิงไซส์",
+        "ห้องอาบน้ำในตัว (น้ำอุ่น)",
+        "เครื่องปรับอากาศ",
+        "ตู้เย็น",
+        "Wi-Fi ฟรี",
+        "กาต้มน้ำ",
+        "ระเบียงส่วนตัว",
+        "ตู้เซฟ",
+      ],
       roomsLabel: "ห้อง",
       floorsLabel: "ชั้น",
       establishedLabel: "ก่อตั้ง",
       voltageLabel: "แรงดันไฟฟ้า",
       // More space section
       needMoreSpace: "ต้องการพื้นที่มากขึ้นไหม?",
-      moreSpaceDesc: "กำลังมองหาห้องสวีทหรืออพาร์ทเมนท์ใช่ไหม? เราสามารถจัดเตรียมตัวเลือกที่พักอื่นๆ ที่เหมาะกับคุณ เพียงอีเมลถึงเราโดยตรงและเราจะช่วยหาพื้นที่ที่สมบูรณ์แบบสำหรับการเข้าพักของคุณ!",
+      moreSpaceDesc:
+        "กำลังมองหาห้องสวีทหรืออพาร์ทเมนท์ใช่ไหม? เราสามารถจัดเตรียมตัวเลือกที่พักอื่นๆ ที่เหมาะกับคุณ เพียงอีเมลถึงเราโดยตรงและเราจะช่วยหาพื้นที่ที่สมบูรณ์แบบสำหรับการเข้าพักของคุณ!",
       // CTA button
-      viewAvailability: "ดูห้องว่างใน AirBNB"
+      viewAvailability: "ดูห้องว่างใน Airbnb",
     },
     // Amenities
     amenities: {
       title: "ทุกสิ่งที่คุณต้องการ",
-      subtitle: "เราคิดถึงทุกรายละเอียดเพื่อให้การเข้าพักของคุณสะดวกสบายและปลอดภัย แอนนาและจอชยินดีช่วยจัดแท็กซี่ ทริปเที่ยวเกาะ แนะนำร้านอาหาร และอื่นๆ!",
+      subtitle:
+        "เราคิดถึงทุกรายละเอียดเพื่อให้การเข้าพักของคุณสะดวกสบายและปลอดภัย แอนนาและจอชยินดีช่วยจัดแท็กซี่ ทริปเที่ยวเกาะ แนะนำร้านอาหาร และอื่นๆ!",
       items: [
-        { title: "เครื่องปรับอากาศ", description: "เย็นสบายในสภาพอากาศเขตร้อน" },
-        { title: "Wi-Fi ฟรี", description: "อินเทอร์เน็ตความเร็วสูง" },
-        { title: "ตู้เย็น", description: "เก็บเครื่องดื่มและขนมให้เย็น" },
-        { title: "พื้นที่รับประทานอาหารกลางแจ้งและบาร์บีคิว", description: "เพลิดเพลินกับอาหารในบรรยากาศเขตร้อน" },
-        { title: "ที่นอนคุณภาพดี", description: "หมอนเสริม ผ้าห่ม และผ้าปูที่นอน" },
-        { title: "มีเตารีด", description: "ดูแลเสื้อผ้าให้สดใส" },
-        { title: "อุปกรณ์อาบน้ำ", description: "แชมพู สบู่ ผ้าเช็ดตัว และของจำเป็น" },
-        { title: "เช่ามอเตอร์ไซค์", description: "บริการเช่ามอเตอร์ไซค์สะดวก" },
-        { title: "เก็บกระเป๋าเดินทาง", description: "มาถึงเร็วหรือออกเดินทางช้า" },
-        { title: "ยินดีรับการเข้าพักระยะยาว", description: "28+ วันขึ้นไป" },
-        { title: "เจ้าของบ้านต้อนรับส่วนตัว", description: "แอนนาต้อนรับแขกทุกคน" },
-        { title: "ความปลอดภัย", description: "เครื่องดับเพลิงและชุดปฐมพยาบาล" }
+        {
+          title: "เครื่องปรับอากาศ",
+          description: "เย็นสบายในสภาพอากาศเขตร้อน",
+        },
+        {
+          title: "Wi-Fi ฟรี",
+          description: "อินเทอร์เน็ตความเร็วสูง",
+        },
+        {
+          title: "ตู้เย็น",
+          description: "เก็บเครื่องดื่มและขนมให้เย็น",
+        },
+        {
+          title: "พื้นที่รับประทานอาหารกลางแจ้งและบาร์บีคิว",
+          description: "เพลิดเพลินกับอาหารในบรรยากาศเขตร้อน",
+        },
+        {
+          title: "ที่นอนคุณภาพดี",
+          description: "หมอนเสริม ผ้าห่ม และผ้าปูที่นอน",
+        },
+        {
+          title: "มีเตารีด",
+          description: "ดูแลเสื้อผ้าให้สดใส",
+        },
+        {
+          title: "อุปกรณ์อาบน้ำ",
+          description: "แชมพู สบู่ ผ้าเช็ดตัว และของจำเป็น",
+        },
+        {
+          title: "เช่ามอเตอร์ไซค์",
+          description: "บริการเช่ามอเตอร์ไซค์สะดวก",
+        },
+        {
+          title: "เก็บกระเป๋าเดินทาง",
+          description: "มาถึงเร็วหรือออกเดินทางช้า",
+        },
+        {
+          title: "ยินดีรับการเข้าพักระยะยาว",
+          description: "28+ วันขึ้นไป",
+        },
+        {
+          title: "เจ้าของบ้านต้อนรับส่วนตัว",
+          description: "แอนนาต้อนรับแขกทุกคน",
+        },
+        {
+          title: "ความปลอดภัย",
+          description: "เครื่องดับเพลิงและชุดปฐมพยาบาล",
+        },
       ],
-      beachAlt: "หาดกะตะ - เพียงไม่กี่ก้าวจากเกสต์เฮ้าส์วารี"
+      beachAlt: "หาดกะตะ - เพียงไม่กี่ก้าวจากเกสต์เฮ้าส์วารี",
     },
     // Photo Gallery
     gallery: {
       title: "ชีวิตที่เกสต์เฮ้าส์วารี",
-      subtitle: "พบกับโฮสต์ของคุณ สำรวจหาดกะตะ และค้นพบประสบการณ์ภูเก็ตแท้ๆ ที่รอคุณอยู่",
+      subtitle:
+        "พบกับโฮสต์ของคุณ สำรวจหาดกะตะ และค้นพบประสบการณ์ภูเก็ตแท้ๆ ที่รอคุณอยู่",
       familyMatters: "ครอบครัวสำคัญ :)",
-      familyMattersDesc: "แหม่ม แอนนา และวารี - ครอบครัวของคุณห่างจากบ้าน",
+      familyMattersDesc:
+        "แหม่ม แอนนา และวารี - ครอบครัวของคุณห่างจากบ้าน",
       meetHosts: "พบกับโฮสต์ของคุณ",
-      meetHostsDesc: "แอนนา จอช และฟิน - ครอบครัวของคุณห่างจา���บ้านตั้งแต่ปี 2000",
+      meetHostsDesc:
+        "แอนนา จอช และฟิน - ครอบครัวของคุณห่างจา���บ้านตั้งแต่ปี 2000",
       paradiseFound: "พบสวรรค์",
-      paradiseFoundDesc: "ทิวทัศน์สวยงาม น้ำใส และชีวิตเกาะที่เงียบสงบ",
+      paradiseFoundDesc:
+        "ทิวทัศน์สวยงาม น้ำใส และชีวิตเกาะที่เงียบสงบ",
       explore: "สำรวจเกาะ",
-      exploreDesc: "ค้นพบจุดชมวิวที่น่าทึ่งและสถานที่ซ่อนเร้นรอบๆ ภูเก็ต",
+      exploreDesc:
+        "ค้นพบจุดชมวิวที่น่าทึ่งและสถานที่ซ่อนเร้นรอบๆ ภูเก็ต",
       familyFun: "ความสนุกสำหรับครอบครัว",
-      familyFunDesc: "สวนน้ำ สถานที่ท่องเที่ยว และกิจกรรมสำหรับทุกวัยใกล้เคียง",
+      familyFunDesc:
+        "สวนน้ำ สถานที่ท่องเที่ยว และกิจกรรมสำหรับทุกวัยใกล้เคียง",
       yourHome: "บ้านของคุณในกะตะ",
-      yourHomeDesc: "ตั้งอยู่ในใจกลางหาดกะตะพร้อมวิวภูเขาที่สวยงาม",
+      yourHomeDesc:
+        "ตั้งอยู่ในใจกลางหาดกะตะพร้อมวิวภูเขาที่สวยงาม",
       welcome: "ยินดีต้อนรับสู่วารี",
-      welcomeDesc: "มองหาโลโก้นกและกุญแจอันเป็นเอกลักษณ์ของเรา - บ้านของคุณห่างจากบ้าน",
+      welcomeDesc:
+        "มองหาโลโก้นกและกุญแจอันเป็นเอกลักษณ์ของเรา - บ้านของคุณห่างจากบ้าน",
       courtyard: "ลานเกสต์เฮ้าส์",
-      courtyardDesc: "พื้นที่เงียบสงบและน่าอยู่สำหรับการผ่อนคลายและพักผ่อน",
+      courtyardDesc:
+        "พื้นที่เงียบสงบและน่าอยู่สำหรับการผ่อนคลายและพักผ่อน",
       entrance: "ทางเข้าเกสต์เฮ้าส์",
-      entranceDesc: "ทางเข้าที่อบอุ่นและมีเสน่ห์สู่บ้านใหม่ของคุณห่างจากบ้าน",
+      entranceDesc:
+        "ทางเข้าที่อบอุ่นและมีเสน่ห์สู่บ้านใหม่ของคุณห่างจากบ้าน",
       ctaTitle: "พร้อมที่จะสร้างความทรงจำของคุณเองหรือยัง?",
-      ctaDesc: "เข้าร่วมครอบครัววารีและสัมผัสการต้อนรับแบบไทยแท้ๆ ในหนึ่งในสถานที่สวยที่สุดของภูเก็ต",
-      ctaButton: "จองที่พักของคุณ"
+      ctaDesc:
+        "เข้าร่วมครอบครัววารีและสัมผัสการต้อนรับแบบไทยแท้ๆ ในหนึ่งในสถานที่สวยที่สุดของภูเก็ต",
+      ctaButton: "จองที่พักของคุณ",
     },
     // Things to Do
     thingsToDo: {
       title: "สิ่งที่ควรทำและสถานที่ใกล้เคียง",
-      subtitle: "ทุกสิ่งที่คุณต้องการอยู่ห่างเพียงไม่กี่นาที - ชายหาด สถานที่ท่องเที่ยว ร้านค้า และสิ่งอำนวยความสะดวกท้องถิ่น",
+      subtitle:
+        "ทุกสิ่งที่คุณต้องการอยู่ห่างเพียงไม่กี่นาที - ชายหาด สถานที่ท่องเที่ยว ร้านค้า และสิ่งอำนวยความสะดวกท้องถิ่น",
       attractionsTitle: "ชายหาดและสถานที่ท่องเที่ยว",
       kataBeach: "หาดกะตะ",
       kataBeachDesc: "หาดทรายขาวสวยงาม",
@@ -554,14 +727,17 @@ export const translations = {
       restaurants: "ร้านอาหารท้องถิ่น",
       restaurantsDesc: "อาหารไทยและนานาชาติ",
       restaurantsDist: "เดิน 2 นาที",
-      localTip: "<strong>💡 เคล็ดลับท้องถิ่น:</strong> เรายินดีช่วยจัดการเดินทาง แนะนำร้านอาหาร จองทัวร์ และแบ่งปันสถานที่ท้องถิ่นโปรดของเรา แค่ถาม เรารักที่จะช่วยแขกของเราค้นพบภูเก็ตที่แท้จริง!"
+      localTip:
+        "<strong>💡 เคล็ดลับท้องถิ่น:</strong> เรายินดีช่วยจัดการเดินทาง แนะนำร้านอาหาร จองทัวร์ และแบ่งปันสถานที่ท้องถิ่นโปรดของเรา แค่ถาม เรารักที่จะช่วยแขกของเราค้นพบภูเก็ตที่แท้จริง!",
     },
     // Location
     location: {
       title: "วิธีการเดินทางมาที่นี่",
-      subtitle: "ตั้งอยู่ใจกลางหาดกะตะ เดินทางมาถึงได้ง่ายจากทุกที่ในภูเก็ต",
+      subtitle:
+        "ตั้งอยู่ใจกลางหาดกะตะ เดินทางมาถึงได้ง่ายจากทุกที่ในภูเก็ต",
       ourAddress: "ที่อยู่ของเรา",
-      address: "44/5 ถนนกะตะ\nหาดกะตะ กะรน\nภูเก็ต 83100\nประเทศไทย",
+      address:
+        "44/5 ถนนกะตะ\nหาดกะตะ กะรน\nภูเก็ต 83100\nประเทศไทย",
       directions: "ดูเส้นทาง",
       fromAirport: "จากสนามบิน",
       distance: "ระยะทาง:",
@@ -569,78 +745,97 @@ export const translations = {
       travelTime: "เวลาเดินทาง:",
       travelTimeValue: "45-60 นาทีโดยรถยนต์",
       recommendedTitle: "แนะนำสำหรับผู้มาเยือนครั้งแรก",
-      recommendedSubtitle: "ใช้บริการแท็กซี่จากสนามบินนานาชาติภูเก็ต",
+      recommendedSubtitle:
+        "ใช้บริการแท็กซี่จากสนามบินนานาชาติภูเก็ต",
       airportTaxiTitle: "🚖 แท็กซี่สนามบิน",
-      airportTaxiDesc: "ตัวเลือกที่ง่ายและสะดวกสบายที่สุดสำหรับผู้มาเยือนภูเก็ตครั้งแรก แท็กซี่สนามบินอย่างเป็นทางการปลอดภัย เชื่อถือได้ และให้บริการถึงหน้าประตูของเรา",
+      airportTaxiDesc:
+        "ตัวเลือกที่ง่ายและสะดวกสบายที่สุดสำหรับผู้มาเยือนภูเก็ตครั้งแรก แท็กซี่สนามบินอย่างเป็นทางการปลอดภัย เชื่อถือได้ และให้บริการถึงหน้าประตูของเรา",
       taxiCost: "ค่าใช้จ่าย:",
       taxiCostValue: "ประมาณ 800-1,000 บาท (ราคาคงที่)",
       taxiWhere: "หาได้จากที่ไหน:",
-      taxiWhereValue: "เคาน์เตอร์แท็กซี่อย่างเป็นทางการในห้องโถงผู้โดยสารขาเข้า",
+      taxiWhereValue:
+        "เคาน์เตอร์แท็กซี่อย่างเป็นทางการในห้องโถงผู้โดยสารขาเข้า",
       taxiDuration: "ระยะเวลา:",
       taxiDurationValue: "45-60 นาทีตรงสู่หาดกะตะ",
       taxiTip: "เคล็ดลับ:",
-      taxiTipValue: "เก็บการยืนยันการจองไว้เพื่อแสดงให้คนขับรถเห็น",
+      taxiTipValue:
+        "เก็บการยืนยันการจองไว้เพื่อแสดงให้คนขับรถเห็น",
       airportBusTitle: "🚌 รถบัสสนามบิน",
-      airportBusDesc: "ตัวเลือกราคาประหยัดพร้อมบริการสม่ำเสมอไปยังพื้นที่หาดกะตะ",
+      airportBusDesc:
+        "ตัวเลือกราคาประหยัดพร้อมบริการสม่ำเสมอไปยังพื้นที่หาดกะตะ",
       busCost: "~150-200 บาท",
       busDuration: "90-120 นาที",
       privateTransferTitle: "🚗 รถรับส่งส่วนตัว",
-      privateTransferDesc: "รถรับส่งที่จองล่วงหน้าพร้อมบริการต้อนรับและแนะนำ",
+      privateTransferDesc:
+        "รถรับส่งที่จองล่วงหน้าพร้อมบริการต้อนรับและแนะนำ",
       privateCost: "~1,200-1,500 บาท",
       privateDuration: "45-60 นาที",
       localTransportTitle: "🛵 การเดินทางท้องถิ่น",
-      localTransportDesc: "ตุ๊กตุ๊กและมอเตอร์ไซค์รับจ้างสำหรับเดินทางระยะสั้นรอบๆ หาดกะตะ",
+      localTransportDesc:
+        "ตุ๊กตุ๊กและมอเตอร์ไซค์รับจ้างสำหรับเดินทางระยะสั้นรอบๆ หาดกะตะ",
       localCost: "แล้วแต่ระยะทาง",
       localTip: "ตกลงราคาก่อนเสมอ",
       helpTitle: "ต้องการความช่วยเหลือในการจัดการเดินทาง?",
-      helpDesc: "แอนนาและจอชยินดีช่วยจัดแท็กซี่หรือให้คำแนะนำเส้นทาง แค่ส่งข้อความหาเราหลังจองเลย!",
+      helpDesc:
+        "แอนนาและจอชยินดีช่วยจัดแท็กซี่หรือให้คำแนะนำเส้นทาง แค่ส่งข้อความหาเราหลังจองเลย!",
       whatsappButton: "WhatsApp เรา",
-      callButton: "โทร +66 76 331 016"
+      callButton: "โทร +66 76 331 016",
     },
     // Social Feed
     social: {
       title: "ติดตามเรื่องราวของเรา",
-      subtitle: "ติดตามเราบน Facebook เพื่อรับข้อมูลอัพเดทประจำวัน รูปภาพจากแขก เคล็ดลับท้องถิ่น และข้อเสนอพิเศษ! ดูว่ามีอะไรใหม่ที่วารีและรับแรงบันดาลใจสำหรับการผจญภัยที่หาดกะตะ",
+      subtitle:
+        "ติดตามเราบน Facebook เพื่อรับข้อมูลอัพเดทประจำวัน รูปภาพจากแขก เคล็ดลับท้องถิ่น และข้อเสนอพิเศษ! ดูว่ามีอะไรใหม่ที่วารีและรับแรงบันดาลใจสำหรับการผจญภัยที่หาดกะตะ",
       communityTitle: "ชุมชน",
-      communityDesc: "เข้าร่วมครอบครัวนักเดินทางที่เติบโตของเราจากทั่วโลก",
+      communityDesc:
+        "เข้าร่วมครอบครัวนักเดินทางที่เติบโตของเราจากทั่วโลก",
       storiesTitle: "เรื่องราวของแขก",
-      storiesDesc: "ดูรูปภาพและเรื่องราวจากแขกที่กลายเป็นเพื่อน",
+      storiesDesc:
+        "ดูรูปภาพและเรื่องราวจากแขกที่กลายเป็นเพื่อน",
       eventsTitle: "กิจกรรมและข้อมูลอัพเดท",
-      eventsDesc: "กิจกรรมท้องถิ่น ข้อมูลอัพเดทชายหาด และข่าวสารเกสต์เฮ้าส์",
+      eventsDesc:
+        "กิจกรรมท้องถิ่น ข้อมูลอัพเดทชายหาด และข่าวสารเกสต์เฮ้าส์",
       latestTitle: "อัพเดทล่าสุดจาก Facebook",
-      latestDesc: "ดูโพสต์ รูปภาพ และข้อมูลอัพเดทล่าสุดจากแอนนา จอช และแหม่ม!",
-      ctaText: "คลิกด้านล่างเพื่อเยี่ยมชมหน้า Facebook ของเราและดูว่ามีอะไรใหม่ที่เกสต์เฮ้าส์วารี!",
+      latestDesc:
+        "ดูโพสต์ รูปภาพ และข้อมูลอัพเดทล่าสุดจากแอนนา จอช และแหม่ม!",
+      ctaText:
+        "คลิกด้านล่างเพื่อเยี่ยมชมหน้า Facebook ของเราและดูว่ามีอะไรใหม่ที่เกสต์เฮ้าส์วารี!",
       ctaButton: "เยี่ยมชมหน้า Facebook ของเรา",
       feature1: "อัพเดท",
       feature2: "รูปภาพจากแขก",
       feature3: "คำแนะนำท้องถิ่น",
       feature4: "ส่งข้อความโดยตรง",
       quickTitle: "มีคำถามเร็วๆ ไหม?",
-      quickDesc: "ส่งข้อความหาเราบน Facebook, WhatsApp, Line หรือโทรหาเราเพื่อรับการตอบกลับที่เร็วที่สุด!",
+      quickDesc:
+        "ส่งข้อความหาเราบน Facebook, WhatsApp, Line หรือโทรหาเราเพื่อรับการตอบกลับที่เร็วที่สุด!",
       facebookBtn: "Facebook",
       whatsappBtn: "WhatsApp",
       lineBtn: "LINE",
       phoneBtn: "+66 76 331 016",
-      emailBtn: "อีเมล"
+      emailBtn: "อีเมล",
     },
     // Common UI
     common: {
       showDetails: "แสดงรายละเอียด",
-      hideDetails: "ซ่อนรายละเอียด"
+      hideDetails: "ซ่อนรายละเอียด",
     },
     // Footer
     footer: {
-      description: "บ้านของคุณห่างจากบ้านในหาดกะตะที่สวยงาม ภูเก็ต สัมผัสความอบอุ่นและการต้อนรับที่แท้จริง",
+      description:
+        "บ้านของคุณห่างจากบ้านในหาดกะตะที่สวยงาม ภูเก็ต สัมผัสความอบอุ่นและการต้อนรับที่แท้จริง",
       contactTitle: "ติดต่อเรา",
       connectTitle: "เชื่อมต่อกับเรา",
       facebook: "ติดตามเราบน Facebook",
       whatsapp: "WhatsApp เรา",
       line: "Line เรา",
-      messagePrompt: "ส่งข้อความหาเราบนแพลตฟอร์มโปรดของคุณ เรายินดีช่วยเหลือ!",
+      messagePrompt:
+        "ส่งข้อความหาเราบนแพลตฟอร์มโปรดของคุณ เรายินดีช่วยเหลือ!",
       bookTitle: "จองที่พัก",
-      bookDescription: "พร้อมสัมผัสหาดกะตะแบบคนท้องถิ่นแล้วหรือยัง? จองเลยเพื่อราคาดีที่สุดและการยืนยันทันที",
+      bookDescription:
+        "พร้อมสัมผัสหาดกะตะแบบคนท้องถิ่นแล้วหรือยัง? จองเลยเพื่อราคาดีที่สุดและการยืนยันทันที",
       tripadvisor: "TripAdvisor",
-      copyright: "© 2026 เกสต์เฮ้าส์วารี หาดกะตะ ภูเก็ต สงวนลิขสิทธิ์",
+      copyright:
+        "© 2026 เกสต์เฮ้าส์วารี หาดกะตะ ภูเก็ต สงวนลิขสิทธิ์",
       tagline: "สร้างความทรงจำ ทีละคนแขก ตั้งแต่ปี 2000 💛",
       quickLinks: "ลิงก์ด่วน",
       contact: "ติดต่อ",
@@ -651,20 +846,20 @@ export const translations = {
       rooms: "ห้องพัก",
       amenities: "สิ่งอำนวยความสะดวก",
       reviews: "รีวิว",
-      location: "สถานที่"
-    }
+      location: "สถานที่",
+    },
   },
   zh: {
     // Language Names
     languageNames: {
-      en: 'English',
-      th: 'ไทย',
-      zh: '中文',
-      ru: 'Русский',
-      de: 'Deutsch',
-      it: 'Italiano',
-      sv: 'Svenska',
-      fi: 'Suomi'
+      en: "English",
+      th: "ไทย",
+      zh: "中文",
+      ru: "Русский",
+      de: "Deutsch",
+      it: "Italiano",
+      sv: "Svenska",
+      fi: "Suomi",
     },
     // Hero
     hero: {
@@ -672,7 +867,7 @@ export const translations = {
       subtitle: "您在卡塔海滩的家",
       tagline: "自2000年以来，体验正宗的泰式待客之道",
       emailButton: "给我们发邮件",
-      bookButton: "在 AirBNB 预订",
+      bookButton: "在 Airbnb 预订",
       reviewsButton: "阅读评论",
     },
     // About
@@ -682,38 +877,44 @@ export const translations = {
       p2: "让我们在户外休息室、小酒吧闲逛，或在街上和我们一起打羽毛球——我们真的很享受与客人共度时光！我们帮助安排旅行、预订出租车、餐厅等等。",
       p3: "<strong>我们相信旅行就是认识你遇到的人！</strong>",
       note: "<strong>🎵 注意：</strong> 我们后面有一个户外市场，晚上播放轻松的现场音乐。他们大多数晚上在22:00到23:00之间结束（不晚于午夜）。",
-      budget: "就像我们说的，我们只是一个普通家庭，经营我们小而轻松的宾馆/民宿。我们认为自己是<strong>\"2星\"/经济型</strong>。",
-      rightForYouTitle: "✨ 如果您符合以下情况，我们认为您会喜欢我们：",
+      budget:
+        '就像我们说的，我们只是一个普通家庭，经营我们小而轻松的宾馆/民宿。我们认为自己是<strong>"2星"/经济型</strong>。',
+      rightForYouTitle:
+        "✨ 如果您符合以下情况，我们认为您会喜欢我们：",
       rightForYou: [
         "想要更独特和本地的体验",
         "享受成为家庭一员的感觉，结识新朋友",
         "预算有限，但欣赏空调、干净床单和热水等小奢侈品",
         "欣赏我们的位置——不靠近嘈杂的道路或酒吧，但仍然可以步行到海滩",
-        "喜欢猫！🐱"
+        "喜欢猫！🐱",
       ],
-      notRightTitle: "💭 如果您符合以下情况，我们可能不适合您：",
+      notRightTitle:
+        "💭 如果您符合以下情况，我们可能不适合您：",
       notRight: [
         "需要大酒店的专业设施和服务",
         "对床型、枕头或毛巾非常挑剔",
         "需要非常靠近海滩",
         "只需要一个睡觉的地方，不需要本地体验",
         "对发展中国家的现实敏感（偶尔停电、昆虫、壁虎等）",
-        "对猫过敏或不喜欢猫"
+        "对猫过敏或不喜欢猫",
       ],
-      hostsPhotoAlt: "Mam、Anna（姐妹）和Waree - Waree民宿的创始家族",
-      hostPhotoAlt: "Anna、Josh和Fin - 您的民宿主人"
+      hostsPhotoAlt:
+        "Mam、Anna（姐妹）和Waree - Waree民宿的创始家族",
+      hostPhotoAlt: "Anna、Josh和Fin - 您的民宿主人",
     },
     // Airbnb Highlights
     airbnb: {
       title: "Airbnb 超赞房东 • 房客最爱",
       subtitle: "我们出色的客人给出4.83分（满分5分）的评分",
       superhost: "Anna是Airbnb超赞房东",
-      superhostDesc: "超赞房东是经验丰富、评价很高的房东，致力于提供出色的住宿体验",
+      superhostDesc:
+        "超赞房东是经验丰富、评价很高的房东，致力于提供出色的住宿体验",
       guestFavorite: "房客最爱",
-      guestFavoriteDesc: "根据评分、评论和可靠性，这是Airbnb上最受欢迎的房源之一",
+      guestFavoriteDesc:
+        "根据评分、评论和可靠性，这是Airbnb上最受欢迎的房源之一",
       rating: "4.83评分",
       ratingDesc: "来自喜爱我们家庭氛围的客人的持续好评",
-      achievementsDate: "截至2026年1月23日的AirBNB成就",
+      achievementsDate: "截至2026年1月23日的Airbnb成就",
       ratingText: "来自35条评论的评分",
       superhostTitle: "超赞房东",
       superhostYears: "Anna • 10年房东经验",
@@ -723,14 +924,14 @@ export const translations = {
       locationDesc: "过去一年100%的客人给这个位置打了5星好评",
       trustedTitle: "值得信赖的体验",
       ctaText: "看看为什么客人不断回来并给我们5星好评！",
-      ctaButton: "在AirBNB上查看空房"
+      ctaButton: "在Airbnb上查看空房",
     },
     // Reviews
     reviews: {
       title: "客人评价",
       subtitle: "来自与我们住过的旅行者的真实体验",
       ratingsDate: "评分截至2026年1月23日",
-      airbnbTitle: "AirBNB",
+      airbnbTitle: "Airbnb",
       airbnbScore: "4.83",
       airbnbReviewCount: "来自35条评论",
       tripadvisorTitle: "TripAdvisor",
@@ -746,30 +947,30 @@ export const translations = {
         value: "性价比",
         sleepQuality: "睡眠质量",
         rooms: "房间",
-        service: "服务"
+        service: "服务",
       },
       // Guest reviews
       guestReviews: [
         {
           text: "很棒的房东，一尘不染，舒适的床，漂亮的阳台，安静...充满爱的家庭经营。我们喜欢住在这里！",
-          author: "Andreas, AirBNB"
+          author: "Andreas, Airbnb",
         },
         {
           text: "安娜非常可爱、友善、乐于助人。房间非常干净舒适。强烈推荐！",
-          author: "Rosa, AirBNB"
+          author: "Rosa, Airbnb",
         },
         {
           text: "可能是我们整个旅程中遇到的最友好的宾馆老板。让我们感觉完全像在家里一样。",
-          author: "Michael, TripAdvisor"
+          author: "Michael, TripAdvisor",
         },
         {
           text: "房间干净，员工友好，位置完美。你真的感觉像家庭的一部分！",
-          author: "Emma, AirBNB"
-        }
+          author: "Emma, Airbnb",
+        },
       ],
       // CTA buttons
-      readAirbnbButton: "AirBNB评论",
-      readTripadvisorButton: "TripAdvisor评论"
+      readAirbnbButton: "Airbnb评论",
+      readTripadvisorButton: "TripAdvisor评论",
     },
     // Rooms
     rooms: {
@@ -778,67 +979,100 @@ export const translations = {
       roomName: "客房",
       roomDesc: "舒适的房间，配备您放松住宿所需的一切",
       features: "房间设施",
-      featuresList: ["特大床", "套内淋浴间（热水）", "空调", "冰箱", "免费WiFi", "水壶", "私人阳台", "保险箱"],
+      featuresList: [
+        "特大床",
+        "套内淋浴间（热水）",
+        "空调",
+        "冰箱",
+        "免费WiFi",
+        "水壶",
+        "私人阳台",
+        "保险箱",
+      ],
       roomsLabel: "房间",
       floorsLabel: "楼层",
       establishedLabel: "成立",
       voltageLabel: "电压",
       // More space section
       needMoreSpace: "需要更多空间？",
-      moreSpaceDesc: "寻找套房或公寓？我们可以安排其他住宿选择以满足您的需求。直接给我们发电子邮件，我们将帮助您找到完美的住宿空间！",
+      moreSpaceDesc:
+        "寻找套房或公寓？我们可以安排其他住宿选择以满足您的需求。直接给我们发电子邮件，我们将帮助您找到完美的住宿空间！",
       // CTA button
-      viewAvailability: "在AirBNB查看可用性"
+      viewAvailability: "在Airbnb查看可用性",
     },
     // Amenities
     amenities: {
       title: "您需要的一切",
-      subtitle: "我们考虑了所有细节，让您的住宿舒适无忧。安娜和乔希很乐意帮助安排出租车、岛屿游览、餐厅推荐等！",
+      subtitle:
+        "我们考虑了所有细节，让您的住宿舒适无忧。安娜和乔希很乐意帮助安排出租车、岛屿游览、餐厅推荐等！",
       items: [
         { title: "空调", description: "在热带天气中保持凉爽" },
         { title: "免费WiFi", description: "高速互联网接入" },
         { title: "冰箱", description: "保持饮料和零食冷藏" },
-        { title: "户外餐饮和烧烤", description: "在热带环境中享用美食" },
-        { title: "优质床品", description: "额外枕头、毯子和床单" },
+        {
+          title: "户外餐饮和烧烤",
+          description: "在热带环境中享用美食",
+        },
+        {
+          title: "优质床品",
+          description: "额外枕头、毯子和床单",
+        },
         { title: "提供熨斗", description: "保持衣物整洁" },
-        { title: "提供洗浴用品", description: "洗发水、肥皂、毛巾和必需品" },
-        { title: "摩托车租赁", description: "方便的摩托车租赁" },
+        {
+          title: "提供洗浴用品",
+          description: "洗发水、肥皂、毛巾和必需品",
+        },
+        {
+          title: "摩托车租赁",
+          description: "方便的摩托车租赁",
+        },
         { title: "行李寄存", description: "早到或晚离" },
         { title: "欢迎长期住宿", description: "28天以上" },
-        { title: "主人亲自迎接", description: "安娜欢迎每位客人" },
-        { title: "安全保障", description: "灭火器和急救箱" }
+        {
+          title: "主人亲自迎接",
+          description: "安娜欢迎每位客人",
+        },
+        { title: "安全保障", description: "灭火器和急救箱" },
       ],
-      beachAlt: "卡塔海滩 - 距离Waree宾馆仅几步之遥"
+      beachAlt: "卡塔海滩 - 距离Waree宾馆仅几步之遥",
     },
     // Photo Gallery
     gallery: {
       title: "Waree的生活",
-      subtitle: "认识您的房东，探索卡塔海滩，发现等待您的正宗普吉岛体验",
+      subtitle:
+        "认识您的房东，探索卡塔海滩，发现等待您的正宗普吉岛体验",
       familyMatters: "家庭很重要 :)",
       familyMattersDesc: "Mam、Anna和Waree - 您的家外之家",
       meetHosts: "认识您的房东",
-      meetHostsDesc: "Anna、Josh和Fin - 自2000年以来您的家外之家",
+      meetHostsDesc:
+        "Anna、Josh和Fin - 自2000年以来您的家外之家",
       paradiseFound: "发现天堂",
-      paradiseFoundDesc: "令人惊叹的景色、清澈的海水和宁静的岛屿生活",
+      paradiseFoundDesc:
+        "令人惊叹的景色、清澈的海水和宁静的岛屿生活",
       explore: "探索岛屿",
       exploreDesc: "发现普吉岛周围令人惊叹的观景点和隐藏的宝石",
       familyFun: "家庭乐趣",
-      familyFunDesc: "附近的水上乐园、景点和适合所有年龄段的活动",
+      familyFunDesc:
+        "附近的水上乐园、景点和适合所有年龄段的活动",
       yourHome: "您在卡塔的家",
       yourHomeDesc: "坐落在卡塔海滩的中心地带，享有壮丽的山景",
       welcome: "欢迎来到Waree",
-      welcomeDesc: "寻找我们标志性的鸟和钥匙标志 - 您的家外之家",
+      welcomeDesc:
+        "寻找我们标志性的鸟和钥匙标志 - 您的家外之家",
       courtyard: "宾馆庭院",
       courtyardDesc: "一个宁静而温馨的空间，供您放松和享受",
       entrance: "宾馆入口",
       entranceDesc: "一个温馨而迷人的入口，通向您新的���外之家",
       ctaTitle: "准备好创造自己的回忆了吗？",
-      ctaDesc: "加入Waree家族，在普吉岛最美丽的地方之一体验正宗的泰式热情好客",
-      ctaButton: "预订您的住宿"
+      ctaDesc:
+        "加入Waree家族，在普吉岛最美丽的地方之一体验正宗的泰式热情好客",
+      ctaButton: "预订您的住宿",
     },
     // Things to Do
     thingsToDo: {
       title: "景点与周边",
-      subtitle: "您需要的一切都只需几分钟 - 海滩、景点、商店和当地便利设施",
+      subtitle:
+        "您需要的一切都只需几分钟 - 海滩、景点、商店和当地便利设施",
       attractionsTitle: "海滩与景点",
       kataBeach: "卡塔海滩",
       kataBeachDesc: "美丽的白色沙滩",
@@ -880,14 +1114,17 @@ export const translations = {
       restaurants: "当地餐厅",
       restaurantsDesc: "泰国和国际美食",
       restaurantsDist: "步行2分钟",
-      localTip: "<strong>💡 当地小贴士：</strong> 我们很乐意帮助您安排交通、推荐餐厅、预订旅游，并分享我们最喜欢的当地景点。只需询问——我们喜欢帮助客人发现真正的普吉岛！"
+      localTip:
+        "<strong>💡 当地小贴士：</strong> 我们很乐意帮助您安排交通、推荐餐厅、预订旅游，并分享我们最喜欢的当地景点。只需询问——我们喜欢帮助客人发现真正的普吉岛！",
     },
     // Location
     location: {
       title: "如何到达这里",
-      subtitle: "位于卡塔海滩的中心地带，从普吉岛的任何地方都很容易到达",
+      subtitle:
+        "位于卡塔海滩的中心地带，从普吉岛的任何地方都很容易到达",
       ourAddress: "我们的地址",
-      address: "44/5 卡塔路\n卡塔海滩，卡伦\n普吉岛 83100\n泰国",
+      address:
+        "44/5 卡塔路\n卡塔海滩，卡伦\n普吉岛 83100\n泰国",
       directions: "获取路线",
       fromAirport: "从机场",
       distance: "距离：",
@@ -897,7 +1134,8 @@ export const translations = {
       recommendedTitle: "推荐给首次访客",
       recommendedSubtitle: "从普吉国际机场乘坐出租车",
       airportTaxiTitle: "🚖 机场出租车",
-      airportTaxiDesc: "对于第一次来普吉岛的游客来说，这是最简单、最舒适的选择。官方机场出租车安全可靠，并提供直达我们门口的服务。",
+      airportTaxiDesc:
+        "对于第一次来普吉岛的游客来说，这是最简单、最舒适的选择。官方机场出租车安全可靠，并提供直达我们门口的服务。",
       taxiCost: "费用：",
       taxiCostValue: "约800-1,000泰铢（固定价格）",
       taxiWhere: "在哪里找到：",
@@ -907,7 +1145,8 @@ export const translations = {
       taxiTip: "提示：",
       taxiTipValue: "随身携带预订确认信以向司机出示",
       airportBusTitle: "🚌 机场巴士",
-      airportBusDesc: "经济实惠的选择，定期服务到卡塔海滩地区。",
+      airportBusDesc:
+        "经济实惠的选择，定期服务到卡塔海滩地区。",
       busCost: "~150-200泰铢",
       busDuration: "90-120分钟",
       privateTransferTitle: "🚗 私人接送",
@@ -915,18 +1154,21 @@ export const translations = {
       privateCost: "~1,200-1,500泰铢",
       privateDuration: "45-60分钟",
       localTransportTitle: "🛵 当地交通",
-      localTransportDesc: "嘟嘟车和摩托车出租车可用于卡塔海滩周围的短途旅行。",
+      localTransportDesc:
+        "嘟嘟车和摩托车出租车可用于卡塔海滩周围的短途旅行。",
       localCost: "根据距离而定",
       localTip: "始终先商定价格",
       helpTitle: "需要帮助安排交通？",
-      helpDesc: "Anna和Josh很乐意帮助您安排出租车或提供路线。预订后给我们留言即可！",
+      helpDesc:
+        "Anna和Josh很乐意帮助您安排出租车或提供路线。预订后给我们留言即可！",
       whatsappButton: "WhatsApp联系我们",
-      callButton: "致电 +66 76 331 016"
+      callButton: "致电 +66 76 331 016",
     },
     // Social Feed
     social: {
       title: "保持联系",
-      subtitle: "在Facebook上关注我们，获取每日更新、客人照片、本地贴士和特别优惠！了解瓦里的最新动态，激发您的卡塔海滩冒险灵感。",
+      subtitle:
+        "在Facebook上关注我们，获取每日更新、客人照片、本地贴士和特别优惠！了解瓦里的最新动态，激发您的卡塔海滩冒险灵感。",
       communityTitle: "社区",
       communityDesc: "加入我们来自世界各地不断壮大的旅行者家庭",
       storiesTitle: "客人故事",
@@ -934,39 +1176,46 @@ export const translations = {
       eventsTitle: "活动与更新",
       eventsDesc: "本地活动、海滩更新和宾馆新闻",
       latestTitle: "Facebook最新动态",
-      latestDesc: "查看我们最新的帖子、照片以及安娜、乔希和妈妈的更新！",
-      ctaText: "点击下方访问我们的Facebook页面，了解瓦里宾馆的最新动态！",
+      latestDesc:
+        "查看我们最新的帖子、照片以及安娜、乔希和妈妈的更新！",
+      ctaText:
+        "点击下方访问我们的Facebook页面，了解瓦里宾馆的最新动态！",
       ctaButton: "访问我们的Facebook页面",
       feature1: "更新",
       feature2: "客人照片",
       feature3: "本地推荐",
       feature4: "直接消息",
       quickTitle: "有快速问题？",
-      quickDesc: "通过Facebook、WhatsApp、Line给我们留言，或致电我们获取最快回复！",
+      quickDesc:
+        "通过Facebook、WhatsApp、Line给我们留言，或致电我们获取最快回复！",
       facebookBtn: "Facebook",
       whatsappBtn: "WhatsApp",
       lineBtn: "LINE",
       phoneBtn: "+66 76 331 016",
-      emailBtn: "电子邮件"
+      emailBtn: "电子邮件",
     },
     // Common UI
     common: {
       showDetails: "显示详情",
-      hideDetails: "隐藏详情"
+      hideDetails: "隐藏详情",
     },
     // Footer
     footer: {
-      description: "您在美丽的普吉岛卡塔海滩的家外之家。体验当地的温暖和真诚的待客之道。",
+      description:
+        "您在美丽的普吉岛卡塔海滩的家外之家。体验当地的温暖和真诚的待客之道。",
       contactTitle: "联系我们",
       connectTitle: "与我们联系",
       facebook: "在Facebook上关注我们",
       whatsapp: "WhatsApp我们",
       line: "Line我们",
-      messagePrompt: "在您喜欢的平台上给我们留言——我们随时为您服务！",
+      messagePrompt:
+        "在您喜欢的平台上给我们留言——我们随时为您服务！",
       bookTitle: "预订住宿",
-      bookDescription: "准备好像当地人一样体验卡塔海滩了吗？立即预订以获得最优惠的价格和即时确认。",
+      bookDescription:
+        "准备好像当地人一样体验卡塔海滩了吗？立即预订以获得最优惠的价格和即时确认。",
       tripadvisor: "TripAdvisor",
-      copyright: "© 2026 Waree宾馆，卡塔海滩，普吉岛。保留所有权利。",
+      copyright:
+        "© 2026 Waree宾馆，卡塔海滩，普吉岛。保留所有权利。",
       tagline: "自2000年以来，一次一位客人，创造回忆 💛",
       quickLinks: "快速链接",
       contact: "联系方式",
@@ -977,28 +1226,29 @@ export const translations = {
       rooms: "客房",
       amenities: "设施",
       reviews: "评论",
-      location: "位置"
-    }
+      location: "位置",
+    },
   },
   ru: {
     // Language Names
     languageNames: {
-      en: 'English',
-      th: 'ไทย',
-      zh: '中文',
-      ru: 'Русский',
-      de: 'Deutsch',
-      it: 'Italiano',
-      sv: 'Svenska',
-      fi: 'Suomi'
+      en: "English",
+      th: "ไทย",
+      zh: "中文",
+      ru: "Русский",
+      de: "Deutsch",
+      it: "Italiano",
+      sv: "Svenska",
+      fi: "Suomi",
     },
     // Hero
     hero: {
       title: "Гестхаус Waree",
       subtitle: "Ваш семейный дом на пляже Ката",
-      tagline: "Познайте Пхукет с подлинным тайским гостеприимством с 2000 года",
+      tagline:
+        "Познайте Пхукет с подлинным тайским гостеприимством с 2000 года",
       emailButton: "Написать нам",
-      bookButton: "Забронировать на AirBNB",
+      bookButton: "Забронировать на Airbnb",
       reviewsButton: "Читать отзывы",
     },
     // About
@@ -1008,14 +1258,16 @@ export const translations = {
       p2: "Давайте посидим в нашей открытой зоне отдыха, в нашем маленьком баре или поиграем в бадминтон на улице - мы действительно любим проводить время с гостями! Мы помогаем организовывать поездки, бронировать такси, рестораны и многое другое.",
       p3: "<strong>Мы верим, что путешествие - это люди, которых вы встречаете!</strong>",
       note: "<strong>🎵 Примечание:</strong> За нами находится открытый рынок с живой музыкой по вечерам. Они заканчивают между 22:00 и 23:00 большинство ночей (не позднее полуночи).",
-      budget: "Как мы уже сказали, мы просто обычная семья, управляющая нашим небольшим, расслабленным гестхаусом/хоумстеем. Мы считаем себя <strong>\"2 звезды\" / бюджетным вариантом</strong>.",
-      rightForYouTitle: "✨ Мы думаем, что мы вам понравимся, если вы:",
+      budget:
+        'Как мы уже сказали, мы просто обычная семья, управляющая нашим небольшим, расслабленным гестхаусом/хоумстеем. Мы считаем себя <strong>"2 звезды" / бюджетным вариантом</strong>.',
+      rightForYouTitle:
+        "✨ Мы думаем, что мы вам понравимся, если вы:",
       rightForYou: [
         "Хотите более уникальный и местный опыт",
         "Наслаждаетесь ощущением части семьи, знакомством с новыми людьми и заведением новых друзей",
         "На бюджете, но цените маленькие удобства, такие как кондиционер, чистые простыни и горячая вода",
         "Цените наше расположение - не рядом с шумной дорогой или барами, но всё ещё в пешей доступности от пляжа",
-        "Любите кошек! 🐱"
+        "Любите кошек! 🐱",
       ],
       notRightTitle: "💭 Мы можем не подходить вам, если вы:",
       notRight: [
@@ -1024,39 +1276,51 @@ export const translations = {
         "Нужно быть очень близко к пляжу",
         "Просто нужно место для сна без местного опыта",
         "Чувствительны к реалиям развивающейся страны (периодические отключения света, насекомые, гекконы и т. д.)",
-        "Аллергия на кошек или не любите кошек"
+        "Аллергия на кошек или не любите кошек",
       ],
-      hostsPhotoAlt: "Мам, Анна (сестры) и Вари - семья-основатель гестхауса Waree",
-      hostPhotoAlt: "Анна, Джош и Фин - ваши хозяева в гестхаусе Waree"
+      hostsPhotoAlt:
+        "Мам, Анна (сестры) и Вари - семья-основатель гестхауса Waree",
+      hostPhotoAlt:
+        "Анна, Джош и Фин - ваши хозяева в гестхаусе Waree",
     },
     // Airbnb Highlights
     airbnb: {
       title: "Airbnb Суперхозяин • Любимец гостей",
-      subtitle: "Оценка 4.83 из 5 от наших замечательных гостей",
+      subtitle:
+        "Оценка 4.83 из 5 от наших замечательных гостей",
       superhost: "Анна - Суперхозяин Airbnb",
-      superhostDesc: "Суперхозяева - это опытные хозяева с высокими оценками, стремящиеся обеспечить отличное проживание",
+      superhostDesc:
+        "Суперхозяева - это опытные хозяева с высокими оценками, стремящиеся обеспечить отличное проживание",
       guestFavorite: "Любимец гостей",
-      guestFavoriteDesc: "Один из самых любимых домов на Airbnb, основанный на оценках, отзывах и надёжности",
+      guestFavoriteDesc:
+        "Один из самых любимых домов на Airbnb, основанный на оценках, отзывах и надёжности",
       rating: "Рейтинг 4.83",
-      ratingDesc: "Постоянные отличные отзывы от гостей, которые любят нашу семейную атмосферу",
-      achievementsDate: "Достижения на AirBNB по состоянию на 23 января 2026 года",
+      ratingDesc:
+        "Постоянные отличные отзывы от гостей, которые любят нашу семейную атмосферу",
+      achievementsDate:
+        "Достижения на Airbnb по состоянию на 23 января 2026 года",
       ratingText: "Рейтинг на основе 35 отзывов",
       superhostTitle: "Суперхозяин",
       superhostYears: "Анна • 10 лет на Airbnb",
       checkInTitle: "Отличное заселение",
-      checkInDesc: "Недавние гости поставили процессу заселения 5 звёзд",
+      checkInDesc:
+        "Недавние гости поставили процессу заселения 5 звёзд",
       locationTitle: "Непревзойдённое расположение",
-      locationDesc: "100% гостей за последний год поставили этому месту 5 звёзд",
+      locationDesc:
+        "100% гостей за последний год поставили этому месту 5 звёзд",
       trustedTitle: "Проверенный опыт",
-      ctaText: "Узнайте, почему гости возвращаются и ставят нам 5 звёзд!",
-      ctaButton: "Проверить доступность на AirBNB"
+      ctaText:
+        "Узнайте, почему гости возвращаются и ставят нам 5 звёзд!",
+      ctaButton: "Проверить доступность на Airbnb",
     },
     // Reviews
     reviews: {
       title: "Что говорят наши гости",
-      subtitle: "Реальный опыт путешественников, которые останавливались у нас",
-      ratingsDate: "Рейтинги по состоянию на 23 января 2026 года",
-      airbnbTitle: "AirBNB",
+      subtitle:
+        "Реальный опыт путешественников, которые останавливались у нас",
+      ratingsDate:
+        "Рейтинги по состоянию на 23 января 2026 года",
+      airbnbTitle: "Airbnb",
       airbnbScore: "4.83",
       airbnbReviewCount: "На основе 35 отзывов",
       tripadvisorTitle: "TripAdvisor",
@@ -1072,99 +1336,163 @@ export const translations = {
         value: "Ценность",
         sleepQuality: "Качество сна",
         rooms: "Номера",
-        service: "Обслуживание"
+        service: "Обслуживание",
       },
       // Guest reviews
       guestReviews: [
         {
           text: "Отличные хозяева, безупречная чистота, удобная кровать, хороший балкон, тихо... семейный бизнес с большой любовью. Нам понравилось здесь!",
-          author: "Andreas, AirBNB"
+          author: "Andreas, Airbnb",
         },
         {
           text: "Анна очень милая, добрая, отзывчивая и дружелюбная. Номера действительно чистые и удобные. Настоятельно рекомендую!",
-          author: "Rosa, AirBNB"
+          author: "Rosa, Airbnb",
         },
         {
           text: "Вероятно, самый дружелюбный владелец гестхауса, которого мы встретили за всю нашу поездку. Мы чувствовали себя как дома.",
-          author: "Michael, TripAdvisor"
+          author: "Michael, TripAdvisor",
         },
         {
           text: "Чистые номера, дружелюбный персонал, отличное расположение. Вы действительно чувствуете себя частью семьи!",
-          author: "Emma, AirBNB"
-        }
+          author: "Emma, Airbnb",
+        },
       ],
       // CTA buttons
-      readAirbnbButton: "Отзывы AirBNB",
-      readTripadvisorButton: "Отзывы TripAdvisor"
+      readAirbnbButton: "Отзывы Airbnb",
+      readTripadvisorButton: "Отзывы TripAdvisor",
     },
     // Rooms
     rooms: {
       title: "Наш гостевой номер",
-      subtitle: "Удобный, чистый и оборудованный всем необходимым",
+      subtitle:
+        "Удобный, чистый и оборудованный всем необходимым",
       roomName: "Гостевой номер",
-      roomDesc: "Уютный, комфортный номер со всем необходимым для расслабляющего отдыха",
+      roomDesc:
+        "Уютный, комфортный номер со всем необходимым для расслабляющего отдыха",
       features: "Удобства в номере",
-      featuresList: ["Кровать king-size", "Душевая комната в номере (горячая вода)", "Кондиционер", "Холодильник", "Бесплатный Wi-Fi", "Чайник", "Личный балкон", "Сейф"],
+      featuresList: [
+        "Кровать king-size",
+        "Душевая комната в номере (горячая вода)",
+        "Кондиционер",
+        "Холодильник",
+        "Бесплатный Wi-Fi",
+        "Чайник",
+        "Личный балкон",
+        "Сейф",
+      ],
       roomsLabel: "Номера",
       floorsLabel: "Этажи",
       establishedLabel: "Основан",
       voltageLabel: "Напряжение",
       // More space section
       needMoreSpace: "Нужно больше места?",
-      moreSpaceDesc: "Ищете люкс или апартаменты? Мы можем организовать другие варианты размещения, соответствующие вашим потребностям. Просто напишите нам напрямую, и мы поможем найти идеальное место для вашего проживания!",
+      moreSpaceDesc:
+        "Ищете люкс или апартаменты? Мы можем организовать другие варианты размещения, соответствующие вашим потребностям. Просто напишите нам напрямую, и мы поможем найти идеальное место для вашего проживания!",
       // CTA button
-      viewAvailability: "Посмотреть доступность на AirBNB"
+      viewAvailability: "Посмотреть доступность на Airbnb",
     },
     // Amenities
     amenities: {
       title: "Всё, что вам нужно",
-      subtitle: "Мы продумали все детали, чтобы ваше пребывание было комфортным и беззаботным. Кроме того, Анна и Джош всегда рады помочь организовать такси, поездки на острова, порекомендовать рестораны и многое другое!",
+      subtitle:
+        "Мы продумали все детали, чтобы ваше пребывание было комфортным и беззаботным. Кроме того, Анна и Джош всегда рады помочь организовать такси, поездки на острова, порекомендовать рестораны и многое другое!",
       items: [
-        { title: "Кондиционер", description: "Сохраняйте прохладу в тропическую погоду" },
-        { title: "Бесплатный Wi-Fi", description: "Высокоскоростной интернет" },
-        { title: "Холодильник", description: "Храните напитки и закуски холодными" },
-        { title: "Обеды на открытом воздухе и барбекю", description: "Наслаждайтесь едой в тропической обстановке" },
-        { title: "Качественное постельное белье", description: "Дополнительные подушки, одеяла и белье" },
-        { title: "Утюг в наличии", description: "Держите одежду свежей" },
-        { title: "Туалетные принадлежности", description: "Шампунь, мыло, полотенца и необходимое" },
-        { title: "Аренда скутеров", description: "Удобная аренда мотобайков" },
-        { title: "Хранение багажа", description: "Ранний заезд или поздний выезд" },
-        { title: "Приветствуем долгосрочное пребывание", description: "28+ дней" },
-        { title: "Личная встреча хозяйкой", description: "Анна встречает каждого гостя" },
-        { title: "Безопасность", description: "Огнетушитель и аптечка" }
+        {
+          title: "Кондиционер",
+          description:
+            "Сохраняйте прохладу в тропическую погоду",
+        },
+        {
+          title: "Бесплатный Wi-Fi",
+          description: "Высокоскоростной интернет",
+        },
+        {
+          title: "Холодильник",
+          description: "Храните напитки и закуски холодными",
+        },
+        {
+          title: "Обеды на открытом воздухе и барбекю",
+          description:
+            "Наслаждайтесь едой в тропической обстановке",
+        },
+        {
+          title: "Качественное постельное белье",
+          description: "Дополнительные подушки, одеяла и белье",
+        },
+        {
+          title: "Утюг в наличии",
+          description: "Держите одежду свежей",
+        },
+        {
+          title: "Туалетные принадлежности",
+          description: "Шампунь, мыло, полотенца и необходимое",
+        },
+        {
+          title: "Аренда скутеров",
+          description: "Удобная аренда мотобайков",
+        },
+        {
+          title: "Хранение багажа",
+          description: "Ранний заезд или поздний выезд",
+        },
+        {
+          title: "Приветствуем долгосрочное пребывание",
+          description: "28+ дней",
+        },
+        {
+          title: "Личная встреча хозяйкой",
+          description: "Анна встречает каждого гостя",
+        },
+        {
+          title: "Безопасность",
+          description: "Огнетушитель и аптечка",
+        },
       ],
-      beachAlt: "Пляж Ката - всего в нескольких шагах от гестхауса Waree"
+      beachAlt:
+        "Пляж Ката - всего в нескольких шагах от гестхауса Waree",
     },
     // Photo Gallery
     gallery: {
       title: "Жизнь в Waree",
-      subtitle: "Познакомьтесь с хозяевами, исследуйте пляж Ката и откройте для себя подлинный опыт Пхукета",
+      subtitle:
+        "Познакомьтесь с хозяевами, исследуйте пляж Ката и откройте для себя подлинный опыт Пхукета",
       familyMatters: "Семья важна :)",
-      familyMattersDesc: "Мам, Анна и Варее - ваша семья вдали от дома",
+      familyMattersDesc:
+        "Мам, Анна и Варее - ваша семья вдали от дома",
       meetHosts: "Познакомьтесь с вашими хозяевами",
-      meetHostsDesc: "Анна, Джош и Фин - ваша семья вдали от дома с 2000 года",
+      meetHostsDesc:
+        "Анна, Джош и Фин - ваша семья вдали от дома с 2000 года",
       paradiseFound: "Рай найден",
-      paradiseFoundDesc: "Потрясающие виды, кристально чистая вода и мирная островная жизнь",
+      paradiseFoundDesc:
+        "Потрясающие виды, кристально чистая вода и мирная островная жизнь",
       explore: "Исследуйте остров",
-      exploreDesc: "Откройте для себя захватывающие дух смотровые площадки и скрытые жемчужины вокруг Пхукета",
+      exploreDesc:
+        "Откройте для себя захватывающие дух смотровые площадки и скрытые жемчужины вокруг Пхукета",
       familyFun: "Семейное веселье",
-      familyFunDesc: "Аквапарки, достопримечательности и развлечения для всех возрастов поблизости",
+      familyFunDesc:
+        "Аквапарки, достопримечательности и развлечения для всех возрастов поблизости",
       yourHome: "Ваш дом в Ката",
-      yourHomeDesc: "Расположен в самом сердце пляжа Ката с потрясающим видом на горы",
+      yourHomeDesc:
+        "Расположен в самом сердце пляжа Ката с потрясающим видом на горы",
       welcome: "Добро пожаловать в Waree",
-      welcomeDesc: "Ищите наш знаковый логотип с птицей и ключом - ваш дом вдали от дома",
+      welcomeDesc:
+        "Ищите наш знаковый логотип с птицей и ключом - ваш дом вдали от дома",
       courtyard: "Двор гестхауса",
-      courtyardDesc: "Мирное и уютное пространство для отдыха и наслаждения",
+      courtyardDesc:
+        "Мирное и уютное пространство для отдыха и наслаждения",
       entrance: "Вход в гестхаус",
-      entranceDesc: "Гостеприимный и очаровательный вход в ваш новый дом вдали от дома",
+      entranceDesc:
+        "Гостеприимный и очаровательный вход в ваш новый дом вдали от дома",
       ctaTitle: "Готовы создать свои собственные воспоминания?",
-      ctaDesc: "Присоединяйтесь к семье Waree и испытайте подлинное тайское гостеприимство в одном из самых красивых мест Пхукета",
-      ctaButton: "Забронировать проживание"
+      ctaDesc:
+        "Присоединяйтесь к семье Waree и испытайте подлинное тайское гостеприимство в одном из самых красивых мест Пхукета",
+      ctaButton: "Забронировать проживание",
     },
     // Things to Do
     thingsToDo: {
       title: "Чем заняться и что рядом",
-      subtitle: "Всё, что вам нужно, находится всего в нескольких минутах - пляжи, достопримечательности, магазины и местные удобства",
+      subtitle:
+        "Всё, что вам нужно, находится всего в нескольких минутах - пляжи, достопримечательности, магазины и местные удобства",
       attractionsTitle: "Пляжи и достопримечательности",
       kataBeach: "Пляж Ката",
       kataBeachDesc: "Красивый белый песчаный пляж",
@@ -1182,7 +1510,8 @@ export const translations = {
       nightMarketDesc: "Местная еда и шопинг",
       nightMarketDist: "За нами! 🎵",
       oldTown: "Старый город Пхукет",
-      oldTownDesc: "Историческая китайско-португальская архитектура",
+      oldTownDesc:
+        "Историческая китайско-португальская архитектура",
       oldTownDist: "30 минут езды",
       conveniencesTitle: "Ближайшие удобства",
       atm: "Банкомат",
@@ -1206,14 +1535,17 @@ export const translations = {
       restaurants: "Местные рестораны",
       restaurantsDesc: "Тайская и интернациональная кухня",
       restaurantsDist: "2 минуты пешком",
-      localTip: "<strong>💡 Местный совет:</strong> Мы рады помочь вам организовать транспорт, порекомендовать рестораны, забронировать туры и поделиться нашими любимыми местными местами. Просто спросите - мы любим помогать нашим гостям открывать настоящий Пхукет!"
+      localTip:
+        "<strong>💡 Местный совет:</strong> Мы рады помочь вам организовать транспорт, порекомендовать рестораны, забронировать туры и поделиться нашими любимыми местными местами. Просто спросите - мы любим помогать нашим гостям открывать настоящий Пхукет!",
     },
     // Location
     location: {
       title: "Как добраться",
-      subtitle: "Расположены в самом сердце пляжа Ката, до нас легко добраться из любой точки Пхукета",
+      subtitle:
+        "Расположены в самом сердце пляжа Ката, до нас легко добраться из любой точки Пхукета",
       ourAddress: "Наш адрес",
-      address: "44/5 Kata Road\nПляж Ката, Карон\nПхукет 83100\nТаиланд",
+      address:
+        "44/5 Kata Road\nПляж Ката, Карон\nПхукет 83100\nТаиланд",
       directions: "Получить маршрут",
       fromAirport: "Из аэропорта",
       distance: "Расстояние:",
@@ -1221,79 +1553,99 @@ export const translations = {
       travelTime: "Время в пути:",
       travelTimeValue: "45-60 минут на машине",
       recommendedTitle: "Рекомендуется для новичков",
-      recommendedSubtitle: "Возьмите такси из международного аэропорта Пхукета",
+      recommendedSubtitle:
+        "Возьмите такси из международного аэропорта Пхукета",
       airportTaxiTitle: "🚖 Такси из аэропорта",
-      airportTaxiDesc: "Самый простой и удобный вариант для тех, кто впервые посещает Пхукет. Официальные такси из аэропорта безопасны, надежны и доставят вас прямо к нашей двери.",
+      airportTaxiDesc:
+        "Самый простой и удобный вариант для тех, кто впервые посещает Пхукет. Официальные такси из аэропорта безопасны, надежны и доставят вас прямо к нашей двери.",
       taxiCost: "Стоимость:",
-      taxiCostValue: "Примерно 800-1,000 батов (фиксированная ставка)",
+      taxiCostValue:
+        "Примерно 800-1,000 батов (фиксированная ставка)",
       taxiWhere: "Где найти:",
       taxiWhereValue: "Официальная стойка такси в зале прилета",
       taxiDuration: "Продолжительность:",
       taxiDurationValue: "45-60 минут прямо до пляжа Ката",
       taxiTip: "Совет:",
-      taxiTipValue: "Держите подтверждение бронирования под рукой, чтобы показать водителю",
+      taxiTipValue:
+        "Держите подтверждение бронирования под рукой, чтобы показать водителю",
       airportBusTitle: "🚌 Автобус из аэропорта",
-      airportBusDesc: "Бюджетный вариант с регулярным сообщением в район пляжа Ката.",
+      airportBusDesc:
+        "Бюджетный вариант с регулярным сообщением в район пляжа Ката.",
       busCost: "~150-200 батов",
       busDuration: "90-120 минут",
       privateTransferTitle: "🚗 Частный трансфер",
-      privateTransferDesc: "Предварительно забронированный трансфер со встречей и сопровождением.",
+      privateTransferDesc:
+        "Предварительно забронированный трансфер со встречей и сопровождением.",
       privateCost: "~1,200-1,500 батов",
       privateDuration: "45-60 минут",
       localTransportTitle: "🛵 Местный транспорт",
-      localTransportDesc: "Тук-туки и мототакси доступны для коротких поездок по пляжу Ката.",
+      localTransportDesc:
+        "Тук-туки и мототакси доступны для коротких поездок по пляжу Ката.",
       localCost: "Зависит от расстояния",
       localTip: "Всегда договаривайтесь о цене заранее",
       helpTitle: "Нужна помощь с организацией транспорта?",
-      helpDesc: "Анна и Джош будут рады помочь вам организовать такси или предоставить направления. Просто напишите нам после бронирования!",
+      helpDesc:
+        "Анна и Джош будут рады помочь вам организовать такси или предоставить направления. Просто напишите нам после бронирования!",
       whatsappButton: "Написать в WhatsApp",
-      callButton: "Позвонить +66 76 331 016"
+      callButton: "Позвонить +66 76 331 016",
     },
     // Social Feed
     social: {
       title: "Оставайтесь на связи",
-      subtitle: "Следите за нами в Facebook для ежедневных обновлений, фото гостей, местных советов и специальных предложений! Узнайте, что происходит в Вари, и вдохновитесь на приключение на пляже Ката.",
+      subtitle:
+        "Следите за нами в Facebook для ежедневных обновлений, фото гостей, местных советов и специальных предложений! Узнайте, что происходит в Вари, и вдохновитесь на приключение на пляже Ката.",
       communityTitle: "Сообщество",
-      communityDesc: "Присоединяйтесь к нашей растущей семье путешественников со всего мира",
+      communityDesc:
+        "Присоединяйтесь к нашей растущей семье путешественников со всего мира",
       storiesTitle: "Истории гостей",
-      storiesDesc: "Смотрите фотографии и истории гостей, ставших друзьями",
+      storiesDesc:
+        "Смотрите фотографии и истории гостей, ставших друзьями",
       eventsTitle: "События и обновления",
-      eventsDesc: "Местные события, новости пляжа и новости гестхауса",
+      eventsDesc:
+        "Местные события, новости пляжа и новости гестхауса",
       latestTitle: "Последние новости из Facebook",
-      latestDesc: "Смотрите наши последние посты, фотографии и обновления от Анны, Джоша и Мам!",
-      ctaText: "Нажмите ниже, чтобы посетить нашу страницу в Facebook и узнать, что нового в гестхаусе Вари!",
+      latestDesc:
+        "Смотрите наши последние посты, фотографии и обновления от Анны, Джоша и Мам!",
+      ctaText:
+        "Нажмите ниже, чтобы посетить нашу страницу в Facebook и узнать, что нового в гестхаусе Вари!",
       ctaButton: "Посетить нашу страницу в Facebook",
       feature1: "Обновления",
       feature2: "Фото гостей",
       feature3: "Местные рекомендации",
       feature4: "Прямые сообщения",
       quickTitle: "Быстрый вопрос?",
-      quickDesc: "Напишите нам в Facebook, WhatsApp, Line или позвоните для самого быстрого ответа!",
+      quickDesc:
+        "Напишите нам в Facebook, WhatsApp, Line или позвоните для самого быстрого ответа!",
       facebookBtn: "Facebook",
       whatsappBtn: "WhatsApp",
       lineBtn: "LINE",
       phoneBtn: "+66 76 331 016",
-      emailBtn: "Электронная почта"
+      emailBtn: "Электронная почта",
     },
     // Common UI
     common: {
       showDetails: "Показать детали",
-      hideDetails: "Скрыть детали"
+      hideDetails: "Скрыть детали",
     },
     // Footer
     footer: {
-      description: "Ваш дом вдали от дома на прекрасном пляже Ката, Пхукет. Ощутите местное тепло и искреннее гостеприимство.",
+      description:
+        "Ваш дом вдали от дома на прекрасном пляже Ката, Пхукет. Ощутите местное тепло и искреннее гостеприимство.",
       contactTitle: "Свяжитесь с нами",
       connectTitle: "Оставайтесь на связи",
       facebook: "Следите за нами на Facebook",
       whatsapp: "Напишите нам в WhatsApp",
       line: "Напишите нам в Line",
-      messagePrompt: "Напишите нам на вашей любимой платформе — мы всегда готовы помочь!",
+      messagePrompt:
+        "Напишите нам на вашей любимой платформе — мы всегда готовы помочь!",
       bookTitle: "Забронируйте проживание",
-      bookDescription: "Готовы познакомиться с пляжем Ката как местный житель? Бронируйте сейчас для лучших цен и мгновенного подтверждения.",
+      bookDescription:
+        "Готовы познакомиться с пляжем Ката как местный житель? Бронируйте сейчас для лучших цен и мгновенного подтверждения.",
       tripadvisor: "TripAdvisor",
-      copyright: "© 2026 Гестхаус Waree, пляж Ката, Пхукет. Все права защищены.",
-      tagline: "Создаём воспоминания, по одному гостю за раз с 2000 года 💛",
+      copyright:
+        "© 2026 Гестхаус Waree, пляж Ката, Пхукет. Все права защищены.",
+      tagline:
+        "Создаём воспоминания, по одному гостю за раз с 2000 года 💛",
       quickLinks: "Быстрые ссылки",
       contact: "Контакты",
       phone: "Телефон",
@@ -1303,28 +1655,29 @@ export const translations = {
       rooms: "Номера",
       amenities: "Удобства",
       reviews: "Отзывы",
-      location: "Расположение"
-    }
+      location: "Расположение",
+    },
   },
   de: {
     // Language Names
     languageNames: {
-      en: 'English',
-      th: 'ไทย',
-      zh: '中文',
-      ru: 'Русский',
-      de: 'Deutsch',
-      it: 'Italiano',
-      sv: 'Svenska',
-      fi: 'Suomi'
+      en: "English",
+      th: "ไทย",
+      zh: "中文",
+      ru: "Русский",
+      de: "Deutsch",
+      it: "Italiano",
+      sv: "Svenska",
+      fi: "Suomi",
     },
     // Hero
     hero: {
       title: "Waree's Gästehaus",
       subtitle: "Ihr Familienzuhause am Kata Beach",
-      tagline: "Erleben Sie Phuket mit authentischer thailändischer Gastfreundschaft seit 2000",
+      tagline:
+        "Erleben Sie Phuket mit authentischer thailändischer Gastfreundschaft seit 2000",
       emailButton: "Schreiben Sie uns",
-      bookButton: "Auf AirBNB buchen",
+      bookButton: "Auf Airbnb buchen",
       reviewsButton: "Bewertungen lesen",
     },
     // About
@@ -1334,55 +1687,68 @@ export const translations = {
       p2: "Lassen Sie uns in unserer Außenlounge abhängen, in unserer kleinen Bar oder Badminton mit uns auf der Straße spielen—wir genießen es wirklich, Zeit mit Gästen zu verbringen! Wir helfen bei der Organisation von Ausflügen, buchen Taxis, Restaurants und mehr.",
       p3: "<strong>Wir glauben, dass Reisen vor allem die Menschen betrifft, die man trifft!</strong>",
       note: "<strong>🎵 Hinweis:</strong> Hinter uns gibt es einen Freiluftmarkt, der abends entspannte Live-Musik spielt. Sie enden zwischen 22:00 und 23:00 Uhr die meisten Abende (spätestens Mitternacht).",
-      budget: "Wie gesagt, wir sind einfach eine normale Familie, die unser kleines, entspanntes Gästehaus/Homestay führt. Wir betrachten uns als <strong>\"2 Sterne\" / budgetfreundlich</strong>.",
-      rightForYouTitle: "✨ Wir denken, Sie werden uns lieben, wenn Sie:",
+      budget:
+        'Wie gesagt, wir sind einfach eine normale Familie, die unser kleines, entspanntes Gästehaus/Homestay führt. Wir betrachten uns als <strong>"2 Sterne" / budgetfreundlich</strong>.',
+      rightForYouTitle:
+        "✨ Wir denken, Sie werden uns lieben, wenn Sie:",
       rightForYou: [
         "Eine einzigartigere und lokalere Erfahrung wünschen",
         "Es genießen, Teil der Familie zu sein, neue Leute kennenzulernen und neue Freunde zu finden",
         "Mit kleinem Budget reisen, aber kleine Luxusgüter wie Klimaanlage, saubere Bettwäsche und heißes Wasser schätzen",
         "Unsere Lage schätzen—nicht in der Nähe einer lauten Straße oder Bars, aber dennoch zu Fuß zum Strand",
-        "Katzen lieben! 🐱"
+        "Katzen lieben! 🐱",
       ],
-      notRightTitle: "💭 Wir sind möglicherweise nicht das Richtige für Sie, wenn Sie:",
+      notRightTitle:
+        "💭 Wir sind möglicherweise nicht das Richtige für Sie, wenn Sie:",
       notRight: [
         "Professionelle Einrichtungen und Dienstleistungen benötigen, die Sie in einem großen Hotel finden würden",
         "Sehr spezifisch bezüglich Betttypen, Kissen oder Handtüchern sind",
         "Sehr nah am Strand sein müssen",
         "Einfach nur einen Schlafplatz ohne lokale Erfahrung benötigen",
         "Empfindlich gegenüber Realitäten von Entwicklungsländern sind (gelegentliche Stromausfälle, Insekten, Geckos usw.)",
-        "Allergisch gegen Katzen sind oder keine Katzen mögen"
+        "Allergisch gegen Katzen sind oder keine Katzen mögen",
       ],
-      hostsPhotoAlt: "Mam, Anna (Schwestern) und Waree - Die Gründerfamilie von Waree's Gästehaus",
-      hostPhotoAlt: "Anna, Josh und Fin - Ihre Gastgeber im Waree's Gästehaus"
+      hostsPhotoAlt:
+        "Mam, Anna (Schwestern) und Waree - Die Gründerfamilie von Waree's Gästehaus",
+      hostPhotoAlt:
+        "Anna, Josh und Fin - Ihre Gastgeber im Waree's Gästehaus",
     },
     // Airbnb Highlights
     airbnb: {
       title: "Airbnb Superhost • Gästefavorit",
-      subtitle: "Von unseren wunderbaren Gästen mit 4,83 von 5 bewertet",
+      subtitle:
+        "Von unseren wunderbaren Gästen mit 4,83 von 5 bewertet",
       superhost: "Anna ist ein Airbnb Superhost",
-      superhostDesc: "Superhosts sind erfahrene, hoch bewertete Gastgeber, die sich für großartige Aufenthalte einsetzen",
+      superhostDesc:
+        "Superhosts sind erfahrene, hoch bewertete Gastgeber, die sich für großartige Aufenthalte einsetzen",
       guestFavorite: "Gästefavorit",
-      guestFavoriteDesc: "Eines der beliebtesten Häuser auf Airbnb basierend auf Bewertungen, Rezensionen und Zuverlässigkeit",
+      guestFavoriteDesc:
+        "Eines der beliebtesten Häuser auf Airbnb basierend auf Bewertungen, Rezensionen und Zuverlässigkeit",
       rating: "4,83 Bewertung",
-      ratingDesc: "Durchweg hervorragende Bewertungen von Gästen, die unsere Familienatmosphäre lieben",
-      achievementsDate: "AirBNB-Erfolge Stand 23. Januar 2026",
+      ratingDesc:
+        "Durchweg hervorragende Bewertungen von Gästen, die unsere Familienatmosphäre lieben",
+      achievementsDate: "Airbnb-Erfolge Stand 23. Januar 2026",
       ratingText: "Bewertung aus 35 Rezensionen",
       superhostTitle: "Superhost",
       superhostYears: "Anna • 10 Jahre Gastgeber",
       checkInTitle: "Außergewöhnlicher Check-in",
-      checkInDesc: "Kürzliche Gäste haben den Check-in-Prozess mit 5 Sternen bewertet",
+      checkInDesc:
+        "Kürzliche Gäste haben den Check-in-Prozess mit 5 Sternen bewertet",
       locationTitle: "Unschlagbare Lage",
-      locationDesc: "100% der Gäste im letzten Jahr haben diese Lage mit 5 Sternen bewertet",
+      locationDesc:
+        "100% der Gäste im letzten Jahr haben diese Lage mit 5 Sternen bewertet",
       trustedTitle: "Vertrauenswürdige Erfahrung",
-      ctaText: "Sehen Sie, warum Gäste wiederkommen und uns 5 Sterne geben!",
-      ctaButton: "Verfügbarkeit auf AirBNB prüfen"
+      ctaText:
+        "Sehen Sie, warum Gäste wiederkommen und uns 5 Sterne geben!",
+      ctaButton: "Verfügbarkeit auf Airbnb prüfen",
     },
     // Reviews
     reviews: {
       title: "Was unsere Gäste sagen",
-      subtitle: "Echte Erfahrungen von Reisenden, die bei uns übernachtet haben",
+      subtitle:
+        "Echte Erfahrungen von Reisenden, die bei uns übernachtet haben",
       ratingsDate: "Bewertungen Stand 23. Januar 2026",
-      airbnbTitle: "AirBNB",
+      airbnbTitle: "Airbnb",
       airbnbScore: "4.83",
       airbnbReviewCount: "Aus 35 Bewertungen",
       tripadvisorTitle: "TripAdvisor",
@@ -1398,99 +1764,164 @@ export const translations = {
         value: "Preis-Leistung",
         sleepQuality: "Schlafqualität",
         rooms: "Zimmer",
-        service: "Service"
+        service: "Service",
       },
       // Guest reviews
       guestReviews: [
         {
           text: "Tolle Gastgeber, blitzsauber, bequemes Bett, schöner Balkon, ruhig... Familienbetrieb mit viel Liebe. Wir haben es geliebt hier zu bleiben!",
-          author: "Andreas, AirBNB"
+          author: "Andreas, Airbnb",
         },
         {
           text: "Anna ist super lieb, nett, hilfsbereit und freundlich. Die Zimmer sind wirklich sauber und komfortabel. Sehr zu empfehlen!",
-          author: "Rosa, AirBNB"
+          author: "Rosa, Airbnb",
         },
         {
           text: "Wahrscheinlich der freundlichste Gästehaus-Besitzer, den wir auf unserer ganzen Reise getroffen haben. Wir fühlten uns völlig zu Hause.",
-          author: "Michael, TripAdvisor"
+          author: "Michael, TripAdvisor",
         },
         {
           text: "Saubere Zimmer, freundliches Personal, perfekte Lage. Man fühlt sich wirklich wie Teil der Familie!",
-          author: "Emma, AirBNB"
-        }
+          author: "Emma, Airbnb",
+        },
       ],
       // CTA buttons
-      readAirbnbButton: "AirBNB Bewertungen",
-      readTripadvisorButton: "TripAdvisor Bewertungen"
+      readAirbnbButton: "Airbnb Bewertungen",
+      readTripadvisorButton: "TripAdvisor Bewertungen",
     },
     // Rooms
     rooms: {
       title: "Unser Gästezimmer",
-      subtitle: "Komfortabel, sauber und mit allem ausgestattet, was Sie brauchen",
+      subtitle:
+        "Komfortabel, sauber und mit allem ausgestattet, was Sie brauchen",
       roomName: "Gästezimmer",
-      roomDesc: "Gemütliches, komfortables Zimmer mit allem, was Sie für einen erholsamen Aufenthalt benötigen",
+      roomDesc:
+        "Gemütliches, komfortables Zimmer mit allem, was Sie für einen erholsamen Aufenthalt benötigen",
       features: "Zimmerausstattung",
-      featuresList: ["Kingsize-Bett", "Eigenes Duschbad (Warmwasser)", "Klimaanlage", "Kühlschrank", "Kostenloses WLAN", "Wasserkocher", "Privater Balkon", "Safe"],
+      featuresList: [
+        "Kingsize-Bett",
+        "Eigenes Duschbad (Warmwasser)",
+        "Klimaanlage",
+        "Kühlschrank",
+        "Kostenloses WLAN",
+        "Wasserkocher",
+        "Privater Balkon",
+        "Safe",
+      ],
       roomsLabel: "Zimmer",
       floorsLabel: "Etagen",
       establishedLabel: "Gegründet",
       voltageLabel: "Spannung",
       // More space section
       needMoreSpace: "Brauchen Sie mehr Platz?",
-      moreSpaceDesc: "Suchen Sie nach einer Suite oder Wohnung? Wir können andere Unterkunftsmöglichkeiten arrangieren, die Ihren Bedürfnissen entsprechen. Schreiben Sie uns einfach direkt eine E-Mail und wir helfen Ihnen, den perfekten Raum für Ihren Aufenthalt zu finden!",
+      moreSpaceDesc:
+        "Suchen Sie nach einer Suite oder Wohnung? Wir können andere Unterkunftsmöglichkeiten arrangieren, die Ihren Bedürfnissen entsprechen. Schreiben Sie uns einfach direkt eine E-Mail und wir helfen Ihnen, den perfekten Raum für Ihren Aufenthalt zu finden!",
       // CTA button
-      viewAvailability: "Verfügbarkeit auf AirBNB anzeigen"
+      viewAvailability: "Verfügbarkeit auf Airbnb anzeigen",
     },
     // Amenities
     amenities: {
       title: "Alles, was Sie brauchen",
-      subtitle: "Wir haben an alle Details gedacht, damit Ihr Aufenthalt komfortabel und sorgenfrei ist. Außerdem helfen Anna und Josh gerne bei der Organisation von Taxis, Inselausflügen, Restaurantempfehlungen und mehr!",
+      subtitle:
+        "Wir haben an alle Details gedacht, damit Ihr Aufenthalt komfortabel und sorgenfrei ist. Außerdem helfen Anna und Josh gerne bei der Organisation von Taxis, Inselausflügen, Restaurantempfehlungen und mehr!",
       items: [
-        { title: "Klimaanlage", description: "Bleiben Sie kühl im tropischen Wetter" },
-        { title: "Kostenloses WLAN", description: "Hochgeschwindigkeits-Internetzugang" },
-        { title: "Kühlschrank", description: "Halten Sie Getränke und Snacks kalt" },
-        { title: "Essen im Freien & Grill", description: "Genießen Sie Mahlzeiten in tropischem Ambiente" },
-        { title: "Hochwertige Bettwäsche", description: "Extra Kissen, Decken & Laken" },
-        { title: "Bügeleisen verfügbar", description: "Halten Sie Ihre Kleidung frisch" },
-        { title: "Toilettenartikel vorhanden", description: "Shampoo, Seife, Handtücher & Wesentliches" },
-        { title: "Rollerverleih", description: "Bequeme Motorradmiete verfügbar" },
-        { title: "Gepäckaufbewahrung", description: "Frühe Ankunft oder späte Abreise" },
-        { title: "Langzeitaufenthalte willkommen", description: "28+ Tage verfügbar" },
-        { title: "Persönliche Gastgeber-Begrüßung", description: "Anna begrüßt jeden Gast" },
-        { title: "Sicherheit", description: "Feuerlöscher & Erste-Hilfe-Kasten" }
+        {
+          title: "Klimaanlage",
+          description: "Bleiben Sie kühl im tropischen Wetter",
+        },
+        {
+          title: "Kostenloses WLAN",
+          description: "Hochgeschwindigkeits-Internetzugang",
+        },
+        {
+          title: "Kühlschrank",
+          description: "Halten Sie Getränke und Snacks kalt",
+        },
+        {
+          title: "Essen im Freien & Grill",
+          description:
+            "Genießen Sie Mahlzeiten in tropischem Ambiente",
+        },
+        {
+          title: "Hochwertige Bettwäsche",
+          description: "Extra Kissen, Decken & Laken",
+        },
+        {
+          title: "Bügeleisen verfügbar",
+          description: "Halten Sie Ihre Kleidung frisch",
+        },
+        {
+          title: "Toilettenartikel vorhanden",
+          description:
+            "Shampoo, Seife, Handtücher & Wesentliches",
+        },
+        {
+          title: "Rollerverleih",
+          description: "Bequeme Motorradmiete verfügbar",
+        },
+        {
+          title: "Gepäckaufbewahrung",
+          description: "Frühe Ankunft oder späte Abreise",
+        },
+        {
+          title: "Langzeitaufenthalte willkommen",
+          description: "28+ Tage verfügbar",
+        },
+        {
+          title: "Persönliche Gastgeber-Begrüßung",
+          description: "Anna begrüßt jeden Gast",
+        },
+        {
+          title: "Sicherheit",
+          description: "Feuerlöscher & Erste-Hilfe-Kasten",
+        },
       ],
-      beachAlt: "Kata Beach - nur wenige Schritte von Waree's Gästehaus entfernt"
+      beachAlt:
+        "Kata Beach - nur wenige Schritte von Waree's Gästehaus entfernt",
     },
     // Photo Gallery
     gallery: {
       title: "Leben bei Waree's",
-      subtitle: "Lernen Sie Ihre Gastgeber kennen, erkunden Sie Kata Beach und entdecken Sie das authentische Phuket-Erlebnis",
+      subtitle:
+        "Lernen Sie Ihre Gastgeber kennen, erkunden Sie Kata Beach und entdecken Sie das authentische Phuket-Erlebnis",
       familyMatters: "Familie ist wichtig :)",
-      familyMattersDesc: "Mam, Anna & Waree - Ihre Familie fern von Zuhause",
+      familyMattersDesc:
+        "Mam, Anna & Waree - Ihre Familie fern von Zuhause",
       meetHosts: "Lernen Sie Ihre Gastgeber kennen",
-      meetHostsDesc: "Anna, Josh & Fin - Ihre Familie fern von Zuhause seit 2000",
+      meetHostsDesc:
+        "Anna, Josh & Fin - Ihre Familie fern von Zuhause seit 2000",
       paradiseFound: "Paradies gefunden",
-      paradiseFoundDesc: "Atemberaubende Aussichten, kristallklares Wasser und friedliches Inselleben",
+      paradiseFoundDesc:
+        "Atemberaubende Aussichten, kristallklares Wasser und friedliches Inselleben",
       explore: "Die Insel erkunden",
-      exploreDesc: "Entdecken Sie atemberaubende Aussichtspunkte und versteckte Schätze rund um Phuket",
+      exploreDesc:
+        "Entdecken Sie atemberaubende Aussichtspunkte und versteckte Schätze rund um Phuket",
       familyFun: "Familienspaß",
-      familyFunDesc: "Wasserparks, Attraktionen und Aktivitäten für alle Altersgruppen in der Nähe",
+      familyFunDesc:
+        "Wasserparks, Attraktionen und Aktivitäten für alle Altersgruppen in der Nähe",
       yourHome: "Ihr Zuhause in Kata",
-      yourHomeDesc: "Im Herzen von Kata Beach mit atemberaubendem Bergblick",
+      yourHomeDesc:
+        "Im Herzen von Kata Beach mit atemberaubendem Bergblick",
       welcome: "Willkommen bei Waree's",
-      welcomeDesc: "Suchen Sie nach unserem ikonischen Vogel-und-Schlüssel-Logo - Ihr Zuhause fern von Zuhause",
+      welcomeDesc:
+        "Suchen Sie nach unserem ikonischen Vogel-und-Schlüssel-Logo - Ihr Zuhause fern von Zuhause",
       courtyard: "Gästehaus-Innenhof",
-      courtyardDesc: "Ein friedlicher und einladender Raum zum Entspannen und Genießen",
+      courtyardDesc:
+        "Ein friedlicher und einladender Raum zum Entspannen und Genießen",
       entrance: "Gästehaus-Eingang",
-      entranceDesc: "Ein einladender und charmanter Eingang zu Ihrem neuen Zuhause fern von Zuhause",
-      ctaTitle: "Bereit, Ihre eigenen Erinnerungen zu schaffen?",
-      ctaDesc: "Werden Sie Teil der Waree-Familie und erleben Sie authentische thailändische Gastfreundschaft an einem der schönsten Orte Phukets",
-      ctaButton: "Buchen Sie Ihren Aufenthalt"
+      entranceDesc:
+        "Ein einladender und charmanter Eingang zu Ihrem neuen Zuhause fern von Zuhause",
+      ctaTitle:
+        "Bereit, Ihre eigenen Erinnerungen zu schaffen?",
+      ctaDesc:
+        "Werden Sie Teil der Waree-Familie und erleben Sie authentische thailändische Gastfreundschaft an einem der schönsten Orte Phukets",
+      ctaButton: "Buchen Sie Ihren Aufenthalt",
     },
     // Things to Do
     thingsToDo: {
       title: "Aktivitäten & In der Nähe",
-      subtitle: "Alles, was Sie brauchen, ist nur wenige Minuten entfernt - Strände, Sehenswürdigkeiten, Geschäfte und lokale Annehmlichkeiten",
+      subtitle:
+        "Alles, was Sie brauchen, ist nur wenige Minuten entfernt - Strände, Sehenswürdigkeiten, Geschäfte und lokale Annehmlichkeiten",
       attractionsTitle: "Strände & Sehenswürdigkeiten",
       kataBeach: "Kata Beach",
       kataBeachDesc: "Schöner weißer Sandstrand",
@@ -1508,7 +1939,8 @@ export const translations = {
       nightMarketDesc: "Lokales Essen & Shopping",
       nightMarketDist: "Hinter uns! 🎵",
       oldTown: "Phuket Altstadt",
-      oldTownDesc: "Historische sino-portugiesische Architektur",
+      oldTownDesc:
+        "Historische sino-portugiesische Architektur",
       oldTownDist: "30 Min. Fahrt",
       conveniencesTitle: "Annehmlichkeiten in der Nähe",
       atm: "Geldautomat",
@@ -1532,14 +1964,17 @@ export const translations = {
       restaurants: "Lokale Restaurants",
       restaurantsDesc: "Thailändische & internationale Küche",
       restaurantsDist: "2 Min. zu Fuß",
-      localTip: "<strong>💡 Lokaler Tipp:</strong> Wir helfen Ihnen gerne bei der Organisation von Transporten, empfehlen Restaurants, buchen Touren und teilen unsere Lieblingsorte. Fragen Sie einfach—wir lieben es, unseren Gästen zu helfen, das echte Phuket zu entdecken!"
+      localTip:
+        "<strong>💡 Lokaler Tipp:</strong> Wir helfen Ihnen gerne bei der Organisation von Transporten, empfehlen Restaurants, buchen Touren und teilen unsere Lieblingsorte. Fragen Sie einfach—wir lieben es, unseren Gästen zu helfen, das echte Phuket zu entdecken!",
     },
     // Location
     location: {
       title: "So erreichen Sie uns",
-      subtitle: "Im Herzen von Kata Beach gelegen, sind wir von überall auf Phuket leicht zu erreichen",
+      subtitle:
+        "Im Herzen von Kata Beach gelegen, sind wir von überall auf Phuket leicht zu erreichen",
       ourAddress: "Unsere Adresse",
-      address: "44/5 Kata Road\nKata Beach, Karon\nPhuket 83100\nThailand",
+      address:
+        "44/5 Kata Road\nKata Beach, Karon\nPhuket 83100\nThailand",
       directions: "Wegbeschreibung",
       fromAirport: "Vom Flughafen",
       distance: "Entfernung:",
@@ -1547,79 +1982,100 @@ export const translations = {
       travelTime: "Reisezeit:",
       travelTimeValue: "45-60 Minuten mit dem Auto",
       recommendedTitle: "Empfohlen für Erstbesucher",
-      recommendedSubtitle: "Nehmen Sie ein Taxi vom internationalen Flughafen Phuket",
+      recommendedSubtitle:
+        "Nehmen Sie ein Taxi vom internationalen Flughafen Phuket",
       airportTaxiTitle: "🚖 Flughafen-Taxi",
-      airportTaxiDesc: "Die einfachste und bequemste Option für Erstbesucher von Phuket. Offizielle Flughafen-Taxis sind sicher, zuverlässig und bringen Sie direkt vor unsere Tür.",
+      airportTaxiDesc:
+        "Die einfachste und bequemste Option für Erstbesucher von Phuket. Offizielle Flughafen-Taxis sind sicher, zuverlässig und bringen Sie direkt vor unsere Tür.",
       taxiCost: "Kosten:",
       taxiCostValue: "Ungefähr 800-1.000 THB (Festpreis)",
       taxiWhere: "Wo zu finden:",
-      taxiWhereValue: "Offizieller Taxi-Schalter in der Ankunftshalle",
+      taxiWhereValue:
+        "Offizieller Taxi-Schalter in der Ankunftshalle",
       taxiDuration: "Dauer:",
       taxiDurationValue: "45-60 Minuten direkt zum Kata Beach",
       taxiTip: "Tipp:",
-      taxiTipValue: "Halten Sie Ihre Buchungsbestätigung bereit, um sie dem Fahrer zu zeigen",
+      taxiTipValue:
+        "Halten Sie Ihre Buchungsbestätigung bereit, um sie dem Fahrer zu zeigen",
       airportBusTitle: "🚌 Flughafen-Bus",
-      airportBusDesc: "Budgetfreundliche Option mit regelmäßiger Verbindung zum Kata Beach-Gebiet.",
+      airportBusDesc:
+        "Budgetfreundliche Option mit regelmäßiger Verbindung zum Kata Beach-Gebiet.",
       busCost: "~150-200 THB",
       busDuration: "90-120 Minuten",
       privateTransferTitle: "🚗 Privater Transfer",
-      privateTransferDesc: "Vorgebuchter Transfer mit Meet & Greet-Service verfügbar.",
+      privateTransferDesc:
+        "Vorgebuchter Transfer mit Meet & Greet-Service verfügbar.",
       privateCost: "~1.200-1.500 THB",
       privateDuration: "45-60 Minuten",
       localTransportTitle: "🛵 Lokaler Transport",
-      localTransportDesc: "Tuk-Tuks und Motorrad-Taxis für kurze Fahrten rund um Kata Beach.",
+      localTransportDesc:
+        "Tuk-Tuks und Motorrad-Taxis für kurze Fahrten rund um Kata Beach.",
       localCost: "Abhängig von der Entfernung",
       localTip: "Vereinbaren Sie immer zuerst den Preis",
-      helpTitle: "Benötigen Sie Hilfe bei der Organisation des Transports?",
-      helpDesc: "Anna und Josh helfen Ihnen gerne bei der Organisation eines Taxis oder geben Ihnen Wegbeschreibungen. Schreiben Sie uns einfach nach der Buchung!",
+      helpTitle:
+        "Benötigen Sie Hilfe bei der Organisation des Transports?",
+      helpDesc:
+        "Anna und Josh helfen Ihnen gerne bei der Organisation eines Taxis oder geben Ihnen Wegbeschreibungen. Schreiben Sie uns einfach nach der Buchung!",
       whatsappButton: "WhatsApp uns",
-      callButton: "Anrufen +66 76 331 016"
+      callButton: "Anrufen +66 76 331 016",
     },
     // Social Feed
     social: {
       title: "Bleiben Sie verbunden",
-      subtitle: "Folgen Sie uns auf Facebook für tägliche Updates, Gästefotos, lokale Tipps und Sonderangebote! Sehen Sie, was bei Waree's los ist und lassen Sie sich für Ihr Kata Beach-Abenteuer inspirieren.",
+      subtitle:
+        "Folgen Sie uns auf Facebook für tägliche Updates, Gästefotos, lokale Tipps und Sonderangebote! Sehen Sie, was bei Waree's los ist und lassen Sie sich für Ihr Kata Beach-Abenteuer inspirieren.",
       communityTitle: "Gemeinschaft",
-      communityDesc: "Treten Sie unserer wachsenden Familie von Reisenden aus aller Welt bei",
+      communityDesc:
+        "Treten Sie unserer wachsenden Familie von Reisenden aus aller Welt bei",
       storiesTitle: "Gästegeschichten",
-      storiesDesc: "Sehen Sie Fotos und Geschichten von Gästen, die Freunde geworden sind",
+      storiesDesc:
+        "Sehen Sie Fotos und Geschichten von Gästen, die Freunde geworden sind",
       eventsTitle: "Veranstaltungen & Updates",
-      eventsDesc: "Lokale Veranstaltungen, Strandneuigkeiten und Gästehaus-News",
+      eventsDesc:
+        "Lokale Veranstaltungen, Strandneuigkeiten und Gästehaus-News",
       latestTitle: "Neueste Nachrichten von Facebook",
-      latestDesc: "Sehen Sie unsere neuesten Beiträge, Fotos und Updates von Anna, Josh und Mam!",
-      ctaText: "Klicken Sie unten, um unsere Facebook-Seite zu besuchen und zu sehen, was es Neues bei Waree's Guesthouse gibt!",
+      latestDesc:
+        "Sehen Sie unsere neuesten Beiträge, Fotos und Updates von Anna, Josh und Mam!",
+      ctaText:
+        "Klicken Sie unten, um unsere Facebook-Seite zu besuchen und zu sehen, was es Neues bei Waree's Guesthouse gibt!",
       ctaButton: "Besuchen Sie unsere Facebook-Seite",
       feature1: "Updates",
       feature2: "Gästefotos",
       feature3: "Lokale Empfehlungen",
       feature4: "Direktnachrichten",
       quickTitle: "Schnelle Frage?",
-      quickDesc: "Schreiben Sie uns auf Facebook, WhatsApp, Line oder rufen Sie uns an für die schnellste Antwort!",
+      quickDesc:
+        "Schreiben Sie uns auf Facebook, WhatsApp, Line oder rufen Sie uns an für die schnellste Antwort!",
       facebookBtn: "Facebook",
       whatsappBtn: "WhatsApp",
       lineBtn: "LINE",
       phoneBtn: "+66 76 331 016",
-      emailBtn: "E-Mail"
+      emailBtn: "E-Mail",
     },
     // Common UI
     common: {
       showDetails: "Details anzeigen",
-      hideDetails: "Details ausblenden"
+      hideDetails: "Details ausblenden",
     },
     // Footer
     footer: {
-      description: "Ihr Zuhause fern von Zuhause am wunderschönen Kata Beach, Phuket. Erleben Sie lokale Wärme und echte Gastfreundschaft.",
+      description:
+        "Ihr Zuhause fern von Zuhause am wunderschönen Kata Beach, Phuket. Erleben Sie lokale Wärme und echte Gastfreundschaft.",
       contactTitle: "Kontaktieren Sie uns",
       connectTitle: "Verbinden Sie sich mit uns",
       facebook: "Folgen Sie uns auf Facebook",
       whatsapp: "Schreiben Sie uns auf WhatsApp",
       line: "Schreiben Sie uns auf Line",
-      messagePrompt: "Schreiben Sie uns auf Ihrer bevorzugten Plattform—wir sind hier, um zu helfen!",
+      messagePrompt:
+        "Schreiben Sie uns auf Ihrer bevorzugten Plattform—wir sind hier, um zu helfen!",
       bookTitle: "Buchen Sie Ihren Aufenthalt",
-      bookDescription: "Bereit, Kata Beach wie ein Einheimischer zu erleben? Buchen Sie jetzt für die besten Preise und sofortige Bestätigung.",
+      bookDescription:
+        "Bereit, Kata Beach wie ein Einheimischer zu erleben? Buchen Sie jetzt für die besten Preise und sofortige Bestätigung.",
       tripadvisor: "TripAdvisor",
-      copyright: "© 2026 Waree's Gästehaus, Kata Beach, Phuket. Alle Rechte vorbehalten.",
-      tagline: "Erinnerungen schaffen, ein Gast nach dem anderen seit 2000 💛",
+      copyright:
+        "© 2026 Waree's Gästehaus, Kata Beach, Phuket. Alle Rechte vorbehalten.",
+      tagline:
+        "Erinnerungen schaffen, ein Gast nach dem anderen seit 2000 💛",
       quickLinks: "Schnelllinks",
       contact: "Kontakt",
       phone: "Telefon",
@@ -1629,28 +2085,29 @@ export const translations = {
       rooms: "Zimmer",
       amenities: "Annehmlichkeiten",
       reviews: "Bewertungen",
-      location: "Lage"
-    }
+      location: "Lage",
+    },
   },
   it: {
     // Language Names
     languageNames: {
-      en: 'English',
-      th: 'ไทย',
-      zh: '中文',
-      ru: 'Русский',
-      de: 'Deutsch',
-      it: 'Italiano',
-      sv: 'Svenska',
-      fi: 'Suomi'
+      en: "English",
+      th: "ไทย",
+      zh: "中文",
+      ru: "Русский",
+      de: "Deutsch",
+      it: "Italiano",
+      sv: "Svenska",
+      fi: "Suomi",
     },
     // Hero
     hero: {
       title: "Pensione di Waree",
       subtitle: "La Vostra Casa di Famiglia a Kata Beach",
-      tagline: "Scopri Phuket con autentica ospitalità thailandese dal 2000",
+      tagline:
+        "Scopri Phuket con autentica ospitalità thailandese dal 2000",
       emailButton: "Scrivici",
-      bookButton: "Prenota su AirBNB",
+      bookButton: "Prenota su Airbnb",
       reviewsButton: "Leggi le Recensioni",
     },
     // About
@@ -1660,14 +2117,15 @@ export const translations = {
       p2: "Stiamo insieme nella nostra lounge all'aperto, nel nostro piccolo bar, o giochiamo a badminton con noi in strada—ci piace davvero trascorrere tempo con gli ospiti! Aiutiamo ad organizzare viaggi, prenotare taxi, ristoranti e altro ancora.",
       p3: "<strong>Crediamo che viaggiare riguardi soprattutto le persone che incontri!</strong>",
       note: "<strong>🎵 Nota:</strong> C'è un mercato all'aperto dietro di noi che suona musica dal vivo rilassante la sera. Finiscono tra le 22:00 e le 23:00 la maggior parte delle sere (non oltre la mezzanotte).",
-      budget: "Come abbiamo detto, siamo solo una famiglia normale, che gestisce la nostra piccola pensione/homestay rilassata. Ci consideriamo <strong>\"2 Stelle\" / economici</strong>.",
+      budget:
+        'Come abbiamo detto, siamo solo una famiglia normale, che gestisce la nostra piccola pensione/homestay rilassata. Ci consideriamo <strong>"2 Stelle" / economici</strong>.',
       rightForYouTitle: "✨ Pensiamo che Vi Piaceremo Se:",
       rightForYou: [
         "Volete un'esperienza più unica e locale",
         "Vi piace sentirvi parte della famiglia, incontrare nuove persone e fare nuove amicizie",
         "Avete un budget limitato, ma apprezzate piccoli lussi come aria condizionata, lenzuola pulite e acqua calda",
         "Apprezzate la nostra posizione—non vicino a una strada rumorosa o bar, ma comunque a distanza a piedi dalla spiaggia",
-        "Amate i gatti! 🐱"
+        "Amate i gatti! 🐱",
       ],
       notRightTitle: "💭 Potremmo Non Essere Adatti a Voi Se:",
       notRight: [
@@ -1676,39 +2134,50 @@ export const translations = {
         "Dovete essere molto vicini alla spiaggia",
         "Avete semplicemente bisogno di un posto dove dormire senza l'esperienza locale",
         "Siete sensibili alle realtà dei paesi in via di sviluppo (blackout occasionali, insetti, gechi, ecc.)",
-        "Siete allergici ai gatti o non vi piacciono i gatti"
+        "Siete allergici ai gatti o non vi piacciono i gatti",
       ],
-      hostsPhotoAlt: "Mam, Anna (sorelle) e Waree - La famiglia fondatrice della Pensione di Waree",
-      hostPhotoAlt: "Anna, Josh e Fin - I vostri host alla Pensione di Waree"
+      hostsPhotoAlt:
+        "Mam, Anna (sorelle) e Waree - La famiglia fondatrice della Pensione di Waree",
+      hostPhotoAlt:
+        "Anna, Josh e Fin - I vostri host alla Pensione di Waree",
     },
     // Airbnb Highlights
     airbnb: {
       title: "Superhost Airbnb • Preferito dagli Ospiti",
-      subtitle: "Valutato 4,83 su 5 dai nostri meravigliosi ospiti",
+      subtitle:
+        "Valutato 4,83 su 5 dai nostri meravigliosi ospiti",
       superhost: "Anna è un Superhost di Airbnb",
-      superhostDesc: "I Superhost sono host esperti e molto apprezzati impegnati a fornire soggiorni eccellenti",
+      superhostDesc:
+        "I Superhost sono host esperti e molto apprezzati impegnati a fornire soggiorni eccellenti",
       guestFavorite: "Preferito dagli Ospiti",
-      guestFavoriteDesc: "Una delle case più amate su Airbnb in base a valutazioni, recensioni e affidabilità",
+      guestFavoriteDesc:
+        "Una delle case più amate su Airbnb in base a valutazioni, recensioni e affidabilità",
       rating: "Valutazione 4,83",
-      ratingDesc: "Recensioni costantemente eccellenti da ospiti che amano la nostra atmosfera familiare",
-      achievementsDate: "Riconoscimenti AirBNB al 23 gennaio 2026",
+      ratingDesc:
+        "Recensioni costantemente eccellenti da ospiti che amano la nostra atmosfera familiare",
+      achievementsDate:
+        "Riconoscimenti Airbnb al 23 gennaio 2026",
       ratingText: "Valutazione da 35 recensioni",
       superhostTitle: "Superhost",
       superhostYears: "Anna • 10 anni di ospitalità",
       checkInTitle: "Check-in Eccezionale",
-      checkInDesc: "Gli ospiti recenti hanno valutato il processo di check-in con 5 stelle",
+      checkInDesc:
+        "Gli ospiti recenti hanno valutato il processo di check-in con 5 stelle",
       locationTitle: "Posizione Imbattibile",
-      locationDesc: "Il 100% degli ospiti nell'ultimo anno ha valutato questa posizione con 5 stelle",
+      locationDesc:
+        "Il 100% degli ospiti nell'ultimo anno ha valutato questa posizione con 5 stelle",
       trustedTitle: "Esperienza Affidabile",
-      ctaText: "Scopri perché gli ospiti continuano a tornare e darci 5 stelle!",
-      ctaButton: "Verifica Disponibilità su AirBNB"
+      ctaText:
+        "Scopri perché gli ospiti continuano a tornare e darci 5 stelle!",
+      ctaButton: "Verifica Disponibilità su Airbnb",
     },
     // Reviews
     reviews: {
       title: "Cosa Dicono i Nostri Ospiti",
-      subtitle: "Esperienze reali di viaggiatori che hanno soggiornato da noi",
+      subtitle:
+        "Esperienze reali di viaggiatori che hanno soggiornato da noi",
       ratingsDate: "Valutazioni al 23 gennaio 2026",
-      airbnbTitle: "AirBNB",
+      airbnbTitle: "Airbnb",
       airbnbScore: "4.83",
       airbnbReviewCount: "Da 35 recensioni",
       tripadvisorTitle: "TripAdvisor",
@@ -1724,99 +2193,163 @@ export const translations = {
         value: "Rapporto qualità-prezzo",
         sleepQuality: "Qualità del sonno",
         rooms: "Camere",
-        service: "Servizio"
+        service: "Servizio",
       },
       // Guest reviews
       guestReviews: [
         {
           text: "Ottimi padroni di casa, immacolatamente pulito, letto comodo, bel balcone, tranquillo... attività familiare con molto amore. Ci è piaciuto soggiornare qui!",
-          author: "Andreas, AirBNB"
+          author: "Andreas, Airbnb",
         },
         {
           text: "Anna è super adorabile, simpatica, disponibile e amichevole. Le camere sono davvero pulite e confortevoli. Altamente raccomandato!",
-          author: "Rosa, AirBNB"
+          author: "Rosa, Airbnb",
         },
         {
           text: "Probabilmente il proprietario di guest house più cordiale che abbiamo incontrato in tutto il nostro viaggio. Ci ha fatto sentire completamente a casa.",
-          author: "Michael, TripAdvisor"
+          author: "Michael, TripAdvisor",
         },
         {
           text: "Camere pulite, personale cordiale, posizione perfetta. Ti senti davvero parte della famiglia qui!",
-          author: "Emma, AirBNB"
-        }
+          author: "Emma, Airbnb",
+        },
       ],
       // CTA buttons
-      readAirbnbButton: "Recensioni AirBNB",
-      readTripadvisorButton: "Recensioni TripAdvisor"
+      readAirbnbButton: "Recensioni Airbnb",
+      readTripadvisorButton: "Recensioni TripAdvisor",
     },
     // Rooms
     rooms: {
       title: "La Nostra Camera per Ospiti",
-      subtitle: "Confortevole, pulita e dotata di tutto ciò di cui hai bisogno",
+      subtitle:
+        "Confortevole, pulita e dotata di tutto ciò di cui hai bisogno",
       roomName: "Camera per Ospiti",
-      roomDesc: "Camera accogliente e confortevole con tutto il necessario per un soggiorno rilassante",
+      roomDesc:
+        "Camera accogliente e confortevole con tutto il necessario per un soggiorno rilassante",
       features: "Caratteristiche della Camera",
-      featuresList: ["Letto King", "Bagno Privato con Doccia (Acqua Calda)", "Aria Condizionata", "Frigorifero", "Wi-Fi Gratuito", "Bollitore", "Balcone Privato", "Cassaforte"],
+      featuresList: [
+        "Letto King",
+        "Bagno Privato con Doccia (Acqua Calda)",
+        "Aria Condizionata",
+        "Frigorifero",
+        "Wi-Fi Gratuito",
+        "Bollitore",
+        "Balcone Privato",
+        "Cassaforte",
+      ],
       roomsLabel: "Camere",
       floorsLabel: "Piani",
       establishedLabel: "Fondato",
       voltageLabel: "Tensione",
       // More space section
       needMoreSpace: "Hai Bisogno di Più Spazio?",
-      moreSpaceDesc: "Cerchi una suite o un appartamento? Possiamo organizzare altre opzioni di alloggio per soddisfare le tue esigenze. Inviaci semplicemente un'email e ti aiuteremo a trovare lo spazio perfetto per il tuo soggiorno!",
+      moreSpaceDesc:
+        "Cerchi una suite o un appartamento? Possiamo organizzare altre opzioni di alloggio per soddisfare le tue esigenze. Inviaci semplicemente un'email e ti aiuteremo a trovare lo spazio perfetto per il tuo soggiorno!",
       // CTA button
-      viewAvailability: "Visualizza Disponibilità su AirBNB"
+      viewAvailability: "Visualizza Disponibilità su Airbnb",
     },
     // Amenities
     amenities: {
       title: "Tutto Ciò di Cui Hai Bisogno",
-      subtitle: "Abbiamo pensato a tutti i dettagli per rendere il tuo soggiorno confortevole e senza preoccupazioni. Inoltre, Anna e Josh sono sempre felici di aiutare a organizzare taxi, gite alle isole, raccomandazioni di ristoranti e altro ancora!",
+      subtitle:
+        "Abbiamo pensato a tutti i dettagli per rendere il tuo soggiorno confortevole e senza preoccupazioni. Inoltre, Anna e Josh sono sempre felici di aiutare a organizzare taxi, gite alle isole, raccomandazioni di ristoranti e altro ancora!",
       items: [
-        { title: "Aria Condizionata", description: "Resta fresco nel clima tropicale" },
-        { title: "Wi-Fi Gratuito", description: "Accesso internet ad alta velocità" },
-        { title: "Frigorifero", description: "Mantieni bevande e snack freddi" },
-        { title: "Pranzo all'aperto e BBQ", description: "Goditi i pasti in ambiente tropicale" },
-        { title: "Biancheria di Qualità", description: "Cuscini extra, coperte e lenzuola" },
-        { title: "Ferro da Stiro Disponibile", description: "Mantieni i tuoi vestiti freschi" },
-        { title: "Articoli da Toilette Forniti", description: "Shampoo, sapone, asciugamani ed essenziali" },
-        { title: "Noleggio Scooter", description: "Comodo noleggio motociclette disponibile" },
-        { title: "Deposito Bagagli", description: "Arrivo anticipato o partenza tardiva" },
-        { title: "Soggiorni a Lungo Termine Benvenuti", description: "28+ giorni disponibili" },
-        { title: "Accoglienza Personale dell'Host", description: "Anna accoglie ogni ospite" },
-        { title: "Sicurezza", description: "Estintore e kit di pronto soccorso" }
+        {
+          title: "Aria Condizionata",
+          description: "Resta fresco nel clima tropicale",
+        },
+        {
+          title: "Wi-Fi Gratuito",
+          description: "Accesso internet ad alta velocità",
+        },
+        {
+          title: "Frigorifero",
+          description: "Mantieni bevande e snack freddi",
+        },
+        {
+          title: "Pranzo all'aperto e BBQ",
+          description: "Goditi i pasti in ambiente tropicale",
+        },
+        {
+          title: "Biancheria di Qualità",
+          description: "Cuscini extra, coperte e lenzuola",
+        },
+        {
+          title: "Ferro da Stiro Disponibile",
+          description: "Mantieni i tuoi vestiti freschi",
+        },
+        {
+          title: "Articoli da Toilette Forniti",
+          description:
+            "Shampoo, sapone, asciugamani ed essenziali",
+        },
+        {
+          title: "Noleggio Scooter",
+          description:
+            "Comodo noleggio motociclette disponibile",
+        },
+        {
+          title: "Deposito Bagagli",
+          description: "Arrivo anticipato o partenza tardiva",
+        },
+        {
+          title: "Soggiorni a Lungo Termine Benvenuti",
+          description: "28+ giorni disponibili",
+        },
+        {
+          title: "Accoglienza Personale dell'Host",
+          description: "Anna accoglie ogni ospite",
+        },
+        {
+          title: "Sicurezza",
+          description: "Estintore e kit di pronto soccorso",
+        },
       ],
-      beachAlt: "Kata Beach - a pochi passi dalla Pensione di Waree"
+      beachAlt:
+        "Kata Beach - a pochi passi dalla Pensione di Waree",
     },
     // Photo Gallery
     gallery: {
       title: "La Vita da Waree's",
-      subtitle: "Incontra i tuoi host, esplora Kata Beach e scopri l'autentica esperienza di Phuket che ti aspetta",
+      subtitle:
+        "Incontra i tuoi host, esplora Kata Beach e scopri l'autentica esperienza di Phuket che ti aspetta",
       familyMatters: "La Famiglia Conta :)",
-      familyMattersDesc: "Mam, Anna e Waree - La vostra famiglia lontano da casa",
+      familyMattersDesc:
+        "Mam, Anna e Waree - La vostra famiglia lontano da casa",
       meetHosts: "Incontra i Tuoi Host",
-      meetHostsDesc: "Anna, Josh e Fin - La vostra famiglia lontano da casa dal 2000",
+      meetHostsDesc:
+        "Anna, Josh e Fin - La vostra famiglia lontano da casa dal 2000",
       paradiseFound: "Paradiso Trovato",
-      paradiseFoundDesc: "Viste mozzafiato, acque cristalline e tranquilla vita insulare",
+      paradiseFoundDesc:
+        "Viste mozzafiato, acque cristalline e tranquilla vita insulare",
       explore: "Esplora l'Isola",
-      exploreDesc: "Scopri punti panoramici mozzafiato e gemme nascoste intorno a Phuket",
+      exploreDesc:
+        "Scopri punti panoramici mozzafiato e gemme nascoste intorno a Phuket",
       familyFun: "Divertimento in Famiglia",
-      familyFunDesc: "Parchi acquatici, attrazioni e attività per tutte le età nelle vicinanze",
+      familyFunDesc:
+        "Parchi acquatici, attrazioni e attività per tutte le età nelle vicinanze",
       yourHome: "La Vostra Casa a Kata",
-      yourHomeDesc: "Nel cuore di Kata Beach con splendide viste sulle montagne",
+      yourHomeDesc:
+        "Nel cuore di Kata Beach con splendide viste sulle montagne",
       welcome: "Benvenuti da Waree's",
-      welcomeDesc: "Cerca il nostro iconico logo con uccello e chiave - la vostra casa lontano da casa",
+      welcomeDesc:
+        "Cerca il nostro iconico logo con uccello e chiave - la vostra casa lontano da casa",
       courtyard: "Cortile della Pensione",
-      courtyardDesc: "Uno spazio tranquillo e accogliente per il relax e il piacere",
+      courtyardDesc:
+        "Uno spazio tranquillo e accogliente per il relax e il piacere",
       entrance: "Ingresso della Pensione",
-      entranceDesc: "Un ingresso accogliente e affascinante alla vostra nuova casa lontano da casa",
+      entranceDesc:
+        "Un ingresso accogliente e affascinante alla vostra nuova casa lontano da casa",
       ctaTitle: "Pronti a creare i vostri ricordi?",
-      ctaDesc: "Unisciti alla famiglia Waree e sperimenta l'autentica ospitalità tailandese in uno dei luoghi più belli di Phuket",
-      ctaButton: "Prenota il Tuo Soggiorno"
+      ctaDesc:
+        "Unisciti alla famiglia Waree e sperimenta l'autentica ospitalità tailandese in uno dei luoghi più belli di Phuket",
+      ctaButton: "Prenota il Tuo Soggiorno",
     },
     // Things to Do
     thingsToDo: {
       title: "Cosa Fare e Nelle Vicinanze",
-      subtitle: "Tutto ciò di cui hai bisogno è a pochi minuti - spiagge, attrazioni, negozi e servizi locali",
+      subtitle:
+        "Tutto ciò di cui hai bisogno è a pochi minuti - spiagge, attrazioni, negozi e servizi locali",
       attractionsTitle: "Spiagge e Attrazioni",
       kataBeach: "Spiaggia di Kata",
       kataBeachDesc: "Bella spiaggia di sabbia bianca",
@@ -1858,94 +2391,119 @@ export const translations = {
       restaurants: "Ristoranti Locali",
       restaurantsDesc: "Cucina thailandese e internazionale",
       restaurantsDist: "2 min a piedi",
-      localTip: "<strong>💡 Consiglio Locale:</strong> Siamo felici di aiutarvi ad organizzare i trasporti, consigliare ristoranti, prenotare tour e condividere i nostri luoghi locali preferiti. Basta chiedere—amiamo aiutare i nostri ospiti a scoprire la vera Phuket!"
+      localTip:
+        "<strong>💡 Consiglio Locale:</strong> Siamo felici di aiutarvi ad organizzare i trasporti, consigliare ristoranti, prenotare tour e condividere i nostri luoghi locali preferiti. Basta chiedere—amiamo aiutare i nostri ospiti a scoprire la vera Phuket!",
     },
     // Location
     location: {
       title: "Come Arrivare",
-      subtitle: "Situati nel cuore di Kata Beach, siamo facili da raggiungere da qualsiasi punto di Phuket",
+      subtitle:
+        "Situati nel cuore di Kata Beach, siamo facili da raggiungere da qualsiasi punto di Phuket",
       ourAddress: "Il Nostro Indirizzo",
-      address: "44/5 Kata Road\nKata Beach, Karon\nPhuket 83100\nThailandia",
+      address:
+        "44/5 Kata Road\nKata Beach, Karon\nPhuket 83100\nThailandia",
       directions: "Ottieni Indicazioni",
       fromAirport: "Dall'Aeroporto",
       distance: "Distanza:",
       distanceValue: "Circa 45 km (28 miglia)",
       travelTime: "Tempo di Viaggio:",
       travelTimeValue: "45-60 minuti in auto",
-      recommendedTitle: "Consigliato per i Visitatori alla Prima Esperienza",
-      recommendedSubtitle: "Prendi un taxi dall'Aeroporto Internazionale di Phuket",
+      recommendedTitle:
+        "Consigliato per i Visitatori alla Prima Esperienza",
+      recommendedSubtitle:
+        "Prendi un taxi dall'Aeroporto Internazionale di Phuket",
       airportTaxiTitle: "🚖 Taxi dall'Aeroporto",
-      airportTaxiDesc: "L'opzione più semplice e comoda per chi visita Phuket per la prima volta. I taxi ufficiali dell'aeroporto sono sicuri, affidabili e offrono un servizio diretto fino alla nostra porta.",
+      airportTaxiDesc:
+        "L'opzione più semplice e comoda per chi visita Phuket per la prima volta. I taxi ufficiali dell'aeroporto sono sicuri, affidabili e offrono un servizio diretto fino alla nostra porta.",
       taxiCost: "Costo:",
       taxiCostValue: "Circa 800-1.000 THB (tariffa fissa)",
       taxiWhere: "Dove trovarli:",
       taxiWhereValue: "Banco taxi ufficiale nell'area arrivi",
       taxiDuration: "Durata:",
-      taxiDurationValue: "45-60 minuti direttamente a Kata Beach",
+      taxiDurationValue:
+        "45-60 minuti direttamente a Kata Beach",
       taxiTip: "Suggerimento:",
-      taxiTipValue: "Tieni a portata di mano la conferma della prenotazione da mostrare all'autista",
+      taxiTipValue:
+        "Tieni a portata di mano la conferma della prenotazione da mostrare all'autista",
       airportBusTitle: "🚌 Autobus dall'Aeroporto",
-      airportBusDesc: "Opzione economica con servizio regolare per l'area di Kata Beach.",
+      airportBusDesc:
+        "Opzione economica con servizio regolare per l'area di Kata Beach.",
       busCost: "~150-200 THB",
       busDuration: "90-120 minuti",
       privateTransferTitle: "🚗 Transfer Privato",
-      privateTransferDesc: "Transfer prenotato in anticipo con servizio di accoglienza disponibile.",
+      privateTransferDesc:
+        "Transfer prenotato in anticipo con servizio di accoglienza disponibile.",
       privateCost: "~1.200-1.500 THB",
       privateDuration: "45-60 minuti",
       localTransportTitle: "🛵 Trasporto Locale",
-      localTransportDesc: "Tuk-tuk e moto-taxi disponibili per brevi spostamenti intorno a Kata Beach.",
+      localTransportDesc:
+        "Tuk-tuk e moto-taxi disponibili per brevi spostamenti intorno a Kata Beach.",
       localCost: "Varia in base alla distanza",
       localTip: "Concordare sempre prima il prezzo",
-      helpTitle: "Hai bisogno di aiuto per organizzare il trasporto?",
-      helpDesc: "Anna e Josh sono felici di aiutarti a organizzare un taxi o fornirti indicazioni. Mandaci un messaggio dopo la prenotazione!",
+      helpTitle:
+        "Hai bisogno di aiuto per organizzare il trasporto?",
+      helpDesc:
+        "Anna e Josh sono felici di aiutarti a organizzare un taxi o fornirti indicazioni. Mandaci un messaggio dopo la prenotazione!",
       whatsappButton: "Scrivici su WhatsApp",
-      callButton: "Chiama +66 76 331 016"
+      callButton: "Chiama +66 76 331 016",
     },
     // Social Feed
     social: {
       title: "Rimani Connesso",
-      subtitle: "Seguici su Facebook per aggiornamenti quotidiani, foto degli ospiti, consigli locali e offerte speciali! Scopri cosa succede da Waree's e lasciati ispirare per la tua avventura a Kata Beach.",
+      subtitle:
+        "Seguici su Facebook per aggiornamenti quotidiani, foto degli ospiti, consigli locali e offerte speciali! Scopri cosa succede da Waree's e lasciati ispirare per la tua avventura a Kata Beach.",
       communityTitle: "Comunità",
-      communityDesc: "Unisciti alla nostra crescente famiglia di viaggiatori da tutto il mondo",
+      communityDesc:
+        "Unisciti alla nostra crescente famiglia di viaggiatori da tutto il mondo",
       storiesTitle: "Storie degli Ospiti",
-      storiesDesc: "Guarda le foto e le storie degli ospiti diventati amici",
+      storiesDesc:
+        "Guarda le foto e le storie degli ospiti diventati amici",
       eventsTitle: "Eventi e Aggiornamenti",
-      eventsDesc: "Eventi locali, aggiornamenti sulla spiaggia e notizie della pensione",
+      eventsDesc:
+        "Eventi locali, aggiornamenti sulla spiaggia e notizie della pensione",
       latestTitle: "Ultimi da Facebook",
-      latestDesc: "Guarda i nostri post, foto e aggiornamenti più recenti da Anna, Josh e Mam!",
-      ctaText: "Clicca qui sotto per visitare la nostra pagina Facebook e scoprire le novità di Waree's Guesthouse!",
+      latestDesc:
+        "Guarda i nostri post, foto e aggiornamenti più recenti da Anna, Josh e Mam!",
+      ctaText:
+        "Clicca qui sotto per visitare la nostra pagina Facebook e scoprire le novità di Waree's Guesthouse!",
       ctaButton: "Visita la nostra pagina Facebook",
       feature1: "Aggiornamenti",
       feature2: "Foto degli ospiti",
       feature3: "Raccomandazioni locali",
       feature4: "Messaggistica diretta",
       quickTitle: "Domanda Veloce?",
-      quickDesc: "Scrivici su Facebook, WhatsApp, Line o chiamaci per la risposta più veloce!",
+      quickDesc:
+        "Scrivici su Facebook, WhatsApp, Line o chiamaci per la risposta più veloce!",
       facebookBtn: "Facebook",
       whatsappBtn: "WhatsApp",
       lineBtn: "LINE",
       phoneBtn: "+66 76 331 016",
-      emailBtn: "Email"
+      emailBtn: "Email",
     },
     // Common UI
     common: {
       showDetails: "Mostra dettagli",
-      hideDetails: "Nascondi dettagli"
+      hideDetails: "Nascondi dettagli",
     },
     // Footer
     footer: {
-      description: "La vostra casa lontano da casa nella bellissima Kata Beach, Phuket. Sperimentate il calore locale e l'ospitalità genuina.",
+      description:
+        "La vostra casa lontano da casa nella bellissima Kata Beach, Phuket. Sperimentate il calore locale e l'ospitalità genuina.",
       contactTitle: "Contattaci",
       connectTitle: "Connettiti con noi",
       facebook: "Seguici su Facebook",
       whatsapp: "Scrivici su WhatsApp",
       line: "Scrivici su Line",
-      messagePrompt: "Scrivici sulla tua piattaforma preferita—siamo qui per aiutarti!",
+      messagePrompt:
+        "Scrivici sulla tua piattaforma preferita—siamo qui per aiutarti!",
       bookTitle: "Prenota il Tuo Soggiorno",
-      bookDescription: "Pronto a vivere Kata Beach come un locale? Prenota ora per le migliori tariffe e conferma istantanea.",
+      bookDescription:
+        "Pronto a vivere Kata Beach come un locale? Prenota ora per le migliori tariffe e conferma istantanea.",
       tripadvisor: "TripAdvisor",
-      copyright: "© 2026 Pensione di Waree, Kata Beach, Phuket. Tutti i diritti riservati.",
-      tagline: "Creando ricordi, un ospite alla volta dal 2000 💛",
+      copyright:
+        "© 2026 Pensione di Waree, Kata Beach, Phuket. Tutti i diritti riservati.",
+      tagline:
+        "Creando ricordi, un ospite alla volta dal 2000 💛",
       quickLinks: "Link Rapidi",
       contact: "Contatti",
       phone: "Telefono",
@@ -1955,28 +2513,29 @@ export const translations = {
       rooms: "Camere",
       amenities: "Servizi",
       reviews: "Recensioni",
-      location: "Posizione"
-    }
+      location: "Posizione",
+    },
   },
   sv: {
     // Language Names
     languageNames: {
-      en: 'English',
-      th: 'ไทย',
-      zh: '中文',
-      ru: 'Русский',
-      de: 'Deutsch',
-      it: 'Italiano',
-      sv: 'Svenska',
-      fi: 'Suomi'
+      en: "English",
+      th: "ไทย",
+      zh: "中文",
+      ru: "Русский",
+      de: "Deutsch",
+      it: "Italiano",
+      sv: "Svenska",
+      fi: "Suomi",
     },
     // Hero
     hero: {
       title: "Waree's Gästhus",
       subtitle: "Ditt Familjehem vid Kata Beach",
-      tagline: "Upplev Phuket med äkta thailändsk gästfrihet sedan 2000",
+      tagline:
+        "Upplev Phuket med äkta thailändsk gästfrihet sedan 2000",
       emailButton: "Mejla oss",
-      bookButton: "Boka på AirBNB",
+      bookButton: "Boka på Airbnb",
       reviewsButton: "Läs Recensioner",
     },
     // About
@@ -1986,14 +2545,16 @@ export const translations = {
       p2: "Låt oss hänga i vår utomhuslounge, i vår lilla bar eller spela badminton med oss på gatan—vi njuter verkligen av att spendera tid med gäster! Vi hjälper till att arrangera resor, boka taxibilar, restauranger och mer.",
       p3: "<strong>Vi tror att att resa handlar om människorna du möter!</strong>",
       note: "<strong>🎵 Obs:</strong> Det finns en utomhusmarknad bakom oss som spelar lugn livemusik på kvällarna. De slutar mellan 22:00 och 23:00 de flesta kvällar (inte senare än midnatt).",
-      budget: "Som vi sa, vi är bara en vanlig familj som driver vårt lilla, avslappnade gästhus/homestay. Vi anser oss vara <strong>\"2 Stjärnor\" / budgetvänliga</strong>.",
-      rightForYouTitle: "✨ Vi Tror Att Du Kommer Älska Oss Om Du:",
+      budget:
+        'Som vi sa, vi är bara en vanlig familj som driver vårt lilla, avslappnade gästhus/homestay. Vi anser oss vara <strong>"2 Stjärnor" / budgetvänliga</strong>.',
+      rightForYouTitle:
+        "✨ Vi Tror Att Du Kommer Älska Oss Om Du:",
       rightForYou: [
         "Vill ha en mer unik och lokal upplevelse",
         "Njuter av att känna dig som en del av familjen, träffa nya människor och få nya vänner",
         "Har en budget, men uppskattar små lyxigheter som luftkonditionering, rena lakan och varmt vatten",
         "Uppskattar vårt läge—inte nära en bullrig väg eller barer, men ändå promenadavstånd till stranden",
-        "Älskar katter! 🐱"
+        "Älskar katter! 🐱",
       ],
       notRightTitle: "💭 Vi Kanske Inte Passar Dig Om Du:",
       notRight: [
@@ -2002,39 +2563,49 @@ export const translations = {
         "Måste vara väldigt nära stranden",
         "Bara behöver en plats att sova utan den lokala upplevelsen",
         "Är känslig för utvecklingsländernas realiteter (tillfälliga strömavbrott, insekter, geckos, etc.)",
-        "Är allergisk mot eller inte gillar katter"
+        "Är allergisk mot eller inte gillar katter",
       ],
-      hostsPhotoAlt: "Mam, Anna (systrar) och Waree - Grundarfamiljen för Waree's Gästhus",
-      hostPhotoAlt: "Anna, Josh och Fin - Dina värdar på Waree's Gästhus"
+      hostsPhotoAlt:
+        "Mam, Anna (systrar) och Waree - Grundarfamiljen för Waree's Gästhus",
+      hostPhotoAlt:
+        "Anna, Josh och Fin - Dina värdar på Waree's Gästhus",
     },
     // Airbnb Highlights
     airbnb: {
       title: "Airbnb Superhost • Gästfavorit",
       subtitle: "Betygsatt 4,83 av 5 av våra underbara gäster",
       superhost: "Anna är en Airbnb Superhost",
-      superhostDesc: "Superhosts är erfarna, högt rankade värdar som är engagerade i att ge fantastiska vistelser",
+      superhostDesc:
+        "Superhosts är erfarna, högt rankade värdar som är engagerade i att ge fantastiska vistelser",
       guestFavorite: "Gästfavorit",
-      guestFavoriteDesc: "Ett av de mest älskade hemmen på Airbnb baserat på betyg, recensioner och tillförlitlighet",
+      guestFavoriteDesc:
+        "Ett av de mest älskade hemmen på Airbnb baserat på betyg, recensioner och tillförlitlighet",
       rating: "4,83 Betyg",
-      ratingDesc: "Konsekvent utmärkta recensioner från gäster som älskar vår familjeatmosfär",
-      achievementsDate: "AirBNB-prestationer per den 23 januari 2026",
+      ratingDesc:
+        "Konsekvent utmärkta recensioner från gäster som älskar vår familjeatmosfär",
+      achievementsDate:
+        "Airbnb-prestationer per den 23 januari 2026",
       ratingText: "Betyg från 35 recensioner",
       superhostTitle: "Superhost",
       superhostYears: "Anna • 10 års värdskap",
       checkInTitle: "Exceptionell Incheckning",
-      checkInDesc: "Senaste gästerna gav incheckningsprocessen 5 stjärnor",
+      checkInDesc:
+        "Senaste gästerna gav incheckningsprocessen 5 stjärnor",
       locationTitle: "Oslagbart Läge",
-      locationDesc: "100% av gästerna det senaste året gav detta läge 5 stjärnor",
+      locationDesc:
+        "100% av gästerna det senaste året gav detta läge 5 stjärnor",
       trustedTitle: "Pålitlig Upplevelse",
-      ctaText: "Se varför gäster fortsätter att komma tillbaka och ge oss 5 stjärnor!",
-      ctaButton: "Kontrollera Tillgänglighet på AirBNB"
+      ctaText:
+        "Se varför gäster fortsätter att komma tillbaka och ge oss 5 stjärnor!",
+      ctaButton: "Kontrollera Tillgänglighet på Airbnb",
     },
     // Reviews
     reviews: {
       title: "Vad Våra Gäster Säger",
-      subtitle: "Verkliga upplevelser från resenärer som har bott hos oss",
+      subtitle:
+        "Verkliga upplevelser från resenärer som har bott hos oss",
       ratingsDate: "Betyg per 23 januari 2026",
-      airbnbTitle: "AirBNB",
+      airbnbTitle: "Airbnb",
       airbnbScore: "4.83",
       airbnbReviewCount: "Från 35 recensioner",
       tripadvisorTitle: "TripAdvisor",
@@ -2050,99 +2621,162 @@ export const translations = {
         value: "Värde",
         sleepQuality: "Sömnkvalitet",
         rooms: "Rum",
-        service: "Service"
+        service: "Service",
       },
       // Guest reviews
       guestReviews: [
         {
           text: "Fantastiska värdar, skinande rent, bekväm säng, fin balkong, tyst... familjeföretag med mycket kärlek. Vi älskade att bo här!",
-          author: "Andreas, AirBNB"
+          author: "Andreas, Airbnb",
         },
         {
           text: "Anna är super lovely, trevlig, hjälpsam och vänlig. Rummen är verkligen rena och bekväma. Rekommenderas varmt!",
-          author: "Rosa, AirBNB"
+          author: "Rosa, Airbnb",
         },
         {
           text: "Förmodligen den vänligaste pensionatsägaren vi träffat på hela vår resa. Fick oss att känna oss helt hemma.",
-          author: "Michael, TripAdvisor"
+          author: "Michael, TripAdvisor",
         },
         {
           text: "Rena rum, vänlig personal, perfekt läge. Du känner dig verkligen som en del av familjen här!",
-          author: "Emma, AirBNB"
-        }
+          author: "Emma, Airbnb",
+        },
       ],
       // CTA buttons
-      readAirbnbButton: "AirBNB recensioner",
-      readTripadvisorButton: "TripAdvisor recensioner"
+      readAirbnbButton: "Airbnb recensioner",
+      readTripadvisorButton: "TripAdvisor recensioner",
     },
     // Rooms
     rooms: {
       title: "Vårt Gästrum",
-      subtitle: "Bekvämt, rent och utrustat med allt du behöver",
+      subtitle:
+        "Bekvämt, rent och utrustat med allt du behöver",
       roomName: "Gästrum",
-      roomDesc: "Mysigt, bekvämt rum med allt du behöver för en avkopplande vistelse",
+      roomDesc:
+        "Mysigt, bekvämt rum med allt du behöver för en avkopplande vistelse",
       features: "Rumsfunktioner",
-      featuresList: ["King Size-säng", "Eget Duschrum (Varmvatten)", "Luftkonditionering", "Kylskåp", "Gratis WiFi", "Vattenkokare", "Privat Balkong", "Kassaskåp"],
+      featuresList: [
+        "King Size-säng",
+        "Eget Duschrum (Varmvatten)",
+        "Luftkonditionering",
+        "Kylskåp",
+        "Gratis WiFi",
+        "Vattenkokare",
+        "Privat Balkong",
+        "Kassaskåp",
+      ],
       roomsLabel: "Rum",
       floorsLabel: "Våningar",
       establishedLabel: "Grundad",
       voltageLabel: "Spänning",
       // More space section
       needMoreSpace: "Behöver Du Mer Utrymme?",
-      moreSpaceDesc: "Letar du efter en svit eller lägenhet? Vi kan ordna andra boendealternativ som passar dina behov. Maila oss direkt så hjälper vi dig hitta det perfekta utrymmet för din vistelse!",
+      moreSpaceDesc:
+        "Letar du efter en svit eller lägenhet? Vi kan ordna andra boendealternativ som passar dina behov. Maila oss direkt så hjälper vi dig hitta det perfekta utrymmet för din vistelse!",
       // CTA button
-      viewAvailability: "Visa Tillgänglighet på AirBNB"
+      viewAvailability: "Visa Tillgänglighet på Airbnb",
     },
     // Amenities
     amenities: {
       title: "Allt Du Behöver",
-      subtitle: "Vi har tänkt på alla detaljer för att göra din vistelse bekväm och bekymmersfri. Dessutom hjälper Anna och Josh gärna till med att ordna taxi, öturer, restaurangrekommendationer och mer!",
+      subtitle:
+        "Vi har tänkt på alla detaljer för att göra din vistelse bekväm och bekymmersfri. Dessutom hjälper Anna och Josh gärna till med att ordna taxi, öturer, restaurangrekommendationer och mer!",
       items: [
-        { title: "Luftkonditionering", description: "Håll dig sval i tropiskt väder" },
-        { title: "Gratis WiFi", description: "Höghastighetsinternet" },
-        { title: "Kylskåp", description: "Håll drycker och snacks kalla" },
-        { title: "Utomhusmåltider & Grill", description: "Njut av måltider i tropisk miljö" },
-        { title: "Kvalitetssängkläder", description: "Extra kuddar, filtar och lakan" },
-        { title: "Strykjärn Tillgängligt", description: "Håll dina kläder fräscha" },
-        { title: "Toalettartiklar Tillhandahålls", description: "Schampo, tvål, handdukar och nödvändigheter" },
-        { title: "Skoteruthyrning", description: "Bekväm motorcykeluthyrning tillgänglig" },
-        { title: "Bagageförvaring", description: "Tidig ankomst eller sen avresa" },
-        { title: "Långtidsvistelser Välkomna", description: "28+ dagar tillgängliga" },
-        { title: "Personlig Värdhälsning", description: "Anna välkomnar varje gäst" },
-        { title: "Säkerhet", description: "Brandsläckare och första hjälpen-kit" }
+        {
+          title: "Luftkonditionering",
+          description: "Håll dig sval i tropiskt väder",
+        },
+        {
+          title: "Gratis WiFi",
+          description: "Höghastighetsinternet",
+        },
+        {
+          title: "Kylskåp",
+          description: "Håll drycker och snacks kalla",
+        },
+        {
+          title: "Utomhusmåltider & Grill",
+          description: "Njut av måltider i tropisk miljö",
+        },
+        {
+          title: "Kvalitetssängkläder",
+          description: "Extra kuddar, filtar och lakan",
+        },
+        {
+          title: "Strykjärn Tillgängligt",
+          description: "Håll dina kläder fräscha",
+        },
+        {
+          title: "Toalettartiklar Tillhandahålls",
+          description:
+            "Schampo, tvål, handdukar och nödvändigheter",
+        },
+        {
+          title: "Skoteruthyrning",
+          description: "Bekväm motorcykeluthyrning tillgänglig",
+        },
+        {
+          title: "Bagageförvaring",
+          description: "Tidig ankomst eller sen avresa",
+        },
+        {
+          title: "Långtidsvistelser Välkomna",
+          description: "28+ dagar tillgängliga",
+        },
+        {
+          title: "Personlig Värdhälsning",
+          description: "Anna välkomnar varje gäst",
+        },
+        {
+          title: "Säkerhet",
+          description: "Brandsläckare och första hjälpen-kit",
+        },
       ],
-      beachAlt: "Kata Beach - bara några steg från Waree's Gästhus"
+      beachAlt:
+        "Kata Beach - bara några steg från Waree's Gästhus",
     },
     // Photo Gallery
     gallery: {
       title: "Livet på Waree's",
-      subtitle: "Möt dina värdar, utforska Kata Beach och upptäck den autentiska Phuket-upplevelsen som väntar dig",
+      subtitle:
+        "Möt dina värdar, utforska Kata Beach och upptäck den autentiska Phuket-upplevelsen som väntar dig",
       familyMatters: "Familjen Betyder Allt :)",
-      familyMattersDesc: "Mam, Anna & Waree - Din familj borta från hemmet",
+      familyMattersDesc:
+        "Mam, Anna & Waree - Din familj borta från hemmet",
       meetHosts: "Möt Dina Värdar",
-      meetHostsDesc: "Anna, Josh & Fin - Din familj borta från hemmet sedan 2000",
+      meetHostsDesc:
+        "Anna, Josh & Fin - Din familj borta från hemmet sedan 2000",
       paradiseFound: "Paradiset Hittat",
-      paradiseFoundDesc: "Fantastiska vyer, kristallklart vatten och fridfullt öbondeliv",
+      paradiseFoundDesc:
+        "Fantastiska vyer, kristallklart vatten och fridfullt öbondeliv",
       explore: "Utforska Ön",
-      exploreDesc: "Upptäck hisnande utsiktspunkter och dolda pärlor runt Phuket",
+      exploreDesc:
+        "Upptäck hisnande utsiktspunkter och dolda pärlor runt Phuket",
       familyFun: "Familjekul",
-      familyFunDesc: "Vattenparker, attraktioner och aktiviteter för alla åldrar i närheten",
+      familyFunDesc:
+        "Vattenparker, attraktioner och aktiviteter för alla åldrar i närheten",
       yourHome: "Ditt Hem i Kata",
-      yourHomeDesc: "Beläget i hjärtat av Kata Beach med fantastisk bergsutsikt",
+      yourHomeDesc:
+        "Beläget i hjärtat av Kata Beach med fantastisk bergsutsikt",
       welcome: "Välkommen till Waree's",
-      welcomeDesc: "Leta efter vår ikoniska fågel-och-nyckel-logotyp - ditt hem borta från hemmet",
+      welcomeDesc:
+        "Leta efter vår ikoniska fågel-och-nyckel-logotyp - ditt hem borta från hemmet",
       courtyard: "Gästhusets Innergård",
-      courtyardDesc: "Ett fridfullt och välkomnande utrymme för avkoppling och njutning",
+      courtyardDesc:
+        "Ett fridfullt och välkomnande utrymme för avkoppling och njutning",
       entrance: "Gästhusets Ingång",
-      entranceDesc: "En välkomnande och charmig ingång till ditt nya hem borta från hemmet",
+      entranceDesc:
+        "En välkomnande och charmig ingång till ditt nya hem borta från hemmet",
       ctaTitle: "Redo att skapa egna minnen?",
-      ctaDesc: "Gå med i Waree-familjen och upplev autentisk thailändsk gästfrihet på en av Phukets vackraste platser",
-      ctaButton: "Boka Din Vistelse"
+      ctaDesc:
+        "Gå med i Waree-familjen och upplev autentisk thailändsk gästfrihet på en av Phukets vackraste platser",
+      ctaButton: "Boka Din Vistelse",
     },
     // Things to Do
     thingsToDo: {
       title: "Saker att Göra & I Närheten",
-      subtitle: "Allt du behöver är bara några minuter bort - stränder, attraktioner, butiker och lokala bekvämligheter",
+      subtitle:
+        "Allt du behöver är bara några minuter bort - stränder, attraktioner, butiker och lokala bekvämligheter",
       attractionsTitle: "Stränder & Attraktioner",
       kataBeach: "Kata Beach",
       kataBeachDesc: "Vacker vit sandstrand",
@@ -2184,14 +2818,17 @@ export const translations = {
       restaurants: "Lokala Restauranger",
       restaurantsDesc: "Thailändsk & internationell mat",
       restaurantsDist: "2 min promenad",
-      localTip: "<strong>💡 Lokalt Tips:</strong> Vi hjälper gärna till att ordna transport, rekommendera restauranger, boka turer och dela våra favoritlokala platser. Bara fråga—vi älskar att hjälpa våra gäster att upptäcka det verkliga Phuket!"
+      localTip:
+        "<strong>💡 Lokalt Tips:</strong> Vi hjälper gärna till att ordna transport, rekommendera restauranger, boka turer och dela våra favoritlokala platser. Bara fråga—vi älskar att hjälpa våra gäster att upptäcka det verkliga Phuket!",
     },
     // Location
     location: {
       title: "Så Här Tar Du Dig Hit",
-      subtitle: "Beläget i hjärtat av Kata Beach, vi är lätta att nå från var som helst på Phuket",
+      subtitle:
+        "Beläget i hjärtat av Kata Beach, vi är lätta att nå från var som helst på Phuket",
       ourAddress: "Vår Adress",
-      address: "44/5 Kata Road\nKata Beach, Karon\nPhuket 83100\nThailand",
+      address:
+        "44/5 Kata Road\nKata Beach, Karon\nPhuket 83100\nThailand",
       directions: "Få Vägbeskrivning",
       fromAirport: "Från Flygplatsen",
       distance: "Avstånd:",
@@ -2199,9 +2836,11 @@ export const translations = {
       travelTime: "Restid:",
       travelTimeValue: "45-60 minuter med bil",
       recommendedTitle: "Rekommenderat för Förstagångsbesökare",
-      recommendedSubtitle: "Ta en taxi från Phuket International Airport",
+      recommendedSubtitle:
+        "Ta en taxi från Phuket International Airport",
       airportTaxiTitle: "🚖 Flygplatstax",
-      airportTaxiDesc: "Det enklaste och bekvämaste alternativet för förstagångsbesökare till Phuket. Officiella flygplatstaxibilar är säkra, pålitliga och ger direkt service till vår dörr.",
+      airportTaxiDesc:
+        "Det enklaste och bekvämaste alternativet för förstagångsbesökare till Phuket. Officiella flygplatstaxibilar är säkra, pålitliga och ger direkt service till vår dörr.",
       taxiCost: "Kostnad:",
       taxiCostValue: "Cirka 800-1 000 THB (fast pris)",
       taxiWhere: "Var man hittar:",
@@ -2209,68 +2848,84 @@ export const translations = {
       taxiDuration: "Varaktighet:",
       taxiDurationValue: "45-60 minuter direkt till Kata Beach",
       taxiTip: "Tips:",
-      taxiTipValue: "Ha din bokningsbekräftelse till hands för att visa föraren",
+      taxiTipValue:
+        "Ha din bokningsbekräftelse till hands för att visa föraren",
       airportBusTitle: "🚌 Flygplatsbuss",
-      airportBusDesc: "Budgetvänligt alternativ med regelbunden trafik till Kata Beach-området.",
+      airportBusDesc:
+        "Budgetvänligt alternativ med regelbunden trafik till Kata Beach-området.",
       busCost: "~150-200 THB",
       busDuration: "90-120 minuter",
       privateTransferTitle: "🚗 Privat Transfer",
-      privateTransferDesc: "Förbokning av transfer med möte & hälsningsservice tillgänglig.",
+      privateTransferDesc:
+        "Förbokning av transfer med möte & hälsningsservice tillgänglig.",
       privateCost: "~1 200-1 500 THB",
       privateDuration: "45-60 minuter",
       localTransportTitle: "🛵 Lokal Transport",
-      localTransportDesc: "Tuk-tuks och motorcykeltaxibilar tillgängliga för korta resor runt Kata Beach.",
+      localTransportDesc:
+        "Tuk-tuks och motorcykeltaxibilar tillgängliga för korta resor runt Kata Beach.",
       localCost: "Varierar beroende på avstånd",
       localTip: "Kom alltid överens om priset först",
       helpTitle: "Behöver du hjälp med att ordna transport?",
-      helpDesc: "Anna och Josh hjälper gärna till att ordna en taxi eller ge vägbeskrivningar. Skicka bara ett meddelande till oss efter bokningen!",
+      helpDesc:
+        "Anna och Josh hjälper gärna till att ordna en taxi eller ge vägbeskrivningar. Skicka bara ett meddelande till oss efter bokningen!",
       whatsappButton: "WhatsApp Oss",
-      callButton: "Ring +66 76 331 016"
+      callButton: "Ring +66 76 331 016",
     },
     // Social Feed
     social: {
       title: "Håll Kontakten",
-      subtitle: "Följ oss på Facebook för dagliga uppdateringar, gästfoton, lokala tips och specialerbjudanden! Se vad som händer på Waree's och bli inspirerad för ditt Kata Beach-äventyr.",
+      subtitle:
+        "Följ oss på Facebook för dagliga uppdateringar, gästfoton, lokala tips och specialerbjudanden! Se vad som händer på Waree's och bli inspirerad för ditt Kata Beach-äventyr.",
       communityTitle: "Gemenskap",
-      communityDesc: "Gå med i vår växande familj av resenärer från hela världen",
+      communityDesc:
+        "Gå med i vår växande familj av resenärer från hela världen",
       storiesTitle: "Gästberättelser",
-      storiesDesc: "Se foton och berättelser från gäster som blivit vänner",
+      storiesDesc:
+        "Se foton och berättelser från gäster som blivit vänner",
       eventsTitle: "Evenemang & Uppdateringar",
-      eventsDesc: "Lokala evenemang, strandnyheter och gästhus-nyheter",
+      eventsDesc:
+        "Lokala evenemang, strandnyheter och gästhus-nyheter",
       latestTitle: "Senaste från Facebook",
-      latestDesc: "Se våra senaste inlägg, foton och uppdateringar från Anna, Josh och Mam!",
-      ctaText: "Klicka nedan för att besöka vår Facebook-sida och se vad som är nytt på Waree's Guesthouse!",
+      latestDesc:
+        "Se våra senaste inlägg, foton och uppdateringar från Anna, Josh och Mam!",
+      ctaText:
+        "Klicka nedan för att besöka vår Facebook-sida och se vad som är nytt på Waree's Guesthouse!",
       ctaButton: "Besök vår Facebook-sida",
       feature1: "Uppdateringar",
       feature2: "Gästfoton",
       feature3: "Lokala rekommendationer",
       feature4: "Direktmeddelanden",
       quickTitle: "Snabb Fråga?",
-      quickDesc: "Skicka meddelande till oss på Facebook, WhatsApp, Line eller ring oss för snabbast svar!",
+      quickDesc:
+        "Skicka meddelande till oss på Facebook, WhatsApp, Line eller ring oss för snabbast svar!",
       facebookBtn: "Facebook",
       whatsappBtn: "WhatsApp",
       lineBtn: "LINE",
       phoneBtn: "+66 76 331 016",
-      emailBtn: "E-post"
+      emailBtn: "E-post",
     },
     // Common UI
     common: {
       showDetails: "Visa detaljer",
-      hideDetails: "Dölj detaljer"
+      hideDetails: "Dölj detaljer",
     },
     // Footer
     footer: {
-      description: "Ditt hem borta från hemmet vid vackra Kata Beach, Phuket. Upplev lokal värme och genuin gästfrihet.",
+      description:
+        "Ditt hem borta från hemmet vid vackra Kata Beach, Phuket. Upplev lokal värme och genuin gästfrihet.",
       contactTitle: "Kontakta Oss",
       connectTitle: "Anslut med Oss",
       facebook: "Följ oss på Facebook",
       whatsapp: "WhatsApp Oss",
       line: "Line Oss",
-      messagePrompt: "Skicka meddelande till oss på din favoritplattform—vi finns här för att hjälpa!",
+      messagePrompt:
+        "Skicka meddelande till oss på din favoritplattform—vi finns här för att hjälpa!",
       bookTitle: "Boka Din Vistelse",
-      bookDescription: "Redo att uppleva Kata Beach som en lokal? Boka nu för bästa priser och omedelbar bekräftelse.",
+      bookDescription:
+        "Redo att uppleva Kata Beach som en lokal? Boka nu för bästa priser och omedelbar bekräftelse.",
       tripadvisor: "TripAdvisor",
-      copyright: "© 2026 Waree's Gästhus, Kata Beach, Phuket. Alla rättigheter förbehållna.",
+      copyright:
+        "© 2026 Waree's Gästhus, Kata Beach, Phuket. Alla rättigheter förbehållna.",
       tagline: "Skapar minnen, en gäst i taget sedan 2000 💛",
       quickLinks: "Snabblänkar",
       contact: "Kontakt",
@@ -2281,28 +2936,29 @@ export const translations = {
       rooms: "Rum",
       amenities: "Bekvämligheter",
       reviews: "Recensioner",
-      location: "Plats"
-    }
+      location: "Plats",
+    },
   },
   fi: {
     // Language Names
     languageNames: {
-      en: 'English',
-      th: 'ไทย',
-      zh: '中文',
-      ru: 'Русский',
-      de: 'Deutsch',
-      it: 'Italiano',
-      sv: 'Svenska',
-      fi: 'Suomi'
+      en: "English",
+      th: "ไทย",
+      zh: "中文",
+      ru: "Русский",
+      de: "Deutsch",
+      it: "Italiano",
+      sv: "Svenska",
+      fi: "Suomi",
     },
     // Hero
     hero: {
       title: "Wareen Majatalo",
       subtitle: "Perhekotisi Kata Beachillä",
-      tagline: "Koe Phuket aidolla thaimaalaisella vieraanvaraisuudella vuodesta 2000",
+      tagline:
+        "Koe Phuket aidolla thaimaalaisella vieraanvaraisuudella vuodesta 2000",
       emailButton: "Lähetä meille sähköpostia",
-      bookButton: "Varaa AirBNB:stä",
+      bookButton: "Varaa Airbnb:stä",
       reviewsButton: "Lue Arvostelut",
     },
     // About
@@ -2312,14 +2968,15 @@ export const translations = {
       p2: "Ollaan yhdessä ulko-oleskelutilassamme, pienessä baarissamme tai pelataan sulkapalloa kanssamme kadulla—nautimme aidosti ajan viettämisestä vieraiden kanssa! Autamme järjestämään retkiä, varaamaan takseja, ravintoloita ja paljon muuta.",
       p3: "<strong>Uskomme, että matkailu on ennen kaikkea ihmisiä, jotka tapaat!</strong>",
       note: "<strong>🎵 Huomautus:</strong> Takana on ulkomarkkina, jossa soitetaan rentouttavaa livemusiikkia iltaisin. He lopettavat kello 22:00 ja 23:00 välillä useimpina iltoina (viimeistään keskiyöllä).",
-      budget: "Kuten sanoimme, olemme vain tavallinen perhe, joka pyörittää pientä, rentoa majataloa/kotimajoitusta. Pidämme itseämme <strong>\"2 Tähteä\" / budjettiyspitäisenä</strong>.",
+      budget:
+        'Kuten sanoimme, olemme vain tavallinen perhe, joka pyörittää pientä, rentoa majataloa/kotimajoitusta. Pidämme itseämme <strong>"2 Tähteä" / budjettiyspitäisenä</strong>.',
       rightForYouTitle: "✨ Uskomme, että Pidät Meistä Jos:",
       rightForYou: [
         "Haluat ainutlaatuisemman ja paikallisemman kokemuksen",
         "Nautit olemisesta osa perhettä, tapaamassa uusia ihmisiä ja hankkimassa uusia ystäviä",
         "Olet budjetilla, mutta arvostat pieniä ylellisyyksiä kuten ilmastointia, puhtaita lakanoita ja kuumaa vettä",
         "Arvostat sijaintiamme—ei meluisan tien tai baarien lähellä, mutta silti kävelymatkan päässä rannasta",
-        "Rakastat kissoja! 🐱"
+        "Rakastat kissoja! 🐱",
       ],
       notRightTitle: "💭 Emme Ehkä Sovi Sinulle Jos:",
       notRight: [
@@ -2328,39 +2985,50 @@ export const translations = {
         "Sinun täytyy olla hyvin lähellä rantaa",
         "Tarvitset vain paikan nukkua ilman paikallista kokemusta",
         "Olet herkkä kehitysmaan todellisuudelle (satunnaiset sähkökatkot, hyönteiset, gekot jne.)",
-        "Olet allerginen kissoille tai et pidä kissoista"
+        "Olet allerginen kissoille tai et pidä kissoista",
       ],
-      hostsPhotoAlt: "Mam, Anna (sisarukset) ja Waree - Wareen Majatalon perustajperhe",
-      hostPhotoAlt: "Anna, Josh ja Fin - Isäntäsi Wareen Majatalossa"
+      hostsPhotoAlt:
+        "Mam, Anna (sisarukset) ja Waree - Wareen Majatalon perustajperhe",
+      hostPhotoAlt:
+        "Anna, Josh ja Fin - Isäntäsi Wareen Majatalossa",
     },
     // Airbnb Highlights
     airbnb: {
       title: "Airbnb Superhost • Vieraiden Suosikki",
-      subtitle: "Arvioitu 4,83/5 ihanasten vieras temme toimesta",
+      subtitle:
+        "Arvioitu 4,83/5 ihanasten vieras temme toimesta",
       superhost: "Anna on Airbnb Superhost",
-      superhostDesc: "Superhostit ovat kokeneita, korkeasti arvioituja isäntiä, jotka ovat sitoutuneet tarjoamaan loistavia yöpymisiä",
+      superhostDesc:
+        "Superhostit ovat kokeneita, korkeasti arvioituja isäntiä, jotka ovat sitoutuneet tarjoamaan loistavia yöpymisiä",
       guestFavorite: "Vieraiden Suosikki",
-      guestFavoriteDesc: "Yksi Airbnb:n rakastetuimmista kodeista arvioiden, arvostelujen ja luotettavuuden perusteella",
+      guestFavoriteDesc:
+        "Yksi Airbnb:n rakastetuimmista kodeista arvioiden, arvostelujen ja luotettavuuden perusteella",
       rating: "4,83 Arvio",
-      ratingDesc: "Jatkuvasti erinomaiset arvostelut vierailta, jotka rakastavat perheilmapiiriämme",
-      achievementsDate: "AirBNB-saavutukset 23. tammikuuta 2026",
+      ratingDesc:
+        "Jatkuvasti erinomaiset arvostelut vierailta, jotka rakastavat perheilmapiiriämme",
+      achievementsDate:
+        "Airbnb-saavutukset 23. tammikuuta 2026",
       ratingText: "Arvio 35 arvostelusta",
       superhostTitle: "Superhost",
       superhostYears: "Anna • 10 vuotta isäntänä",
       checkInTitle: "Poikkeuksellinen Sisäänkirjautuminen",
-      checkInDesc: "Viimeaikaiset vieraat antoivat sisäänkirjautumisprosessille 5 tähteä",
+      checkInDesc:
+        "Viimeaikaiset vieraat antoivat sisäänkirjautumisprosessille 5 tähteä",
       locationTitle: "Lyömätön Sijainti",
-      locationDesc: "100% vieraista viime vuonna antoi tälle sijainnille 5 tähteä",
+      locationDesc:
+        "100% vieraista viime vuonna antoi tälle sijainnille 5 tähteä",
       trustedTitle: "Luotettava Kokemus",
-      ctaText: "Katso miksi vieraat palaavat ja antavat meille 5 tähteä!",
-      ctaButton: "Tarkista Saatavuus AirBNB:ssä"
+      ctaText:
+        "Katso miksi vieraat palaavat ja antavat meille 5 tähteä!",
+      ctaButton: "Tarkista Saatavuus Airbnb:ssä",
     },
     // Reviews
     reviews: {
       title: "Mitä Vieraamme Sanovat",
-      subtitle: "Todellisia kokemuksia matkailijoilta, jotka ovat yöpyneet luonamme",
+      subtitle:
+        "Todellisia kokemuksia matkailijoilta, jotka ovat yöpyneet luonamme",
       ratingsDate: "Arvostelut 23. tammikuuta 2026",
-      airbnbTitle: "AirBNB",
+      airbnbTitle: "Airbnb",
       airbnbScore: "4.83",
       airbnbReviewCount: "35 arvostelusta",
       tripadvisorTitle: "TripAdvisor",
@@ -2376,99 +3044,166 @@ export const translations = {
         value: "Hinta-laatusuhde",
         sleepQuality: "Unen laatu",
         rooms: "Huoneet",
-        service: "Palvelu"
+        service: "Palvelu",
       },
       // Guest reviews
       guestReviews: [
         {
           text: "Mahtavat isännät, nuhteettoman siisti, mukava sänky, kiva parveke, hiljainen... perheomisteinen yritys paljon rakkaudella. Rakastimme yöpyä täällä!",
-          author: "Andreas, AirBNB"
+          author: "Andreas, Airbnb",
         },
         {
           text: "Anna on erittäin ihana, mukava, avulias ja ystävällinen. Huoneet ovat todella siistit ja mukavat. Erittäin suositeltava!",
-          author: "Rosa, AirBNB"
+          author: "Rosa, Airbnb",
         },
         {
           text: "Luultavasti ystävällisin majatalon omistaja jonka tapasimme koko matkamme aikana. Sai meidät tuntemaan itsemme täysin kotoisaksi.",
-          author: "Michael, TripAdvisor"
+          author: "Michael, TripAdvisor",
         },
         {
           text: "Siistit huoneet, ystävällinen henkilökunta, täydellinen sijainti. Tunnet itsesi todella osaksi perhettä täällä!",
-          author: "Emma, AirBNB"
-        }
+          author: "Emma, Airbnb",
+        },
       ],
       // CTA buttons
-      readAirbnbButton: "AirBNB arvostelut",
-      readTripadvisorButton: "TripAdvisor arvostelut"
+      readAirbnbButton: "Airbnb arvostelut",
+      readTripadvisorButton: "TripAdvisor arvostelut",
     },
     // Rooms
     rooms: {
       title: "Vierashuoneemme",
-      subtitle: "Mukava, puhdas ja varustettu kaikella mitä tarvitset",
+      subtitle:
+        "Mukava, puhdas ja varustettu kaikella mitä tarvitset",
       roomName: "Vierashuone",
-      roomDesc: "Viihtyisä, mukava huone kaikella mitä tarvitset rentouttavaan yöpymiseen",
+      roomDesc:
+        "Viihtyisä, mukava huone kaikella mitä tarvitset rentouttavaan yöpymiseen",
       features: "Huoneen Ominaisuudet",
-      featuresList: ["King-sänky", "Oma Suihkuhuone (Lämmin Vesi)", "Ilmastointi", "Jääkaappi", "Ilmainen WiFi", "Vedenkeitin", "Yksityinen Parveke", "Tallelokero"],
+      featuresList: [
+        "King-sänky",
+        "Oma Suihkuhuone (Lämmin Vesi)",
+        "Ilmastointi",
+        "Jääkaappi",
+        "Ilmainen WiFi",
+        "Vedenkeitin",
+        "Yksityinen Parveke",
+        "Tallelokero",
+      ],
       roomsLabel: "Huoneet",
       floorsLabel: "Kerrokset",
       establishedLabel: "Perustettu",
       voltageLabel: "Jännite",
       // More space section
       needMoreSpace: "Tarvitsetko Enemmän Tilaa?",
-      moreSpaceDesc: "Etsitkö sviittiä tai asuntoa? Voimme järjestää muita majoitusvaihtoehtoja tarpeisiisi. Lähetä meille vain sähköpostia suoraan, niin autamme löytämään täydellisen tilan oleskeluusi!",
+      moreSpaceDesc:
+        "Etsitkö sviittiä tai asuntoa? Voimme järjestää muita majoitusvaihtoehtoja tarpeisiisi. Lähetä meille vain sähköpostia suoraan, niin autamme löytämään täydellisen tilan oleskeluusi!",
       // CTA button
-      viewAvailability: "Näytä Saatavuus AirBNB:ssä"
+      viewAvailability: "Näytä Saatavuus Airbnb:ssä",
     },
     // Amenities
     amenities: {
       title: "Kaikki Mitä Tarvitset",
-      subtitle: "Olemme ajatelleet kaikki yksityiskohdat tehdäksemme yöpymisestäsi mukavan ja huolettoman. Lisäksi Anna ja Josh auttavat mielellään taksivarausten, saariretkien, ravintolasuositusten ja muiden järjestämisessä!",
+      subtitle:
+        "Olemme ajatelleet kaikki yksityiskohdat tehdäksemme yöpymisestäsi mukavan ja huolettoman. Lisäksi Anna ja Josh auttavat mielellään taksivarausten, saariretkien, ravintolasuositusten ja muiden järjestämisessä!",
       items: [
-        { title: "Ilmastointi", description: "Pysy viileänä trooppisessa säässä" },
-        { title: "Ilmainen WiFi", description: "Nopea internetyhteys" },
-        { title: "Jääkaappi", description: "Pidä juomat ja välipalat kylminä" },
-        { title: "Ulkoruokailu & Grilli", description: "Nauti aterioista trooppisessa ympäristössä" },
-        { title: "Laadukas Vuodevaatteet", description: "Lisätyynyjä, peittoja ja lakanoita" },
-        { title: "Silitysrauta Saatavilla", description: "Pidä vaatteesi raikkaana" },
-        { title: "Pesuaineet Tarjolla", description: "Shampoo, saippua, pyyhkeet ja välttämättömyydet" },
-        { title: "Skootterivuokraus", description: "Kätevä moottoripyörävuokraus saatavilla" },
-        { title: "Matkatavarasäilytys", description: "Aikainen saapuminen tai myöhäinen lähtö" },
-        { title: "Pitkäaikaiset Yöpymiset Tervetulleita", description: "28+ päivää saatavilla" },
-        { title: "Henkilökohtainen Isännän Tervehdys", description: "Anna toivottaa jokaisen vieraan tervetulleeksi" },
-        { title: "Turvallisuus", description: "Sammutin ja ensiapupakkaus" }
+        {
+          title: "Ilmastointi",
+          description: "Pysy viileänä trooppisessa säässä",
+        },
+        {
+          title: "Ilmainen WiFi",
+          description: "Nopea internetyhteys",
+        },
+        {
+          title: "Jääkaappi",
+          description: "Pidä juomat ja välipalat kylminä",
+        },
+        {
+          title: "Ulkoruokailu & Grilli",
+          description:
+            "Nauti aterioista trooppisessa ympäristössä",
+        },
+        {
+          title: "Laadukas Vuodevaatteet",
+          description: "Lisätyynyjä, peittoja ja lakanoita",
+        },
+        {
+          title: "Silitysrauta Saatavilla",
+          description: "Pidä vaatteesi raikkaana",
+        },
+        {
+          title: "Pesuaineet Tarjolla",
+          description:
+            "Shampoo, saippua, pyyhkeet ja välttämättömyydet",
+        },
+        {
+          title: "Skootterivuokraus",
+          description:
+            "Kätevä moottoripyörävuokraus saatavilla",
+        },
+        {
+          title: "Matkatavarasäilytys",
+          description:
+            "Aikainen saapuminen tai myöhäinen lähtö",
+        },
+        {
+          title: "Pitkäaikaiset Yöpymiset Tervetulleita",
+          description: "28+ päivää saatavilla",
+        },
+        {
+          title: "Henkilökohtainen Isännän Tervehdys",
+          description:
+            "Anna toivottaa jokaisen vieraan tervetulleeksi",
+        },
+        {
+          title: "Turvallisuus",
+          description: "Sammutin ja ensiapupakkaus",
+        },
       ],
-      beachAlt: "Kata Beach - vain muutaman askeleen päässä Wareen Majatalosta"
+      beachAlt:
+        "Kata Beach - vain muutaman askeleen päässä Wareen Majatalosta",
     },
     // Photo Gallery
     gallery: {
       title: "Elämä Wareella",
-      subtitle: "Tapaa isäntäsi, tutustu Kata Beachiin ja löydä aito Phuket-kokemus, joka odottaa sinua",
+      subtitle:
+        "Tapaa isäntäsi, tutustu Kata Beachiin ja löydä aito Phuket-kokemus, joka odottaa sinua",
       familyMatters: "Perhe on Tärkeä :)",
-      familyMattersDesc: "Mam, Anna ja Waree - Perheesi poissa kotoa",
+      familyMattersDesc:
+        "Mam, Anna ja Waree - Perheesi poissa kotoa",
       meetHosts: "Tapaa Isäntäsi",
-      meetHostsDesc: "Anna, Josh ja Fin - Perheesi poissa kotoa vuodesta 2000",
+      meetHostsDesc:
+        "Anna, Josh ja Fin - Perheesi poissa kotoa vuodesta 2000",
       paradiseFound: "Paratiisi Löydetty",
-      paradiseFoundDesc: "Upeat näkymät, kristallinkirkas vesi ja rauhallinen saarielämä",
+      paradiseFoundDesc:
+        "Upeat näkymät, kristallinkirkas vesi ja rauhallinen saarielämä",
       explore: "Tutustu Saareen",
-      exploreDesc: "Löydä henkeäsalpaavia näköalapaikkoja ja piilotettuja helmiä ympäri Phuketa",
+      exploreDesc:
+        "Löydä henkeäsalpaavia näköalapaikkoja ja piilotettuja helmiä ympäri Phuketa",
       familyFun: "Perhehauskuus",
-      familyFunDesc: "Vesipuistoja, nähtävyyksiä ja aktiviteettejä kaikenikäisille lähellä",
+      familyFunDesc:
+        "Vesipuistoja, nähtävyyksiä ja aktiviteettejä kaikenikäisille lähellä",
       yourHome: "Kotisi Katassa",
-      yourHomeDesc: "Sijaitsee Kata Beachin sydämessä upeine vuoristomaisemineen",
+      yourHomeDesc:
+        "Sijaitsee Kata Beachin sydämessä upeine vuoristomaisemineen",
       welcome: "Tervetuloa Wareelle",
-      welcomeDesc: "Etsi ikoninen lintu-ja-avain-logomme - kotisi poissa kotoa",
+      welcomeDesc:
+        "Etsi ikoninen lintu-ja-avain-logomme - kotisi poissa kotoa",
       courtyard: "Majatalon Sisäpiha",
-      courtyardDesc: "Rauhallinen ja kutsuva tila rentoutumiseen ja nautiskeluun",
+      courtyardDesc:
+        "Rauhallinen ja kutsuva tila rentoutumiseen ja nautiskeluun",
       entrance: "Majatalon Sisäänkäynti",
-      entranceDesc: "Vieraanvarainen ja viehättävä sisäänkäynti uuteen kotiisi poissa kotoa",
+      entranceDesc:
+        "Vieraanvarainen ja viehättävä sisäänkäynti uuteen kotiisi poissa kotoa",
       ctaTitle: "Valmis luomaan omia muistoja?",
-      ctaDesc: "Liity Waree-perheeseen ja koe aito thaimaalainen vieraanvaraisuus yhdessä Phuketin kauneimmista paikoista",
-      ctaButton: "Varaa Oleskelusi"
+      ctaDesc:
+        "Liity Waree-perheeseen ja koe aito thaimaalainen vieraanvaraisuus yhdessä Phuketin kauneimmista paikoista",
+      ctaButton: "Varaa Oleskelusi",
     },
     // Things to Do
     thingsToDo: {
       title: "Tekemistä ja Lähellä",
-      subtitle: "Kaikki mitä tarvitset on vain minuuttien päässä - rannat, nähtävyydet, kaupat ja paikalliset mukavuudet",
+      subtitle:
+        "Kaikki mitä tarvitset on vain minuuttien päässä - rannat, nähtävyydet, kaupat ja paikalliset mukavuudet",
       attractionsTitle: "Rannat ja Nähtävyydet",
       kataBeach: "Kata Beach",
       kataBeachDesc: "Kaunis valkoinen hiekkaranta",
@@ -2486,7 +3221,8 @@ export const translations = {
       nightMarketDesc: "Paikallista ruokaa ja shoppailu a",
       nightMarketDist: "Takanamme! 🎵",
       oldTown: "Phuketin Vanha Kaupunki",
-      oldTownDesc: "Historiallista kiinalais-portugalilaista arkkitehtuuria",
+      oldTownDesc:
+        "Historiallista kiinalais-portugalilaista arkkitehtuuria",
       oldTownDist: "30 min ajomatka",
       conveniencesTitle: "Lähellä Olevat Mukavuudet",
       atm: "Pankkiautomaatti",
@@ -2510,14 +3246,17 @@ export const translations = {
       restaurants: "Paikalliset Ravintolat",
       restaurantsDesc: "Thaimaalaista ja kansainvälistä ruokaa",
       restaurantsDist: "2 min kävelymatka",
-      localTip: "<strong>💡 Paikallinen Vinkki:</strong> Autamme mielellämme järjestämään kuljetuksen, suosittelemaan ravintoloita, varaamaan retkiä ja jakamaan suosikkipaikallispaikkaame. Kysy vain—rakastamme auttaa vieraitamme löytämään todellisen Phuketin!"
+      localTip:
+        "<strong>💡 Paikallinen Vinkki:</strong> Autamme mielellämme järjestämään kuljetuksen, suosittelemaan ravintoloita, varaamaan retkiä ja jakamaan suosikkipaikallispaikkaame. Kysy vain—rakastamme auttaa vieraitamme löytämään todellisen Phuketin!",
     },
     // Location
     location: {
       title: "Kuinka Pääset Perille",
-      subtitle: "Sijaitsee Kata Beachin sydämessä, meihin on helppo päästä mistä tahansa Phuketista",
+      subtitle:
+        "Sijaitsee Kata Beachin sydämessä, meihin on helppo päästä mistä tahansa Phuketista",
       ourAddress: "Osoitteemme",
-      address: "44/5 Kata Road\nKata Beach, Karon\nPhuket 83100\nThaimaa",
+      address:
+        "44/5 Kata Road\nKata Beach, Karon\nPhuket 83100\nThaimaa",
       directions: "Hae Reittiohjeet",
       fromAirport: "Lentokentältä",
       distance: "Etäisyys:",
@@ -2525,79 +3264,100 @@ export const translations = {
       travelTime: "Matka-aika:",
       travelTimeValue: "45-60 minuuttia autolla",
       recommendedTitle: "Suositeltu Ensikertalaisille",
-      recommendedSubtitle: "Ota taksi Phuketin kansainväliseltä lentokentältä",
+      recommendedSubtitle:
+        "Ota taksi Phuketin kansainväliseltä lentokentältä",
       airportTaxiTitle: "🚖 Lentokenttätaksi",
-      airportTaxiDesc: "Helpoin ja mukavin vaihtoehto Phuketin ensikertalaisille. Viralliset lentokenttätaksit ovat turvallisia, luotettavia ja tarjoavat suoran palvelun ovellemme.",
+      airportTaxiDesc:
+        "Helpoin ja mukavin vaihtoehto Phuketin ensikertalaisille. Viralliset lentokenttätaksit ovat turvallisia, luotettavia ja tarjoavat suoran palvelun ovellemme.",
       taxiCost: "Hinta:",
       taxiCostValue: "Noin 800-1 000 THB (kiinteä hinta)",
       taxiWhere: "Mistä löytää:",
       taxiWhereValue: "Virallinen taksitiski saapumishallissa",
       taxiDuration: "Kesto:",
-      taxiDurationValue: "45-60 minuuttia suoraan Kata Beachille",
+      taxiDurationValue:
+        "45-60 minuuttia suoraan Kata Beachille",
       taxiTip: "Vinkki:",
-      taxiTipValue: "Pidä varausvahvistuksesi käsillä näyttääksesi sen kuljettajalle",
+      taxiTipValue:
+        "Pidä varausvahvistuksesi käsillä näyttääksesi sen kuljettajalle",
       airportBusTitle: "🚌 Lentokenttäbussi",
-      airportBusDesc: "Budjettitietoinen vaihtoehto säännöllisellä palvelulla Kata Beach -alueelle.",
+      airportBusDesc:
+        "Budjettitietoinen vaihtoehto säännöllisellä palvelulla Kata Beach -alueelle.",
       busCost: "~150-200 THB",
       busDuration: "90-120 minuuttia",
       privateTransferTitle: "🚗 Yksityinen Kuljetus",
-      privateTransferDesc: "Ennakkoon varattu kuljetus tapaamis- ja tervehdyspalvelulla saatavilla.",
+      privateTransferDesc:
+        "Ennakkoon varattu kuljetus tapaamis- ja tervehdyspalvelulla saatavilla.",
       privateCost: "~1 200-1 500 THB",
       privateDuration: "45-60 minuuttia",
       localTransportTitle: "🛵 Paikallisliikenne",
-      localTransportDesc: "Tuk-tukit ja moottoripyörätaksit saatavilla lyhyille matkoille Kata Beachin ympäristössä.",
+      localTransportDesc:
+        "Tuk-tukit ja moottoripyörätaksit saatavilla lyhyille matkoille Kata Beachin ympäristössä.",
       localCost: "Vaihtelee etäisyyden mukaan",
       localTip: "Sovi aina hinnasta etukäteen",
-      helpTitle: "Tarvitsetko apua kuljetuksen järjestämisessä?",
-      helpDesc: "Anna ja Josh auttavat mielellään taksin järjestämisessä tai reittiohjeiden antamisessa. Lähetä meille vain viesti varauksen jälkeen!",
+      helpTitle:
+        "Tarvitsetko apua kuljetuksen järjestämisessä?",
+      helpDesc:
+        "Anna ja Josh auttavat mielellään taksin järjestämisessä tai reittiohjeiden antamisessa. Lähetä meille vain viesti varauksen jälkeen!",
       whatsappButton: "WhatsApp Meille",
-      callButton: "Soita +66 76 331 016"
+      callButton: "Soita +66 76 331 016",
     },
     // Social Feed
     social: {
       title: "Pysy Yhteydessä",
-      subtitle: "Seuraa meitä Facebookissa päivittäisten päivitysten, vieraiden kuvien, paikallisten vinkkien ja erikoistarjousten saamiseksi! Katso, mitä Waree'sissa tapahtuu ja inspiroidu Kata Beachin seikkailuusi.",
+      subtitle:
+        "Seuraa meitä Facebookissa päivittäisten päivitysten, vieraiden kuvien, paikallisten vinkkien ja erikoistarjousten saamiseksi! Katso, mitä Waree'sissa tapahtuu ja inspiroidu Kata Beachin seikkailuusi.",
       communityTitle: "Yhteisö",
-      communityDesc: "Liity kasvavaan matkailijaperheeseen ympäri maailmaa",
+      communityDesc:
+        "Liity kasvavaan matkailijaperheeseen ympäri maailmaa",
       storiesTitle: "Vieraiden Tarinoita",
-      storiesDesc: "Katso kuvia ja tarinoita vieraista, jotka ovat tulleet ystäviksi",
+      storiesDesc:
+        "Katso kuvia ja tarinoita vieraista, jotka ovat tulleet ystäviksi",
       eventsTitle: "Tapahtumat & Päivitykset",
-      eventsDesc: "Paikalliset tapahtumat, rantauutiset ja majatalon kuulumiset",
+      eventsDesc:
+        "Paikalliset tapahtumat, rantauutiset ja majatalon kuulumiset",
       latestTitle: "Uusimmat Facebookista",
-      latestDesc: "Katso uusimmat julkaisumme, kuvamme ja päivityksemme Annalta, Joshilta ja Mamilta!",
-      ctaText: "Klikkaa alla vieraillaksesi Facebook-sivullamme ja nähdäksesi, mitä uutta Waree's Guesthousella on!",
+      latestDesc:
+        "Katso uusimmat julkaisumme, kuvamme ja päivityksemme Annalta, Joshilta ja Mamilta!",
+      ctaText:
+        "Klikkaa alla vieraillaksesi Facebook-sivullamme ja nähdäksesi, mitä uutta Waree's Guesthousella on!",
       ctaButton: "Käy Facebook-sivullamme",
       feature1: "Päivitykset",
       feature2: "Vieraiden kuvia",
       feature3: "Paikalliset suositukset",
       feature4: "Suoraviestit",
       quickTitle: "Nopea Kysymys?",
-      quickDesc: "Lähetä meille viesti Facebookissa, WhatsAppissa, Linessä tai soita meille nopeinta vastausta varten!",
+      quickDesc:
+        "Lähetä meille viesti Facebookissa, WhatsAppissa, Linessä tai soita meille nopeinta vastausta varten!",
       facebookBtn: "Facebook",
       whatsappBtn: "WhatsApp",
       lineBtn: "LINE",
       phoneBtn: "+66 76 331 016",
-      emailBtn: "Sähköposti"
+      emailBtn: "Sähköposti",
     },
     // Common UI
     common: {
       showDetails: "Näytä tiedot",
-      hideDetails: "Piilota tiedot"
+      hideDetails: "Piilota tiedot",
     },
     // Footer
     footer: {
-      description: "Kotisi poissa kotoa kauniilla Kata Beachillä, Phuketissa. Koe paikallinen lämpö ja aito vieraanvaraisuus.",
+      description:
+        "Kotisi poissa kotoa kauniilla Kata Beachillä, Phuketissa. Koe paikallinen lämpö ja aito vieraanvaraisuus.",
       contactTitle: "Ota Yhteyttä",
       connectTitle: "Yhdistä Kanssamme",
       facebook: "Seuraa meitä Facebookissa",
       whatsapp: "WhatsApp Meille",
       line: "Line Meille",
-      messagePrompt: "Lähetä meille viesti suosikkialustallasi—olemme täällä auttamassa!",
+      messagePrompt:
+        "Lähetä meille viesti suosikkialustallasi—olemme täällä auttamassa!",
       bookTitle: "Varaa Majoitus",
-      bookDescription: "Valmis kokemaan Kata Beachin kuten paikallinen? Varaa nyt parhaat hinnat ja välitön vahvistus.",
+      bookDescription:
+        "Valmis kokemaan Kata Beachin kuten paikallinen? Varaa nyt parhaat hinnat ja välitön vahvistus.",
       tripadvisor: "TripAdvisor",
-      copyright: "© 2026 Wareen Majatalo, Kata Beach, Phuket. Kaikki oikeudet pidätetään.",
-      tagline: "Luomme muistoja, yksi vieras kerrallaan vuodesta 2000 💛",
+      copyright:
+        "© 2026 Wareen Majatalo, Kata Beach, Phuket. Kaikki oikeudet pidätetään.",
+      tagline:
+        "Luomme muistoja, yksi vieras kerrallaan vuodesta 2000 💛",
       quickLinks: "Pikalinkit",
       contact: "Yhteystiedot",
       phone: "Puhelin",
@@ -2607,7 +3367,7 @@ export const translations = {
       rooms: "Huoneet",
       amenities: "Mukavuudet",
       reviews: "Arvostelut",
-      location: "Sijainti"
-    }
-  }
+      location: "Sijainti",
+    },
+  },
 } as const;

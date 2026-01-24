@@ -32,7 +32,7 @@ git push  # Vercel auto-deploys
 
 - ✅ Multi-language support (8 languages)
 - ✅ Responsive mobile & desktop design
-- ✅ AirBNB Superhost badges (4.83★)
+- ✅ Airbnb Superhost badges (4.83★)
 - ✅ Photo gallery & room showcase
 - ✅ GDPR-compliant cookie consent
 - ✅ Google Analytics + Meta Pixel (cookie-gated)
@@ -71,7 +71,7 @@ Operated by Anna, Josh, Mam, and Fin since 2000. Located in Kata Beach, Phuket.
 - **Email:** wareesguesthouse@gmail.com
 - **Phone:** +66 76 331 016
 - **Address:** 44/5 Kata Road, Karon, Phuket 83100, Thailand
-- **AirBNB:** Superhost | 4.83★ Rating | Guest Favorite
+- **Airbnb:** Superhost | 4.83★ Rating | Guest Favorite
 
 ---
 
