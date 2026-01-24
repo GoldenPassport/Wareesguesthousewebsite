@@ -1,6 +1,7 @@
 import { LanguageProvider } from '@/contexts/language-context';
 import { SEOProvider } from '@/app/components/seo-head';
 import { Analytics } from '@/app/components/analytics';
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import { Hero } from '@/app/components/hero';
 import { About } from '@/app/components/about';
 import { AirbnbHighlights } from '@/app/components/airbnb-highlights';
@@ -17,9 +18,10 @@ import { ScrollToTop } from '@/app/components/scroll-to-top';
 
 function App() {
   return (
-    <SEOProvider>
-      <LanguageProvider>
+    <LanguageProvider>
+      <SEOProvider>
         <Analytics />
+        <VercelAnalytics />
         <div className="min-h-screen bg-white">
           <Hero />
           <About />
@@ -35,8 +37,8 @@ function App() {
           <CookieConsent />
           <ScrollToTop />
         </div>
-      </LanguageProvider>
-    </SEOProvider>
+      </SEOProvider>
+    </LanguageProvider>
   );
 }
 

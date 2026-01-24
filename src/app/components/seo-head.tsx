@@ -13,9 +13,9 @@ export function SEOHead() {
     : siteUrl;
 
   // SEO-optimized description
-  const description = `Experience authentic Thai hospitality at Waree's Guesthouse, a family-run B&B in Kata Beach, Phuket since 2000. AirBNB Superhost with 4.83★ rating and Guest Favorite status. Budget-friendly rooms with AC, WiFi, near beach. Book now!`;
+  const description = `Experience authentic Thai hospitality at Waree's Guesthouse, a family-run B&B in Kata Beach, Phuket since 2000. Airbnb Superhost with 4.83★ rating and Guest Favorite status. Budget-friendly rooms with AC, WiFi, near beach. Book now!`;
   
-  const title = "Waree's Guesthouse Kata Beach Phuket | AirBNB Superhost | Budget B&B Thailand";
+  const title = "Waree's Guesthouse Kata Beach Phuket | Airbnb Superhost | Budget B&B Thailand";
   
   // Use the imported logo - this will be a proper URL at runtime
   const logoUrl = logo.startsWith('http') ? logo : `${siteUrl}${logo}`;
@@ -155,7 +155,7 @@ export function SEOHead() {
       <link rel="canonical" href={currentUrl} />
       
       {/* Keywords - Important for SEO */}
-      <meta name="keywords" content="Waree's Guesthouse, Kata Beach hotel, Phuket accommodation, Thailand B&B, budget hotel Phuket, guesthouse Kata, AirBNB Phuket, Superhost, family run hotel, cheap hotel Phuket, Kata Beach B&B, Phuket guesthouse, beach accommodation Thailand, Kata Beach lodging, affordable hotel Phuket, 2 star hotel, guest house near beach, Phuket budget stay, Kata accommodation" />
+      <meta name="keywords" content="Waree's Guesthouse, Kata Beach hotel, Phuket accommodation, Thailand B&B, budget hotel Phuket, guesthouse Kata, Airbnb Phuket, Superhost, family run hotel, cheap hotel Phuket, Kata Beach B&B, Phuket guesthouse, beach accommodation Thailand, Kata Beach lodging, affordable hotel Phuket, 2 star hotel, guest house near beach, Phuket budget stay, Kata accommodation" />
       
       {/* Author & Publisher */}
       <meta name="author" content="Waree's Guesthouse" />

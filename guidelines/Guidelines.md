@@ -24,13 +24,20 @@ git push  # Vercel auto-deploys
 
 The build system automatically handles image format conversions and base64 corruption.
 
-### Environment Variables (Optional Analytics)
+### Analytics Setup
+
+**Vercel Analytics:**
+- Automatically enabled (no configuration needed)
+- Tracks page views and web vitals
+- Works out of the box on Vercel deployments
+
+**Google Analytics & Meta Pixel (Optional):**
 
 Add in Vercel Dashboard → Settings → Environment Variables:
 - `VITE_GA_MEASUREMENT_ID` (format: `G-XXXXXXXXXX`)
 - `VITE_FB_PIXEL_ID` (numeric ID)
 
-Analytics ONLY load if BOTH env vars are set AND user accepts cookies.
+These analytics ONLY load if BOTH env vars are set AND user accepts cookies.
 Get IDs from [Google Analytics](https://analytics.google.com/) and [Meta Events Manager](https://business.facebook.com/events_manager).
 
 **⚠️ CRITICAL:** After adding environment variables in Vercel, you MUST redeploy for them to take effect!
@@ -149,8 +156,8 @@ English, Thai, Chinese, Russian, German, Italian, Swedish, Finnish
 - Events: booking clicks, contact clicks, room views, language changes, etc.
 - See `/src/app/components/analytics.tsx` for all available events
 
-**AirBNB Booking Tracking:**
-- All AirBNB links have unique IDs and UTM parameters
+**Airbnb Booking Tracking:**
+- All Airbnb links have unique IDs and UTM parameters
 - Tracking IDs: `hero_primary_cta`, `airbnb_highlights_cta`, `rooms_section_cta`, `reviews_section_cta`, `gallery_section_cta`, `footer_link`
 - UTM parameters automatically added: `utm_source=wareeguesthouse_website`, `utm_medium=referral`, `utm_campaign=direct_booking`
 - Data attributes on all buttons for enhanced tracking
@@ -292,7 +299,7 @@ window.dataLayer  // Check if consent events are present
 ### Messaging
 - Emphasize "family feel" atmosphere
 - Honest "2-star" budget-friendly approach
-- Highlight AirBNB Superhost status (4.83 rating)
+- Highlight Airbnb Superhost status (4.83 rating)
 - Showcase "Guest Favorite" designation
 - Focus on authentic local experiences over luxury
 

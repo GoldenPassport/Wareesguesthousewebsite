@@ -103,10 +103,10 @@ export function Footer() {
                 data-tracking-platform="airbnb"
                 className="text-white hover:text-[#f58220] transition-colors flex items-center gap-2"
               >
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z"/>
                 </svg>
-                AirBNB
+                Airbnb
               </a>
               <a 
                 href={siteConfig.reviews.tripadvisor.url}

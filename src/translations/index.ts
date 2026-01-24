@@ -19,7 +19,7 @@ export const translations = {
       subtitle: "Your Family Home in Kata Beach",
       tagline: "Experience Phuket with authentic Thai hospitality since 2000",
       emailButton: "Email Us",
-      bookButton: "Book on AirBNB",
+      bookButton: "Book on Airbnb",
       reviewsButton: "Read Reviews",
     },
     // Common UI
@@ -65,7 +65,7 @@ export const translations = {
       guestFavoriteDesc: "One of the most loved homes on Airbnb based on ratings, reviews, and reliability",
       rating: "4.83 Rating",
       ratingDesc: "Consistently excellent reviews from guests who love our family atmosphere",
-      achievementsDate: "AirBNB achievements as of January 23, 2026",
+      achievementsDate: "Airbnb achievements as of January 23, 2026",
       ratingText: "Rating from 35 Reviews",
       superhostTitle: "Superhost",
       superhostYears: "Anna • 10 Years Hosting",
@@ -75,14 +75,14 @@ export const translations = {
       locationDesc: "100% of guests in the past year gave this location a 5-star rating",
       trustedTitle: "Trusted Experience",
       ctaText: "See why guests keep coming back and rating us 5 stars!",
-      ctaButton: "Check Availability on AirBNB"
+      ctaButton: "Check Availability on Airbnb"
     },
     // Reviews
     reviews: {
       title: "What Our Guests Say",
       subtitle: "Real experiences from travelers who've stayed with us",
       ratingsDate: "Ratings as of January 23, 2026",
-      airbnbTitle: "AirBNB",
+      airbnbTitle: "Airbnb",
       airbnbScore: "4.83",
       airbnbReviewCount: "From 35 Reviews",
       tripadvisorTitle: "TripAdvisor",
@@ -104,11 +104,11 @@ export const translations = {
       guestReviews: [
         {
           text: "Great hosts, spotlessly clean, comfortable bed, nice balcony, quiet... family-run business with a lot of love. We loved staying here!",
-          author: "Andreas, AirBNB"
+          author: "Andreas, Airbnb"
         },
         {
           text: "Anna is super lovely, nice, helpful, and friendly. The rooms are really clean and comfortable. Highly recommended!",
-          author: "Rosa, AirBNB"
+          author: "Rosa, Airbnb"
         },
         {
           text: "Probably the friendliest guesthouse owner we've met on our entire trip. Made us feel completely at home.",
@@ -116,11 +116,11 @@ export const translations = {
         },
         {
           text: "Clean rooms, friendly staff, perfect location. You really feel like part of the family here!",
-          author: "Emma, AirBNB"
+          author: "Emma, Airbnb"
         }
       ],
       // CTA buttons
-      readAirbnbButton: "AirBNB Reviews",
+      readAirbnbButton: "Airbnb Reviews",
       readTripadvisorButton: "TripAdvisor Reviews"
     },
     // Rooms
@@ -140,7 +140,7 @@ export const translations = {
       needMoreSpace: "Need More Space?",
       moreSpaceDesc: "Looking for a suite or apartment? We can arrange other accommodation options to suit your needs. Just email us directly and we'll help find the perfect space for your stay!",
       // CTA button
-      viewAvailability: "View Availability on AirBNB"
+      viewAvailability: "View Availability on Airbnb"
     },
     // Amenities
     amenities: {

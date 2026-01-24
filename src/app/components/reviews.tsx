@@ -65,7 +65,7 @@ export function Reviews() {
         
         {/* Dual Platform Ratings Header */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          {/* AirBNB Card */}
+          {/* Airbnb Card */}
           <div className="bg-gradient-to-br from-[#f58220] to-[#d47020] text-white p-6 sm:p-8 rounded-2xl shadow-xl">
             <div className="flex items-center justify-between mb-4">
               <div>

@@ -41,10 +41,10 @@ export function Hero() {
         
         {/* Badges */}
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-4">
-          <div className="flex items-center bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/30">
+          <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/20 shadow-xl">
             <Award className="w-4 h-4 sm:w-4 sm:h-4 mr-1.5 text-[#f58220] fill-[#f58220]" />
             <span className="text-white text-sm sm:text-sm font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
-              AirBNB Superhost
+              Airbnb Superhost
             </span>
           </div>
           
