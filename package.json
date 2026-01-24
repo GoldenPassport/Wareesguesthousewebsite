@@ -1,8 +1,11 @@
 {
-  "name": "@figma/my-make-file",
+  "name": "warees-guesthouse-website",
+  "description": "Official website for Waree's Guesthouse - Your Family Home in Kata Beach, Phuket",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.1",
   "type": "module",
+  "author": "ch-lukas",
+  "homepage": "https://wareeguesthouse.com",
   "scripts": {
     "build": "vite build",
     "build:dev": "vite build",
