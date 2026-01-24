@@ -1,5 +1,6 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { siteConfig } from '@/config/siteConfig';
+import logo from "figma:asset/302a78d8be4e75fe5f3bef65f80ada9b7aeb0688.png";
 
 export function SEOHead() {
   // Get current URL (in production this will be your actual domain)
@@ -16,6 +17,9 @@ export function SEOHead() {
   
   const title = "Waree's Guesthouse Kata Beach Phuket | AirBNB Superhost | Budget B&B Thailand";
   
+  // Use the imported logo - this will be a proper URL at runtime
+  const logoUrl = logo.startsWith('http') ? logo : `${siteUrl}${logo}`;
+  
   // Structured Data (JSON-LD) for Google
   const structuredData = {
     "@context": "https://schema.org",
@@ -28,7 +32,13 @@ export function SEOHead() {
         "alternateName": "Waree's Guesthouse Kata Beach",
         "description": description,
         "url": siteUrl,
-        "logo": `${siteUrl}/logo.png`,
+        "logo": {
+          "@type": "ImageObject",
+          "url": logoUrl,
+          "width": 512,
+          "height": 512,
+          "caption": "Waree's Guesthouse Logo - Bird and Key Design"
+        },
         "image": `${siteUrl}/og-image.jpg`,
         "telephone": siteConfig.contact.phone.international,
         "email": siteConfig.contact.email,
