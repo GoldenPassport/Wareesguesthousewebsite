@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
+    "build:dev": "vite build",
+    "build:quick": "npm run generate-favicons && vite build",
+    "generate-favicons": "node scripts/generate-favicons.js",
     "verify-images": "bash scripts/verify-images.sh",
     "verify-favicons": "bash scripts/verify-favicons.sh",
     "fix-images": "node scripts/fix_image_assets.js",
