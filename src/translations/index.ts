@@ -57,11 +57,11 @@ export const translations = {
     },
     // Airbnb Highlights
     airbnb: {
-      title: "Airbnb Superhost • Guest Favorite",
+      title: "Airbnb Superhost • Guest Favourite",
       subtitle: "Rated 4.83 out of 5 by our wonderful guests",
       superhost: "Anna is an Airbnb Superhost",
       superhostDesc: "Superhosts are experienced, highly rated hosts committed to providing great stays",
-      guestFavorite: "Guest Favorite",
+      guestFavorite: "Guest Favourite",
       guestFavoriteDesc: "One of the most loved homes on Airbnb based on ratings, reviews, and reliability",
       rating: "4.83 Rating",
       ratingDesc: "Consistently excellent reviews from guests who love our family atmosphere",
@@ -80,7 +80,7 @@ export const translations = {
     // Reviews
     reviews: {
       title: "What Our Guests Say",
-      subtitle: "Real experiences from travelers who've stayed with us",
+      subtitle: "Real experiences from travellers who've stayed with us",
       ratingsDate: "Ratings as of January 23, 2026",
       airbnbTitle: "Airbnb",
       airbnbScore: "4.83",
@@ -228,12 +228,12 @@ export const translations = {
       clinicDesc: "Medical services nearby",
       clinicDist: "Short drive",
       jungceylon: "Jungceylon",
-      jungceylonDesc: "Major shopping center",
+      jungceylonDesc: "Major shopping centre",
       jungceylonDist: "7.3 km • Patong",
       restaurants: "Local Restaurants",
       restaurantsDesc: "Thai & international food",
       restaurantsDist: "2 min walk",
-      localTip: "<strong>💡 Local Tip:</strong> We're happy to help you arrange transport, recommend restaurants, book tours, and share our favorite local spots. Just ask—we love helping our guests discover the real Phuket!"
+      localTip: "<strong>💡 Local Tip:</strong> We're happy to help you arrange transport, recommend restaurants, book tours, and share our favourite local spots. Just ask—we love helping our guests discover the real Phuket!"
     },
     // Location
     location: {
@@ -281,7 +281,7 @@ export const translations = {
       title: "Stay Connected",
       subtitle: "Follow us on Facebook for daily updates, guest photos, local tips, and special offers! See what's happening at Waree's and get inspired for your Kata Beach adventure.",
       communityTitle: "Community",
-      communityDesc: "Join our growing family of travelers from around the world",
+      communityDesc: "Join our growing family of travellers from around the world",
       storiesTitle: "Guest Stories",
       storiesDesc: "See photos and stories from guests who've become friends",
       eventsTitle: "Events & Updates",
@@ -310,7 +310,7 @@ export const translations = {
       facebook: "Follow us on Facebook",
       whatsapp: "WhatsApp Us",
       line: "Line Us",
-      messagePrompt: "Message us on your favorite platform—we're here to help!",
+      messagePrompt: "Message us on your favourite platform—we're here to help!",
       bookTitle: "Book Your Stay",
       bookDescription: "Ready to experience Kata Beach like a local? Book now for the best rates and instant confirmation.",
       tripadvisor: "TripAdvisor",
