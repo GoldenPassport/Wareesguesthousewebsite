@@ -10,11 +10,22 @@
  * - If environment variables are missing: Analytics remain disabled
  * - Cookie consent is checked continuously and analytics activate/deactivate accordingly
  * 
+ * Google Analytics Consent Mode:
+ * - Default consent: 'denied' for all storage types (analytics, ads, user data, personalization)
+ * - When user accepts: Consent updated to 'granted' via gtag('consent', 'update')
+ * - Consent mode script loads BEFORE GA to ensure proper tracking
+ * 
+ * Facebook Pixel Consent Mode:
+ * - Default consent: 'revoke' if user hasn't consented
+ * - When user accepts: Consent granted via fbq('consent', 'grant')
+ * - Consent mode initialized BEFORE Pixel loads
+ * - Real-time consent updates when user changes settings
+ * 
  * Environment Variables:
  * - VITE_GA_MEASUREMENT_ID: Google Analytics Measurement ID (format: G-XXXXXXXXXX)
  * - VITE_FB_PIXEL_ID: Facebook Pixel ID (numeric)
  * 
- * See ANALYTICS.md for complete setup guide.
+ * See Guidelines.md for complete setup guide.
  */
 
 import { useEffect, useState } from 'react';
@@ -26,6 +37,7 @@ declare global {
     dataLayer?: any[];
     fbq?: (...args: any[]) => void;
     _fbq?: any;
+    _fbq_consent_mode?: any[];
   }
 }
 
@@ -35,6 +47,16 @@ export function Analytics() {
   // Get analytics IDs from environment variables
   const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
   const FB_PIXEL_ID = import.meta.env.VITE_FB_PIXEL_ID;
+
+  // Debug logging (remove in production)
+  useEffect(() => {
+    console.log('🔍 Analytics Debug Info:');
+    console.log('- GA_MEASUREMENT_ID:', GA_MEASUREMENT_ID || 'NOT SET');
+    console.log('- FB_PIXEL_ID:', FB_PIXEL_ID || 'NOT SET');
+    console.log('- Cookie Consent:', localStorage.getItem('cookie-consent') || 'NOT SET');
+    console.log('- isGAEnabled:', cookiesAccepted && GA_MEASUREMENT_ID && GA_MEASUREMENT_ID.trim() !== '');
+    console.log('- isFBPixelEnabled:', cookiesAccepted && FB_PIXEL_ID && FB_PIXEL_ID.trim() !== '');
+  }, [GA_MEASUREMENT_ID, FB_PIXEL_ID, cookiesAccepted]);
 
   // Check cookie consent status
   useEffect(() => {
@@ -53,6 +75,17 @@ export function Analytics() {
           'ad_user_data': newConsentStatus ? 'granted' : 'denied',
           'ad_personalization': newConsentStatus ? 'granted' : 'denied',
         });
+      }
+      
+      // Update Facebook Pixel consent mode
+      if (window.fbq) {
+        if (newConsentStatus) {
+          // Grant consent for Facebook Pixel
+          window.fbq('consent', 'grant');
+        } else {
+          // Revoke consent for Facebook Pixel
+          window.fbq('consent', 'revoke');
+        }
       }
     };
 
@@ -123,6 +156,28 @@ export function Analytics() {
                   'ad_user_data': 'granted',
                   'ad_personalization': 'granted',
                 });
+              }
+            `}
+          </script>
+        </Helmet>
+      )}
+
+      {/* Facebook Pixel Consent Mode - Initialize BEFORE Pixel loads */}
+      {FB_PIXEL_ID && FB_PIXEL_ID.trim() !== '' && (
+        <Helmet>
+          <script>
+            {`
+              // Initialize Facebook Pixel consent mode BEFORE pixel loads
+              window._fbq_consent_mode = window._fbq_consent_mode || [];
+              
+              // Check if user has already consented
+              const fbConsent = localStorage.getItem('cookie-consent');
+              if (fbConsent !== 'accepted') {
+                // If not consented, revoke consent by default
+                window._fbq_consent_mode.push(['revoke']);
+              } else {
+                // If consented, grant consent
+                window._fbq_consent_mode.push(['grant']);
               }
             `}
           </script>

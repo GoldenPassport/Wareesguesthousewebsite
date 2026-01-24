@@ -33,6 +33,21 @@ Add in Vercel Dashboard → Settings → Environment Variables:
 Analytics ONLY load if BOTH env vars are set AND user accepts cookies.
 Get IDs from [Google Analytics](https://analytics.google.com/) and [Meta Events Manager](https://business.facebook.com/events_manager).
 
+**⚠️ CRITICAL:** After adding environment variables in Vercel, you MUST redeploy for them to take effect!
+
+**Local Development Setup:**
+```bash
+# 1. Copy the example file
+cp .env.example .env
+
+# 2. Edit .env and add your IDs
+# VITE_GA_MEASUREMENT_ID=G-9F302KVQPD
+# VITE_FB_PIXEL_ID=your_pixel_id
+
+# 3. Restart dev server
+npm run dev
+```
+
 ---
 
 ## Image Assets (20 Required)
@@ -115,6 +130,13 @@ English, Thai, Chinese, Russian, German, Italian, Swedish, Finnish
 - When cookies accepted: Consent updated to `granted` via `gtag('consent', 'update')`
 - Consent mode script loads BEFORE GA to ensure proper tracking
 - Real-time consent updates when user changes settings
+
+**Facebook Pixel Consent Mode Integration:**
+- Default consent state: `revoke` if user hasn't consented
+- When cookies accepted: Consent granted via `fbq('consent', 'grant')`
+- Consent mode initialized BEFORE Pixel loads
+- Real-time consent updates when user changes settings
+- Both Google and Facebook consent APIs fully integrated
 
 **Cookie Settings Button:**
 - Located in footer
@@ -222,7 +244,40 @@ console.log(import.meta.env.VITE_FB_PIXEL_ID);
 // Check scripts loaded
 console.log(typeof window.gtag);  // Should be "function"
 console.log(typeof window.fbq);   // Should be "function"
+
+// Verify Google Analytics consent mode
+window.dataLayer  // Check if consent events are present
+
+// Verify Facebook Pixel consent mode
+// Check if fbq('consent', 'grant') was called after accepting cookies
 ```
+
+**Common Issues:**
+
+1. **Environment Variables Not Set in Vercel:**
+   - Go to Vercel Dashboard → Project → Settings → Environment Variables
+   - Add `VITE_GA_MEASUREMENT_ID` = `G-9F302KVQPD` (or your ID)
+   - Add `VITE_FB_PIXEL_ID` = `your_pixel_id`
+   - **IMPORTANT:** Redeploy after adding env vars (env vars only apply to new builds)
+
+2. **Cookies Not Accepted:**
+   - Open browser console
+   - Check: `localStorage.getItem('cookie-consent')`
+   - Should return `"accepted"` (not `null` or `"declined"`)
+   - If not accepted: Clear localStorage and reload to see cookie banner again
+
+3. **Scripts Not Loading After Accepting Cookies:**
+   - Ensure you clicked "Accept" on the cookie banner
+   - Page should reload automatically after accepting
+   - Check console for debug logs (look for "🔍 Analytics Debug Info")
+   - Verify both conditions are true: cookies accepted AND env var set
+
+4. **Testing Locally:**
+   - Create `.env` file in project root (don't commit it!)
+   - Add: `VITE_GA_MEASUREMENT_ID=G-9F302KVQPD`
+   - Restart dev server (`npm run dev`)
+   - Accept cookies in browser
+   - Check console for analytics scripts
 
 ---
 
