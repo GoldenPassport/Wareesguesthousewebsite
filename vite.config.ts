@@ -5,6 +5,27 @@ import react from "@vitejs/plugin-react";
 import fs from "fs";
 import { faviconPlugin } from "./vite-favicon-plugin";
 
+// Log environment variables during build
+console.log('\n' + '='.repeat(80));
+console.log('🔧 VITE BUILD - ENVIRONMENT VARIABLES');
+console.log('='.repeat(80));
+console.log('NODE_ENV:', process.env.NODE_ENV);
+console.log('VITE_GA_MEASUREMENT_ID:', process.env.VITE_GA_MEASUREMENT_ID || '❌ NOT SET');
+console.log('VITE_FB_PIXEL_ID:', process.env.VITE_FB_PIXEL_ID || '❌ NOT SET');
+console.log('\nAll VITE_ prefixed environment variables:');
+Object.keys(process.env)
+  .filter(key => key.startsWith('VITE_'))
+  .forEach(key => {
+    console.log(`  ${key}:`, process.env[key]);
+  });
+console.log('\nAll Vercel environment variables:');
+Object.keys(process.env)
+  .filter(key => key.startsWith('VERCEL_'))
+  .forEach(key => {
+    console.log(`  ${key}:`, process.env[key]);
+  });
+console.log('='.repeat(80) + '\n');
+
 // Plugin to transform figma:asset imports for production builds only
 function figmaAssetsPlugin() {
   return {
