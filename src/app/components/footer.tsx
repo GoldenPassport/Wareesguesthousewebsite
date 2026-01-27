@@ -31,7 +31,7 @@ export function Footer() {
                 className="flex items-center gap-2 sm:gap-3 hover:text-[#f58220] transition-colors"
               >
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-[#f58220] flex-shrink-0" />
-                <span className="text-white/80 text-sm sm:text-base break-all">{siteConfig.contact.email}</span>
+                <span className="text-white/80 text-sm sm:text-base whitespace-nowrap overflow-hidden text-ellipsis">{siteConfig.contact.email}</span>
               </a>
               <a href={`tel:${siteConfig.contact.phone.raw}`} className="flex items-center space-x-2 sm:space-x-3 hover:text-[#f58220] transition-colors">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-[#f58220] flex-shrink-0" />
