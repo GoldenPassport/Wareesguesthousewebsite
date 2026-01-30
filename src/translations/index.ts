@@ -178,7 +178,7 @@ export const translations = {
     amenities: {
       title: "Everything You Need",
       subtitle:
-        "We've thought of all the details to make your stay comfortable and worry-free. Plus, Anna and Josh are always happy to help organize taxis, island trips, restaurant recommendations, and more!",
+        "We've thought of all the details to make your stay comfortable and worry-free. Plus, Anna and Josh are always happy to help organise taxis, island trips, restaurant recommendations, and more!",
       items: [
         {
           title: "Air Conditioning",
