@@ -145,7 +145,7 @@ export const translations = {
     },
     // Rooms
     rooms: {
-      title: "Our Guest Room",
+      title: "Our Guesthouse",
       subtitle:
         "Comfortable, clean, and equipped with everything you need",
       roomName: "Guest Room",
@@ -473,7 +473,7 @@ export const translations = {
       ],
       notRightTitle: "💭 เราอาจไม่เหมาะกับคุณถ้าคุณ:",
       notRight: [
-        "ต้องการสิ่งอำนวยความสะดวกและบริการแบบมืออาชีพที่คุณจะพบในโรงแรมใหญ่",
+        "ต้องการสิ่งอำนวยความสะ��วกและบริการแบบมืออาชีพที่คุณจะพบในโรงแรมใหญ่",
         "เป็นคนเฉพาะเจาะจงมากเกี่ยวกับประเภทเตียง หมอน หรือผ้าเช็ดตัว",
         "ต้องการอยู่ใกล้ชายหาดมาก",
         "ต้องการเพียงที่นอนโดยไม่ต้องการประสบการณ์ท้องถิ่น",
@@ -525,7 +525,7 @@ export const translations = {
       // Rating categories
       categories: {
         cleanliness: "ความสะอาด",
-        accuracy: "ความถูกต้อง",
+        accuracy: "คว��มถูกต้อง",
         checkIn: "การเช็คอิน",
         communication: "การสื่อสาร",
         location: "ทำเล",
@@ -559,7 +559,7 @@ export const translations = {
     },
     // Rooms
     rooms: {
-      title: "ห้องพักของเรา",
+      title: "เกสต์เฮาส์ของเรา",
       subtitle:
         "สะดวกสบาย สะอาด และครบครันด้วยทุกสิ่งที่คุณต้องการ",
       roomName: "ห้องพัก",
@@ -974,7 +974,7 @@ export const translations = {
     },
     // Rooms
     rooms: {
-      title: "我们的客房",
+      title: "我们的旅馆",
       subtitle: "舒适、干净，配备您需要的一切",
       roomName: "客房",
       roomDesc: "舒适的房间，配备您放松住宿所需的一切",
@@ -1363,7 +1363,7 @@ export const translations = {
     },
     // Rooms
     rooms: {
-      title: "Наш гостевой номер",
+      title: "Наш гостевой дом",
       subtitle:
         "Удобный, чистый и оборудованный всем необходимым",
       roomName: "Гостевой номер",
@@ -1791,7 +1791,7 @@ export const translations = {
     },
     // Rooms
     rooms: {
-      title: "Unser Gästezimmer",
+      title: "Unser Gästehaus",
       subtitle:
         "Komfortabel, sauber und mit allem ausgestattet, was Sie brauchen",
       roomName: "Gästezimmer",
@@ -2220,7 +2220,7 @@ export const translations = {
     },
     // Rooms
     rooms: {
-      title: "La Nostra Camera per Ospiti",
+      title: "La Nostra Pensione",
       subtitle:
         "Confortevole, pulita e dotata di tutto ciò di cui hai bisogno",
       roomName: "Camera per Ospiti",
@@ -2648,7 +2648,7 @@ export const translations = {
     },
     // Rooms
     rooms: {
-      title: "Vårt Gästrum",
+      title: "Vårt Gästhus",
       subtitle:
         "Bekvämt, rent och utrustat med allt du behöver",
       roomName: "Gästrum",
@@ -3071,7 +3071,7 @@ export const translations = {
     },
     // Rooms
     rooms: {
-      title: "Vierashuoneemme",
+      title: "Majatalomme",
       subtitle:
         "Mukava, puhdas ja varustettu kaikella mitä tarvitset",
       roomName: "Vierashuone",
@@ -3293,7 +3293,7 @@ export const translations = {
       localTransportDesc:
         "Tuk-tukit ja moottoripyörätaksit saatavilla lyhyille matkoille Kata Beachin ympäristössä.",
       localCost: "Vaihtelee etäisyyden mukaan",
-      localTip: "Sovi aina hinnasta etukäteen",
+      localTip: "Sovi aina hinnasta etuk��teen",
       helpTitle:
         "Tarvitsetko apua kuljetuksen järjestämisessä?",
       helpDesc:
