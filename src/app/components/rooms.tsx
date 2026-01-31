@@ -1,9 +1,11 @@
+import { RoomCard } from './room-card';
 import { useLanguage } from '@/contexts/language-context';
-import { Mail } from 'lucide-react';
-import { Building2 } from 'lucide-react';
+import { useState } from 'react';
+import { Building2, Mail } from 'lucide-react';
 import { siteConfig } from '@/config/siteConfig';
-import { trackEvent } from '@/app/components/analytics';
-import { RoomCard } from '@/app/components/room-card';
+import { trackEvent } from './analytics';
+
+// Import images for Double Room with Private Balcony
 import bathroomShower from 'figma:asset/fe90856b4d0401840ae1c7eae87b65bf4a9d0967.png';
 import balconyView from 'figma:asset/afcf207372169cde9fed998c2cab3df10bf19418.png';
 import balconySeating from 'figma:asset/4ef3e0d03f87cafbc8eaaaea75adf4ec188f3ab3.png';
@@ -42,6 +44,7 @@ import houseKitchenUtensils from 'figma:asset/760f1ef221dd79e3fd95fc48eb57a66da5
 
 export function Rooms() {
   const { t } = useLanguage();
+  const [selectedRoomIndex, setSelectedRoomIndex] = useState(0);
   
   const rooms = t.rooms.roomTypes.map((roomType, index) => {
     let images;
@@ -65,10 +68,10 @@ export function Rooms() {
   });
   
   return (
-    <section className="py-20 px-4 bg-[#b3dce6]/10">
+    <section className="py-12 sm:py-16 md:py-20 px-4 bg-[#b3dce6]/10">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl text-[#0a3d3d] text-center mb-4">{t.rooms.title}</h2>
-        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl text-[#0a3d3d] text-center mb-3 sm:mb-4">{t.rooms.title}</h2>
+        <p className="text-sm sm:text-base text-gray-600 text-center mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
           {t.rooms.subtitle}
         </p>
         
@@ -96,14 +99,29 @@ export function Rooms() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {/* Room Type Buttons */}
+        <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-8 px-4">
           {rooms.map((room, index) => (
-            <RoomCard 
-              key={index} 
-              room={room} 
-              showPrimaryOnly={true} // Show primary image first for both rooms
-            />
+            <button
+              key={index}
+              onClick={() => setSelectedRoomIndex(index)}
+              className={`px-6 py-3 rounded-full text-sm sm:text-base font-medium transition-all duration-300 transform hover:scale-105 ${
+                selectedRoomIndex === index
+                  ? 'bg-[#f58220] text-white shadow-lg'
+                  : 'bg-white text-[#0a3d3d] border-2 border-[#b3dce6] hover:border-[#f58220]'
+              }`}
+            >
+              {room.name}
+            </button>
           ))}
+        </div>
+
+        {/* Selected Room Card */}
+        <div className="max-w-2xl mx-auto">
+          <RoomCard 
+            room={rooms[selectedRoomIndex]} 
+            showPrimaryOnly={true}
+          />
         </div>
         
         {/* Additional accommodation options */}

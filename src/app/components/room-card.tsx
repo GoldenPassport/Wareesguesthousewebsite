@@ -70,6 +70,16 @@ export function RoomCard({ room, showPrimaryOnly = false }: RoomCardProps) {
     };
   }, [emblaApiDesktop, onSelectDesktop]);
 
+  // Reset carousels to first image when room changes
+  useEffect(() => {
+    if (emblaApiMobile) {
+      emblaApiMobile.scrollTo(0, true); // true = instant, no animation
+    }
+    if (emblaApiDesktop) {
+      emblaApiDesktop.scrollTo(0, true);
+    }
+  }, [room.name, emblaApiMobile, emblaApiDesktop]);
+
   // Group images into chunks of 3 for desktop (1 row)
   // If showPrimaryOnly is true, first slide is just the primary image, rest are groups of 3
   const desktopSlides = [];
@@ -88,9 +98,9 @@ export function RoomCard({ room, showPrimaryOnly = false }: RoomCardProps) {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col md:min-h-[750px]">
       {/* Mobile Carousel */}
-      <div className="md:hidden">
+      <div className="md:hidden flex-shrink-0">
         <div className="overflow-hidden" ref={emblaRefMobile}>
           <div className="flex">
             {room.images.map((image, idx) => (
@@ -205,7 +215,7 @@ export function RoomCard({ room, showPrimaryOnly = false }: RoomCardProps) {
         </div>
       </div>
 
-      <div className="p-5 md:p-6">
+      <div className="p-5 md:p-6 flex-grow">
         <h3 className="text-xl md:text-2xl text-[#0a3d3d] mb-2">{room.name}</h3>
         <p className="text-gray-600 mb-4 text-sm md:text-base">{room.description}</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-2">
