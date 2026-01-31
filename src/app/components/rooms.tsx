@@ -22,18 +22,47 @@ import apartmentWideView from 'figma:asset/5777600bb0dfbf0ab10d83930a32e0d1e6beb
 import apartmentBedTowels from 'figma:asset/29bfd27db8ec17cb9bbb530bbbb2a45797927012.png';
 import apartmentKitchen from 'figma:asset/2af56812ce855cb1ab80070206c522cfdb2e1eae.png';
 import apartmentLivingRoom from 'figma:asset/c05def542a859510fc8b2c18bf42e805b84b1a2e.png';
+// Two-Bedroom House images
+import houseExterior from 'figma:asset/099fce94991b27efebc26df19baa33a29b248956.png';
+import houseBalcony from 'figma:asset/d930debdc532fc36f49faa1519c4b762a2518840.png';
+import houseLivingRoomTV from 'figma:asset/8b2527fd98f8ce365f1039d3c602103274ba0a61.png';
+import houseLivingRoomDining from 'figma:asset/18ee650b3b634cbf3345df79f176d74c216bbb65.png';
+import houseBedroom from 'figma:asset/c42962c8939494ab9e60d3da05eb49d786617d94.png';
+import houseDiningArea from 'figma:asset/2fe59df327f66fa57a5c0e273e00c11894f8ea97.png';
+import houseBedroomMain from 'figma:asset/e392648303f73a9bde4e3915e507a4e21ed6da02.png';
+import houseVanity from 'figma:asset/653c08dc83289b9d9225459133cb3820e76ceaa5.png';
+import houseWardrobe from 'figma:asset/bbded6a639fee6d0f4fcd86fb9c410a135206a63.png';
+import houseBedroom2 from 'figma:asset/c269f732fe17b716fecad88e700a9fd702a3b978.png';
+import houseBathtub from 'figma:asset/5017040fc36f17fcb202bf15c453e6f7c6b10a71.png';
+import houseBathroom from 'figma:asset/32bba7e6a6a9fdf7a348b95a6302b07b75a14ebc.png';
+import houseKitchenCounter from 'figma:asset/07878e5d94a11750c5417a0ca12c0f2be6ba763a.png';
+import houseKitchenView from 'figma:asset/95eb92c0c80354e33427a215c1af9f9b3edb744e.png';
+import houseKitchenFull from 'figma:asset/cf13c033df7f79102f2ea09154f03b800b2082d5.png';
+import houseKitchenUtensils from 'figma:asset/760f1ef221dd79e3fd95fc48eb57a66da5d741bc.png';
 
 export function Rooms() {
   const { t } = useLanguage();
   
-  const rooms = t.rooms.roomTypes.map((roomType, index) => ({
-    name: roomType.name,
-    description: roomType.description,
-    images: index === 0 
-      ? [roomWithMirror, kingBedRoom, roomBedWithSafe, roomAmenitiesWide, balconySeating, balconyView, bathroomShower]
-      : [apartmentKitchen, apartmentWideView, apartmentLivingRoom, apartmentCourtyard, apartmentBedTowels, apartmentInteriorWardrobe, apartmentStorageUnit, apartmentInteriorShelves, apartmentBathroomShower, apartmentBathroomSink],
-    features: roomType.features
-  }));
+  const rooms = t.rooms.roomTypes.map((roomType, index) => {
+    let images;
+    if (index === 0) {
+      // Double Room with Private Balcony
+      images = [roomWithMirror, kingBedRoom, roomBedWithSafe, roomAmenitiesWide, balconySeating, balconyView, bathroomShower];
+    } else if (index === 1) {
+      // Ground Floor Apartment
+      images = [apartmentKitchen, apartmentWideView, apartmentLivingRoom, apartmentCourtyard, apartmentBedTowels, apartmentInteriorWardrobe, apartmentStorageUnit, apartmentInteriorShelves, apartmentBathroomShower, apartmentBathroomSink];
+    } else {
+      // Two-Bedroom House
+      images = [houseExterior, houseBalcony, houseLivingRoomTV, houseLivingRoomDining, houseDiningArea, houseBedroom, houseBedroomMain, houseVanity, houseWardrobe, houseBedroom2, houseBathtub, houseBathroom, houseKitchenFull, houseKitchenCounter, houseKitchenUtensils, houseKitchenView];
+    }
+    
+    return {
+      name: roomType.name,
+      description: roomType.description,
+      images: images,
+      features: roomType.features
+    };
+  });
   
   return (
     <section className="py-20 px-4 bg-[#b3dce6]/10">
