@@ -51,17 +51,19 @@ export function Analytics() {
   const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
   const FB_PIXEL_ID = import.meta.env.VITE_FB_PIXEL_ID;
 
-  // Debug logging
+  // Debug logging (only in development)
   useEffect(() => {
-    console.log('🔍 Analytics Debug Info:');
-    console.log('- GA_MEASUREMENT_ID:', GA_MEASUREMENT_ID || 'NOT SET');
-    console.log('- FB_PIXEL_ID:', FB_PIXEL_ID || 'NOT SET');
-    console.log('- Cookie Consent:', localStorage.getItem('cookie-consent') || 'NOT SET');
-    console.log('- cookiesAccepted state:', cookiesAccepted);
-    console.log('- gaLoaded:', gaLoaded);
-    console.log('- fbLoaded:', fbLoaded);
-    console.log('- window.gtag exists:', typeof window.gtag !== 'undefined');
-    console.log('- window.fbq exists:', typeof window.fbq !== 'undefined');
+    if (import.meta.env.DEV) {
+      console.log('🔍 Analytics Debug Info:');
+      console.log('- GA_MEASUREMENT_ID:', GA_MEASUREMENT_ID || 'NOT SET');
+      console.log('- FB_PIXEL_ID:', FB_PIXEL_ID || 'NOT SET');
+      console.log('- Cookie Consent:', localStorage.getItem('cookie-consent') || 'NOT SET');
+      console.log('- cookiesAccepted state:', cookiesAccepted);
+      console.log('- gaLoaded:', gaLoaded);
+      console.log('- fbLoaded:', fbLoaded);
+      console.log('- window.gtag exists:', typeof window.gtag !== 'undefined');
+      console.log('- window.fbq exists:', typeof window.fbq !== 'undefined');
+    }
   }, [GA_MEASUREMENT_ID, FB_PIXEL_ID, cookiesAccepted, gaLoaded, fbLoaded]);
 
   // Initialize Google Analytics consent mode (always load this)
@@ -94,7 +96,9 @@ export function Analytics() {
       });
     }
 
-    console.log('✅ Google Analytics consent mode initialized');
+    if (import.meta.env.DEV) {
+      console.log('✅ Google Analytics consent mode initialized');
+    }
   }, [GA_MEASUREMENT_ID]);
 
   // Check cookie consent status and load GA script
@@ -146,14 +150,18 @@ export function Analytics() {
       return;
     }
 
-    console.log('📊 Loading Google Analytics script...');
+    if (import.meta.env.DEV) {
+      console.log('📊 Loading Google Analytics script...');
+    }
 
     // Load the gtag.js script
     const script = document.createElement('script');
     script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
     script.async = true;
     script.onload = () => {
-      console.log('✅ Google Analytics script loaded');
+      if (import.meta.env.DEV) {
+        console.log('✅ Google Analytics script loaded');
+      }
       
       // Initialize GA
       if (window.gtag) {
@@ -162,13 +170,17 @@ export function Analytics() {
           page_path: window.location.pathname,
           cookie_flags: 'SameSite=None;Secure'
         });
-        console.log('✅ Google Analytics configured with ID:', GA_MEASUREMENT_ID);
+        if (import.meta.env.DEV) {
+          console.log('✅ Google Analytics configured with ID:', GA_MEASUREMENT_ID);
+        }
       }
       
       setGaLoaded(true);
     };
     script.onerror = () => {
-      console.error('❌ Failed to load Google Analytics script');
+      if (import.meta.env.DEV) {
+        console.error('❌ Failed to load Google Analytics script');
+      }
     };
 
     document.head.appendChild(script);
@@ -187,7 +199,9 @@ export function Analytics() {
       return;
     }
 
-    console.log('📊 Loading Facebook Pixel...');
+    if (import.meta.env.DEV) {
+      console.log('📊 Loading Facebook Pixel...');
+    }
 
     // Facebook Pixel initialization
     (function(f: any, b: any, e: any, v: any, n: any, t: any, s: any) {
@@ -210,7 +224,9 @@ export function Analytics() {
     if (window.fbq) {
       window.fbq('init', FB_PIXEL_ID);
       window.fbq('track', 'PageView');
-      console.log('✅ Facebook Pixel initialized with ID:', FB_PIXEL_ID);
+      if (import.meta.env.DEV) {
+        console.log('✅ Facebook Pixel initialized with ID:', FB_PIXEL_ID);
+      }
       setFbLoaded(true);
     }
   }, [cookiesAccepted, FB_PIXEL_ID, fbLoaded]);
