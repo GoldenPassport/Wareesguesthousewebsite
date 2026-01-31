@@ -5,15 +5,13 @@ import { siteConfig } from '@/config/siteConfig';
 import { trackEvent } from '@/app/components/analytics';
 import { RoomCard } from '@/app/components/room-card';
 import bathroomShower from 'figma:asset/fe90856b4d0401840ae1c7eae87b65bf4a9d0967.png';
-import bathroomSink from 'figma:asset/c8eb8834474b6ee7e9b14931d4731257b7f460f4.png';
 import balconyView from 'figma:asset/afcf207372169cde9fed998c2cab3df10bf19418.png';
 import balconySeating from 'figma:asset/4ef3e0d03f87cafbc8eaaaea75adf4ec188f3ab3.png';
 import kingBedRoom from 'figma:asset/ae87d5913824777f33e1cf7b1aa5bb9ff9e76937.png';
-import roomAmenities from 'figma:asset/e624635e32d87a6ef0d6605d63e4816d15a69a0a.png';
 import roomWithMirror from 'figma:asset/b94d4d20d14168f3e5fed1c480d0c31daa2cf4cc.png';
 import roomAmenitiesWide from 'figma:asset/7535206b35eef49ec344fb3a87c9dd37de145c2e.png';
-import fullRoomView from 'figma:asset/aaeceff6fe165faa2028b5c18597728bddcf2ac4.png';
 // Ground Floor Apartment images
+import apartmentCourtyard from 'figma:asset/324e60d5f107c135971d0a8fa4c0d84a3e7c6c01.png';
 import apartmentLivingRoom from 'figma:asset/351d3f8845ce3ca91a2dc0674b1bf5e82b63027a.png';
 import apartmentFullView from 'figma:asset/841cd18c9b53c51de2346a1af27be97c9c00cc3f.png';
 import apartmentKitchen from 'figma:asset/69de0ba210fe8ee33ccb991d65d44efb4de9d5f6.png';
@@ -31,7 +29,7 @@ export function Rooms() {
     description: roomType.description,
     images: index === 0 
       ? [roomWithMirror, kingBedRoom, roomAmenitiesWide, balconySeating, balconyView, bathroomShower]
-      : [apartmentLivingRoom, apartmentFullView, apartmentKitchen, apartmentBedDetail, apartmentBedroom, apartmentInterior, apartmentBathroom, apartmentBathroomShower],
+      : [apartmentCourtyard, apartmentLivingRoom, apartmentFullView, apartmentKitchen, apartmentBedroom, apartmentBedDetail, apartmentInterior, apartmentBathroom, apartmentBathroomShower],
     features: roomType.features
   }));
   
