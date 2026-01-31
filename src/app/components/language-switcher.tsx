@@ -11,7 +11,7 @@ export function LanguageSwitcher() {
 
   const languages: { code: Language; flag: string }[] = [
     { code: 'en', flag: '🇬🇧' },
-    { code: 'th', flag: '🇹🇭' },
+    // { code: 'th', flag: '🇹🇭' }, // Temporarily hidden - translation in progress
     { code: 'zh', flag: '🇨🇳' },
     { code: 'ru', flag: '🇷🇺' },
     { code: 'de', flag: '🇩🇪' },

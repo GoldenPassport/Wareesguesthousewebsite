@@ -10,6 +10,7 @@ import { Rooms } from '@/app/components/rooms';
 import { Amenities } from '@/app/components/amenities';
 import { PhotoGallery } from '@/app/components/photo-gallery';
 import { ThingsToDo } from '@/app/components/things-to-do';
+import { AdventureTrips } from '@/app/components/adventure-trips';
 import { Location } from '@/app/components/location';
 import { SocialFeed } from '@/app/components/social-feed';
 import { Footer } from '@/app/components/footer';
@@ -31,6 +32,7 @@ function App() {
           <Amenities />
           <PhotoGallery />
           <ThingsToDo />
+          <AdventureTrips />
           <Location />
           <SocialFeed />
           <Footer />

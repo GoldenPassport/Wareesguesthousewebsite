@@ -1,10 +1,14 @@
-import { MapPin, ShoppingBag, Plus, Utensils, Building2, Palmtree, Camera, Waves } from 'lucide-react';
+import { MapPin, ShoppingBag, Plus, Utensils, Building2, Palmtree, Camera, Waves, ChevronDown, ChevronUp } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback, useEffect, useState } from 'react';
 
 export function ThingsToDo() {
   const { t } = useLanguage();
+  
+  // Expansion state
+  const [attractionsExpanded, setAttractionsExpanded] = useState(false);
+  const [conveniencesExpanded, setConveniencesExpanded] = useState(false);
   
   // Carousel for attractions
   const [emblaRefAttractions, emblaApiAttractions] = useEmblaCarousel({ 
@@ -65,12 +69,13 @@ export function ThingsToDo() {
   }, [emblaApiConveniences, onSelectConveniences]);
 
   const attractions = [
-    { name: t.thingsToDo.kataBeach, desc: t.thingsToDo.kataBeachDesc, dist: t.thingsToDo.kataBeachDist, icon: Waves },
-    { name: t.thingsToDo.karonBeach, desc: t.thingsToDo.karonBeachDesc, dist: t.thingsToDo.karonBeachDist, icon: Waves },
-    { name: t.thingsToDo.viewpoint, desc: t.thingsToDo.viewpointDesc, dist: t.thingsToDo.viewpointDist, icon: Camera },
-    { name: t.thingsToDo.bigBuddha, desc: t.thingsToDo.bigBuddhaDesc, dist: t.thingsToDo.bigBuddhaDist, icon: Camera },
-    { name: t.thingsToDo.nightMarket, desc: t.thingsToDo.nightMarketDesc, dist: t.thingsToDo.nightMarketDist, icon: Utensils },
-    { name: t.thingsToDo.oldTown, desc: t.thingsToDo.oldTownDesc, dist: t.thingsToDo.oldTownDist, icon: Camera }
+    { name: t.thingsToDo.kataBeach, desc: t.thingsToDo.kataBeachDesc, dist: t.thingsToDo.kataBeachDist, icon: Waves, mapUrl: null },
+    { name: t.thingsToDo.karonBeach, desc: t.thingsToDo.karonBeachDesc, dist: t.thingsToDo.karonBeachDist, icon: Waves, mapUrl: null },
+    { name: t.thingsToDo.viewpoint, desc: t.thingsToDo.viewpointDesc, dist: t.thingsToDo.viewpointDist, icon: Camera, mapUrl: 'https://maps.app.goo.gl/EGhPrq7cFn4dKm27A' },
+    { name: t.thingsToDo.bigBuddha, desc: t.thingsToDo.bigBuddhaDesc, dist: t.thingsToDo.bigBuddhaDist, icon: Camera, mapUrl: 'https://maps.app.goo.gl/dpSLHFxgicgWx7Ty8' },
+    { name: t.thingsToDo.watChalong, desc: t.thingsToDo.watChalongDesc, dist: t.thingsToDo.watChalongDist, icon: Camera, mapUrl: 'https://maps.app.goo.gl/RMGCv3u5LKH7orYy7' },
+    { name: t.thingsToDo.nightMarket, desc: t.thingsToDo.nightMarketDesc, dist: t.thingsToDo.nightMarketDist, icon: Utensils, mapUrl: null },
+    { name: t.thingsToDo.oldTown, desc: t.thingsToDo.oldTownDesc, dist: t.thingsToDo.oldTownDist, icon: Camera, mapUrl: null }
   ];
 
   const conveniences = [
@@ -102,146 +107,200 @@ export function ThingsToDo() {
 
         {/* Things to Do & Sights */}
         <div className="mb-16">
-          <div className="flex items-center justify-center md:justify-start gap-3 mb-8">
-            <Camera className="w-6 h-6 sm:w-8 sm:h-8 text-[#f58220] flex-shrink-0" />
-            <h3 className="text-xl sm:text-2xl md:text-3xl text-[#0a3d3d] leading-tight">{t.thingsToDo.attractionsTitle}</h3>
+          {/* Button Row */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8">
+            {/* Beaches & Attractions Button */}
+            <button 
+              onClick={() => setAttractionsExpanded(!attractionsExpanded)}
+              className="flex items-center justify-between gap-2 sm:gap-3 group hover:bg-[#f58220]/5 active:bg-[#f58220]/10 p-4 sm:p-5 rounded-xl transition-all border-2 border-[#b3dce6]/30 hover:border-[#f58220]/40 min-h-[60px] touch-manipulation"
+            >
+              <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+                <Camera className="w-6 h-6 sm:w-7 sm:h-7 text-[#f58220] flex-shrink-0" />
+                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#0a3d3d] leading-tight text-left font-semibold">{t.thingsToDo.attractionsTitle}</h3>
+              </div>
+              {attractionsExpanded ? (
+                <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6 text-[#f58220] flex-shrink-0" />
+              ) : (
+                <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-[#f58220] flex-shrink-0" />
+              )}
+            </button>
+
+            {/* Nearby Conveniences Button */}
+            <button 
+              onClick={() => setConveniencesExpanded(!conveniencesExpanded)}
+              className="flex items-center justify-between gap-2 sm:gap-3 group hover:bg-[#f58220]/5 active:bg-[#f58220]/10 p-4 sm:p-5 rounded-xl transition-all border-2 border-[#b3dce6]/30 hover:border-[#f58220]/40 min-h-[60px] touch-manipulation"
+            >
+              <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+                <MapPin className="w-6 h-6 sm:w-7 sm:h-7 text-[#f58220] flex-shrink-0" />
+                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#0a3d3d] leading-tight text-left font-semibold">{t.thingsToDo.conveniencesTitle}</h3>
+              </div>
+              {conveniencesExpanded ? (
+                <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6 text-[#f58220] flex-shrink-0" />
+              ) : (
+                <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-[#f58220] flex-shrink-0" />
+              )}
+            </button>
           </div>
           
-          {/* Mobile Carousel */}
-          <div className="md:hidden">
-            <div className="overflow-hidden py-2" ref={emblaRefAttractions}>
-              <div className="flex">
+          {/* Attractions Expandable Content */}
+          {attractionsExpanded && (
+            <div className="animate-in fade-in slide-in-from-top-4 duration-300 mb-8">
+              {/* Mobile Carousel */}
+              <div className="md:hidden">
+                <div className="overflow-hidden py-2" ref={emblaRefAttractions}>
+                  <div className="flex">
+                    {attractions.map((attraction, index) => {
+                      const IconComponent = attraction.icon;
+                      return (
+                        <div key={index} className="flex-[0_0_100%] min-w-0 px-2">
+                          <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-[#b3dce6]/30 h-full">
+                            <div className="flex items-start justify-between mb-3">
+                              <div>
+                                <h4 className="text-xl text-[#0a3d3d] mb-1 font-semibold">{attraction.name}</h4>
+                                <p className="text-gray-600 text-base">{attraction.desc}</p>
+                              </div>
+                              <IconComponent className={`w-6 h-6 flex-shrink-0 ml-2 ${attraction.icon === Waves ? 'text-[#b3dce6]' : 'text-[#f58220]'}`} />
+                            </div>
+                            <p className="text-[#f58220] font-semibold mb-3">{attraction.dist}</p>
+                            {attraction.mapUrl && (
+                              <a 
+                                href={attraction.mapUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-sm bg-[#f58220] text-white px-4 py-2 rounded-lg hover:bg-[#e57420] transition-colors"
+                              >
+                                <MapPin className="w-4 h-4" />
+                                {t.thingsToDo.getDirections}
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+                
+                {/* Carousel Dots */}
+                <div className="flex justify-center gap-2 mt-6">
+                  {scrollSnapsAttractions.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        index === selectedIndexAttractions 
+                          ? 'bg-[#f58220] w-6' 
+                          : 'bg-gray-300 hover:bg-gray-400'
+                      }`}
+                      onClick={() => scrollToAttractions(index)}
+                      aria-label={`Go to attraction ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Desktop Grid */}
+              <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {attractions.map((attraction, index) => {
                   const IconComponent = attraction.icon;
                   return (
-                    <div key={index} className="flex-[0_0_100%] min-w-0 px-2">
-                      <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-[#b3dce6]/30 h-full">
-                        <div className="flex items-start justify-between mb-3">
-                          <div>
-                            <h4 className="text-xl text-[#0a3d3d] mb-1 font-semibold">{attraction.name}</h4>
-                            <p className="text-gray-600 text-base">{attraction.desc}</p>
-                          </div>
-                          <IconComponent className={`w-6 h-6 flex-shrink-0 ml-2 ${attraction.icon === Waves ? 'text-[#b3dce6]' : 'text-[#f58220]'}`} />
+                    <div key={index} className="bg-white p-6 rounded-xl shadow-lg border-2 border-[#b3dce6]/30 hover:border-[#f58220]/50 transition-all">
+                      <div className="flex items-start justify-between mb-3">
+                        <div>
+                          <h4 className="text-xl text-[#0a3d3d] mb-1 font-semibold">{attraction.name}</h4>
+                          <p className="text-gray-600 text-sm">{attraction.desc}</p>
                         </div>
-                        <p className="text-[#f58220] font-semibold">{attraction.dist}</p>
+                        <IconComponent className={`w-6 h-6 ${attraction.icon === Waves ? 'text-[#b3dce6]' : 'text-[#f58220]'}`} />
                       </div>
+                      <p className="text-[#f58220] font-semibold mb-3">{attraction.dist}</p>
+                      {attraction.mapUrl && (
+                        <a 
+                          href={attraction.mapUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm bg-[#f58220] text-white px-4 py-2 rounded-lg hover:bg-[#e57420] transition-colors"
+                        >
+                          <MapPin className="w-4 h-4" />
+                          {t.thingsToDo.getDirections}
+                        </a>
+                      )}
                     </div>
                   );
                 })}
               </div>
             </div>
-            
-            {/* Carousel Dots */}
-            <div className="flex justify-center gap-2 mt-6">
-              {scrollSnapsAttractions.map((_, index) => (
-                <button
-                  key={index}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === selectedIndexAttractions 
-                      ? 'bg-[#f58220] w-6' 
-                      : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
-                  onClick={() => scrollToAttractions(index)}
-                  aria-label={`Go to attraction ${index + 1}`}
-                />
-              ))}
-            </div>
-          </div>
+          )}
 
-          {/* Desktop Grid */}
-          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {attractions.map((attraction, index) => {
-              const IconComponent = attraction.icon;
-              return (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg border-2 border-[#b3dce6]/30 hover:border-[#f58220]/50 transition-all">
-                  <div className="flex items-start justify-between mb-3">
-                    <div>
-                      <h4 className="text-xl text-[#0a3d3d] mb-1 font-semibold">{attraction.name}</h4>
-                      <p className="text-gray-600 text-sm">{attraction.desc}</p>
-                    </div>
-                    <IconComponent className={`w-6 h-6 ${attraction.icon === Waves ? 'text-[#b3dce6]' : 'text-[#f58220]'}`} />
+          {/* Conveniences Expandable Content */}
+          {conveniencesExpanded && (
+            <div className="animate-in fade-in slide-in-from-top-4 duration-300">
+              {/* Mobile Carousel */}
+              <div className="md:hidden">
+                <div className="overflow-hidden py-2" ref={emblaRefConveniences}>
+                  <div className="flex">
+                    {convenienceSlides.map((slide, slideIndex) => (
+                      <div key={slideIndex} className="flex-[0_0_100%] min-w-0 px-2">
+                        <div className="space-y-4">
+                          {slide.map((convenience, itemIndex) => {
+                            const IconComponent = convenience.icon;
+                            return (
+                              <div key={itemIndex} className="bg-white p-5 rounded-xl shadow-lg border-2 border-[#b3dce6]/30">
+                                <div className="flex items-center gap-3 mb-2">
+                                  <div className="w-12 h-12 bg-[#f58220]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <IconComponent className="w-6 h-6 text-[#f58220]" />
+                                  </div>
+                                  <div className="min-w-0">
+                                    <h4 className="text-base text-[#0a3d3d] font-semibold">{convenience.name}</h4>
+                                    <p className="text-xs text-gray-600">{convenience.desc}</p>
+                                  </div>
+                                </div>
+                                <p className="text-[#f58220] font-semibold text-sm ml-15">{convenience.dist}</p>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                  <p className="text-[#f58220] font-semibold">{attraction.dist}</p>
                 </div>
-              );
-            })}
-          </div>
-        </div>
+                
+                {/* Carousel Dots */}
+                <div className="flex justify-center gap-2 mt-6">
+                  {scrollSnapsConveniences.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        index === selectedIndexConveniences 
+                          ? 'bg-[#f58220] w-6' 
+                          : 'bg-gray-300 hover:bg-gray-400'
+                      }`}
+                      onClick={() => scrollToConveniences(index)}
+                      aria-label={`Go to conveniences page ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
 
-        {/* Nearby Conveniences */}
-        <div>
-          <div className="flex items-center justify-center md:justify-start gap-3 mb-8">
-            <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-[#f58220] flex-shrink-0" />
-            <h3 className="text-xl sm:text-2xl md:text-3xl text-[#0a3d3d] leading-tight">{t.thingsToDo.conveniencesTitle}</h3>
-          </div>
-
-          {/* Mobile Carousel */}
-          <div className="md:hidden">
-            <div className="overflow-hidden py-2" ref={emblaRefConveniences}>
-              <div className="flex">
-                {convenienceSlides.map((slide, slideIndex) => (
-                  <div key={slideIndex} className="flex-[0_0_100%] min-w-0 px-2">
-                    <div className="space-y-4">
-                      {slide.map((convenience, itemIndex) => {
-                        const IconComponent = convenience.icon;
-                        return (
-                          <div key={itemIndex} className="bg-white p-5 rounded-xl shadow-lg border-2 border-[#b3dce6]/30">
-                            <div className="flex items-center gap-3 mb-2">
-                              <div className="w-12 h-12 bg-[#f58220]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                <IconComponent className="w-6 h-6 text-[#f58220]" />
-                              </div>
-                              <div className="min-w-0">
-                                <h4 className="text-base text-[#0a3d3d] font-semibold">{convenience.name}</h4>
-                                <p className="text-xs text-gray-600">{convenience.desc}</p>
-                              </div>
-                            </div>
-                            <p className="text-[#f58220] font-semibold text-sm ml-15">{convenience.dist}</p>
-                          </div>
-                        );
-                      })}
+              {/* Desktop Grid */}
+              <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {conveniences.map((convenience, index) => {
+                  const IconComponent = convenience.icon;
+                  return (
+                    <div key={index} className="bg-white p-6 rounded-xl shadow-lg border-2 border-[#b3dce6]/30">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-12 h-12 bg-[#f58220]/10 rounded-full flex items-center justify-center">
+                          <IconComponent className="w-6 h-6 text-[#f58220]" />
+                        </div>
+                        <div>
+                          <h4 className="text-lg text-[#0a3d3d] font-semibold">{convenience.name}</h4>
+                          <p className="text-sm text-gray-600">{convenience.desc}</p>
+                        </div>
+                      </div>
+                      <p className="text-[#f58220] font-semibold">{convenience.dist}</p>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
-            
-            {/* Carousel Dots */}
-            <div className="flex justify-center gap-2 mt-6">
-              {scrollSnapsConveniences.map((_, index) => (
-                <button
-                  key={index}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === selectedIndexConveniences 
-                      ? 'bg-[#f58220] w-6' 
-                      : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
-                  onClick={() => scrollToConveniences(index)}
-                  aria-label={`Go to conveniences page ${index + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Desktop Grid */}
-          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {conveniences.map((convenience, index) => {
-              const IconComponent = convenience.icon;
-              return (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg border-2 border-[#b3dce6]/30">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-12 h-12 bg-[#f58220]/10 rounded-full flex items-center justify-center">
-                      <IconComponent className="w-6 h-6 text-[#f58220]" />
-                    </div>
-                    <div>
-                      <h4 className="text-lg text-[#0a3d3d] font-semibold">{convenience.name}</h4>
-                      <p className="text-sm text-gray-600">{convenience.desc}</p>
-                    </div>
-                  </div>
-                  <p className="text-[#f58220] font-semibold">{convenience.dist}</p>
-                </div>
-              );
-            })}
-          </div>
+          )}
         </div>
 
         {/* Call out box */}
