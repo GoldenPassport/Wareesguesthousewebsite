@@ -30,7 +30,17 @@ LanguageProvider.displayName = 'LanguageProvider';
 export function useLanguage(): LanguageContextType {
   const context = useContext(LanguageContext);
   if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
+    // In development or preview environments, log the error but provide a fallback
+    console.error('useLanguage must be used within a LanguageProvider');
+    
+    // Provide a fallback default context to prevent crashes
+    return {
+      language: 'en' as Language,
+      setLanguage: () => {
+        console.warn('setLanguage called outside LanguageProvider');
+      },
+      t: translations.en,
+    };
   }
   return context;
 }

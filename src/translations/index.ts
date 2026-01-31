@@ -148,19 +148,41 @@ export const translations = {
       title: "Our Guesthouse",
       subtitle:
         "Comfortable, clean, and equipped with everything you need",
-      roomName: "Guest Room",
-      roomDesc:
-        "Cozy, comfortable room with everything you need for a relaxing stay",
-      features: "Room Features",
-      featuresList: [
-        "King Bed",
-        "Ensuite Shower Room (Hot Water)",
-        "Air Conditioning",
-        "Refrigerator",
-        "Free WiFi",
-        "Kettle",
-        "Private Balcony",
-        "Safe",
+      roomTypes: [
+        {
+          name: "Double Room with Private Balcony",
+          description:
+            "Cozy, comfortable room with everything you need for a relaxing stay",
+          features: [
+            "King Bed",
+            "Ensuite Shower Room (Hot Water)",
+            "Air Conditioning",
+            "Refrigerator",
+            "Free WiFi",
+            "Kettle",
+            "Private Balcony",
+            "Safe",
+          ],
+        },
+        {
+          name: "Ground Floor Apartment",
+          description:
+            "Offering additional living space, this apartment has a sofa and kitchen. Sleeps 3 guests with inner courtyard and quiet street views.",
+          features: [
+            "1 Bedroom, separate lounge with attached kitchen",
+            "Spacious Ensuite Shower Room (Hot Water)",
+            "Full Kitchen with Stovetop & Refrigerator",
+            "Free WiFi",
+            "Air Conditioning",
+            "Inner Courtyard View",
+            "Quiet Street View",
+            "Private Entrance",
+            "Sofa Bed",
+            "Dining Area",
+            "Safety Deposit Box",
+            "Flat-screen TV with Satellite & Cable",
+          ],
+        },
       ],
       // Property details
       roomsLabel: "Rooms",
@@ -562,19 +584,41 @@ export const translations = {
       title: "เกสต์เฮาส์ของเรา",
       subtitle:
         "สะดวกสบาย สะอาด และครบครันด้วยทุกสิ่งที่คุณต้องการ",
-      roomName: "ห้องพัก",
-      roomDesc:
-        "ห้องที่อบอุ่น สะดวกสบาย พร้อมทุกสิ่งที่คุณต้องการสำหรับการพักผ่อน",
-      features: "สิ่งอำนวยความสะดวกในห้อง",
-      featuresList: [
-        "เตียงคิงไซส์",
-        "ห้องอาบน้ำในตัว (น้ำอุ่น)",
-        "เครื่องปรับอากาศ",
-        "ตู้เย็น",
-        "Wi-Fi ฟรี",
-        "กาต้มน้ำ",
-        "ระเบียงส่วนตัว",
-        "ตู้เซฟ",
+      roomTypes: [
+        {
+          name: "ห้องดับเบิลพร้อมระเบียงส่วนตัว",
+          description:
+            "ห้องที่อบอุ่น สะดวกสบาย พร้อมทุกสิ่งที่คุณต้องการสำหรับการพักผ่อน",
+          features: [
+            "เตียงคิงไซส์",
+            "ห้องอาบน้ำในตัว (น้ำอุ่น)",
+            "เครื่องปรับอากาศ",
+            "ตู้เย็น",
+            "Wi-Fi ฟรี",
+            "กาต้มน้ำ",
+            "ระเบียงส่วนตัว",
+            "ตู้เซฟ",
+          ],
+        },
+        {
+          name: "อพาร์ทเมนต์ชั้นล่าง",
+          description:
+            "ห้องที่มีพื้นที่นั่งเล่นเพิ่มเติม มีโซฟาและครัว รองรับได้ 3 ท่าน วิวสวนภายในและถนนเงียบสงบ",
+          features: [
+            "1 ห้องนอน ห้องนั่งเล่นแยกพร้อมครัวติดต่อ",
+            "ห้องอาบน้ำในตัวขนาดกว้างขวาง (น้ำอุ่น)",
+            "ครัวพร้อมเตาและตู้เย็น",
+            "Wi-Fi ฟรี",
+            "เครื่องปรับอากาศ",
+            "วิวสวนภายใน",
+            "วิวถนนเงียบสงบ",
+            "ทางเข้าส่วนตัว",
+            "โซฟาเบด",
+            "พื้นที่รับประทานอาหาร",
+            "ตู้นิรภัย",
+            "ทีวีจอแบนพร้อมดาวเทียมและเคเบิล",
+          ],
+        },
       ],
       roomsLabel: "ห้อง",
       floorsLabel: "ชั้น",
@@ -788,7 +832,7 @@ export const translations = {
         "ติดตามเราบน Facebook เพื่อรับข้อมูลอัพเดทประจำวัน รูปภาพจากแขก เคล็ดลับท้องถิ่น และข้อเสนอพิเศษ! ดูว่ามีอะไรใหม่ที่วารีและรับแรงบันดาลใจสำหรับการผจญภัยที่หาดกะตะ",
       communityTitle: "ชุมชน",
       communityDesc:
-        "เข้าร่วมครอบครัวนักเดินทางที่เติบโตของเราจากทั่วโลก",
+        "เข้าร่วมครอบครัวนักเดินทางที่เติบโตของเราจากทั่���โลก",
       storiesTitle: "เรื่องราวของแขก",
       storiesDesc:
         "ดูรูปภาพและเรื่องราวจากแขกที่กลายเป็นเพื่อน",
@@ -976,18 +1020,40 @@ export const translations = {
     rooms: {
       title: "我们的旅馆",
       subtitle: "舒适、干净，配备您需要的一切",
-      roomName: "客房",
-      roomDesc: "舒适的房间，配备您放松住宿所需的一切",
-      features: "房间设施",
-      featuresList: [
-        "特大床",
-        "套内淋浴间（热水）",
-        "空调",
-        "冰箱",
-        "免费WiFi",
-        "水壶",
-        "私人阳台",
-        "保险箱",
+      roomTypes: [
+        {
+          name: "带私人阳台的双人房",
+          description: "舒适的房间，配备您放松住宿所需的一切",
+          features: [
+            "特大床",
+            "套内淋浴间（热水）",
+            "空调",
+            "冰箱",
+            "免费WiFi",
+            "水壶",
+            "私人阳台",
+            "保险箱",
+          ],
+        },
+        {
+          name: "一楼公寓",
+          description:
+            "提供额外的生活空间，配有沙发和厨房。可容纳3位客人，享有内庭院和安静街景。",
+          features: [
+            "1间卧室，独立休息室配附属厨房",
+            "宽敞的套内淋浴间（热水）",
+            "带炉灶和冰箱的全套厨房",
+            "免费WiFi",
+            "空调",
+            "内庭院景观",
+            "安静街景",
+            "私人入口",
+            "沙发床",
+            "用餐区",
+            "保险箱",
+            "带卫星和有线电视的平板电视",
+          ],
+        },
       ],
       roomsLabel: "房间",
       floorsLabel: "楼层",
@@ -1366,19 +1432,41 @@ export const translations = {
       title: "Наш гостевой дом",
       subtitle:
         "Удобный, чистый и оборудованный всем необходимым",
-      roomName: "Гостевой номер",
-      roomDesc:
-        "Уютный, комфортный номер со всем необходимым для расслабляющего отдыха",
-      features: "Удобства в номере",
-      featuresList: [
-        "Кровать king-size",
-        "Душевая комната в номере (горячая вода)",
-        "Кондиционер",
-        "Холодильник",
-        "Бесплатный Wi-Fi",
-        "Чайник",
-        "Личный балкон",
-        "Сейф",
+      roomTypes: [
+        {
+          name: "Двухместный номер с личным балконом",
+          description:
+            "Уютный, комфортный номер со всем необходимым для расслабляющего отдыха",
+          features: [
+            "Кровать king-size",
+            "Душевая комната в номере (горячая вода)",
+            "Кондиционер",
+            "Холодильник",
+            "Бесплатный Wi-Fi",
+            "Чайник",
+            "Личный балкон",
+            "Сейф",
+          ],
+        },
+        {
+          name: "Апартаменты на первом этаже",
+          description:
+            "Предлагая дополнительное жилое пространство, эти апартаменты имеют диван и кухню. Размещение 3 гостей с видом на внутренний двор и тихую улицу.",
+          features: [
+            "1 спальня, отдельная гостиная с кухней",
+            "Просторная ванная комната с душем (горячая вода)",
+            "Полная кухня с плитой и холодильником",
+            "Бесплатный Wi-Fi",
+            "Кондиционер",
+            "Вид на внутренний двор",
+            "Вид на тихую улицу",
+            "Отдельный вход",
+            "Диван-кровать",
+            "Обеденная зона",
+            "Сейф",
+            "Телевизор с плоским экраном и спутниковым/кабельным ТВ",
+          ],
+        },
       ],
       roomsLabel: "Номера",
       floorsLabel: "Этажи",
@@ -1794,19 +1882,41 @@ export const translations = {
       title: "Unser Gästehaus",
       subtitle:
         "Komfortabel, sauber und mit allem ausgestattet, was Sie brauchen",
-      roomName: "Gästezimmer",
-      roomDesc:
-        "Gemütliches, komfortables Zimmer mit allem, was Sie für einen erholsamen Aufenthalt benötigen",
-      features: "Zimmerausstattung",
-      featuresList: [
-        "Kingsize-Bett",
-        "Eigenes Duschbad (Warmwasser)",
-        "Klimaanlage",
-        "Kühlschrank",
-        "Kostenloses WLAN",
-        "Wasserkocher",
-        "Privater Balkon",
-        "Safe",
+      roomTypes: [
+        {
+          name: "Doppelzimmer mit privatem Balkon",
+          description:
+            "Gemütliches, komfortables Zimmer mit allem, was Sie für einen erholsamen Aufenthalt benötigen",
+          features: [
+            "Kingsize-Bett",
+            "Eigenes Duschbad (Warmwasser)",
+            "Klimaanlage",
+            "Kühlschrank",
+            "Kostenloses WLAN",
+            "Wasserkocher",
+            "Privater Balkon",
+            "Safe",
+          ],
+        },
+        {
+          name: "Erdgeschosswohnung",
+          description:
+            "Mit zusätzlichem Wohnraum bietet dieses Apartment ein Sofa und eine Küche. Platz für 3 Gäste mit Blick auf den Innenhof und eine ruhige Straße.",
+          features: [
+            "1 Schlafzimmer, separates Wohnzimmer mit angeschlossener Küche",
+            "Geräumiges eigenes Duschbad (Warmwasser)",
+            "Vollküche mit Herd und Kühlschrank",
+            "Kostenloses WLAN",
+            "Klimaanlage",
+            "Blick auf den Innenhof",
+            "Blick auf eine ruhige Straße",
+            "Privater Eingang",
+            "Schlafsofa",
+            "Essbereich",
+            "Safe",
+            "Flachbildfernseher mit Satellit und Kabel",
+          ],
+        },
       ],
       roomsLabel: "Zimmer",
       floorsLabel: "Etagen",
@@ -2223,19 +2333,41 @@ export const translations = {
       title: "La Nostra Pensione",
       subtitle:
         "Confortevole, pulita e dotata di tutto ciò di cui hai bisogno",
-      roomName: "Camera per Ospiti",
-      roomDesc:
-        "Camera accogliente e confortevole con tutto il necessario per un soggiorno rilassante",
-      features: "Caratteristiche della Camera",
-      featuresList: [
-        "Letto King",
-        "Bagno Privato con Doccia (Acqua Calda)",
-        "Aria Condizionata",
-        "Frigorifero",
-        "Wi-Fi Gratuito",
-        "Bollitore",
-        "Balcone Privato",
-        "Cassaforte",
+      roomTypes: [
+        {
+          name: "Camera Doppia con Balcone Privato",
+          description:
+            "Camera accogliente e confortevole con tutto il necessario per un soggiorno rilassante",
+          features: [
+            "Letto King",
+            "Bagno Privato con Doccia (Acqua Calda)",
+            "Aria Condizionata",
+            "Frigorifero",
+            "Wi-Fi Gratuito",
+            "Bollitore",
+            "Balcone Privato",
+            "Cassaforte",
+          ],
+        },
+        {
+          name: "Appartamento al Piano Terra",
+          description:
+            "Offrendo spazio abitativo aggiuntivo, questo appartamento dispone di un divano e cucina. Ospita 3 persone con vista sul cortile interno e strada tranquilla.",
+          features: [
+            "1 Camera da Letto, soggiorno separato con cucina annessa",
+            "Ampio Bagno Privato con Doccia (Acqua Calda)",
+            "Cucina completa con piano cottura e frigorifero",
+            "Wi-Fi Gratuito",
+            "Aria Condizionata",
+            "Vista Cortile Interno",
+            "Vista Strada Tranquilla",
+            "Ingresso Privato",
+            "Divano Letto",
+            "Zona Pranzo",
+            "Cassaforte",
+            "TV a schermo piatto con Satellite e Cavo",
+          ],
+        },
       ],
       roomsLabel: "Camere",
       floorsLabel: "Piani",
@@ -2651,19 +2783,41 @@ export const translations = {
       title: "Vårt Gästhus",
       subtitle:
         "Bekvämt, rent och utrustat med allt du behöver",
-      roomName: "Gästrum",
-      roomDesc:
-        "Mysigt, bekvämt rum med allt du behöver för en avkopplande vistelse",
-      features: "Rumsfunktioner",
-      featuresList: [
-        "King Size-säng",
-        "Eget Duschrum (Varmvatten)",
-        "Luftkonditionering",
-        "Kylskåp",
-        "Gratis WiFi",
-        "Vattenkokare",
-        "Privat Balkong",
-        "Kassaskåp",
+      roomTypes: [
+        {
+          name: "Dubbelrum med privat balkong",
+          description:
+            "Mysigt, bekvämt rum med allt du behöver för en avkopplande vistelse",
+          features: [
+            "King Size-säng",
+            "Eget Duschrum (Varmvatten)",
+            "Luftkonditionering",
+            "Kylskåp",
+            "Gratis WiFi",
+            "Vattenkokare",
+            "Privat Balkong",
+            "Kassaskåp",
+          ],
+        },
+        {
+          name: "Bottenvåningslägenhet",
+          description:
+            "Med extra boyta erbjuder denna lägenhet en soffa och kök. Plats för 3 gäster med utsikt över innergården och tyst gata.",
+          features: [
+            "1 Sovrum, separat vardagsrum med angränsande kök",
+            "Rymligt eget duschrum (varmvatten)",
+            "Fullständigt kök med spis och kylskåp",
+            "Gratis WiFi",
+            "Luftkonditionering",
+            "Utsikt över Innergård",
+            "Utsikt över Tyst Gata",
+            "Privat Ingång",
+            "Bäddsoffa",
+            "Matplats",
+            "Kassaskåp",
+            "Platt-TV med Satellit och Kabel",
+          ],
+        },
       ],
       roomsLabel: "Rum",
       floorsLabel: "Våningar",
@@ -3074,19 +3228,41 @@ export const translations = {
       title: "Majatalomme",
       subtitle:
         "Mukava, puhdas ja varustettu kaikella mitä tarvitset",
-      roomName: "Vierashuone",
-      roomDesc:
-        "Viihtyisä, mukava huone kaikella mitä tarvitset rentouttavaan yöpymiseen",
-      features: "Huoneen Ominaisuudet",
-      featuresList: [
-        "King-sänky",
-        "Oma Suihkuhuone (Lämmin Vesi)",
-        "Ilmastointi",
-        "Jääkaappi",
-        "Ilmainen WiFi",
-        "Vedenkeitin",
-        "Yksityinen Parveke",
-        "Tallelokero",
+      roomTypes: [
+        {
+          name: "Kahden hengen huone yksityisellä parvekkeella",
+          description:
+            "Viihtyisä, mukava huone kaikella mitä tarvitset rentouttavaan yöpymiseen",
+          features: [
+            "King-sänky",
+            "Oma Suihkuhuone (Lämmin Vesi)",
+            "Ilmastointi",
+            "Jääkaappi",
+            "Ilmainen WiFi",
+            "Vedenkeitin",
+            "Yksityinen Parveke",
+            "Tallelokero",
+          ],
+        },
+        {
+          name: "Pohjakerroksen Asunto",
+          description:
+            "Tarjoten lisäasumistilaa, tässä asunnossa on sohva ja keittiö. Majoitustilaa 3 vieraalle sisäpihan ja hiljaisen kadun näköalalla.",
+          features: [
+            "1 Makuuhuone, erillinen olohuone keittiöllä",
+            "Tilava oma suihkuhuone (lämmin vesi)",
+            "Täysi keittiö liedellä ja jääkaapilla",
+            "Ilmainen WiFi",
+            "Ilmastointi",
+            "Sisäpihan Näkymä",
+            "Hiljaisen Kadun Näkymä",
+            "Yksityinen Sisäänkäynti",
+            "Vuodesohva",
+            "Ruokailualue",
+            "Tallelokero",
+            "Tasokuva-TV satelliitti- ja kaapelikanaville",
+          ],
+        },
       ],
       roomsLabel: "Huoneet",
       floorsLabel: "Kerrokset",

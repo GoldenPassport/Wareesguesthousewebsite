@@ -1,10 +1,9 @@
 import { useLanguage } from '@/contexts/language-context';
-import { ChevronLeft, ChevronRight, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { Building2 } from 'lucide-react';
 import { siteConfig } from '@/config/siteConfig';
-import useEmblaCarousel from 'embla-carousel-react';
-import { useCallback, useEffect, useState } from 'react';
 import { trackEvent } from '@/app/components/analytics';
+import { RoomCard } from '@/app/components/room-card';
 import bathroomShower from 'figma:asset/fe90856b4d0401840ae1c7eae87b65bf4a9d0967.png';
 import bathroomSink from 'figma:asset/c8eb8834474b6ee7e9b14931d4731257b7f460f4.png';
 import balconyView from 'figma:asset/afcf207372169cde9fed998c2cab3df10bf19418.png';
@@ -14,41 +13,28 @@ import roomAmenities from 'figma:asset/e624635e32d87a6ef0d6605d63e4816d15a69a0a.
 import roomWithMirror from 'figma:asset/b94d4d20d14168f3e5fed1c480d0c31daa2cf4cc.png';
 import roomAmenitiesWide from 'figma:asset/7535206b35eef49ec344fb3a87c9dd37de145c2e.png';
 import fullRoomView from 'figma:asset/aaeceff6fe165faa2028b5c18597728bddcf2ac4.png';
+// Ground Floor Apartment images
+import apartmentCourtyard from 'figma:asset/324e60d5f107c135971d0a8fa4c0d84a3e7c6c01.png';
+import apartmentLivingRoom from 'figma:asset/351d3f8845ce3ca91a2dc0674b1bf5e82b63027a.png';
+import apartmentFullView from 'figma:asset/841cd18c9b53c51de2346a1af27be97c9c00cc3f.png';
+import apartmentKitchen from 'figma:asset/69de0ba210fe8ee33ccb991d65d44efb4de9d5f6.png';
+import apartmentBedroom from 'figma:asset/3571ead409000b8a9924c66d801b96158c6961ca.png';
+import apartmentBedDetail from 'figma:asset/041651d3fede3f41701b2f7b2e55d7f593c816b3.png';
+import apartmentInterior from 'figma:asset/f1ca437fd7cd6f33d58ff2036f9633294a8c0fdb.png';
+import apartmentBathroom from 'figma:asset/0f06e42f756e4a03ddd2f7414c96f4e056f1de5f.png';
+import apartmentBathroomShower from 'figma:asset/72d876f74c91ce72688e72932aa9f35c0d83320a.png';
 
 export function Rooms() {
   const { t } = useLanguage();
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    loop: true,
-    align: 'center',
-  });
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
-
-  const scrollTo = useCallback((index: number) => emblaApi && emblaApi.scrollTo(index), [emblaApi]);
-
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    setScrollSnaps(emblaApi.scrollSnapList());
-    onSelect();
-    emblaApi.on('select', onSelect);
-    return () => {
-      emblaApi.off('select', onSelect);
-    };
-  }, [emblaApi, onSelect]);
   
-  const rooms = [
-    {
-      name: t.rooms.roomName,
-      description: t.rooms.roomDesc,
-      images: [roomWithMirror, kingBedRoom, roomAmenitiesWide, balconySeating, balconyView, bathroomShower],
-      features: t.rooms.featuresList
-    }
-  ];
+  const rooms = t.rooms.roomTypes.map((roomType, index) => ({
+    name: roomType.name,
+    description: roomType.description,
+    images: index === 0 
+      ? [roomWithMirror, kingBedRoom, roomAmenitiesWide, balconySeating, balconyView, bathroomShower]
+      : [apartmentCourtyard, apartmentLivingRoom, apartmentFullView, apartmentKitchen, apartmentBedDetail, apartmentBedroom, apartmentInterior, apartmentBathroom, apartmentBathroomShower],
+    features: roomType.features
+  }));
   
   return (
     <section className="py-20 px-4 bg-[#b3dce6]/10">
@@ -82,67 +68,9 @@ export function Rooms() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-1 gap-8 max-w-2xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {rooms.map((room, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              {/* Mobile Carousel */}
-              <div className="md:hidden">
-                <div className="overflow-hidden" ref={emblaRef}>
-                  <div className="flex">
-                    {room.images.map((image, idx) => (
-                      <div key={idx} className="flex-[0_0_100%] min-w-0">
-                        <img 
-                          src={image} 
-                          alt={`${room.name} - Photo ${idx + 1}`}
-                          className="w-full h-64 object-cover"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                
-                {/* Carousel Dots */}
-                <div className="flex justify-center gap-2 py-3 bg-gray-50">
-                  {scrollSnaps.map((_, idx) => (
-                    <button
-                      key={idx}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        idx === selectedIndex 
-                          ? 'bg-[#f58220] w-6' 
-                          : 'bg-gray-300 hover:bg-gray-400'
-                      }`}
-                      onClick={() => scrollTo(idx)}
-                      aria-label={`Go to photo ${idx + 1}`}
-                    />
-                  ))}
-                </div>
-              </div>
-
-              {/* Desktop Grid */}
-              <div className="hidden md:grid grid-cols-3 gap-2">
-                {room.images.map((image, idx) => (
-                  <img 
-                    key={idx}
-                    src={image} 
-                    alt={room.name}
-                    className="w-full h-80 object-cover"
-                  />
-                ))}
-              </div>
-
-              <div className="p-5 md:p-6">
-                <h3 className="text-xl md:text-2xl text-[#0a3d3d] mb-2">{room.name}</h3>
-                <p className="text-gray-600 mb-4 text-sm md:text-base">{room.description}</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-2">
-                  {room.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-gray-700 text-sm md:text-base">
-                      <span className="w-2 h-2 bg-[#f58220] rounded-full mr-2 md:mr-3 flex-shrink-0" />
-                      <span className="leading-tight">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <RoomCard key={index} room={room} />
           ))}
         </div>
         
