@@ -212,6 +212,13 @@ function figmaAssetsPlugin() {
                   magic[1] === 0x50 &&
                   magic[2] === 0x4e &&
                   magic[3] === 0x47;
+                
+                // Also check for WebP format
+                const isWebP =
+                  magic[0] === 0x52 &&  // R
+                  magic[1] === 0x49 &&  // I
+                  magic[2] === 0x46 &&  // F
+                  magic[3] === 0x46;    // F
 
                 if (isJPEG) {
                   console.log(
@@ -227,10 +234,28 @@ function figmaAssetsPlugin() {
                     `   ✓ Detected PNG format (${decodedBuffer.length} bytes)`,
                   );
                   finalBuffer = decodedBuffer;
-                } else {
-                  console.warn(
-                    `   ⚠ Unknown format, using original buffer`,
+                } else if (isWebP) {
+                  console.log(
+                    `   ✓ Detected WebP format (${decodedBuffer.length} bytes)`,
                   );
+                  finalBuffer = decodedBuffer;
+                  finalFilename = finalFilename.replace(
+                    /\\.(png|jpg)$/,
+                    ".webp",
+                  );
+                } else {
+                  // Log magic bytes for debugging
+                  const magicHex = Array.from(magic.subarray(0, 8))
+                    .map(b => b.toString(16).padStart(2, '0'))
+                    .join(' ');
+                  console.warn(
+                    `   ⚠ Unknown format (magic bytes: ${magicHex})`,
+                  );
+                  console.warn(
+                    `   ⚠ Decoded ${decodedBuffer.length} bytes - trying anyway`,
+                  );
+                  // Still use the decoded buffer - it might work
+                  finalBuffer = decodedBuffer;
                 }
               } catch (error) {
                 console.error(
@@ -279,4 +304,4 @@ export default defineConfig({
     assetsDir: "assets",
     copyPublicDir: true,
   },
-}); 
+});
