@@ -14,7 +14,6 @@ import roomWithMirror from 'figma:asset/b94d4d20d14168f3e5fed1c480d0c31daa2cf4cc
 import roomAmenitiesWide from 'figma:asset/7535206b35eef49ec344fb3a87c9dd37de145c2e.png';
 import fullRoomView from 'figma:asset/aaeceff6fe165faa2028b5c18597728bddcf2ac4.png';
 // Ground Floor Apartment images
-import apartmentCourtyard from 'figma:asset/324e60d5f107c135971d0a8fa4c0d84a3e7c6c01.png';
 import apartmentLivingRoom from 'figma:asset/351d3f8845ce3ca91a2dc0674b1bf5e82b63027a.png';
 import apartmentFullView from 'figma:asset/841cd18c9b53c51de2346a1af27be97c9c00cc3f.png';
 import apartmentKitchen from 'figma:asset/69de0ba210fe8ee33ccb991d65d44efb4de9d5f6.png';
@@ -32,7 +31,7 @@ export function Rooms() {
     description: roomType.description,
     images: index === 0 
       ? [roomWithMirror, kingBedRoom, roomAmenitiesWide, balconySeating, balconyView, bathroomShower]
-      : [apartmentCourtyard, apartmentLivingRoom, apartmentFullView, apartmentKitchen, apartmentBedDetail, apartmentBedroom, apartmentInterior, apartmentBathroom, apartmentBathroomShower],
+      : [apartmentLivingRoom, apartmentFullView, apartmentKitchen, apartmentBedDetail, apartmentBedroom, apartmentInterior, apartmentBathroom, apartmentBathroomShower],
     features: roomType.features
   }));
   
