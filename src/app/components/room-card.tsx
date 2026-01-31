@@ -98,7 +98,7 @@ export function RoomCard({ room, showPrimaryOnly = false }: RoomCardProps) {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col md:min-h-[750px]">
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col md:min-h-[650px]">
       {/* Mobile Carousel */}
       <div className="md:hidden flex-shrink-0">
         <div className="overflow-hidden" ref={emblaRefMobile}>
@@ -108,7 +108,7 @@ export function RoomCard({ room, showPrimaryOnly = false }: RoomCardProps) {
                 <img 
                   src={image} 
                   alt={`${room.name} - Photo ${idx + 1}`}
-                  className="w-full h-64 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                  className="w-full h-56 object-cover cursor-pointer hover:opacity-90 transition-opacity"
                   onClick={() => openLightbox(idx)}
                 />
               </div>
@@ -145,7 +145,7 @@ export function RoomCard({ room, showPrimaryOnly = false }: RoomCardProps) {
                     <img 
                       src={slide[0]} 
                       alt={`${room.name} - Primary Photo`}
-                      className="w-full h-80 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                      className="w-full h-64 object-cover cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() => openLightbox(0)}
                     />
                   </div>
@@ -161,7 +161,7 @@ export function RoomCard({ room, showPrimaryOnly = false }: RoomCardProps) {
                           key={idx}
                           src={image} 
                           alt={`${room.name} - Photo ${globalIdx + 1}`}
-                          className="w-full h-80 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                          className="w-full h-64 object-cover cursor-pointer hover:opacity-90 transition-opacity"
                           onClick={() => openLightbox(globalIdx)}
                         />
                       );
@@ -215,16 +215,30 @@ export function RoomCard({ room, showPrimaryOnly = false }: RoomCardProps) {
         </div>
       </div>
 
-      <div className="p-5 md:p-6 flex-grow">
+      <div className="p-5 md:p-6 pb-3 md:pb-3 flex-grow">
         <h3 className="text-xl md:text-2xl text-[#0a3d3d] mb-2">{room.name}</h3>
         <p className="text-gray-600 mb-4 text-sm md:text-base">{room.description}</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-2">
-          {room.features.map((feature, idx) => (
-            <div key={idx} className="flex items-center text-gray-700 text-sm md:text-base">
-              <span className="w-2 h-2 bg-[#f58220] rounded-full mr-2 md:mr-3 flex-shrink-0" />
-              <span className="leading-tight">{feature}</span>
+        <div className="flex flex-col md:flex-row md:gap-4">
+          {/* First column - max 7 items */}
+          <div className="flex-1">
+            {room.features.slice(0, 7).map((feature, idx) => (
+              <div key={idx} className="flex items-center text-gray-700 text-sm md:text-base mb-2">
+                <span className="w-2 h-2 bg-[#f58220] rounded-full mr-2 md:mr-3 flex-shrink-0" />
+                <span className="leading-tight">{feature}</span>
+              </div>
+            ))}
+          </div>
+          {/* Second column - remaining items */}
+          {room.features.length > 7 && (
+            <div className="flex-1">
+              {room.features.slice(7).map((feature, idx) => (
+                <div key={idx + 7} className="flex items-center text-gray-700 text-sm md:text-base mb-2">
+                  <span className="w-2 h-2 bg-[#f58220] rounded-full mr-2 md:mr-3 flex-shrink-0" />
+                  <span className="leading-tight">{feature}</span>
+                </div>
+              ))}
             </div>
-          ))}
+          )}
         </div>
       </div>
 

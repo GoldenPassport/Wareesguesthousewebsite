@@ -69,13 +69,12 @@ export function ThingsToDo() {
   }, [emblaApiConveniences, onSelectConveniences]);
 
   const attractions = [
-    { name: t.thingsToDo.kataBeach, desc: t.thingsToDo.kataBeachDesc, dist: t.thingsToDo.kataBeachDist, icon: Waves, mapUrl: null },
-    { name: t.thingsToDo.karonBeach, desc: t.thingsToDo.karonBeachDesc, dist: t.thingsToDo.karonBeachDist, icon: Waves, mapUrl: null },
+    { name: t.thingsToDo.kataBeach, desc: t.thingsToDo.kataBeachDesc, dist: t.thingsToDo.kataBeachDist, icon: Waves, mapUrl: 'https://maps.app.goo.gl/9haTFbS4ieQYZ4cs6' },
+    { name: t.thingsToDo.karonBeach, desc: t.thingsToDo.karonBeachDesc, dist: t.thingsToDo.karonBeachDist, icon: Waves, mapUrl: 'https://maps.app.goo.gl/mZGRfL4y4eWsfSCi8' },
     { name: t.thingsToDo.viewpoint, desc: t.thingsToDo.viewpointDesc, dist: t.thingsToDo.viewpointDist, icon: Camera, mapUrl: 'https://maps.app.goo.gl/EGhPrq7cFn4dKm27A' },
     { name: t.thingsToDo.bigBuddha, desc: t.thingsToDo.bigBuddhaDesc, dist: t.thingsToDo.bigBuddhaDist, icon: Camera, mapUrl: 'https://maps.app.goo.gl/dpSLHFxgicgWx7Ty8' },
     { name: t.thingsToDo.watChalong, desc: t.thingsToDo.watChalongDesc, dist: t.thingsToDo.watChalongDist, icon: Camera, mapUrl: 'https://maps.app.goo.gl/RMGCv3u5LKH7orYy7' },
-    { name: t.thingsToDo.nightMarket, desc: t.thingsToDo.nightMarketDesc, dist: t.thingsToDo.nightMarketDist, icon: Utensils, mapUrl: null },
-    { name: t.thingsToDo.oldTown, desc: t.thingsToDo.oldTownDesc, dist: t.thingsToDo.oldTownDist, icon: Camera, mapUrl: null }
+    { name: t.thingsToDo.oldTown, desc: t.thingsToDo.oldTownDesc, dist: t.thingsToDo.oldTownDist, icon: Camera, mapUrl: 'https://maps.app.goo.gl/NwdG2uEbufQCa77aA' }
   ];
 
   const conveniences = [
@@ -111,7 +110,10 @@ export function ThingsToDo() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8">
             {/* Beaches & Attractions Button */}
             <button 
-              onClick={() => setAttractionsExpanded(!attractionsExpanded)}
+              onClick={() => {
+                setAttractionsExpanded(!attractionsExpanded);
+                if (!attractionsExpanded) setConveniencesExpanded(false);
+              }}
               className="flex items-center justify-between gap-2 sm:gap-3 group hover:bg-[#f58220]/5 active:bg-[#f58220]/10 p-4 sm:p-5 rounded-xl transition-all border-2 border-[#b3dce6]/30 hover:border-[#f58220]/40 min-h-[60px] touch-manipulation"
             >
               <div className="flex items-center gap-2 sm:gap-3 min-w-0">
@@ -127,7 +129,10 @@ export function ThingsToDo() {
 
             {/* Nearby Conveniences Button */}
             <button 
-              onClick={() => setConveniencesExpanded(!conveniencesExpanded)}
+              onClick={() => {
+                setConveniencesExpanded(!conveniencesExpanded);
+                if (!conveniencesExpanded) setAttractionsExpanded(false);
+              }}
               className="flex items-center justify-between gap-2 sm:gap-3 group hover:bg-[#f58220]/5 active:bg-[#f58220]/10 p-4 sm:p-5 rounded-xl transition-all border-2 border-[#b3dce6]/30 hover:border-[#f58220]/40 min-h-[60px] touch-manipulation"
             >
               <div className="flex items-center gap-2 sm:gap-3 min-w-0">

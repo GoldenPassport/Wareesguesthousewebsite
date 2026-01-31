@@ -26,14 +26,14 @@ export function AdventureTrips() {
   const scrollPrev = useCallback(() => {
     if (emblaApi) {
       emblaApi.scrollPrev();
-      setIsDetailsExpanded(false); // Close details when navigating
+      // Keep details expanded if already open
     }
   }, [emblaApi]);
 
   const scrollNext = useCallback(() => {
     if (emblaApi) {
       emblaApi.scrollNext();
-      setIsDetailsExpanded(false); // Close details when navigating
+      // Keep details expanded if already open
     }
   }, [emblaApi]);
 

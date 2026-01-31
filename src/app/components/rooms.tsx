@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Building2, Mail } from 'lucide-react';
 import { siteConfig } from '@/config/siteConfig';
 import { trackEvent } from './analytics';
+import { motion, AnimatePresence } from 'motion/react';
 
 // Import images for Double Room with Private Balcony
 import bathroomShower from 'figma:asset/fe90856b4d0401840ae1c7eae87b65bf4a9d0967.png';
@@ -118,11 +119,20 @@ export function Rooms() {
 
         {/* Selected Room Card */}
         <div className="max-w-2xl mx-auto">
-          <RoomCard 
-            key={rooms[selectedRoomIndex].name}
-            room={rooms[selectedRoomIndex]} 
-            showPrimaryOnly={true}
-          />
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={rooms[selectedRoomIndex].name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4, ease: 'easeInOut' }}
+            >
+              <RoomCard 
+                room={rooms[selectedRoomIndex]} 
+                showPrimaryOnly={true}
+              />
+            </motion.div>
+          </AnimatePresence>
         </div>
         
         {/* Additional accommodation options */}
