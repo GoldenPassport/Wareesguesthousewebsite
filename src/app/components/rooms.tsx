@@ -119,6 +119,7 @@ export function Rooms() {
         {/* Selected Room Card */}
         <div className="max-w-2xl mx-auto">
           <RoomCard 
+            key={rooms[selectedRoomIndex].name}
             room={rooms[selectedRoomIndex]} 
             showPrimaryOnly={true}
           />
