@@ -10,10 +10,18 @@ import balconySeating from 'figma:asset/4ef3e0d03f87cafbc8eaaaea75adf4ec188f3ab3
 import kingBedRoom from 'figma:asset/ae87d5913824777f33e1cf7b1aa5bb9ff9e76937.png';
 import roomWithMirror from 'figma:asset/b94d4d20d14168f3e5fed1c480d0c31daa2cf4cc.png';
 import roomAmenitiesWide from 'figma:asset/7535206b35eef49ec344fb3a87c9dd37de145c2e.png';
+import roomBedWithSafe from 'figma:asset/349b239356ffbc7de1c999a663c23bf074f5f8b9.png';
 // Ground Floor Apartment images
 import apartmentCourtyard from 'figma:asset/4932cdef4be7145e445285e2655b332a0a5a9cf8.png';
 import apartmentBathroomShower from 'figma:asset/fcb23c3b762c07bd5d763699fd4ba02fde069765.png';
 import apartmentBathroomSink from 'figma:asset/052ff561eb03d67253af29d921ce4d42a4e9b01e.png';
+import apartmentInteriorShelves from 'figma:asset/8034899bb5b4af8bffc7d33154530f72692b65bf.png';
+import apartmentInteriorWardrobe from 'figma:asset/0fefeb906903c38c7f9d4115276ba65c9c12ec23.png';
+import apartmentStorageUnit from 'figma:asset/2a5a41f90ea70d757805598eb63687a6e33213c4.png';
+import apartmentWideView from 'figma:asset/5777600bb0dfbf0ab10d83930a32e0d1e6bebd3e.png';
+import apartmentBedTowels from 'figma:asset/29bfd27db8ec17cb9bbb530bbbb2a45797927012.png';
+import apartmentKitchen from 'figma:asset/2af56812ce855cb1ab80070206c522cfdb2e1eae.png';
+import apartmentLivingRoom from 'figma:asset/c05def542a859510fc8b2c18bf42e805b84b1a2e.png';
 
 export function Rooms() {
   const { t } = useLanguage();
@@ -22,8 +30,8 @@ export function Rooms() {
     name: roomType.name,
     description: roomType.description,
     images: index === 0 
-      ? [roomWithMirror, kingBedRoom, roomAmenitiesWide, balconySeating, balconyView, bathroomShower]
-      : [apartmentCourtyard, apartmentBathroomShower, apartmentBathroomSink],
+      ? [roomWithMirror, kingBedRoom, roomBedWithSafe, roomAmenitiesWide, balconySeating, balconyView, bathroomShower]
+      : [apartmentKitchen, apartmentWideView, apartmentLivingRoom, apartmentCourtyard, apartmentBedTowels, apartmentInteriorWardrobe, apartmentStorageUnit, apartmentInteriorShelves, apartmentBathroomShower, apartmentBathroomSink],
     features: roomType.features
   }));
   
@@ -61,7 +69,11 @@ export function Rooms() {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {rooms.map((room, index) => (
-            <RoomCard key={index} room={room} />
+            <RoomCard 
+              key={index} 
+              room={room} 
+              showPrimaryOnly={true} // Show primary image first for both rooms
+            />
           ))}
         </div>
         

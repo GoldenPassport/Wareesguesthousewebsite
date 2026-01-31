@@ -10,9 +10,10 @@ interface RoomCardProps {
     images: string[];
     features: string[];
   };
+  showPrimaryOnly?: boolean; // If true, show only first image initially on desktop
 }
 
-export function RoomCard({ room }: RoomCardProps) {
+export function RoomCard({ room, showPrimaryOnly = false }: RoomCardProps) {
   const [emblaRefMobile, emblaApiMobile] = useEmblaCarousel({ 
     loop: true,
     align: 'center',
@@ -70,9 +71,20 @@ export function RoomCard({ room }: RoomCardProps) {
   }, [emblaApiDesktop, onSelectDesktop]);
 
   // Group images into chunks of 3 for desktop (1 row)
+  // If showPrimaryOnly is true, first slide is just the primary image, rest are groups of 3
   const desktopSlides = [];
-  for (let i = 0; i < room.images.length; i += 3) {
-    desktopSlides.push(room.images.slice(i, i + 3));
+  if (showPrimaryOnly && room.images.length > 0) {
+    // First slide: single primary image
+    desktopSlides.push([room.images[0]]);
+    // Remaining slides: groups of 3
+    for (let i = 1; i < room.images.length; i += 3) {
+      desktopSlides.push(room.images.slice(i, i + 3));
+    }
+  } else {
+    // Default behavior: all images in groups of 3
+    for (let i = 0; i < room.images.length; i += 3) {
+      desktopSlides.push(room.images.slice(i, i + 3));
+    }
   }
 
   return (
@@ -117,17 +129,35 @@ export function RoomCard({ room }: RoomCardProps) {
           <div className="flex">
             {desktopSlides.map((slide, slideIdx) => (
               <div key={slideIdx} className="flex-[0_0_100%] min-w-0">
-                <div className="grid grid-cols-3 gap-2">
-                  {slide.map((image, idx) => (
+                {/* If this is the primary image slide (first slide with single image) */}
+                {showPrimaryOnly && slideIdx === 0 && slide.length === 1 ? (
+                  <div className="flex justify-center items-center">
                     <img 
-                      key={idx}
-                      src={image} 
-                      alt={`${room.name} - Photo ${slideIdx * 3 + idx + 1}`}
+                      src={slide[0]} 
+                      alt={`${room.name} - Primary Photo`}
                       className="w-full h-80 object-cover cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() => openLightbox(slideIdx * 3 + idx)}
+                      onClick={() => openLightbox(0)}
                     />
-                  ))}
-                </div>
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-3 gap-2">
+                    {slide.map((image, idx) => {
+                      // Calculate the global image index
+                      const globalIdx = showPrimaryOnly && slideIdx > 0 
+                        ? 1 + (slideIdx - 1) * 3 + idx 
+                        : slideIdx * 3 + idx;
+                      return (
+                        <img 
+                          key={idx}
+                          src={image} 
+                          alt={`${room.name} - Photo ${globalIdx + 1}`}
+                          className="w-full h-80 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                          onClick={() => openLightbox(globalIdx)}
+                        />
+                      );
+                    })}
+                  </div>
+                )}
               </div>
             ))}
           </div>
