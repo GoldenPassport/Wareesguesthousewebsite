@@ -69,10 +69,10 @@ export function RoomCard({ room }: RoomCardProps) {
     };
   }, [emblaApiDesktop, onSelectDesktop]);
 
-  // Group images into chunks of 6 for desktop
+  // Group images into chunks of 3 for desktop (1 row)
   const desktopSlides = [];
-  for (let i = 0; i < room.images.length; i += 6) {
-    desktopSlides.push(room.images.slice(i, i + 6));
+  for (let i = 0; i < room.images.length; i += 3) {
+    desktopSlides.push(room.images.slice(i, i + 3));
   }
 
   return (
@@ -122,9 +122,9 @@ export function RoomCard({ room }: RoomCardProps) {
                     <img 
                       key={idx}
                       src={image} 
-                      alt={`${room.name} - Photo ${slideIdx * 6 + idx + 1}`}
+                      alt={`${room.name} - Photo ${slideIdx * 3 + idx + 1}`}
                       className="w-full h-80 object-cover cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() => openLightbox(slideIdx * 6 + idx)}
+                      onClick={() => openLightbox(slideIdx * 3 + idx)}
                     />
                   ))}
                 </div>
