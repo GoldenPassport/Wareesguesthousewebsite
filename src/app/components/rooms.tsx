@@ -12,14 +12,9 @@ import roomWithMirror from 'figma:asset/b94d4d20d14168f3e5fed1c480d0c31daa2cf4cc
 import roomAmenitiesWide from 'figma:asset/7535206b35eef49ec344fb3a87c9dd37de145c2e.png';
 // Ground Floor Apartment images
 import apartmentCourtyard from 'figma:asset/324e60d5f107c135971d0a8fa4c0d84a3e7c6c01.png';
-import apartmentLivingRoom from 'figma:asset/351d3f8845ce3ca91a2dc0674b1bf5e82b63027a.png';
-import apartmentFullView from 'figma:asset/841cd18c9b53c51de2346a1af27be97c9c00cc3f.png';
-import apartmentKitchen from 'figma:asset/69de0ba210fe8ee33ccb991d65d44efb4de9d5f6.png';
-import apartmentBedroom from 'figma:asset/3571ead409000b8a9924c66d801b96158c6961ca.png';
-import apartmentBedDetail from 'figma:asset/041651d3fede3f41701b2f7b2e55d7f593c816b3.png';
+import apartmentBathroomShower from 'figma:asset/72d876f74c91ce72688e72932aa9f35c0d83320a.png';
 import apartmentInterior from 'figma:asset/f1ca437fd7cd6f33d58ff2036f9633294a8c0fdb.png';
 import apartmentBathroom from 'figma:asset/0f06e42f756e4a03ddd2f7414c96f4e056f1de5f.png';
-import apartmentBathroomShower from 'figma:asset/72d876f74c91ce72688e72932aa9f35c0d83320a.png';
 
 export function Rooms() {
   const { t } = useLanguage();
@@ -29,7 +24,7 @@ export function Rooms() {
     description: roomType.description,
     images: index === 0 
       ? [roomWithMirror, kingBedRoom, roomAmenitiesWide, balconySeating, balconyView, bathroomShower]
-      : [apartmentCourtyard, apartmentLivingRoom, apartmentFullView, apartmentKitchen, apartmentBedroom, apartmentBedDetail, apartmentInterior, apartmentBathroom, apartmentBathroomShower],
+      : [apartmentCourtyard, apartmentBathroomShower, apartmentInterior, apartmentBathroom], // Ground Floor Apartment - add new images here when uploaded
     features: roomType.features
   }));
   
