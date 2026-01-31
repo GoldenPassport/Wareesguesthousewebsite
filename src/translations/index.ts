@@ -1124,37 +1124,6 @@ export const translations = {
               tip: "เริ่มประมาณ 4 โมงเย็นวันอาทิตย์เท่านั้น"
             }
           ]
-        },
-        {
-          name: "Local Market & Cook",
-          description: "ช้อปปิ้งแบบคนท้องถิ่นและเรียนทำอาหารไทย",
-          purpose: "ประสบการณ์ตรง อาหารแท้ การดื่มด่ำวัฒนธรรม",
-          stops: [
-            {
-              name: "Fresh Market (Talad Sod)",
-              time: "30 min",
-              activity: "เที่ยวชมตลาดสดไทยพร้อมวัตถุดิบแปลกใหม่",
-              tip: "ชิมตัวอย่างผลไม้เขตร้อนที่ไม่เคยเห็น"
-            },
-            {
-              name: "Spice & Herb Stall",
-              time: "15 min",
-              activity: "เรียนรู้เกี่ยวกับเครื่องปรุงไทย - ตะไคร้ ข่า ใบมะกรูด",
-              tip: "ซื้อชุดน้ำพริกแกงเล็กๆ กลับบ้าน"
-            },
-            {
-              name: "Quick Cooking Class / Demo",
-              time: "45 min",
-              activity: "เรียนทำผัดไทยหรือแกงเขียวหวานง่ายๆ",
-              tip: "เกสต์เฮาส์หลายแห่งมีบริการนี้ - ถามแอนนาได้!"
-            },
-            {
-              name: "Beachside Picnic",
-              time: "30 min",
-              activity: "ทานอาหารที่ทำเองที่หาดกะตะ",
-              tip: "นำเสื่อมาและทำปิกนิกริมหาดเล็กๆ"
-            }
-          ]
         }
       ]
     },
@@ -1346,7 +1315,7 @@ export const translations = {
       ratingText: "来自35条评论的评分",
       superhostTitle: "超赞房东",
       superhostYears: "Anna • 10年房东经验",
-      checkInTitle: "卓越的入住体��",
+      checkInTitle: "卓越的入住体验",
       checkInDesc: "最近的客人给入住流程打了5星好评",
       locationTitle: "无与伦比的位置",
       locationDesc: "过去一年100%的客人给这个位置打了5星好评",
@@ -1475,7 +1444,7 @@ export const translations = {
       subtitle:
         "我们考虑了所有细节，让您的住宿舒适无忧。安娜和乔希很乐意帮助安排出租车、岛屿游览、餐厅推荐等！",
       items: [
-        { title: "空调", description: "在热带天气中���持凉爽" },
+        { title: "空调", description: "在热带天气中保持凉爽" },
         { title: "免费WiFi", description: "高速互联网接入" },
         { title: "冰箱", description: "保持饮料和零食冷藏" },
         {
@@ -1531,7 +1500,7 @@ export const translations = {
       courtyard: "宾馆庭院",
       courtyardDesc: "一个宁静而温馨的空间，供您放松和享受",
       entrance: "宾馆入口",
-      entranceDesc: "一个温馨而迷人的入口，通向您新的���外之家",
+      entranceDesc: "一个温馨而迷人的入口，通向您新的海外之家",
       ctaTitle: "准备好创造自己的回忆了吗？",
       ctaDesc:
         "加入Waree家族，在普吉岛最美丽的地方之一体验正宗的泰式热情好客",
@@ -1639,17 +1608,6 @@ export const translations = {
             { name: "Local Markets", time: "35 min", activity: "品尝摊贩的煎饼、沙爹和新鲜水果", tip: "温和讨价还价并微笑 - 价格灵活" },
             { name: "Dessert at Torry's Ice Cream", time: "20 min", activity: "以独特的泰式冰淇淋口味结束", tip: "椰子灰或泰茶口味必试" },
             { name: "Sunday Walking Street (Weekend Only)", time: "10 min", activity: "周日来访可浏览工艺品和街头表演", tip: "仅周日下午4点左右开始" }
-          ]
-        },
-        {
-          name: "Local Market & Cook",
-          description: "像当地人一样购物并学习烹饪泰国菜",
-          purpose: "实践体验、正宗美食、文化沉浸",
-          stops: [
-            { name: "Fresh Market (Talad Sod)", time: "30 min", activity: "游览真正的泰国湿市场，异国食材", tip: "尝试你从未见过的热带水果样品" },
-            { name: "Spice & Herb Stall", time: "15 min", activity: "了解泰式烹饪要素 - 香茅、南姜、青柠叶", tip: "买一套小咖喱酱带回家" },
-            { name: "Quick Cooking Class / Demo", time: "45 min", activity: "向当地厨师学习简��的泰式炒面或绿咖喱", tip: "许多宾馆提供此服务 - 可以问Anna安��！" },
-            { name: "Beachside Picnic", time: "30 min", activity: "在附近的卡塔海滩享用你煮的食物", tip: "带上垫子，来个小型海滩野餐" }
           ]
         }
       ]
@@ -1798,7 +1756,7 @@ export const translations = {
       budget:
         'Как мы уже сказали, мы просто обычная семья, управляющая нашим небольшим, расслабленным гестхаусом/хоумстеем. Мы считаем себя <strong>"2 звезды" / бюджетным вариантом</strong>.',
       rightForYouTitle:
-        "✨ Мы думаем, что мы вам понравимся, если в��:",
+        "✨ Мы думаем, что мы вам понравимся, если вы:",
       rightForYou: [
         "Хотите более уникальный и местный опыт",
         "Наслаждаетесь ощущением части семьи, знакомством с новыми людьми и заведением новых друзей",
@@ -1812,7 +1770,7 @@ export const translations = {
         "Очень требовательны к типам кроватей, подушкам или полотенцам",
         "Нужно быть очень близко к пляжу",
         "Просто нужно место для сна без местного опыта",
-        "Чувствительны к реалиям развивающейся стр��ны (периодические отключения света, насекомые, гекконы и т. д.)",
+        "Чувствительны к реалиям развивающейся страны (периодические отключения света, насекомые, гекконы и т. д.)",
         "Аллергия на кошек или не любите кошек",
       ],
       hostsPhotoAlt:
@@ -1882,11 +1840,11 @@ export const translations = {
           author: "Andreas, Airbnb",
         },
         {
-          text: "Анна очень милая, добрая, отзывчивая и дружелюбная. Номера ��ействительно чистые и удобные. Настоятельно рекомендую!",
+          text: "Анна очень милая, добрая, отзывчивая и дружелюбная. Номера действительно чистые и удобные. Настоятельно рекомендую!",
           author: "Rosa, Airbnb",
         },
         {
-          text: "Вероятно, самый д��ужелюбный владелец гестхауса, которого мы встретили за всю нашу поездку. Мы чувствовали себя как дома.",
+          text: "Вероятно, самый дружелюбный владелец гестхауса, которого мы встретили за всю нашу поездку. Мы чувствовали себя как дома.",
           author: "Michael, TripAdvisor",
         },
         {
@@ -1973,7 +1931,7 @@ export const translations = {
     amenities: {
       title: "Всё, что вам нужно",
       subtitle:
-        "Мы продумали все детали, чтобы ваше пребывание было комфортным и беззаботным. Кроме того, Анна и Джош всегда рады помочь организовать такси, поездки на острова, порекомендовать рестораны �� многое другое!",
+        "Мы продумали все детали, чтобы ваше пребывание было комфортным и беззаботным. Кроме того, Анна и Джош всегда рады помочь организовать такси, поездки на острова, порекомендовать рестораны и многое другое!",
       items: [
         {
           title: "Кондиционер",
@@ -2045,7 +2003,7 @@ export const translations = {
         "Потрясающие виды, кристально чистая вода и мирная островная жизнь",
       explore: "Исследуйте остров",
       exploreDesc:
-        "Откройте для себя захватывающие дух смотровые площадки и скрытые ��емчужины вокруг Пхукета",
+        "Откройте для себя захватывающие дух смотровые площадки и скрытые жемчужины вокруг Пхукета",
       familyFun: "Семейное веселье",
       familyFunDesc:
         "Аквапарки, достопримечательности и развлечения для всех возрастов поблизости",
@@ -2122,7 +2080,7 @@ export const translations = {
     },
     // 2-Hour Adventures  
     adventures: {
-      title: "2-час��вые приключения",
+      title: "2-часовые приключения",
       subtitle: "Веселые мини-поездки идеально подходят для утреннего или дневного отдыха",
       duration: "~2 часа",
       trips: [
@@ -2130,7 +2088,7 @@ export const translations = {
             { name: "Karon Viewpoint", time: "30 мин", activity: "Панорамные виды трёх заливов", tip: "Приезжайте за 30 минут до заката" },
             { name: "Rawai Seafood Market", time: "45 мин", activity: "Выберите морепродукты и приготовьте на месте", tip: "Попробуйте креветки на гриле" },
             { name: "Nai Harn Beach Sunset", time: "30 мин", activity: "Наблюдайте закат с ногами в песке", tip: "Купите кокос у продавцов" },
-            { name: "Chalong Night Market", time: "15 мин", activity: "Десер�� - попробуйте манго с рисом", tip: "Отлично для сувениров" }
+            { name: "Chalong Night Market", time: "15 мин", activity: "Десерт - попробуйте манго с рисом", tip: "Отлично для сувениров" }
           ]},
         { name: "Temple & Culture Trail", description: "Исследуйте духовную сторону Пхукета", purpose: "Фотография, культура и спокойствие", stops: [
             { name: "Wat Chalong Temple", time: "40 мин", activity: "Самый важный храм Пхукета", tip: "Скромная одежда - закройте плечи и колени" },
@@ -2150,12 +2108,6 @@ export const translations = {
             { name: "Local Markets", time: "35 мин", activity: "Пробуйте роти, сатай и свежие фрукты", tip: "Торгуйтесь мягко и улыбайтесь" },
             { name: "Dessert at Torry's Ice Cream", time: "20 мин", activity: "Уникальные тайские вкусы мороженого", tip: "Кокосовый пепел или тайский чай обязательно" },
             { name: "Sunday Walking Street (Weekend Only)", time: "10 мин", activity: "Ремесла и уличные выступления по воскресеньям", tip: "Начинается около 16:00 только по воскресеньям" }
-          ]},
-        { name: "Local Market & Cook", description: "Покупки как местные и кулинарный урок", purpose: "Практический опыт, настоящая еда, культурное погружение", stops: [
-            { name: "Fresh Market (Talad Sod)", time: "30 мин", activity: "Настоящий тайский рынок с экзотическими ингредиентами", tip: "Попробуйте тропические фрукты, которые никогда не видели" },
-            { name: "Spice & Herb Stall", time: "15 мин", activity: "Узнайте о тайских специях - лемонграсс, галангал, лайм", tip: "Купите набор карри пасты домой" },
-            { name: "Quick Cooking Class / Demo", time: "45 мин", activity: "Простой урок пад тай или зелёного карри", tip: "Многие гостевые дома предлагают это - спросите Анну!" },
-            { name: "Beachside Picnic", time: "30 мин", activity: "Наслаждайтесь приготовленным на пляже Ката", tip: "Принесите коврик и устройте мини-пикник" }
           ]}
       ]
     },
@@ -2201,7 +2153,7 @@ export const translations = {
       privateDuration: "45-60 минут",
       localTransportTitle: "🛵 Местный транспорт",
       localTransportDesc:
-        "Тук-туки и мототакси доступны для коротких поездок по пляжу ��ата.",
+        "Тук-туки и мототакси доступны для коротких поездок по пляжу Ката.",
       localCost: "Зависит от расстояния",
       localTip: "Всегда договаривайтесь о цене заранее",
       helpTitle: "Нужна помощь с организацией транспорта?",
@@ -2642,8 +2594,7 @@ export const translations = {
         { name: "Sunset & Street Food Tour", description: "Sonnenuntergang und Phukets bestes Street Food", purpose: "Fotografie und lokale Aromen", stops: [{ name: "Karon Viewpoint", time: "30 Min", activity: "Panoramablick auf drei Buchten", tip: "30 Min vor Sonnenuntergang ankommen" }, { name: "Rawai Seafood Market", time: "45 Min", activity: "Frische Meeresfrüchte auswählen und vor Ort kochen lassen", tip: "Probieren Sie die gegrillten Garnelen" }, { name: "Nai Harn Beach Sunset", time: "30 Min", activity: "Sonnenuntergang mit Füßen im Sand", tip: "Kokosnuss von Verkäufern holen" }, { name: "Chalong Night Market", time: "15 Min", activity: "Dessert-Stopp - Mango Sticky Rice", tip: "Auch gut für Last-Minute-Souvenirs" }]},
         { name: "Temple & Culture Trail", description: "Entdecken Sie Phukets spirituelle Seite", purpose: "Fotografie, Kultur und friedliche Momente", stops: [{ name: "Wat Chalong Temple", time: "40 Min", activity: "Phukets wichtigster buddhistischer Tempel", tip: "Bescheiden kleiden - Schultern und Knie bedecken" }, { name: "Big Buddha", time: "40 Min", activity: "45-Meter-Marmorstatue", tip: "360°-Blick auf die Insel von oben" }, { name: "Local Coffee Shop", time: "20 Min", activity: "Thai-Eiskaffee-Pause", tip: "Traditionellen Kopi probieren - stark und süß" }, { name: "Karon Temple (Quick Stop)", time: "20 Min", activity: "Kleiner lokaler Tempel", tip: "Meist ruhig - perfekt für Reflexion" }]},
         { name: "Hidden Beaches Hopper", description: "Entdecken Sie geheime Orte", purpose: "Strandfotos, Schwimmen und lokales Essen", stops: [{ name: "Ya Nui Beach", time: "40 Min", activity: "Versteckte Bucht - perfekt zum Schnorcheln", tip: "Schnorchelausrüstung mitbringen" }, { name: "Ao Sane Beach", time: "30 Min", activity: "Felsenstrand mit kristallklarem Wasser", tip: "Besser zum Fotografieren als zum Schwimmen" }, { name: "Nui Beach Restaurant", time: "30 Min", activity: "Thai-Mittagessen am Strand", tip: "Gebratener Reis mit Ananas in einer Ananas bestellen!" }, { name: "Windmill Viewpoint", time: "20 Min", activity: "Panoramafoto von Süd-Phuket", tip: "Weniger überfüllt als Promthep Cape" }]},
-        { name: "Old Town Food Walk", description: "Historische Straßen treffen authentische Phuket-Aromen", purpose: "Street Food, Architekturfotografie, lokale Kultur", stops: [{ name: "Thalang Road", time: "30 Min", activity: "Farbenfrohe chinesisch-portugiesische Gebäude", tip: "Suchen Sie nach Street-Art-Wandgemälden" }, { name: "Kopitiam by Wilai", time: "25 Min", activity: "Traditionelles Phuket-Frühstück - Dim Sum & Kaffee", tip: "Hokkien-Nudeln probieren - lokale Spezialität" }, { name: "Local Markets", time: "35 Min", activity: "Roti, Satay und frische Früchte probieren", tip: "Sanft verhandeln und lächeln" }, { name: "Dessert at Torry's Ice Cream", time: "20 Min", activity: "Einzigartige Thai-inspirierte Eissorten", tip: "Kokosnussasche oder Thai-Tee - ein Muss" }, { name: "Sunday Walking Street (Weekend Only)", time: "10 Min", activity: "Kunsthandwerk und Straßenaufführungen sonntags", tip: "Beginnt sonntags um 16 Uhr" }]},
-        { name: "Local Market & Cook", description: "Wie ein Einheimischer einkaufen und thailändisch kochen lernen", purpose: "Praktische Erfahrung, authentisches Essen, kulturelles Eintauchen", stops: [{ name: "Fresh Market (Talad Sod)", time: "30 Min", activity: "Echter thailändischer Nassmarkt mit exotischen Zutaten", tip: "Probieren Sie tropische Früchte, die Sie noch nie gesehen haben" }, { name: "Spice & Herb Stall", time: "15 Min", activity: "Über thailändische Gewürze lernen - Zitronengras, Galgant, Kaffir-Limette", tip: "Kleines Curry-Pasten-Set kaufen" }, { name: "Quick Cooking Class / Demo", time: "45 Min", activity: "Einfache Pad-Thai- oder Green-Curry-Lektion", tip: "Viele Gästehäuser bieten dies an - fragen Sie Anna!" }, { name: "Beachside Picnic", time: "30 Min", activity: "Genießen Sie das Gekochte am Kata Beach", tip: "Matte mitbringen und Mini-Strandpicknick machen" }]}
+        { name: "Old Town Food Walk", description: "Historische Straßen treffen authentische Phuket-Aromen", purpose: "Street Food, Architekturfotografie, lokale Kultur", stops: [{ name: "Thalang Road", time: "30 Min", activity: "Farbenfrohe chinesisch-portugiesische Gebäude", tip: "Suchen Sie nach Street-Art-Wandgemälden" }, { name: "Kopitiam by Wilai", time: "25 Min", activity: "Traditionelles Phuket-Frühstück - Dim Sum & Kaffee", tip: "Hokkien-Nudeln probieren - lokale Spezialität" }, { name: "Local Markets", time: "35 Min", activity: "Roti, Satay und frische Früchte probieren", tip: "Sanft verhandeln und lächeln" }, { name: "Dessert at Torry's Ice Cream", time: "20 Min", activity: "Einzigartige Thai-inspirierte Eissorten", tip: "Kokosnussasche oder Thai-Tee - ein Muss" }, { name: "Sunday Walking Street (Weekend Only)", time: "10 Min", activity: "Kunsthandwerk und Straßenaufführungen sonntags", tip: "Beginnt sonntags um 16 Uhr" }]}
       ]
     },
     // Location
@@ -3127,8 +3078,7 @@ export const translations = {
         { name: "Sunset & Street Food Tour", description: "Tramonto e il miglior cibo di strada di Phuket", purpose: "Fotografia e sapori locali", stops: [{ name: "Karon Viewpoint", time: "30 min", activity: "Vista panoramica di tre baie", tip: "Arrivare 30 min prima del tramonto" }, { name: "Rawai Seafood Market", time: "45 min", activity: "Scegliere frutti di mare freschi e farli cucinare sul posto", tip: "Provare i gamberi alla griglia" }, { name: "Nai Harn Beach Sunset", time: "30 min", activity: "Guardare il tramonto con i piedi nella sabbia", tip: "Prendere una noce di cocco dai venditori" }, { name: "Chalong Night Market", time: "15 min", activity: "Sosta dessert - provare mango sticky rice", tip: "Ottimo anche per souvenir" }]},
         { name: "Temple & Culture Trail", description: "Esplorare il lato spirituale di Phuket", purpose: "Fotografia, cultura e momenti di pace", stops: [{ name: "Wat Chalong Temple", time: "40 min", activity: "Tempio buddista più importante di Phuket", tip: "Vestirsi modestamente - coprire spalle e ginocchia" }, { name: "Big Buddha", time: "40 min", activity: "Statua di marmo alta 45 metri", tip: "Vista a 360° dell'isola dall'alto" }, { name: "Local Coffee Shop", time: "20 min", activity: "Pausa caffè ghiacciato tailandese", tip: "Provare il kopi tradizionale - forte e dolce" }, { name: "Karon Temple (Quick Stop)", time: "20 min", activity: "Piccolo tempio locale", tip: "Solitamente tranquillo - perfetto per la riflessione" }]},
         { name: "Hidden Beaches Hopper", description: "Scoprire luoghi segreti lontano dalle folle", purpose: "Foto di spiaggia, nuoto e cibo locale", stops: [{ name: "Ya Nui Beach", time: "40 min", activity: "Piccola baia nascosta - perfetta per lo snorkeling", tip: "Portare attrezzatura da snorkeling" }, { name: "Ao Sane Beach", time: "30 min", activity: "Spiaggia rocciosa con acqua cristallina", tip: "Meglio per le foto che per nuotare" }, { name: "Nui Beach Restaurant", time: "30 min", activity: "Pranzo tailandese in spiaggia con frutti di mare freschi", tip: "Ordinare riso fritto all'ananas in un ananas!" }, { name: "Windmill Viewpoint", time: "20 min", activity: "Foto panoramica del sud di Phuket", tip: "Meno affollato di Promthep Cape" }]},
-        { name: "Old Town Food Walk", description: "Strade storiche incontrano i sapori autentici di Phuket", purpose: "Cibo di strada, fotografia architettonica, cultura locale", stops: [{ name: "Thalang Road", time: "30 min", activity: "Edifici sino-portoghesi colorati", tip: "Cercare i murales di street art" }, { name: "Kopitiam by Wilai", time: "25 min", activity: "Colazione tradizionale di Phuket - dim sum e caffè", tip: "Provare i noodles hokkien - specialità locale" }, { name: "Local Markets", time: "35 min", activity: "Assaggiare roti, satay e frutta fresca", tip: "Contrattare gentilmente e sorridere" }, { name: "Dessert at Torry's Ice Cream", time: "20 min", activity: "Gusti unici di gelato ispirati alla Thailandia", tip: "Cenere di cocco o tè tailandese da provare" }, { name: "Sunday Walking Street (Weekend Only)", time: "10 min", activity: "Artigianato e spettacoli di strada la domenica", tip: "Inizia intorno alle 16:00 solo la domenica" }]},
-        { name: "Local Market & Cook", description: "Fare la spesa come un locale e imparare a cucinare tailandese", purpose: "Esperienza pratica, cibo autentico, immersione culturale", stops: [{ name: "Fresh Market (Talad Sod)", time: "30 min", activity: "Vero mercato tailandese con ingredienti esotici", tip: "Assaggiare frutti tropicali mai visti" }, { name: "Spice & Herb Stall", time: "15 min", activity: "Conoscere le spezie thailandesi - citronella, galanga, lime kaffir", tip: "Comprare un piccolo kit di pasta al curry" }, { name: "Quick Cooking Class / Demo", time: "45 min", activity: "Lezione semplice di pad thai o curry verde", tip: "Molte guest house offrono questo - chiedere ad Anna!" }, { name: "Beachside Picnic", time: "30 min", activity: "Gustare ciò che hai cucinato a Kata Beach", tip: "Portare un tappetino e fare un mini-picnic in spiaggia" }]}
+        { name: "Old Town Food Walk", description: "Strade storiche incontrano i sapori autentici di Phuket", purpose: "Cibo di strada, fotografia architettonica, cultura locale", stops: [{ name: "Thalang Road", time: "30 min", activity: "Edifici sino-portoghesi colorati", tip: "Cercare i murales di street art" }, { name: "Kopitiam by Wilai", time: "25 min", activity: "Colazione tradizionale di Phuket - dim sum e caffè", tip: "Provare i noodles hokkien - specialità locale" }, { name: "Local Markets", time: "35 min", activity: "Assaggiare roti, satay e frutta fresca", tip: "Contrattare gentilmente e sorridere" }, { name: "Dessert at Torry's Ice Cream", time: "20 min", activity: "Gusti unici di gelato ispirati alla Thailandia", tip: "Cenere di cocco o tè tailandese da provare" }, { name: "Sunday Walking Street (Weekend Only)", time: "10 min", activity: "Artigianato e spettacoli di strada la domenica", tip: "Inizia intorno alle 16:00 solo la domenica" }]}
       ]
     },
     // Location
@@ -3612,8 +3562,7 @@ export const translations = {
         { name: "Sunset & Street Food Tour", description: "Solnedgång och Phukets bästa gatumat", purpose: "Fotografering och lokala smaker", stops: [{ name: "Karon Viewpoint", time: "30 min", activity: "Panoramautsikt över tre vikar", tip: "Kom 30 min före solnedgången" }, { name: "Rawai Seafood Market", time: "45 min", activity: "Välj färska skaldjur och låt dem lagas på plats", tip: "Prova de grillade räkorna" }, { name: "Nai Harn Beach Sunset", time: "30 min", activity: "Titta på solnedgången med fötterna i sanden", tip: "Ta en kokosnöt från säljare" }, { name: "Chalong Night Market", time: "15 min", activity: "Dessertstopp - prova mango sticky rice", tip: "Bra för sista minuten-souvenirer också" }]},
         { name: "Temple & Culture Trail", description: "Utforska Phukets andliga sida", purpose: "Fotografering, kultur och lugna stunder", stops: [{ name: "Wat Chalong Temple", time: "40 min", activity: "Phukets viktigaste buddhistiska tempel", tip: "Klä dig anständigt - täck axlar och knän" }, { name: "Big Buddha", time: "40 min", activity: "45 meter hög marmorstaty", tip: "360° utsikt över ön uppifrån" }, { name: "Local Coffee Shop", time: "20 min", activity: "Thai iskaffe-paus", tip: "Prova traditionell kopi - stark och söt" }, { name: "Karon Temple (Quick Stop)", time: "20 min", activity: "Litet lokalt tempel", tip: "Vanligtvis lugnt - perfekt för reflektion" }]},
         { name: "Hidden Beaches Hopper", description: "Upptäck hemliga platser bort från folkmassorna", purpose: "Strandfotografering, simning och lokal mat", stops: [{ name: "Ya Nui Beach", time: "40 min", activity: "Liten gömd vik - perfekt för snorkling", tip: "Ta med snorkelutrustning" }, { name: "Ao Sane Beach", time: "30 min", activity: "Stenstrand med kristallklart vatten", tip: "Bättre för foton än simning" }, { name: "Nui Beach Restaurant", time: "30 min", activity: "Thai lunch vid stranden med färska skaldjur", tip: "Beställ ananas stekt ris i en ananas!" }, { name: "Windmill Viewpoint", time: "20 min", activity: "Panoramafoto av södra Phuket", tip: "Mindre folkmassor än Promthep Cape" }]},
-        { name: "Old Town Food Walk", description: "Historiska gator möter autentiska Phuket-smaker", purpose: "Gatumat, arkitekturfotografering, lokal kultur", stops: [{ name: "Thalang Road", time: "30 min", activity: "Färgglada kinesisk-portugisiska byggnader", tip: "Leta efter street art-muralmålningar" }, { name: "Kopitiam by Wilai", time: "25 min", activity: "Traditionell Phuket-frukost - dim sum & kaffe", tip: "Prova hokkien-nudlar - lokal specialitet" }, { name: "Local Markets", time: "35 min", activity: "Prova roti, satay och färsk frukt", tip: "Pruta försiktigt och le" }, { name: "Dessert at Torry's Ice Cream", time: "20 min", activity: "Unika thaiinspirerade glassmaker", tip: "Kokosaska eller thai-te är ett måste" }, { name: "Sunday Walking Street (Weekend Only)", time: "10 min", activity: "Bläddra hantverk och gatuföreställningar på söndagar", tip: "Börjar runt 16:00 endast söndagar" }]},
-        { name: "Local Market & Cook", description: "Handla som en lokal och lär dig laga thailändsk mat", purpose: "Praktisk erfarenhet, autentisk mat, kulturell fördjupning", stops: [{ name: "Fresh Market (Talad Sod)", time: "30 min", activity: "Äkta thailändsk marknad med exotiska ingredienser", tip: "Prova prover av tropisk frukt du aldrig sett" }, { name: "Spice & Herb Stall", time: "15 min", activity: "Lär dig om thailändska kryddor - citrongräs, galanga, kaffirlime", tip: "Köp ett litet currypasta-kit hem" }, { name: "Quick Cooking Class / Demo", time: "45 min", activity: "Enkel pad thai eller grön curry-lektion", tip: "Många pensionat erbjuder detta - fråga Anna!" }, { name: "Beachside Picnic", time: "30 min", activity: "Njut av det du lagat vid Kata Beach", tip: "Ta med en matta och gör en mini-strandpicknick" }]}
+        { name: "Old Town Food Walk", description: "Historiska gator möter autentiska Phuket-smaker", purpose: "Gatumat, arkitekturfotografering, lokal kultur", stops: [{ name: "Thalang Road", time: "30 min", activity: "Färgglada kinesisk-portugisiska byggnader", tip: "Leta efter street art-muralmålningar" }, { name: "Kopitiam by Wilai", time: "25 min", activity: "Traditionell Phuket-frukost - dim sum & kaffe", tip: "Prova hokkien-nudlar - lokal specialitet" }, { name: "Local Markets", time: "35 min", activity: "Prova roti, satay och färsk frukt", tip: "Pruta försiktigt och le" }, { name: "Dessert at Torry's Ice Cream", time: "20 min", activity: "Unika thaiinspirerade glassmaker", tip: "Kokosaska eller thai-te är ett måste" }, { name: "Sunday Walking Street (Weekend Only)", time: "10 min", activity: "Bläddra hantverk och gatuföreställningar på söndagar", tip: "Börjar runt 16:00 endast söndagar" }]}
       ]
     },
     // Location
@@ -4098,8 +4047,7 @@ export const translations = {
         { name: "Sunset & Street Food Tour", description: "Auringonlasku ja Phuketin paras katukatu", purpose: "Valokuvaus ja paikalliset maut", stops: [{ name: "Karon Viewpoint", time: "30 min", activity: "Panoraamanäkymä kolmeen lahtteen", tip: "Saavu 30 min ennen auringonlaskua" }, { name: "Rawai Seafood Market", time: "45 min", activity: "Valitse tuoreet merenelävät ja anna valmistaa paikan päällä", tip: "Maista grillattuja katkarapuja" }, { name: "Nai Harn Beach Sunset", time: "30 min", activity: "Katso auringonlaskua jalat hiekassa", tip: "Nappaa kookospähkinä myyjiltä" }, { name: "Chalong Night Market", time: "15 min", activity: "Jälkiruokapysähdys - maista mango sticky rice", tip: "Hyvä myös viime hetken matkamuistoille" }]},
         { name: "Temple & Culture Trail", description: "Tutki Phuketin henkistä puolta", purpose: "Valokuvaus, kulttuuri ja rauhallisia hetkiä", stops: [{ name: "Wat Chalong Temple", time: "40 min", activity: "Phuketin tärkein buddhalainen temppeli", tip: "Pukeudu vaatimattomasti - peitä hartiat ja polvet" }, { name: "Big Buddha", time: "40 min", activity: "45 metrin korkuinen marmoripatsas", tip: "360° näkymä saaresta ylhäältä" }, { name: "Local Coffee Shop", time: "20 min", activity: "Thai-jääkahvitauko", tip: "Maista perinteinen kopi - vahva ja makea" }, { name: "Karon Temple (Quick Stop)", time: "20 min", activity: "Pieni paikallinen temppeli", tip: "Yleensä hiljainen - täydellinen pohdintaan" }]},
         { name: "Hidden Beaches Hopper", description: "Löydä salaiset paikat kaukana väkijoukosta", purpose: "Rantavalokuvaus, uinti ja paikallinen ruoka", stops: [{ name: "Ya Nui Beach", time: "40 min", activity: "Pieni piilotettu lahti - täydellinen snorklailuun", tip: "Ota snorklausvarusteet mukaan" }, { name: "Ao Sane Beach", time: "30 min", activity: "Kiviranta kirkkaalla vedellä", tip: "Parempi valokuvaukseen kuin uintiin" }, { name: "Nui Beach Restaurant", time: "30 min", activity: "Thai-lounas rannalla tuoreilla merenelvillä", tip: "Tilaa ananaspaistettua riisiä ananaksessa!" }, { name: "Windmill Viewpoint", time: "20 min", activity: "Panoraamavalokuva eteläisestä Phuketista", tip: "Vähemmän ruuhkaa kuin Promthep Cape" }]},
-        { name: "Old Town Food Walk", description: "Historialliset kadut kohtaavat aidot Phuket-maut", purpose: "Katumatua, arkkitehtuurivalokuvaus, paikallinen kulttuuri", stops: [{ name: "Thalang Road", time: "30 min", activity: "Värikkäät kiinalais-portugalilaiset rakennukset", tip: "Etsi katuteidemuuraalia" }, { name: "Kopitiam by Wilai", time: "25 min", activity: "Perinteinen Phuket-aamiainen - dim sum & kahvi", tip: "Maista hokkien-nuudeleita - paikallinen erikoisuus" }, { name: "Local Markets", time: "35 min", activity: "Maista rotia, satayta ja tuoreita hedelmiä", tip: "Tinkaa lempeästi ja hymyile" }, { name: "Dessert at Torry's Ice Cream", time: "20 min", activity: "Ainutlaatuiset thai-inspiroitut jäätelömaut", tip: "Kookostuhka tai thai-tee on pakko maistaa" }, { name: "Sunday Walking Street (Weekend Only)", time: "10 min", activity: "Selaa käsitöitä ja katuesiintymiä sunnuntaisin", tip: "Alkaa noin klo 16 vain sunnuntaisin" }]},
-        { name: "Local Market & Cook", description: "Osta kuin paikallinen ja opi valmistamaan thaimaalaista ruokaa", purpose: "Käytännön kokemus, aito ruoka, kulttuurinen uppoutuminen", stops: [{ name: "Fresh Market (Talad Sod)", time: "30 min", activity: "Aito thaimaalainen tori eksoottisilla ainesosilla", tip: "Maista trooppisia hedelmiä, joita et ole koskaan nähnyt" }, { name: "Spice & Herb Stall", time: "15 min", activity: "Opi thaimaalaisista mausteista - sitruunaruoho, galanga, kaffirlime", tip: "Osta pieni currypasta-sarja kotiin" }, { name: "Quick Cooking Class / Demo", time: "45 min", activity: "Yksinkertainen pad thai tai vihreä curry -oppitunti", tip: "Monet guesthouset tarjoavat tätä - kysy Annalta!" }, { name: "Beachside Picnic", time: "30 min", activity: "Nauti tekemästäsi ruoasta Kata Beachilla", tip: "Ota matto mukaan ja tee mini-rantapiknik" }]}
+        { name: "Old Town Food Walk", description: "Historialliset kadut kohtaavat aidot Phuket-maut", purpose: "Katumatua, arkkitehtuurivalokuvaus, paikallinen kulttuuri", stops: [{ name: "Thalang Road", time: "30 min", activity: "Värikkäät kiinalais-portugalilaiset rakennukset", tip: "Etsi katuteidemuuraalia" }, { name: "Kopitiam by Wilai", time: "25 min", activity: "Perinteinen Phuket-aamiainen - dim sum & kahvi", tip: "Maista hokkien-nuudeleita - paikallinen erikoisuus" }, { name: "Local Markets", time: "35 min", activity: "Maista rotia, satayta ja tuoreita hedelmiä", tip: "Tinkaa lempeästi ja hymyile" }, { name: "Dessert at Torry's Ice Cream", time: "20 min", activity: "Ainutlaatuiset thai-inspiroitut jäätelömaut", tip: "Kookostuhka tai thai-tee on pakko maistaa" }, { name: "Sunday Walking Street (Weekend Only)", time: "10 min", activity: "Selaa käsitöitä ja katuesiintymiä sunnuntaisin", tip: "Alkaa noin klo 16 vain sunnuntaisin" }]}
       ]
     },
     // Location
@@ -4146,7 +4094,7 @@ export const translations = {
       localTransportDesc:
         "Tuk-tukit ja moottoripyörätaksit saatavilla lyhyille matkoille Kata Beachin ympäristössä.",
       localCost: "Vaihtelee etäisyyden mukaan",
-      localTip: "Sovi aina hinnasta etuk��teen",
+      localTip: "Sovi aina hinnasta etukäteen",
       helpTitle:
         "Tarvitsetko apua kuljetuksen järjestämisessä?",
       helpDesc:
