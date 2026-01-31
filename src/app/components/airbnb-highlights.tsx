@@ -149,7 +149,10 @@ export function AirbnbHighlights() {
             target="_blank" 
             rel="noopener noreferrer"
             id="airbnb-booking-highlights"
-            onClick={() => trackEvent.bookingClick('airbnb')}
+            onClick={() => {
+              trackEvent.bookingClick('airbnb', 'airbnb_highlights');
+              trackEvent.ctaClick('Check Availability on Airbnb', 'airbnb_highlights', 'airbnb');
+            }}
             data-tracking-id="airbnb_highlights_cta"
             data-tracking-section="airbnb_highlights"
             data-tracking-platform="airbnb"

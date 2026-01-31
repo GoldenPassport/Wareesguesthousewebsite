@@ -1,9 +1,9 @@
-import { MapPin, Plane, Car, Navigation } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
-import { translations } from '@/translations';
 import { siteConfig } from '@/config/siteConfig';
-import { ChevronDown } from 'lucide-react';
+import { translations } from '@/translations';
+import { MapPin, Plane, Car, Coffee, ChevronDown, Navigation } from 'lucide-react';
 import { useState } from 'react';
+import { trackEvent } from '@/app/components/analytics';
 
 export function Location() {
   const { language } = useLanguage();
@@ -55,6 +55,11 @@ export function Location() {
                     href={siteConfig.location.googleMapsDirectionsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => {
+                      trackEvent.ctaClick('Get Directions', 'location', 'google_maps');
+                    }}
+                    data-tracking-id="location_google_maps_directions"
+                    data-tracking-section="location"
                     className="inline-flex items-center text-[#f58220] hover:text-[#d47020] mt-3 transition-colors text-base"
                   >
                     <Navigation className="w-4 h-4 mr-2" />
@@ -248,12 +253,24 @@ export function Location() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-4">
             <a
               href={`tel:${siteConfig.contact.phone.raw}`}
+              onClick={() => {
+                trackEvent.contactClick('phone', 'location');
+                trackEvent.phoneClick('location');
+              }}
+              data-tracking-id="location_phone_cta"
+              data-tracking-section="location"
               className="inline-block bg-[#0a3d3d] hover:bg-[#0a3d3d]/80 text-white px-8 py-3 sm:px-10 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
               {t.callButton}
             </a>
             <a
               href={`mailto:${siteConfig.contact.email}`}
+              onClick={() => {
+                trackEvent.contactClick('email', 'location');
+                trackEvent.emailClick('location');
+              }}
+              data-tracking-id="location_email_cta"
+              data-tracking-section="location"
               className="inline-block bg-[#f58220] hover:bg-[#d47020] text-white px-8 py-3 sm:px-10 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
               {hero.emailButton}

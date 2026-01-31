@@ -155,6 +155,13 @@ export function Rooms() {
           </p>
           <a 
             href={`mailto:${siteConfig.contact.email}`}
+            onClick={() => {
+              trackEvent.contactClick('email', 'rooms');
+              trackEvent.emailClick('rooms_need_more_space');
+            }}
+            data-tracking-id="rooms_need_more_space_email"
+            data-tracking-section="rooms"
+            data-tracking-context="need_more_space"
             className="inline-block text-[#f58220] hover:text-[#d47020] transition-colors text-center break-all"
           >
             {siteConfig.contact.email}
@@ -167,7 +174,10 @@ export function Rooms() {
             target="_blank" 
             rel="noopener noreferrer"
             id="airbnb-booking-rooms"
-            onClick={() => trackEvent.bookingClick('airbnb')}
+            onClick={() => {
+              trackEvent.bookingClick('airbnb', 'rooms');
+              trackEvent.ctaClick('View Availability on Airbnb', 'rooms', 'airbnb');
+            }}
             data-tracking-id="rooms_section_cta"
             data-tracking-section="rooms"
             data-tracking-platform="airbnb"

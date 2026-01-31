@@ -76,7 +76,10 @@ export function Hero() {
           {/* Primary CTA - Email Us */}
           <a 
             href={`mailto:${siteConfig.contact.email}`}
-            onClick={() => trackEvent.contactClick('email')}
+            onClick={() => {
+              trackEvent.contactClick('email', 'hero');
+              trackEvent.emailClick('hero');
+            }}
             className="bg-[#b3dce6] hover:bg-[#9cc8d6] text-[#0a3d3d] px-8 py-4 sm:px-10 sm:py-4 rounded-full text-lg sm:text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-2xl text-center flex items-center justify-center gap-2"
           >
             <Mail className="w-5 h-5" />
@@ -90,7 +93,10 @@ export function Hero() {
               target="_blank" 
               rel="noopener noreferrer"
               id="airbnb-booking-hero"
-              onClick={() => trackEvent.bookingClick('airbnb')}
+              onClick={() => {
+                trackEvent.bookingClick('airbnb', 'hero');
+                trackEvent.ctaClick('Book on Airbnb', 'hero', 'airbnb');
+              }}
               data-tracking-id="hero_primary_cta"
               data-tracking-section="hero"
               data-tracking-platform="airbnb"
@@ -102,7 +108,10 @@ export function Hero() {
               href={siteConfig.reviews.tripadvisor.url}
               target="_blank" 
               rel="noopener noreferrer"
-              onClick={() => trackEvent.socialClick('tripadvisor')}
+              onClick={() => {
+                trackEvent.socialClick('tripadvisor', 'hero');
+                trackEvent.reviewView('tripadvisor');
+              }}
               className="text-white hover:text-[#b3dce6] text-base sm:text-lg transition-all duration-300 text-center underline underline-offset-4 sm:no-underline sm:bg-white/10 sm:backdrop-blur-sm sm:border sm:border-white/30 sm:hover:bg-white/20 sm:text-white sm:px-8 sm:py-4 sm:rounded-full"
             >
               {t.hero.reviewsButton}

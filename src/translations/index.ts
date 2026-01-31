@@ -394,7 +394,7 @@ export const translations = {
       feature4: "Direct messaging",
       quickTitle: "Quick Question?",
       quickDesc:
-        "Message us on Facebook, WhatsApp, Line, or call us for the fastest response!",
+        "Message us on Facebook, text, email or call us for the fastest response!",
       facebookBtn: "Facebook",
       whatsappBtn: "WhatsApp",
       lineBtn: "LINE",
@@ -807,7 +807,7 @@ export const translations = {
       feature4: "ส่งข้อความโดยตรง",
       quickTitle: "มีคำถามเร็วๆ ไหม?",
       quickDesc:
-        "ส่งข้อความหาเราบน Facebook, WhatsApp, Line หรือโทรหาเราเพื่อรับการตอบกลับที่เร็วที่สุด!",
+        "ส่งข้อความหาเราบน Facebook ส่งข้อความ อีเมล หรือโทรหาเราเพื่อรับการตอบกลับที่เร็วที่สุด!",
       facebookBtn: "Facebook",
       whatsappBtn: "WhatsApp",
       lineBtn: "LINE",
@@ -1187,7 +1187,7 @@ export const translations = {
       feature4: "直接消息",
       quickTitle: "有快速问题？",
       quickDesc:
-        "通过Facebook、WhatsApp、Line给我们留言，或致电我们获取最快回复！",
+        "通过Facebook、短信、电子邮件给我们留言，或致电我们获取最快回复！",
       facebookBtn: "Facebook",
       whatsappBtn: "WhatsApp",
       lineBtn: "LINE",
@@ -1615,7 +1615,7 @@ export const translations = {
       feature4: "Прямые сообщения",
       quickTitle: "Быстрый вопрос?",
       quickDesc:
-        "Напишите нам в Facebook, WhatsApp, Line или позвоните для самого быстрого ответа!",
+        "Напишите нам в Facebook, текстовое сообщение, электронную почту или позвоните для самого быстрого ответа!",
       facebookBtn: "Facebook",
       whatsappBtn: "WhatsApp",
       lineBtn: "LINE",
@@ -2045,7 +2045,7 @@ export const translations = {
       feature4: "Direktnachrichten",
       quickTitle: "Schnelle Frage?",
       quickDesc:
-        "Schreiben Sie uns auf Facebook, WhatsApp, Line oder rufen Sie uns an für die schnellste Antwort!",
+        "Schreiben Sie uns auf Facebook, per SMS, E-Mail oder rufen Sie uns an für die schnellste Antwort!",
       facebookBtn: "Facebook",
       whatsappBtn: "WhatsApp",
       lineBtn: "LINE",
@@ -2473,7 +2473,7 @@ export const translations = {
       feature4: "Messaggistica diretta",
       quickTitle: "Domanda Veloce?",
       quickDesc:
-        "Scrivici su Facebook, WhatsApp, Line o chiamaci per la risposta più veloce!",
+        "Scrivici su Facebook, per messaggio, email o chiamaci per la risposta più veloce!",
       facebookBtn: "Facebook",
       whatsappBtn: "WhatsApp",
       lineBtn: "LINE",
@@ -2897,7 +2897,7 @@ export const translations = {
       feature4: "Direktmeddelanden",
       quickTitle: "Snabb Fråga?",
       quickDesc:
-        "Skicka meddelande till oss på Facebook, WhatsApp, Line eller ring oss för snabbast svar!",
+        "Skicka meddelande till oss på Facebook, sms, e-post eller ring oss för snabbast svar!",
       facebookBtn: "Facebook",
       whatsappBtn: "WhatsApp",
       lineBtn: "LINE",
@@ -3327,7 +3327,7 @@ export const translations = {
       feature4: "Suoraviestit",
       quickTitle: "Nopea Kysymys?",
       quickDesc:
-        "Lähetä meille viesti Facebookissa, WhatsAppissa, Linessä tai soita meille nopeinta vastausta varten!",
+        "Lähetä meille viesti Facebookissa, tekstiviesti, sähköposti tai soita meille nopeinta vastausta varten!",
       facebookBtn: "Facebook",
       whatsappBtn: "WhatsApp",
       lineBtn: "LINE",

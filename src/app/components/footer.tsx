@@ -25,7 +25,10 @@ export function Footer() {
             <div className="space-y-2 sm:space-y-3">
               <a 
                 href={`mailto:${siteConfig.contact.email}`}
-                onClick={() => trackEvent.contactClick('email')}
+                onClick={() => {
+                  trackEvent.contactClick('email', 'footer');
+                  trackEvent.emailClick('footer');
+                }}
                 data-tracking-id="footer_email_link"
                 data-tracking-section="footer"
                 className="flex items-center gap-2 sm:gap-3 hover:text-[#f58220] transition-colors"
@@ -33,7 +36,16 @@ export function Footer() {
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-[#f58220] flex-shrink-0" />
                 <span className="text-white/80 text-sm sm:text-base whitespace-nowrap overflow-hidden text-ellipsis">{siteConfig.contact.email}</span>
               </a>
-              <a href={`tel:${siteConfig.contact.phone.raw}`} className="flex items-center space-x-2 sm:space-x-3 hover:text-[#f58220] transition-colors">
+              <a 
+                href={`tel:${siteConfig.contact.phone.raw}`} 
+                onClick={() => {
+                  trackEvent.contactClick('phone', 'footer');
+                  trackEvent.phoneClick('footer');
+                }}
+                data-tracking-id="footer_phone_link"
+                data-tracking-section="footer"
+                className="flex items-center space-x-2 sm:space-x-3 hover:text-[#f58220] transition-colors"
+              >
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-[#f58220] flex-shrink-0" />
                 <span className="text-white/80 text-sm sm:text-base">{siteConfig.contact.phone.display}</span>
               </a>
@@ -51,6 +63,11 @@ export function Footer() {
                 href={siteConfig.social.facebook.url}
                 target="_blank" 
                 rel="noopener noreferrer"
+                onClick={() => {
+                  trackEvent.socialClick('facebook', 'footer');
+                }}
+                data-tracking-id="footer_facebook_link"
+                data-tracking-section="footer"
                 className="flex items-center space-x-2 sm:space-x-3 hover:text-[#f58220] transition-colors group"
               >
                 <Facebook className="w-4 h-4 sm:w-5 sm:h-5 text-[#f58220]" />
@@ -70,6 +87,13 @@ export function Footer() {
             <div className="space-y-2 sm:space-y-3">
               <a 
                 href={`mailto:${siteConfig.contact.email}`}
+                onClick={() => {
+                  trackEvent.contactClick('email', 'footer');
+                  trackEvent.emailClick('footer');
+                  trackEvent.ctaClick('Email Us', 'footer', 'email');
+                }}
+                data-tracking-id="footer_email_cta"
+                data-tracking-section="footer"
                 className="inline-block bg-[#f58220] hover:bg-[#d47020] text-white px-4 sm:px-6 py-2 rounded-full transition-all duration-300 w-full text-center text-sm"
               >
                 {t.hero.emailButton}
@@ -79,7 +103,10 @@ export function Footer() {
                 target="_blank" 
                 rel="noopener noreferrer"
                 id="airbnb-booking-footer"
-                onClick={() => trackEvent.bookingClick('airbnb')}
+                onClick={() => {
+                  trackEvent.bookingClick('airbnb', 'footer');
+                  trackEvent.ctaClick('Airbnb', 'footer', 'airbnb');
+                }}
                 data-tracking-id="footer_link"
                 data-tracking-section="footer"
                 data-tracking-platform="airbnb"
@@ -91,6 +118,12 @@ export function Footer() {
                 href={siteConfig.reviews.tripadvisor.url}
                 target="_blank" 
                 rel="noopener noreferrer"
+                onClick={() => {
+                  trackEvent.socialClick('tripadvisor', 'footer');
+                  trackEvent.ctaClick('TripAdvisor', 'footer', 'tripadvisor');
+                }}
+                data-tracking-id="footer_tripadvisor_link"
+                data-tracking-section="footer"
                 className="inline-block bg-white/10 hover:bg-white/20 text-white border border-white/30 px-4 sm:px-6 py-2 rounded-full transition-all duration-300 w-full text-center text-sm"
               >
                 {t.footer.tripadvisor}

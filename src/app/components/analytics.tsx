@@ -30,6 +30,7 @@
 
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { track } from '@vercel/analytics';
 
 declare global {
   interface Window {
@@ -237,6 +238,11 @@ const hasCookieConsent = (): boolean => {
 
 // Helper functions for tracking events
 export const trackEvent = {
+  // Vercel Analytics event (always fires, no cookie consent needed)
+  vercel: (eventName: string, eventParams?: Record<string, any>) => {
+    track(eventName, eventParams);
+  },
+
   // Google Analytics event
   ga: (eventName: string, eventParams?: Record<string, any>) => {
     if (hasCookieConsent() && window.gtag && import.meta.env.VITE_GA_MEASUREMENT_ID) {
@@ -251,19 +257,22 @@ export const trackEvent = {
     }
   },
 
-  // Track both platforms
+  // Track all platforms (Vercel + GA + FB)
   all: (eventName: string, eventParams?: Record<string, any>) => {
+    trackEvent.vercel(eventName, eventParams); // Always track to Vercel
     trackEvent.ga(eventName, eventParams);
     trackEvent.fb(eventName, eventParams);
   },
 
   // Common events
-  bookingClick: (platform: 'airbnb' | 'booking' | 'email') => {
-    trackEvent.all('booking_click', { platform });
+  bookingClick: (platform: 'airbnb' | 'booking' | 'email', section?: string) => {
+    const params = { platform, ...(section && { section }) };
+    trackEvent.all('booking_click', params);
   },
 
-  contactClick: (method: 'phone' | 'email' | 'whatsapp' | 'line' | 'facebook') => {
-    trackEvent.all('contact_click', { method });
+  contactClick: (method: 'phone' | 'email' | 'whatsapp' | 'line' | 'facebook', section?: string) => {
+    const params = { method, ...(section && { section }) };
+    trackEvent.all('contact_click', params);
   },
 
   roomView: (roomType: string) => {
@@ -281,12 +290,42 @@ export const trackEvent = {
     trackEvent.all('language_change', { language });
   },
 
-  socialClick: (platform: 'facebook' | 'instagram' | 'tripadvisor') => {
-    trackEvent.all('social_click', { platform });
+  socialClick: (platform: 'facebook' | 'instagram' | 'tripadvisor', section?: string) => {
+    const params = { platform, ...(section && { section }) };
+    trackEvent.all('social_click', params);
   },
 
-  reviewView: () => {
-    trackEvent.all('view_reviews');
+  reviewView: (platform?: 'airbnb' | 'tripadvisor') => {
+    trackEvent.all('view_reviews', platform ? { platform } : undefined);
+  },
+
+  // CTA button tracking
+  ctaClick: (buttonName: string, section: string, destination?: string) => {
+    trackEvent.all('cta_click', { 
+      button_name: buttonName,
+      section,
+      ...(destination && { destination })
+    });
+  },
+
+  // Email tracking
+  emailClick: (section: string) => {
+    trackEvent.all('email_click', { section });
+  },
+
+  // Phone tracking
+  phoneClick: (section: string) => {
+    trackEvent.all('phone_click', { section });
+  },
+
+  // WhatsApp tracking
+  whatsappClick: (section: string) => {
+    trackEvent.all('whatsapp_click', { section });
+  },
+
+  // Navigation tracking
+  scrollToSection: (sectionName: string) => {
+    trackEvent.all('scroll_to_section', { section: sectionName });
   }
 };
 

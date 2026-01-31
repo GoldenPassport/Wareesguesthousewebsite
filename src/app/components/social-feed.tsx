@@ -3,6 +3,7 @@ import { useLanguage } from '@/contexts/language-context';
 import { siteConfig } from '@/config/siteConfig';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback, useEffect, useState } from 'react';
+import { trackEvent } from '@/app/components/analytics';
 
 export function SocialFeed() {
   const { t } = useLanguage();
@@ -123,6 +124,12 @@ export function SocialFeed() {
               href={siteConfig.social.facebook.url}
               target="_blank" 
               rel="noopener noreferrer"
+              onClick={() => {
+                trackEvent.socialClick('facebook', 'social_feed');
+                trackEvent.ctaClick('Visit Our Facebook Page', 'social_feed', 'facebook');
+              }}
+              data-tracking-id="social_feed_main_facebook_cta"
+              data-tracking-section="social_feed"
               className="inline-block bg-[#f58220] hover:bg-[#d47020] text-white px-8 md:px-10 py-3 md:py-4 rounded-full text-base md:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               {t.social.ctaButton}
@@ -147,18 +154,36 @@ export function SocialFeed() {
               href={siteConfig.social.facebook.url}
               target="_blank" 
               rel="noopener noreferrer"
+              onClick={() => {
+                trackEvent.socialClick('facebook', 'social_feed');
+                trackEvent.ctaClick('Facebook', 'social_feed', 'facebook');
+              }}
+              data-tracking-id="social_feed_facebook_btn"
+              data-tracking-section="social_feed"
               className="bg-white text-[#0a3d3d] px-4 md:px-6 py-2 rounded-full text-sm md:text-base hover:bg-gray-100 transition-colors"
             >
               📘 {t.social.facebookBtn}
             </a>
             <a 
               href={`tel:${siteConfig.contact.phone.raw}`}
+              onClick={() => {
+                trackEvent.contactClick('phone', 'social_feed');
+                trackEvent.phoneClick('social_feed');
+              }}
+              data-tracking-id="social_feed_phone_btn"
+              data-tracking-section="social_feed"
               className="bg-white text-[#0a3d3d] px-4 md:px-6 py-2 rounded-full text-sm md:text-base hover:bg-gray-100 transition-colors"
             >
               📞 {t.social.phoneBtn}
             </a>
             <a 
               href={`mailto:${siteConfig.contact.email}`}
+              onClick={() => {
+                trackEvent.contactClick('email', 'social_feed');
+                trackEvent.emailClick('social_feed');
+              }}
+              data-tracking-id="social_feed_email_btn"
+              data-tracking-section="social_feed"
               className="bg-white text-[#0a3d3d] px-4 md:px-6 py-2 rounded-full text-sm md:text-base hover:bg-gray-100 transition-colors"
             >
               ✉️ {t.social.emailBtn}

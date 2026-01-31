@@ -220,7 +220,11 @@ export function Reviews() {
               target="_blank" 
               rel="noopener noreferrer"
               id="airbnb-booking-reviews"
-              onClick={() => trackEvent.bookingClick('airbnb')}
+              onClick={() => {
+                trackEvent.bookingClick('airbnb', 'reviews');
+                trackEvent.ctaClick('Airbnb Reviews', 'reviews', 'airbnb');
+                trackEvent.reviewView('airbnb');
+              }}
               data-tracking-id="reviews_section_cta"
               data-tracking-section="reviews"
               data-tracking-platform="airbnb"
@@ -232,6 +236,11 @@ export function Reviews() {
               href={siteConfig.reviews.tripadvisor.url}
               target="_blank" 
               rel="noopener noreferrer"
+              onClick={() => {
+                trackEvent.socialClick('tripadvisor', 'reviews');
+                trackEvent.ctaClick('TripAdvisor Reviews', 'reviews', 'tripadvisor');
+                trackEvent.reviewView('tripadvisor');
+              }}
               className="inline-block bg-[#0a3d3d] hover:bg-[#164d4d] text-white px-6 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-xl whitespace-nowrap"
             >
               {t.reviews.readTripadvisorButton}

@@ -187,7 +187,10 @@ export function PhotoGallery() {
             target="_blank" 
             rel="noopener noreferrer"
             id="airbnb-booking-gallery"
-            onClick={() => trackEvent.bookingClick('airbnb')}
+            onClick={() => {
+              trackEvent.bookingClick('airbnb', 'gallery');
+              trackEvent.ctaClick('Book Your Stay', 'gallery', 'airbnb');
+            }}
             data-tracking-id="gallery_section_cta"
             data-tracking-section="gallery"
             data-tracking-platform="airbnb"

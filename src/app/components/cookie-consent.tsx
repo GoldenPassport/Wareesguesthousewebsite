@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { X, Cookie } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import { cookieTranslations } from '@/translations/cookies';
+import { track } from '@vercel/analytics';
 
 export function CookieConsent() {
   const { language } = useLanguage();
@@ -36,6 +37,9 @@ export function CookieConsent() {
   }, [showPolicy]);
 
   const handleAccept = () => {
+    // Track cookie acceptance (Vercel Analytics only - GA/FB not loaded yet)
+    track('cookie_consent', { action: 'accepted' });
+    
     localStorage.setItem('cookie-consent', 'accepted');
     setIsVisible(false);
     if (showPolicy) {
@@ -48,6 +52,9 @@ export function CookieConsent() {
   };
 
   const handleDecline = () => {
+    // Track cookie decline (Vercel Analytics only - GA/FB not loaded yet)
+    track('cookie_consent', { action: 'declined' });
+    
     localStorage.setItem('cookie-consent', 'declined');
     setIsVisible(false);
     if (showPolicy) {
@@ -58,6 +65,9 @@ export function CookieConsent() {
   };
 
   const handleShowPolicy = () => {
+    // Track when user views cookie policy
+    track('cookie_policy_view', { source: 'banner' });
+    
     setShowPolicy(true);
     document.body.style.overflow = 'hidden';
   };
