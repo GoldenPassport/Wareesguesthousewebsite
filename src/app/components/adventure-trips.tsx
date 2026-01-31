@@ -253,13 +253,13 @@ export function AdventureTrips() {
               {/* Trip Footer */}
               <div className="mt-8 pt-6 border-t-2 border-[#b3dce6] text-center">
                 <p className="text-sm sm:text-base text-gray-600 mb-4">
-                  💡 <strong>Need help planning?</strong> Anna and Josh can help arrange transport and give you insider tips!
+                  {t.adventures.helpText}
                 </p>
                 <a
                   href="mailto:wareesguesthouse@gmail.com?subject=Help Planning a 2-Hour Adventure"
                   className="inline-block bg-[#f58220] hover:bg-[#d47020] text-white px-6 sm:px-8 py-3 rounded-full text-sm sm:text-base transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
-                  Ask Anna for Help
+                  {t.adventures.helpButton}
                 </a>
               </div>
             </div>

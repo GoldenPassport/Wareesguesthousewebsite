@@ -1,47 +1,8 @@
-import { LanguageProvider } from '@/contexts/language-context';
-import { SEOProvider } from '@/app/components/seo-head';
-import { Analytics } from '@/app/components/analytics';
-import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
-import { Hero } from '@/app/components/hero';
-import { About } from '@/app/components/about';
-import { AirbnbHighlights } from '@/app/components/airbnb-highlights';
-import { Reviews } from '@/app/components/reviews';
-import { Rooms } from '@/app/components/rooms';
-import { Amenities } from '@/app/components/amenities';
-import { PhotoGallery } from '@/app/components/photo-gallery';
-import { ThingsToDo } from '@/app/components/things-to-do';
-import { AdventureTrips } from '@/app/components/adventure-trips';
-import { Location } from '@/app/components/location';
-import { SocialFeed } from '@/app/components/social-feed';
-import { Footer } from '@/app/components/footer';
-import { CookieConsent } from '@/app/components/cookie-consent';
-import { ScrollToTop } from '@/app/components/scroll-to-top';
+import { RouterProvider } from 'react-router';
+import { router } from '@/app/routes';
 
 function App() {
-  return (
-    <LanguageProvider>
-      <SEOProvider>
-        <Analytics />
-        <VercelAnalytics />
-        <div className="min-h-screen bg-white">
-          <Hero />
-          <About />
-          <AirbnbHighlights />
-          <Reviews />
-          <Rooms />
-          <Amenities />
-          <PhotoGallery />
-          <ThingsToDo />
-          <AdventureTrips />
-          <Location />
-          <SocialFeed />
-          <Footer />
-          <CookieConsent />
-          <ScrollToTop />
-        </div>
-      </SEOProvider>
-    </LanguageProvider>
-  );
+  return <RouterProvider router={router} />;
 }
 
 App.displayName = 'App';

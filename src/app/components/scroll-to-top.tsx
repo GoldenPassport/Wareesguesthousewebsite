@@ -1,8 +1,15 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router';
 import { ArrowUp } from 'lucide-react';
 
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  const location = useLocation();
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   useEffect(() => {
     const toggleVisibility = () => {

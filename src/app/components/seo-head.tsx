@@ -1,17 +1,26 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { useLanguage } from '@/contexts/language-context';
 import { siteConfig } from '@/config/siteConfig';
 import logo from "figma:asset/302a78d8be4e75fe5f3bef65f80ada9b7aeb0688.png";
 
 export function SEOHead() {
+  const { language } = useLanguage();
+  
   // Get current URL (in production this will be your actual domain)
   const siteUrl = typeof window !== 'undefined' 
     ? window.location.origin 
     : 'https://wareeguesthouse.com';
   
-  const currentUrl = typeof window !== 'undefined' 
-    ? window.location.href 
+  // Base URL without query params
+  const baseUrl = typeof window !== 'undefined'
+    ? `${window.location.origin}${window.location.pathname}`
     : siteUrl;
-
+  
+  const currentUrl = `${siteUrl}/${language}`;
+  
+  // List of supported languages
+  const languages = ['en', 'th', 'zh', 'ru', 'de', 'it', 'sv', 'fi'];
+  
   // SEO-optimized description
   const description = `Experience authentic Thai hospitality at Waree's Guesthouse, a family-run B&B in Kata Beach, Phuket since 2000. Airbnb Superhost with 4.83★ rating and Guest Favorite status. Budget-friendly rooms with AC, WiFi, near beach. Book now!`;
   
@@ -215,15 +224,10 @@ export function SEOHead() {
       <link rel="manifest" href="/site.webmanifest" />
       
       {/* Alternate Languages for SEO */}
-      <link rel="alternate" hrefLang="en" href={currentUrl} />
-      <link rel="alternate" hrefLang="th" href={`${currentUrl}?lang=th`} />
-      <link rel="alternate" hrefLang="zh" href={`${currentUrl}?lang=zh`} />
-      <link rel="alternate" hrefLang="ru" href={`${currentUrl}?lang=ru`} />
-      <link rel="alternate" hrefLang="de" href={`${currentUrl}?lang=de`} />
-      <link rel="alternate" hrefLang="it" href={`${currentUrl}?lang=it`} />
-      <link rel="alternate" hrefLang="sv" href={`${currentUrl}?lang=sv`} />
-      <link rel="alternate" hrefLang="fi" href={`${currentUrl}?lang=fi`} />
-      <link rel="alternate" hrefLang="x-default" href={currentUrl} />
+      {languages.map(lang => (
+        <link key={lang} rel="alternate" hrefLang={lang} href={`${siteUrl}/${lang}`} />
+      ))}
+      <link rel="alternate" hrefLang="x-default" href={`${siteUrl}/en`} />
       
       {/* Structured Data (JSON-LD) */}
       <script type="application/ld+json">

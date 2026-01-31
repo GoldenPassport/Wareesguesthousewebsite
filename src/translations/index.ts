@@ -530,7 +530,9 @@ export const translations = {
             }
           ]
         }
-      ]
+      ],
+      helpText: "💡 Need help planning? Anna and Josh can help arrange transport and give you insider tips!",
+      helpButton: "Ask Us for Help"
     },
     // Location
     location: {
@@ -1125,7 +1127,9 @@ export const translations = {
             }
           ]
         }
-      ]
+      ],
+      helpText: "💡 ต้องการความช่วยเหลือในการวางแผน? แอนนาและจอชช่วยจัดการเรื่องการเดินทางและให้คำแนะนำจากคนในพื้นที่!",
+      helpButton: "ถามเราเพื่อขอความช่วยเหลือ"
     },
     // Location
     location: {
@@ -1164,7 +1168,7 @@ export const translations = {
       busDuration: "90-120 นาที",
       privateTransferTitle: "🚗 รถรับส่งส่วนตัว",
       privateTransferDesc:
-        "รถรับส่งที่จองล่วงหน้าพร้อมบริการต้อนรับและแนะนำ",
+        "รถรับส่งท���่จองล่วงหน้าพร้อมบริการต้อนรับและแนะนำ",
       privateCost: "~1,200-1,500 บาท",
       privateDuration: "45-60 นาที",
       localTransportTitle: "🛵 การเดินทางท้องถิ่น",
@@ -1610,7 +1614,9 @@ export const translations = {
             { name: "Sunday Walking Street (Weekend Only)", time: "10 min", activity: "周日来访可浏览工艺品和街头表演", tip: "仅周日下午4点左右开始" }
           ]
         }
-      ]
+      ],
+      helpText: "💡 需要帮助规划行程？Anna和Josh可以帮您安排交通并提供当地人的内部建议！",
+      helpButton: "联系我们寻求帮助"
     },
     // Location
     location: {
@@ -2109,7 +2115,9 @@ export const translations = {
             { name: "Dessert at Torry's Ice Cream", time: "20 мин", activity: "Уникальные тайские вкусы мороженого", tip: "Кокосовый пепел или тайский чай обязательно" },
             { name: "Sunday Walking Street (Weekend Only)", time: "10 мин", activity: "Ремесла и уличные выступления по воскресеньям", tip: "Начинается около 16:00 только по воскресеньям" }
           ]}
-      ]
+      ],
+      helpText: "💡 Нужна помощь с планированием? Анна и Джош помогут организовать транспорт и дадут советы инсайдеров!",
+      helpButton: "Спросите нас"
     },
     // Location
     location: {
@@ -2595,7 +2603,9 @@ export const translations = {
         { name: "Temple & Culture Trail", description: "Entdecken Sie Phukets spirituelle Seite", purpose: "Fotografie, Kultur und friedliche Momente", stops: [{ name: "Wat Chalong Temple", time: "40 Min", activity: "Phukets wichtigster buddhistischer Tempel", tip: "Bescheiden kleiden - Schultern und Knie bedecken" }, { name: "Big Buddha", time: "40 Min", activity: "45-Meter-Marmorstatue", tip: "360°-Blick auf die Insel von oben" }, { name: "Local Coffee Shop", time: "20 Min", activity: "Thai-Eiskaffee-Pause", tip: "Traditionellen Kopi probieren - stark und süß" }, { name: "Karon Temple (Quick Stop)", time: "20 Min", activity: "Kleiner lokaler Tempel", tip: "Meist ruhig - perfekt für Reflexion" }]},
         { name: "Hidden Beaches Hopper", description: "Entdecken Sie geheime Orte", purpose: "Strandfotos, Schwimmen und lokales Essen", stops: [{ name: "Ya Nui Beach", time: "40 Min", activity: "Versteckte Bucht - perfekt zum Schnorcheln", tip: "Schnorchelausrüstung mitbringen" }, { name: "Ao Sane Beach", time: "30 Min", activity: "Felsenstrand mit kristallklarem Wasser", tip: "Besser zum Fotografieren als zum Schwimmen" }, { name: "Nui Beach Restaurant", time: "30 Min", activity: "Thai-Mittagessen am Strand", tip: "Gebratener Reis mit Ananas in einer Ananas bestellen!" }, { name: "Windmill Viewpoint", time: "20 Min", activity: "Panoramafoto von Süd-Phuket", tip: "Weniger überfüllt als Promthep Cape" }]},
         { name: "Old Town Food Walk", description: "Historische Straßen treffen authentische Phuket-Aromen", purpose: "Street Food, Architekturfotografie, lokale Kultur", stops: [{ name: "Thalang Road", time: "30 Min", activity: "Farbenfrohe chinesisch-portugiesische Gebäude", tip: "Suchen Sie nach Street-Art-Wandgemälden" }, { name: "Kopitiam by Wilai", time: "25 Min", activity: "Traditionelles Phuket-Frühstück - Dim Sum & Kaffee", tip: "Hokkien-Nudeln probieren - lokale Spezialität" }, { name: "Local Markets", time: "35 Min", activity: "Roti, Satay und frische Früchte probieren", tip: "Sanft verhandeln und lächeln" }, { name: "Dessert at Torry's Ice Cream", time: "20 Min", activity: "Einzigartige Thai-inspirierte Eissorten", tip: "Kokosnussasche oder Thai-Tee - ein Muss" }, { name: "Sunday Walking Street (Weekend Only)", time: "10 Min", activity: "Kunsthandwerk und Straßenaufführungen sonntags", tip: "Beginnt sonntags um 16 Uhr" }]}
-      ]
+      ],
+      helpText: "💡 Brauchen Sie Hilfe bei der Planung? Anna und Josh helfen gerne bei der Organisation von Transporten und geben Insider-Tipps!",
+      helpButton: "Fragen Sie uns"
     },
     // Location
     location: {
@@ -3079,7 +3089,9 @@ export const translations = {
         { name: "Temple & Culture Trail", description: "Esplorare il lato spirituale di Phuket", purpose: "Fotografia, cultura e momenti di pace", stops: [{ name: "Wat Chalong Temple", time: "40 min", activity: "Tempio buddista più importante di Phuket", tip: "Vestirsi modestamente - coprire spalle e ginocchia" }, { name: "Big Buddha", time: "40 min", activity: "Statua di marmo alta 45 metri", tip: "Vista a 360° dell'isola dall'alto" }, { name: "Local Coffee Shop", time: "20 min", activity: "Pausa caffè ghiacciato tailandese", tip: "Provare il kopi tradizionale - forte e dolce" }, { name: "Karon Temple (Quick Stop)", time: "20 min", activity: "Piccolo tempio locale", tip: "Solitamente tranquillo - perfetto per la riflessione" }]},
         { name: "Hidden Beaches Hopper", description: "Scoprire luoghi segreti lontano dalle folle", purpose: "Foto di spiaggia, nuoto e cibo locale", stops: [{ name: "Ya Nui Beach", time: "40 min", activity: "Piccola baia nascosta - perfetta per lo snorkeling", tip: "Portare attrezzatura da snorkeling" }, { name: "Ao Sane Beach", time: "30 min", activity: "Spiaggia rocciosa con acqua cristallina", tip: "Meglio per le foto che per nuotare" }, { name: "Nui Beach Restaurant", time: "30 min", activity: "Pranzo tailandese in spiaggia con frutti di mare freschi", tip: "Ordinare riso fritto all'ananas in un ananas!" }, { name: "Windmill Viewpoint", time: "20 min", activity: "Foto panoramica del sud di Phuket", tip: "Meno affollato di Promthep Cape" }]},
         { name: "Old Town Food Walk", description: "Strade storiche incontrano i sapori autentici di Phuket", purpose: "Cibo di strada, fotografia architettonica, cultura locale", stops: [{ name: "Thalang Road", time: "30 min", activity: "Edifici sino-portoghesi colorati", tip: "Cercare i murales di street art" }, { name: "Kopitiam by Wilai", time: "25 min", activity: "Colazione tradizionale di Phuket - dim sum e caffè", tip: "Provare i noodles hokkien - specialità locale" }, { name: "Local Markets", time: "35 min", activity: "Assaggiare roti, satay e frutta fresca", tip: "Contrattare gentilmente e sorridere" }, { name: "Dessert at Torry's Ice Cream", time: "20 min", activity: "Gusti unici di gelato ispirati alla Thailandia", tip: "Cenere di cocco o tè tailandese da provare" }, { name: "Sunday Walking Street (Weekend Only)", time: "10 min", activity: "Artigianato e spettacoli di strada la domenica", tip: "Inizia intorno alle 16:00 solo la domenica" }]}
-      ]
+      ],
+      helpText: "💡 Hai bisogno di aiuto con la pianificazione? Anna e Josh possono aiutarvi ad organizzare i trasporti e darvi consigli da insider!",
+      helpButton: "Chiedeteci aiuto"
     },
     // Location
     location: {
@@ -3563,7 +3575,9 @@ export const translations = {
         { name: "Temple & Culture Trail", description: "Utforska Phukets andliga sida", purpose: "Fotografering, kultur och lugna stunder", stops: [{ name: "Wat Chalong Temple", time: "40 min", activity: "Phukets viktigaste buddhistiska tempel", tip: "Klä dig anständigt - täck axlar och knän" }, { name: "Big Buddha", time: "40 min", activity: "45 meter hög marmorstaty", tip: "360° utsikt över ön uppifrån" }, { name: "Local Coffee Shop", time: "20 min", activity: "Thai iskaffe-paus", tip: "Prova traditionell kopi - stark och söt" }, { name: "Karon Temple (Quick Stop)", time: "20 min", activity: "Litet lokalt tempel", tip: "Vanligtvis lugnt - perfekt för reflektion" }]},
         { name: "Hidden Beaches Hopper", description: "Upptäck hemliga platser bort från folkmassorna", purpose: "Strandfotografering, simning och lokal mat", stops: [{ name: "Ya Nui Beach", time: "40 min", activity: "Liten gömd vik - perfekt för snorkling", tip: "Ta med snorkelutrustning" }, { name: "Ao Sane Beach", time: "30 min", activity: "Stenstrand med kristallklart vatten", tip: "Bättre för foton än simning" }, { name: "Nui Beach Restaurant", time: "30 min", activity: "Thai lunch vid stranden med färska skaldjur", tip: "Beställ ananas stekt ris i en ananas!" }, { name: "Windmill Viewpoint", time: "20 min", activity: "Panoramafoto av södra Phuket", tip: "Mindre folkmassor än Promthep Cape" }]},
         { name: "Old Town Food Walk", description: "Historiska gator möter autentiska Phuket-smaker", purpose: "Gatumat, arkitekturfotografering, lokal kultur", stops: [{ name: "Thalang Road", time: "30 min", activity: "Färgglada kinesisk-portugisiska byggnader", tip: "Leta efter street art-muralmålningar" }, { name: "Kopitiam by Wilai", time: "25 min", activity: "Traditionell Phuket-frukost - dim sum & kaffe", tip: "Prova hokkien-nudlar - lokal specialitet" }, { name: "Local Markets", time: "35 min", activity: "Prova roti, satay och färsk frukt", tip: "Pruta försiktigt och le" }, { name: "Dessert at Torry's Ice Cream", time: "20 min", activity: "Unika thaiinspirerade glassmaker", tip: "Kokosaska eller thai-te är ett måste" }, { name: "Sunday Walking Street (Weekend Only)", time: "10 min", activity: "Bläddra hantverk och gatuföreställningar på söndagar", tip: "Börjar runt 16:00 endast söndagar" }]}
-      ]
+      ],
+      helpText: "💡 Behöver du hjälp med planering? Anna och Josh kan hjälpa till att ordna transport och ge insidertips!",
+      helpButton: "Fråga oss om hjälp"
     },
     // Location
     location: {
@@ -4048,7 +4062,9 @@ export const translations = {
         { name: "Temple & Culture Trail", description: "Tutki Phuketin henkistä puolta", purpose: "Valokuvaus, kulttuuri ja rauhallisia hetkiä", stops: [{ name: "Wat Chalong Temple", time: "40 min", activity: "Phuketin tärkein buddhalainen temppeli", tip: "Pukeudu vaatimattomasti - peitä hartiat ja polvet" }, { name: "Big Buddha", time: "40 min", activity: "45 metrin korkuinen marmoripatsas", tip: "360° näkymä saaresta ylhäältä" }, { name: "Local Coffee Shop", time: "20 min", activity: "Thai-jääkahvitauko", tip: "Maista perinteinen kopi - vahva ja makea" }, { name: "Karon Temple (Quick Stop)", time: "20 min", activity: "Pieni paikallinen temppeli", tip: "Yleensä hiljainen - täydellinen pohdintaan" }]},
         { name: "Hidden Beaches Hopper", description: "Löydä salaiset paikat kaukana väkijoukosta", purpose: "Rantavalokuvaus, uinti ja paikallinen ruoka", stops: [{ name: "Ya Nui Beach", time: "40 min", activity: "Pieni piilotettu lahti - täydellinen snorklailuun", tip: "Ota snorklausvarusteet mukaan" }, { name: "Ao Sane Beach", time: "30 min", activity: "Kiviranta kirkkaalla vedellä", tip: "Parempi valokuvaukseen kuin uintiin" }, { name: "Nui Beach Restaurant", time: "30 min", activity: "Thai-lounas rannalla tuoreilla merenelvillä", tip: "Tilaa ananaspaistettua riisiä ananaksessa!" }, { name: "Windmill Viewpoint", time: "20 min", activity: "Panoraamavalokuva eteläisestä Phuketista", tip: "Vähemmän ruuhkaa kuin Promthep Cape" }]},
         { name: "Old Town Food Walk", description: "Historialliset kadut kohtaavat aidot Phuket-maut", purpose: "Katumatua, arkkitehtuurivalokuvaus, paikallinen kulttuuri", stops: [{ name: "Thalang Road", time: "30 min", activity: "Värikkäät kiinalais-portugalilaiset rakennukset", tip: "Etsi katuteidemuuraalia" }, { name: "Kopitiam by Wilai", time: "25 min", activity: "Perinteinen Phuket-aamiainen - dim sum & kahvi", tip: "Maista hokkien-nuudeleita - paikallinen erikoisuus" }, { name: "Local Markets", time: "35 min", activity: "Maista rotia, satayta ja tuoreita hedelmiä", tip: "Tinkaa lempeästi ja hymyile" }, { name: "Dessert at Torry's Ice Cream", time: "20 min", activity: "Ainutlaatuiset thai-inspiroitut jäätelömaut", tip: "Kookostuhka tai thai-tee on pakko maistaa" }, { name: "Sunday Walking Street (Weekend Only)", time: "10 min", activity: "Selaa käsitöitä ja katuesiintymiä sunnuntaisin", tip: "Alkaa noin klo 16 vain sunnuntaisin" }]}
-      ]
+      ],
+      helpText: "💡 Tarvitsetko apua suunnittelussa? Anna ja Josh voivat auttaa järjestämään kuljetuksen ja antaa sisäpiiritietoja!",
+      helpButton: "Kysy meiltä apua"
     },
     // Location
     location: {
